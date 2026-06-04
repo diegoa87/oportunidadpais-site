@@ -18,17 +18,17 @@
 
   <style>
     :root {
-      --bronce: #E8A838;
-      --bronce-oscuro: #C98B1F;
-      --rojo-chileno: #D62828;
-      --negro: #0A0A0A;
-      --grafito: #141414;
-      --grafito-2: #1E1E1E;
+      --azul-profundo: #1A3A5C;
+      --dorado: #F5A623;
+      --rojo-coral: #E84C3D;
+      --texto: #2C3E50;
+      --azul-oscuro: #122D4A;
+      --azul-medio: #1A3A5C;
       --blanco: #FFFFFF;
-      --crema: #FFF8EE;
-      --gris: #9CA3AF;
-      --gris-oscuro: #6B7280;
-      --azul-acento: #2563EB;
+      --crema: #FDF6EC;
+      --gris: #4A5568;
+      --gris-oscuro: #4A5568;
+      --azul-acento: #1A3A5C;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -77,8 +77,8 @@
       content: '';
       position: absolute; top: 0; left: 0; right: 0; bottom: 0;
       background: 
-        radial-gradient(ellipse at 20% 50%, rgba(232,168,56,0.06) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(214,40,40,0.05) 0%, transparent 50%),
+        radial-gradient(ellipse at 20% 50%, rgba(26,58,92,0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(232,76,61,0.05) 0%, transparent 50%),
         radial-gradient(ellipse at 50% 80%, rgba(37,99,235,0.04) 0%, transparent 40%);
       z-index: 0;
     }
@@ -99,7 +99,7 @@
     .hero-meta { display: flex; gap: 32px; }
     .hero-meta-item { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
     .hero-meta-item strong { color: var(--bronce); font-size: 1.1rem; display: block; font-family: 'Playfair Display', serif; }
-    .podcast-icon { width: 260px; height: 260px; background: linear-gradient(135deg, var(--grafito-2) 0%, #1a1a1a 100%); border: 1px solid rgba(232,168,56,0.2); border-radius: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; position: relative; }
+    .podcast-icon { width: 260px; height: 260px; background: linear-gradient(135deg, var(--grafito-2) 0%, #16324F 100%); border: 1px solid rgba(232,168,56,0.2); border-radius: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; position: relative; }
     .podcast-icon::before { content: ''; position: absolute; inset: -1px; border-radius: 24px; padding: 1px; background: linear-gradient(135deg, rgba(232,168,56,0.4), transparent, rgba(214,40,40,0.3)); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
     .podcast-icon .icon-emoji { font-size: 3.5rem; }
     .podcast-icon .icon-label { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; color: var(--bronce); }
@@ -139,7 +139,7 @@
     .ep-guest { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
     .ep-desc { font-size: 0.88rem; color: rgba(255,255,255,0.5); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 16px; }
     .ep-links { display: flex; gap: 10px; }
-    .btn-ep-spotify { display: inline-flex; align-items: center; gap: 5px; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.78rem; font-weight: 600; background: #1DB954; color: white; transition: all 0.2s; }
+    .btn-ep-spotify { display: inline-flex; align-items: center; gap: 5px; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.78rem; font-weight: 600; background: #1A3A5C; color: white; transition: all 0.2s; }
     .btn-ep-spotify:hover { opacity: 0.85; }
     .btn-ep-yt { display: inline-flex; align-items: center; gap: 5px; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.78rem; font-weight: 600; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.1); transition: all 0.2s; }
     .btn-ep-yt:hover { opacity: 0.85; }
@@ -168,11 +168,11 @@
     .platforms .container { text-align: center; }
     .platforms h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 28px; color: rgba(255,255,255,0.8); }
     .platform-btns { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-    .btn-spotify { background: #1DB954; color: white; }
-    .btn-spotify:hover { background: #1aa34a; transform: translateY(-2px); }
-    .btn-apple { background: #FA2D48; color: white; }
+    .btn-spotify { background: #1A3A5C; color: white; }
+    .btn-spotify:hover { background: #E84C3D; transform: translateY(-2px); }
+    .btn-apple { background: #E84C3D; color: white; }
     .btn-apple:hover { opacity: 0.85; transform: translateY(-2px); }
-    .btn-youtube { background: #FF0000; color: white; }
+    .btn-youtube { background: #E84C3D; color: white; }
     .btn-youtube:hover { opacity: 0.85; transform: translateY(-2px); }
 
     /* Footer */
@@ -250,7 +250,7 @@
 
       <!-- CAPÍTULO 1 -->
       <div class="ep-card">
-        <div class="ep-thumb" style="background: linear-gradient(135deg, #D62828 0%, #9B1D1D 100%);">
+        <div class="ep-thumb" style="background: linear-gradient(135deg, #E84C3D 0%, #C9443A 100%);">
           <div class="ep-num">01</div>
           <span class="ep-dur">Mar 2026</span>
           <a href="https://www.youtube.com/watch?v=aYCqxOal1uk" target="_blank" class="ep-play">
@@ -276,7 +276,7 @@
 
       <!-- CAPÍTULO 2 -->
       <div class="ep-card">
-        <div class="ep-thumb" style="background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);">
+        <div class="ep-thumb" style="background: linear-gradient(135deg, #1A3A5C 0%, #16324F 100%);">
           <div class="ep-num">02</div>
           <span class="ep-dur">Mar 2026</span>
           <a href="https://www.youtube.com/watch?v=GbMk7umUWig" target="_blank" class="ep-play">
@@ -302,7 +302,7 @@
 
       <!-- CAPÍTULO 3 -->
       <div class="ep-card">
-        <div class="ep-thumb" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
+        <div class="ep-thumb" style="background: linear-gradient(135deg, #1A3A5C 0%, #16324F 100%);">
           <div class="ep-num">03</div>
           <span class="ep-dur">Abr 2026</span>
           <a href="https://www.youtube.com/watch?v=-jepRqm50g4" target="_blank" class="ep-play">
@@ -328,7 +328,7 @@
 
       <!-- CAPÍTULO 4 -->
       <div class="ep-card">
-        <div class="ep-thumb" style="background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);">
+        <div class="ep-thumb" style="background: linear-gradient(135deg, #F5A623 0%, #D4890F 100%);">
           <div class="ep-num">04</div>
           <span class="ep-dur">May 2026</span>
           <a href="https://www.youtube.com/watch?v=V-RCd010Bck" target="_blank" class="ep-play">
