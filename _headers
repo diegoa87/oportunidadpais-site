@@ -1,0 +1,12 @@
+/*
+  Cache-Control: public, max-age=3600
+  X-Content-Type-Options: nosniff
+
+/*.png
+  Cache-Control: public, max-age=86400
+
+/*.jpg
+  Cache-Control: public, max-age=86400
+
+/*.mp4
+  Cache-Control: public, max-age=604800
