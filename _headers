@@ -1,6 +1,11 @@
 /*
-  Cache-Control: public, max-age=3600
+  X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/index.html
+  Cache-Control: public, max-age=3600
 
 /*.png
   Cache-Control: public, max-age=86400
@@ -8,5 +13,14 @@
 /*.jpg
   Cache-Control: public, max-age=86400
 
+/*.jpeg
+  Cache-Control: public, max-age=86400
+
+/*.webp
+  Cache-Control: public, max-age=86400
+
 /*.mp4
   Cache-Control: public, max-age=604800
+
+/*.svg
+  Cache-Control: public, max-age=86400
