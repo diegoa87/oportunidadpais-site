@@ -1,9 +1,0 @@
-name = "oportunidadpais-site"
-compatibility_date = "2024-01-01"
-main = "src/index.ts"
-
-[site]
-bucket = "./static"
-
-[dev]
-port = 8787
