@@ -10,33 +10,35 @@
 
   <style>
     :root {
-      --negro: #0A0A0A;
+      --azul-marina: #082663;
+      --azul-marina-claro: #1A3A5F;
+      --azul-brillante: #1E40AF;
+      --bronce: #F5A623;
+      --bronce-oscuro: #C8860E;
+      --rojo-acento: #E84C3D;
+      --blanco: #FFFFFF;
+      --blanco-2: #F8FAFC;
+      --gris: #94A3B8;
       --grafito: #1F2937;
       --grafito-2: #374151;
-      --blanco: #FFFFFF;
-      --azul: #0039A6;
-      --azul-oscuro: #002060;
-      --rojo: #D52B1E;
-      --bronce: #F5A623;
-      --bronce-oscuro: #D4890F;
-      --azul-letras: #1E3A5F;
+      --grafito-3: #1E293B;
+      --negro: #0F172A;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--negro); color: var(--blanco); line-height: 1.7; max-width: 100vw; overflow-x: hidden; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--grafito-3); color: var(--blanco); line-height: 1.7; }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; height: auto; display: block; }
     .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
 
-    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0;
-      background: rgba(10,10,10,0.95);
+      background: rgba(15,23,42,0.95);
       backdrop-filter: blur(14px);
       z-index: 1000;
       padding: 14px 0;
-      border-bottom: 2px solid var(--azul);
+      border-bottom: 1px solid rgba(245,166,35,0.2);
     }
     nav .container { display: flex; justify-content: space-between; align-items: center; }
     .logo img { height: 50px; }
@@ -45,114 +47,162 @@
     .nav-links a:hover { opacity: 1; color: var(--bronce); }
     .nav-links a.active { opacity: 1; color: var(--bronce); }
     .nav-cta { background: var(--bronce); color: var(--negro) !important; padding: 8px 20px; border-radius: 8px; font-weight: 600 !important; opacity: 1 !important; }
-    .nav-cta:hover { background: var(--bronce-oscuro); }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 6px; }
     .hamburger span { display: block; width: 24px; height: 2px; background: var(--blanco); border-radius: 2px; }
 
     @media(max-width:768px) {
       .hamburger { display: flex; }
-      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,10,10,0.97); padding: 24px; gap: 20px; border-bottom: 1px solid rgba(232,168,56,0.12); }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(15,23,42,0.97); padding: 24px; gap: 20px; border-bottom: 1px solid rgba(245,166,35,0.12); }
       .nav-links.open { display: flex; }
     }
 
     /* HERO */
     .hero {
       padding: 140px 0 60px;
-      background: var(--negro);
       position: relative;
       overflow: hidden;
+      background: var(--grafito-3);
     }
     .hero::before {
       content: '';
       position: absolute; inset: 0;
       background:
-        radial-gradient(ellipse at 20% 50%, rgba(0,57,166,0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(213,43,30,0.06) 0%, transparent 50%);
+        radial-gradient(ellipse at 15% 50%, rgba(8,38,99,0.25) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 20%, rgba(245,166,35,0.08) 0%, transparent 50%);
       z-index: 0;
     }
     .hero > * { position: relative; z-index: 1; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,57,166,0.1); border: 1px solid rgba(0,57,166,0.25); border-radius: 100px; padding: 6px 16px; font-size: 0.78rem; color: var(--azul); margin-bottom: 20px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
-    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.1; margin-bottom: 16px; letter-spacing: -0.5px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(245,166,35,0.12); border: 1px solid rgba(245,166,35,0.3); border-radius: 100px; padding: 6px 16px; font-size: 0.78rem; color: var(--bronce); margin-bottom: 20px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 700; line-height: 1.1; margin-bottom: 16px; letter-spacing: -0.5px; }
     .hero h1 span { color: var(--bronce); }
     .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.6); max-width: 600px; line-height: 1.7; }
-    .hero-logo { margin-top: 48px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
-    .hero-logo img { height: 100px; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 16px; background: rgba(255,255,255,0.03); }
-    .hero-logo-label { font-size: 0.82rem; color: rgba(255,255,255,0.4); }
+    .hero-logo-area { margin-top: 48px; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
 
-    /* SECTION */
+    .logo-showcase {
+      background: white;
+      border-radius: 20px;
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 200px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .logo-showcase img { height: 90px; }
+    .logo-info { max-width: 300px; }
+    .logo-info-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 4px; color: var(--blanco); }
+    .logo-info-desc { font-size: 0.82rem; color: var(--gris); line-height: 1.5; }
+
+    /* SECTIONS */
     section { padding: 80px 0; }
-    .section-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--bronce); font-weight: 700; margin-bottom: 10px; }
+    .bg-dark { background: var(--grafito-3); }
+    .bg-mid { background: var(--grafito); }
+    .bg-white { background: var(--blanco-2); }
+
+    .section-tag { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.8px; color: var(--bronce); font-weight: 700; margin-bottom: 10px; }
     h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 12px; }
     h2 span { color: var(--bronce); }
-    .section-intro { color: rgba(255,255,255,0.5); font-size: 0.95rem; margin-bottom: 40px; max-width: 620px; }
+    .section-intro { color: rgba(255,255,255,0.5); font-size: 0.95rem; margin-bottom: 40px; max-width: 620px; line-height: 1.7; }
+    h2 + .section-intro { margin-top: -4px; margin-bottom: 40px; }
 
-    .bg-section { background: var(--grafito); }
-    .bg-dark { background: var(--negro); }
-
-    /* GRID */
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-    @media(max-width:900px) { .grid-3 { grid-template-columns: 1fr 1fr; } }
-    @media(max-width:600px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+    .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+    @media(max-width:900px) { .grid-3 { grid-template-columns: 1fr 1fr; } .grid-5 { grid-template-columns: repeat(3, 1fr); } }
+    @media(max-width:600px) { .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; } .grid-5 { grid-template-columns: 1fr 1fr; } }
 
-    /* COLOR CARDS */
-    .color-card { border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); }
+    /* COLOR SWATCHES */
+    .color-card { border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
     .color-swatch { height: 100px; }
-    .color-info { padding: 16px; background: var(--grafito-2); }
-    .color-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
-    .color-hex { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-bottom: 2px; }
-    .color-usage { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+    .color-info { padding: 16px; background: white; }
+    .color-name { font-weight: 600; font-size: 0.92rem; color: #1a1a1a; margin-bottom: 4px; }
+    .color-hex { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #64748b; margin-bottom: 2px; }
+    .color-usage { font-size: 0.75rem; color: #94a3b8; line-height: 1.4; }
+
+    /* COLOR USAGE */
+    .color-usage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .color-usage-card { border-radius: 16px; overflow: hidden; }
+    .color-usage-preview { height: 80px; display: flex; align-items: center; justify-content: center; }
+    .color-usage-label { padding: 16px; background: white; }
+    .color-usage-label strong { display: block; font-size: 0.88rem; color: #1a1a1a; margin-bottom: 4px; }
+    .color-usage-label span { font-size: 0.75rem; color: #64748b; }
 
     /* LOGO VARIANTS */
-    .logo-variant-card { background: var(--grafito-2); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 32px; text-align: center; }
-    .logo-variant-card .preview { height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-    .logo-variant-card .preview img { max-height: 80px; }
-    .logo-variant-card.light-preview { background: #F8F8F8; }
-    .logo-variant-card.dark-preview { background: var(--negro); }
-    .logo-variant-label { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
-    .logo-variant-desc { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
-
-    /* SPACING GUIDE */
-    .spacing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .spacing-item { text-align: center; }
-    .spacing-box { margin: 0 auto 10px; background: rgba(245,166,35,0.15); border: 1px dashed var(--bronce); border-radius: 4px; }
-    .spacing-label { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--bronce); font-weight: 500; }
+    .logo-variant-row { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+    .logo-variant-card { border-radius: 16px; overflow: hidden; flex: 1; min-width: 200px; max-width: 300px; }
+    .logo-variant-bg { height: 120px; display: flex; align-items: center; justify-content: center; padding: 24px; }
+    .logo-variant-bg img { max-height: 70px; }
+    .logo-variant-label { padding: 16px; background: white; }
+    .logo-variant-label strong { font-size: 0.88rem; color: #1a1a1a; display: block; margin-bottom: 2px; }
+    .logo-variant-label span { font-size: 0.75rem; color: #64748b; }
 
     /* TYPOGRAPHY */
-    .type-sample { margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .type-sample:last-child { border: none; }
-    .type-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--bronce); font-weight: 700; margin-bottom: 8px; }
-    .type-name { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
-    .type-sample h1 { font-family: 'Playfair Display', serif; margin-bottom: 8px; }
-    .type-sample h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 8px; }
-    .type-sample p { font-size: 0.95rem; color: rgba(255,255,255,0.6); }
+    .type-card { background: white; border-radius: 16px; padding: 32px; }
+    .type-font-name { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--bronce); font-weight: 700; margin-bottom: 8px; }
+    .type-font-meta { font-size: 0.8rem; color: #94a3b8; margin-bottom: 20px; }
+    .type-sample { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #f1f5f9; }
+    .type-sample:last-child { border: none; margin-bottom 0; padding-bottom: 0; }
+    .type-sample h1 { font-family: 'Playfair Display', serif; color: var(--azul-marina); }
+    .type-sample h2 { font-family: 'Playfair Display', serif; color: var(--azul-marina); font-size: 1.4rem; }
+    .type-sample p { color: #475569; font-size: 0.9rem; }
 
-    /* DO's and DON'Ts */
+    /* FONT STACKS */
+    .font-stacks { background: white; border-radius: 16px; overflow: hidden; }
+    .font-stack-item { padding: 20px 28px; border-bottom: 1px solid #f1f5f9; display: flex; gap: 20px; align-items: center; }
+    .font-stack-item:last-child { border: none; }
+    .font-stack-name { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--bronce); min-width: 120px; font-weight: 500; }
+    .font-stack-example { font-size: 0.88rem; color: #475569; }
+
+    /* SPACING */
+    .spacing-demo { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .spacing-unit { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .spacing-box { background: rgba(8,38,99,0.08); border: 1px dashed var(--azul-marina); border-radius: 4px; }
+    .spacing-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--azul-marina); font-weight: 500; }
+
+    /* DO / DONT */
     .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .rule-card { border-radius: 12px; padding: 24px; }
-    .rule-card.do { background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.2); }
+    .rule-card { border-radius: 16px; padding: 24px; }
+    .rule-card.do { background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.2); }
     .rule-card.dont { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.2); }
-    .rule-icon { font-size: 1.5rem; margin-bottom: 12px; }
-    .rule-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 6px; }
-    .rule-desc { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+    .rule-icon { font-size: 1.4rem; margin-bottom: 12px; }
+    .rule-title { font-weight: 600; font-size: 0.92rem; margin-bottom: 6px; }
+    .rule-desc { font-size: 0.8rem; color: rgba(255,255,255,0.5); line-height: 1.5; }
 
-    /* DOWNLOAD CTA */
-    .download-cta { background: linear-gradient(135deg, var(--azul) 0%, var(--azul-oscuro) 100%); border-radius: 20px; padding: 48px; text-align: center; border: 1px solid rgba(0,57,166,0.3); }
-    .download-cta h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 12px; }
-    .download-cta p { color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto; }
-    .btn-download { display: inline-flex; align-items: center; gap: 10px; background: var(--bronce); color: var(--negro); padding: 14px 32px; border-radius: 10px; font-weight: 600; font-size: 0.95rem; transition: all 0.25s; }
-    .btn-download:hover { background: var(--bronce-oscuro); transform: translateY(-2px); }
+    /* SECCIONES CON EJEMPLOS */
+    .example-block { border-radius: 16px; overflow: hidden; margin-top: 32px; }
+    .example-nav { background: var(--azul-marina); padding: 16px 24px; display: flex; gap: 24px; align-items: center; }
+    .example-nav img { height: 36px; }
+    .example-nav-links { display: flex; gap: 20px; }
+    .example-nav-links span { font-size: 0.8rem; color: rgba(255,255,255,0.7); }
+    .example-hero { background: var(--grafito-3); padding: 48px; text-align: center; }
+    .example-hero-text { font-family: 'Playfair Display', serif; font-size: 2rem; color: white; margin-bottom: 8px; }
+    .example-hero-text span { color: var(--bronce); }
+    .example-hero-sub { font-size: 0.9rem; color: rgba(255,255,255,0.5); }
+    .example-badge { display: inline-block; background: rgba(245,166,35,0.15); border: 1px solid rgba(245,166,35,0.3); color: var(--bronce); font-size: 0.72rem; padding: 5px 14px; border-radius: 100px; margin-bottom: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* MINISITE CTA */
+    .minisite-cta { background: linear-gradient(135deg, var(--azul-marina) 0%, #0a1854 100%); border-radius: 20px; padding: 48px; text-align: center; border: 1px solid rgba(245,166,35,0.15); }
+    .minisite-cta h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 12px; }
+    .minisite-cta p { color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .btn-bronze { display: inline-flex; align-items: center; gap: 10px; background: var(--bronce); color: var(--negro); padding: 14px 32px; border-radius: 10px; font-weight: 600; font-size: 0.95rem; transition: all 0.25s; }
+    .btn-bronze:hover { background: var(--bronce-oscuro); transform: translateY(-2px); }
 
     /* FOOTER */
     footer { background: var(--grafito); border-top: 1px solid rgba(255,255,255,0.05); padding: 40px 0; text-align: center; }
     footer p { color: rgba(255,255,255,0.35); font-size: 0.82rem; }
     footer a { color: var(--bronce); }
 
+    /* TEXTOS EN FONDO BLANCO */
+    .bg-white h2 { color: var(--azul-marina); }
+    .bg-white h2 span { color: var(--bronce); }
+    .bg-white .section-intro { color: #64748b; }
+    .bg-white .section-tag { color: var(--bronce); }
+
     @media(max-width:768px) {
       .rules-grid { grid-template-columns: 1fr; }
       .grid-4 { grid-template-columns: repeat(2, 1fr); }
-      .spacing-grid { grid-template-columns: repeat(2, 1fr); }
+      .spacing-demo { justify-content: center; }
     }
   </style>
 </head>
@@ -176,75 +226,51 @@
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <div class="hero-badge">Manual de Marca</div>
-    <h1>Identidad Visual<br><span>Oportunidad País</span></h1>
-    <p class="hero-sub">Guía oficial de uso de la marca Oportunidad País. Aquí encontrarás todo lo necesario para aplicar correctamente nuestra identidad visual en cualquier pieza de comunicación.</p>
-    <div class="hero-logo">
-      <img src="/static/oportunidad-pais-logo.png" alt="Logo Oportunidad País">
-      <div>
-        <div class="hero-logo-label">Logo principal — versión actual</div>
-        <div class="hero-logo-label" style="opacity:0.5; font-size:0.75rem; margin-top:6px;">PNG transparente · 2026</div>
+    <div class="hero-badge">Manual de Marca · v1.0 · 2026</div>
+    <h1>Oportunidad <span>País</span></h1>
+    <p class="hero-sub">Guía oficial de identidad visual del podcast Oportunidad País. Todo lo necesario para aplicar correctamente la marca en cualquier pieza de comunicación.</p>
+    <div class="hero-logo-area">
+      <div class="logo-showcase">
+        <img src="/static/oportunidad-pais-logo.png" alt="Oportunidad País">
+      </div>
+      <div class="logo-info">
+        <div class="logo-info-title">Isologo principal</div>
+        <div class="logo-info-desc">Fondo blanco con texto en azul marina. Usar sobre fondos claros o como versión standalone. Proporción 1:1, mínimo 120px de ancho.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- LOGO SECTION -->
-<section class="bg-section">
-  <div class="container">
-    <div class="section-tag">Logo</div>
-    <h2>Variantes del <span>Logo</span></h2>
-    <p class="section-intro">El logo de Oportunidad País se presenta en dos variantes: una versión oscura para fondos claros y una versión clara para fondos oscuros. Usar siempre el archivo correcto según el contexto.</p>
-
-    <div class="grid-2">
-      <div class="logo-variant-card light-preview">
-        <div class="preview">
-          <img src="/static/oportunidad-pais-logo.png" alt="Logo fondo claro">
-        </div>
-        <div class="logo-variant-label" style="color:#1a1a1a;">Versión oscura</div>
-        <div class="logo-variant-desc" style="color:#888;">Para fondos claros y páginas blancas</div>
-      </div>
-      <div class="logo-variant-card dark-preview">
-        <div class="preview">
-          <img src="/static/oportunidad-pais-logo.png" alt="Logo fondo oscuro" style="filter: brightness(1.3);">
-        </div>
-        <div class="logo-variant-label" style="color:#fff;">Versión clara</div>
-        <div class="logo-variant-desc" style="color:rgba(255,255,255,0.4);">Para fondos oscuros y secciones dark</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COLORS -->
-<section class="bg-dark">
+<!-- COLORES -->
+<section class="bg-mid">
   <div class="container">
     <div class="section-tag">Paleta de Colores</div>
     <h2>Colores <span>Oficiales</span></h2>
-    <p class="section-intro">Nuestra paleta se inspira en los colores de Chile: el azul profundo de la bandera y el rojo vibrante. El bronce/dorado funciona como color de acento para dar personalidad y calidez a la marca.</p>
+    <p class="section-intro">La paleta se extrae directamente del logo y el contexto editorial del podcast. Azul marina como color dominante, bronce como acento vibrante para acciones y destaques.</p>
 
-    <div class="grid-4" style="margin-top:40px;">
+    <div class="grid-5" style="margin-top:40px;">
       <div class="color-card">
-        <div class="color-swatch" style="background:#0039A6;"></div>
+        <div class="color-swatch" style="background:#082663;"></div>
         <div class="color-info">
-          <div class="color-name">Azul Chile</div>
-          <div class="color-hex">#0039A6</div>
-          <div class="color-usage">Color primario. Navegación, headers y acentos principales.</div>
+          <div class="color-name">Azul Marina</div>
+          <div class="color-hex">#082663</div>
+          <div class="color-usage">Color primario del logo. Fondos de navegación, secciones de peso, texto sobre fondos claros.</div>
         </div>
       </div>
       <div class="color-card">
-        <div class="color-swatch" style="background:#002060;"></div>
+        <div class="color-swatch" style="background:#1A3A5F;"></div>
         <div class="color-info">
-          <div class="color-name">Azul Oscuro</div>
-          <div class="color-hex">#002060</div>
-          <div class="color-usage">Fondos profundos. Secciones hero y elementos de peso.</div>
+          <div class="color-name">Azul Profundo</div>
+          <div class="color-hex">#1A3A5F</div>
+          <div class="color-usage">Acentos en secciones hero, fondos de cards, variaciones de profundidad sobre azul marina.</div>
         </div>
       </div>
       <div class="color-card">
-        <div class="color-swatch" style="background:#D52B1E;"></div>
+        <div class="color-swatch" style="background:#1E40AF;"></div>
         <div class="color-info">
-          <div class="color-name">Rojo Chile</div>
-          <div class="color-hex">#D52B1E</div>
-          <div class="color-usage">Acentos secundarios. Botones CTA y highlights.</div>
+          <div class="color-name">Azul Brillante</div>
+          <div class="color-hex">#1E40AF</div>
+          <div class="color-usage">Links activos, estados hover, badges informativos, énfasis en elementos interactivos.</div>
         </div>
       </div>
       <div class="color-card">
@@ -252,18 +278,42 @@
         <div class="color-info">
           <div class="color-name">Bronce</div>
           <div class="color-hex">#F5A623</div>
-          <div class="color-usage">Color destaque. Tags, badges y elementos interactivos.</div>
+          <div class="color-usage">Color de acento principal. Botones CTA, badges, destacados, elementos que requieren atención.</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#E84C3D;"></div>
+        <div class="color-info">
+          <div class="color-name">Rojo Coral</div>
+          <div class="color-hex">#E84C3D</div>
+          <div class="color-usage">Acento secundario. Alertas, estados de urgencia, elementos editoriales que necesitan contraste.</div>
         </div>
       </div>
     </div>
 
-    <div class="grid-4" style="margin-top:20px;">
+    <div class="grid-5" style="margin-top:16px;">
       <div class="color-card">
-        <div class="color-swatch" style="background:#0A0A0A; border:1px solid rgba(255,255,255,0.1);"></div>
+        <div class="color-swatch" style="background:#FFFFFF; border-bottom:1px solid #e2e8f0;"></div>
         <div class="color-info">
-          <div class="color-name">Negro</div>
-          <div class="color-hex">#0A0A0A</div>
-          <div class="color-usage">Fondo principal del sitio. Color base de toda la composición.</div>
+          <div class="color-name">Blanco</div>
+          <div class="color-hex">#FFFFFF</div>
+          <div class="color-usage">Fondo principal de secciones, tarjetas y componentes sobre fondos claros. Contraste máximo.</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#F8FAFC; border-bottom:1px solid #e2e8f0;"></div>
+        <div class="color-info">
+          <div class="color-name">Blanco 2</div>
+          <div class="color-hex">#F8FAFC</div>
+          <div class="color-usage">Fondo secundario para secciones alternas, cards y componentes de interfaz ligera.</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#1E293B;"></div>
+        <div class="color-info">
+          <div class="color-name">Grafito 3</div>
+          <div class="color-hex">#1E293B</div>
+          <div class="color-usage">Fondo principal del sitio (dark mode). Superficies elevadas, bordes y separadores.</div>
         </div>
       </div>
       <div class="color-card">
@@ -271,172 +321,291 @@
         <div class="color-info">
           <div class="color-name">Grafito</div>
           <div class="color-hex">#1F2937</div>
-          <div class="color-usage">Fondos de secciones alternas y cards. Texto secundario.</div>
+          <div class="color-usage">Secciones alternas, componentes de profundidad media, fondos de tarjetas secondary.</div>
         </div>
       </div>
       <div class="color-card">
-        <div class="color-swatch" style="background:#374151;"></div>
+        <div class="color-swatch" style="background:#94A3B8;"></div>
         <div class="color-info">
-          <div class="color-name">Grafito 2</div>
-          <div class="color-hex">#374151</div>
-          <div class="color-usage">Cards, componentes y elementos elevados de la interfaz.</div>
-        </div>
-      </div>
-      <div class="color-card">
-        <div class="color-swatch" style="background:#FFFFFF;"></div>
-        <div class="color-info">
-          <div class="color-name">Blanco</div>
-          <div class="color-hex">#FFFFFF</div>
-          <div class="color-usage">Texto principal sobre fondos oscuros. Contraste máximo.</div>
+          <div class="color-name">Gris</div>
+          <div class="color-hex">#94A3B8</div>
+          <div class="color-usage">Texto secundario, labels, metadata, placeholders y elementos de bajo contraste.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TYPOGRAPHY -->
-<section class="bg-section">
+<!-- COLORES EN USO -->
+<section class="bg-white">
+  <div class="container">
+    <div class="section-tag">Ejemplos de Color</div>
+    <h2>Cómo se <span>aplican</span></h2>
+    <p class="section-intro">Ejemplos prácticos de cómo cada color funciona en contexto real dentro del sitio.</p>
+
+    <div class="grid-3" style="margin-top:32px;">
+      <div class="color-usage-card">
+        <div class="color-usage-preview" style="background:#082663;">
+          <span style="font-family:'Playfair Display',serif; color:white; font-size:0.95rem;">Oportunidad País</span>
+        </div>
+        <div class="color-usage-label">
+          <strong>Azul Marina — fondo</strong>
+          <span>Nav y secciones hero. Transmite autoridad y profesionalismo.</span>
+        </div>
+      </div>
+      <div class="color-usage-card">
+        <div class="color-usage-preview" style="background:#F5A623;">
+          <span style="font-weight:700; color:#0F172A; font-size:0.9rem; background:rgba(0,0,0,0.1); padding:6px 16px; border-radius:100px;">Escuchar ahora</span>
+        </div>
+        <div class="color-usage-label">
+          <strong>Bronce — CTA</strong>
+          <span>Botones primarios. Color de acción que destaca sobre cualquier fondo.</span>
+        </div>
+      </div>
+      <div class="color-usage-card">
+        <div class="color-usage-preview" style="background:#F8FAFC; border-bottom:1px solid #e2e8f0;">
+          <span style="font-family:'Playfair Display',serif; color:#082663; font-size:1.1rem;">Oportunidad <span style="color:#F5A623;">País</span></span>
+        </div>
+        <div class="color-usage-label">
+          <strong>Títulos con bronce</strong>
+          <span>Highlight en títulos. Marca el contraste entre lo genérico y lo específico.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIPOGRAFIA -->
+<section class="bg-white" style="padding-top:0;">
   <div class="container">
     <div class="section-tag">Tipografía</div>
     <h2>Familias <span>Tipográficas</span></h2>
-    <p class="section-intro">Usamos tres familias tipográficas que se complementan: Playfair Display para títulos transmite autoridad y sofisticación; Inter para cuerpo aporta legibilidad y modernidad; JetBrains Mono para datos y código.</p>
+    <p class="section-intro">Tres fuentes que se complementan: Playfair Display para transmitir autoridad editorial en títulos, Inter para legibilidad óptima en cuerpo, y JetBrains Mono para datos técnicos.</p>
 
     <div class="grid-2" style="margin-top:40px;">
-      <div class="type-sample">
-        <div class="type-label">Display / Títulos</div>
-        <div class="type-name">Playfair Display — 600, 700</div>
-        <h1 style="font-family:'Playfair Display',serif;">Oportunidad País</h1>
-        <p>Se usa en títulos de sección, headings principales y elementos destacados. Transmite sofisticación, autoridad editorial y profesionalismo. Nunca usar para cuerpo de texto.</p>
-      </div>
-      <div class="type-sample">
-        <div class="type-label">Cuerpo / UI</div>
-        <div class="type-name">Inter — 300, 400, 500, 600, 700</div>
-        <h1 style="font-family:'Inter',sans-serif; font-size:2rem;">Oportunidad País</h1>
-        <p>Tipografía principal para textos de lectura, descripciones, navegación y elementos de interfaz. Excelente legibilidad en pantalla. Peso base: 400. Títulos: 600–700.</p>
-      </div>
-      <div class="type-sample" style="grid-column:1/-1; border:none; padding-bottom:0;">
-        <div class="type-label">Código / Datos</div>
-        <div class="type-name">JetBrains Mono — 400, 500</div>
-        <div style="font-family:'JetBrains Mono',monospace; font-size:1.1rem; background:rgba(255,255,255,0.04); padding:16px; border-radius:8px; display:inline-block; margin-bottom:12px;">
-          #0039A6 · Azul Chile · RGB(0,57,166)
+      <div class="type-card">
+        <div class="type-font-name">Playfair Display</div>
+        <div class="type-font-meta">Display / Títulos · Serif · Pesos: 400, 600, 700</div>
+        <div class="type-sample">
+          <h1>Oportunidad País</h1>
+          <p>Se usa en títulos principales, headlines de sección y elementos de impacto. Transmite sofisticación editorial y autoridad. Nunca usar en cuerpo de texto — solo display.</p>
         </div>
-        <p>Para valores hexadecimales, métricas, badges y cualquier dato técnico. Transmite precisión y rigor técnico.</p>
+        <div class="type-sample" style="border:none; margin:0; padding:0;">
+          <h2>Tamaño h2 · Subsecciones</h2>
+          <p>Para subtítulos y elementos de navegación secundaria. Con peso 600 mantiene jerarquía clara.</p>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-font-name">Inter</div>
+        <div class="type-font-meta">Cuerpo / UI · Sans-serif · Pesos: 300, 400, 500, 600, 700</div>
+        <div class="type-sample">
+          <h1 style="font-family:Inter,sans-serif; font-size:1.8rem; color:#082663;">Oportunidad País</h1>
+          <p>Tipografía principal para todos los textos de lectura: descripciones, navegación, labels, metadata. Excelente legibilidad en pantalla. Base: 400. Títulos UI: 600.</p>
+        </div>
+        <div class="type-sample" style="border:none; margin:0; padding:0;">
+          <h2 style="font-family:Inter,sans-serif; font-size:1.1rem; color:#475569;">Texto de ejemplo en Inter</h2>
+          <p>Descripción de episodio, texto de cards, metadata y todo aquello que requiere lectura fluida.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="font-stacks" style="margin-top:24px;">
+      <div class="font-stack-item">
+        <div class="font-stack-name">Playfair Display</div>
+        <div class="font-stack-example">font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;</div>
+      </div>
+      <div class="font-stack-item">
+        <div class="font-stack-name">Inter</div>
+        <div class="font-stack-example">font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;</div>
+      </div>
+      <div class="font-stack-item">
+        <div class="font-stack-name">JetBrains Mono</div>
+        <div class="font-stack-example">font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SPACING -->
-<section class="bg-dark">
+<!-- VARIANTES DEL LOGO -->
+<section class="bg-mid">
+  <div class="container">
+    <div class="section-tag">El Logo</div>
+    <h2>Variantes <span>de uso</span></h2>
+    <p class="section-intro">El logo se presenta en versión única. El azul marina del texto funciona sobre fondo blanco. Para fondos oscuros se aplica filtro de brillo o se usa la versión white del contenedor.</p>
+
+    <div class="logo-variant-row" style="margin-top:40px;">
+      <div class="logo-variant-card">
+        <div class="logo-variant-bg" style="background:#FFFFFF;">
+          <img src="/static/oportunidad-pais-logo.png" alt="Logo fondo blanco">
+        </div>
+        <div class="logo-variant-label">
+          <strong>Fondo blanco</strong>
+          <span>Versión principal. Usar en cards, documentos y cualquier superficie clara.</span>
+        </div>
+      </div>
+      <div class="logo-variant-card">
+        <div class="logo-variant-bg" style="background:#082663;">
+          <img src="/static/oportunidad-pais-logo.png" alt="Logo fondo oscuro" style="filter: brightness(0) invert(1);">
+        </div>
+        <div class="logo-variant-label">
+          <strong>Fondo azul marino</strong>
+          <span>Versión invertida en blanco. Para navegación y secciones dark backgrounds.</span>
+        </div>
+      </div>
+      <div class="logo-variant-card">
+        <div class="logo-variant-bg" style="background:#0F172A;">
+          <img src="/static/oportunidad-pais-logo.png" alt="Logo fondo negro" style="filter: brightness(0) invert(1);">
+        </div>
+        <div class="logo-variant-label">
+          <strong>Fondo negro</strong>
+          <span>Versión invertida. Para secciones hero con fondo grafito oscuro.</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px; background:rgba(245,166,35,0.06); border:1px solid rgba(245,166,35,0.15); border-radius:12px; padding:20px 24px;">
+      <div style="font-size:0.82rem; color:rgba(255,255,255,0.5); line-height:1.6;">
+        <strong style="color:var(--bronce);">Nota sobre el logo:</strong> El logo es un isologo — la tipografía y el símbolo están integrados en un solo bloque. No separar los elementos. No reconstruir el texto manualmente. Usar siempre el archivo PNG del repositorio. Proporción 1:1, ancho mínimo 120px en pantalla, 30mm en impresión.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREA DE PROTECCION -->
+<section class="bg-white" style="padding-top:0;">
   <div class="container">
     <div class="section-tag">Espaciado</div>
     <h2>Área de <span>Protección</span></h2>
-    <p class="section-intro">Mantener un área de protección mínima alrededor del logo equivale a la altura del isotipo. Ningún elemento visual debe invadir esta zona.</p>
+    <p class="section-intro">El área de protección equivale a la altura de la palabra "País" del logo. Ningún elemento visual debe invadir esta zona.</p>
 
-    <div class="spacing-grid" style="margin-top:40px;">
-      <div class="spacing-item">
-        <div style="display:flex; justify-content:center; align-items:center; height:120px;">
-          <div style="border:1px dashed rgba(245,166,35,0.3); width:120px; height:120px; display:flex; justify-content:center; align-items:center;">
-            <div style="width:60px; height:60px; background:rgba(245,166,35,0.15); border:1px dashed var(--bronce); border-radius:4px; display:flex; justify-content:center; align-items:center;">
-              <span style="font-size:1.2rem;">🔵</span>
-            </div>
-          </div>
+    <div class="spacing-demo" style="margin-top:40px; gap:28px;">
+      <div style="text-align:center;">
+        <div style="display:flex; justify-content:center; align-items:center; width:120px; height:120px; background:rgba(8,38,99,0.04); border:1px dashed rgba(8,38,99,0.2); border-radius:8px;">
+          <div style="width:60px; height:60px; background:rgba(245,166,35,0.1); border:1px dashed var(--bronce); border-radius:4px; display:flex; justify-content:center; align-items:center; font-size:0.75rem; color:var(--bronce); font-weight:600;">LOGO</div>
         </div>
-        <div class="spacing-label">X = Altura logo</div>
-        <div style="font-size:0.78rem; color:rgba(255,255,255,0.35); margin-top:4px;">Mínimo requerido</div>
+        <div class="spacing-label" style="margin-top:10px;">X = altura logo</div>
+        <div style="font-size:0.72rem; color:#94a3b8; margin-top:4px;">Mínimo requerido</div>
       </div>
-      <div class="spacing-item">
-        <div style="display:flex; justify-content:center; align-items:center; height:120px;">
-          <div style="border:1px dashed rgba(245,166,35,0.3); width:160px; height:120px; display:flex; justify-content:center; align-items:center;">
-            <div style="width:60px; height:60px; background:rgba(245,166,35,0.15); border:1px dashed var(--bronce); border-radius:4px; display:flex; justify-content:center; align-items:center;">
-              <span style="font-size:1.2rem;">🔵</span>
-            </div>
-          </div>
+      <div style="text-align:center;">
+        <div style="display:flex; justify-content:center; align-items:center; width:160px; height:120px; background:rgba(8,38,99,0.04); border:1px dashed rgba(8,38,99,0.2); border-radius:8px;">
+          <div style="width:60px; height:60px; background:rgba(245,166,35,0.1); border:1px dashed var(--bronce); border-radius:4px; display:flex; justify-content:center; align-items:center; font-size:0.75rem; color:var(--bronce); font-weight:600;">LOGO</div>
         </div>
-        <div class="spacing-label">2X = Recomendado</div>
-        <div style="font-size:0.78rem; color:rgba(255,255,255,0.35); margin-top:4px;">Para más aire</div>
+        <div class="spacing-label" style="margin-top:10px;">2X = recomendado</div>
+        <div style="font-size:0.72rem; color:#94a3b8; margin-top:4px;">Para más aire</div>
       </div>
-      <div class="spacing-item">
-        <div style="display:flex; justify-content:center; align-items:center; height:120px;">
-          <img src="/static/oportunidad-pais-logo.png" style="height:60px;">
+      <div style="text-align:center;">
+        <div style="display:flex; justify-content:center; align-items:center; width:120px; height:120px; background:#082663; border-radius:8px;">
+          <img src="/static/oportunidad-pais-logo.png" style="height:50px; filter:brightness(0) invert(1);">
         </div>
-        <div class="spacing-label">Ejemplo aplicado</div>
-        <div style="font-size:0.78rem; color:rgba(255,255,255,0.35); margin-top:4px;">En contexto real</div>
+        <div class="spacing-label" style="margin-top:10px;">En contexto</div>
+        <div style="font-size:0.72rem; color:#94a3b8; margin-top:4px;">Con fondo azul</div>
       </div>
-      <div class="spacing-item">
-        <div style="display:flex; justify-content:center; align-items:center; height:120px;">
-          <div style="background:var(--grafito); border-radius:8px; padding:16px; width:140px; height:90px; display:flex; justify-content:center; align-items:center; border:1px solid rgba(255,255,255,0.06);">
-            <img src="/static/oportunidad-pais-logo.png" style="height:50px;">
-          </div>
+      <div style="text-align:center;">
+        <div style="display:flex; justify-content:center; align-items:center; width:120px; height:120px; background:white; border-radius:8px; border:1px solid #e2e8f0; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+          <img src="/static/oportunidad-pais-logo.png" style="height:50px;">
         </div>
-        <div class="spacing-label">En tarjeta</div>
-        <div style="font-size:0.78rem; color:rgba(255,255,255,0.35); margin-top:4px;">Con fondo oscuro</div>
+        <div class="spacing-label" style="margin-top:10px;">En tarjeta</div>
+        <div style="font-size:0.72rem; color:#94a3b8; margin-top:4px;">Fondo blanco</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="display:flex; justify-content:center; align-items:center; width:200px; height:80px; background:linear-gradient(135deg, #082663, #0a1854); border-radius:8px; padding:0 20px;">
+          <img src="/static/oportunidad-pais-logo.png" style="height:40px; filter:brightness(0) invert(1);">
+          <span style="color:white; font-size:0.8rem; font-weight:600; margin-left:12px;">Podcast</span>
+        </div>
+        <div class="spacing-label" style="margin-top:10px;">En navbar</div>
+        <div style="font-size:0.72rem; color:#94a3b8; margin-top:4px;">Con texto adiciónal</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DO's and DON'Ts -->
-<section class="bg-section">
+<!-- DO's AND DON'Ts -->
+<section class="bg-mid" style="padding-top:0;">
   <div class="container">
     <div class="section-tag">Directrices</div>
     <h2>Usos <span>Correctos</span> e Incorrectos</h2>
-    <p class="section-intro">Para mantener la integridad de la marca, respetá estas reglas básicas de aplicación.</p>
+    <p class="section-intro">Reglas básicas para mantener la integridad de la marca en todas las aplicaciones.</p>
 
-    <div class="rules-grid" style="margin-top:40px;">
+    <div class="rules-grid" style="margin-top:36px;">
       <div class="rule-card do">
         <div class="rule-icon">✅</div>
-        <div class="rule-title">Usar sobre fondos oscuros</div>
-        <div class="rule-desc">El logo funciona perfectamente sobre negro (#0A0A0A) y azul oscuro (#002060). Estos son los contextos preferidos.</div>
+        <div class="rule-title">Usar la paleta de colores oficial</div>
+        <div class="rule-desc">Azul marina (#082663) como base, bronce (#F5A623) para acentos y CTAs, blanco para fondos. No crear colores adicionales.</div>
       </div>
       <div class="rule-card dont">
         <div class="rule-icon">❌</div>
-        <div class="rule-title">No deformar el logo</div>
-        <div class="rule-desc">Nunca estirar, comprimir ni alterar las proporciones del logo. Siempre mantener su aspect ratio original.</div>
+        <div class="rule-title">No deformar ni alterear el logo</div>
+        <div class="rule-desc">Nunca estirar, comprimir ni modificar las proporciones del logo. Mantener aspect ratio 1:1 y ancho mínimo de 120px.</div>
       </div>
       <div class="rule-card do">
         <div class="rule-icon">✅</div>
-        <div class="rule-title">Usar los colores oficiales</div>
-        <div class="rule-desc">Aplicar la paleta exacta definida en este manual. No inventar colores adicionales ni hacer variaciones.</div>
+        <div class="rule-title">Usar tipografías de Google Fonts</div>
+        <div class="rule-desc">Playfair Display para títulos, Inter para cuerpo, JetBrains Mono para datos. Cargar desde fonts.googleapis.com.</div>
       </div>
       <div class="rule-card dont">
         <div class="rule-icon">❌</div>
-        <div class="rule-title">No agregar sombras ni efectos</div>
-        <div class="rule-desc">No aplicar sombras, gradientes, blur ni efectos visuales al logo. Mantenerlo limpio y plano.</div>
+        <div class="rule-title">No aplicar efectos al logo</div>
+        <div class="rule-desc">No usar sombras, gradientes, blur ni glow sobre el logo. Mantener siempre versión limpia y plana.</div>
       </div>
       <div class="rule-card do">
         <div class="rule-icon">✅</div>
-        <div class="rule-title">Respetar el espaciado mínimo</div>
-        <div class="rule-desc">Mantener el área de protección equivalente a la altura del isotipo alrededor del logo en todo momento.</div>
+        <div class="rule-title">Respetar el área de protección</div>
+        <div class="rule-desc">Dejar al menos una altura de logo como margen alrededor. Esto garantiza que el logo respire en cualquier contexto.</div>
       </div>
       <div class="rule-card dont">
         <div class="rule-icon">❌</div>
-        <div class="rule-title">No cambiar tipografía</div>
-        <div class="rule-desc">No reemplazar Playfair Display o Inter por otras tipografías. Usar únicamente las familias definidas.</div>
+        <div class="rule-title">No cambiar colores del logo</div>
+        <div class="rule-desc">No recolorear el logo ni aplicar filtros. Usar la versión invertida (blanco) para fondos oscuros, nunca alterar los colores originales.</div>
       </div>
       <div class="rule-card do">
         <div class="rule-icon">✅</div>
-        <div class="rule-title">Tamaño mínimo legible</div>
-        <div class="rule-desc">No usar el logo a un ancho menor a 120px en pantalla. Para impresión, mínimo 30mm de ancho.</div>
+        <div class="rule-title">Usar fondos oscuros para contraste</div>
+        <div class="rule-desc">El sitio funciona en dark mode (#0F172A). Sobre estos fondos usar logo invertido en blanco para máximo contraste.</div>
       </div>
       <div class="rule-card dont">
         <div class="rule-icon">❌</div>
-        <div class="rule-title">No recolorear el logo</div>
-        <div class="rule-desc">No aplicar filtros de color ni cambiar los colores del logo. Usar la versión correcta según el fondo.</div>
+        <div class="rule-title">No usar sobre fondos complejos</div>
+        <div class="rule-desc">No colocar el logo sobre fotos, patrones o fondos con mucho detalle. Siempre sobre fondos planos y limpios.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DOWNLOAD -->
-<section class="bg-dark">
+<!-- EJEMPLO EN CONTEXTO -->
+<section class="bg-dark" style="padding-top:0;">
   <div class="container">
-    <div class="download-cta">
+    <div class="section-tag">Ejemplo</div>
+    <h2>Aplicación en <span>contexto real</span></h2>
+    <p class="section-intro">Así se ve la identidad aplicada en el sitio web del podcast.</p>
+
+    <div class="example-block" style="margin-top:32px; border-radius:20px; overflow:hidden; max-width:800px; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+      <div class="example-nav">
+        <img src="/static/oportunidad-pais-logo.png" alt="OP" style="filter:brightness(0) invert(1);">
+        <div class="example-nav-links">
+          <span>Capítulos</span>
+          <span style="color:var(--bronce);">Manual de Marca</span>
+          <span>Diego Arias</span>
+        </div>
+        <div style="margin-left:auto; background:var(--bronce); color:var(--negro); font-size:0.72rem; font-weight:600; padding:6px 14px; border-radius:6px;">Escuchar ahora</div>
+      </div>
+      <div class="example-hero" style="background:linear-gradient(135deg, #0F172A 0%, #082663 100%);">
+        <div class="example-badge">Podcast de Desafío Latam</div>
+        <div class="example-hero-text">Oportunidad <span>País</span></div>
+        <div class="example-hero-sub">Conversaciones sin filtro sobre las oportunidades de Chile</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESCARGAS -->
+<section class="bg-mid">
+  <div class="container">
+    <div class="minisite-cta">
       <h3>Descargá los activos</h3>
-      <p>Todos los archivos de marca están disponibles en el repositorio de GitHub. Incluye logo en PNG, versión para fondos claros y versión oscura.</p>
-      <a href="https://github.com/diegoa87/oportunidadpais-site/tree/main/static" target="_blank" class="btn-download">
+      <p>Todos los archivos de marca están disponibles en el repositorio de GitHub del proyecto. Incluye logo en PNG transparente y versión para fondos oscuros.</p>
+      <a href="https://github.com/diegoa87/oportunidadpais-site/tree/main/static" target="_blank" class="btn-bronce">
         <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-        Ver en GitHub
+        Ver archivos en GitHub
       </a>
     </div>
   </div>
@@ -444,7 +613,7 @@
 
 <footer>
   <div class="container">
-    <p>© 2026 Oportunidad País — Manual de Marca. Un podcast de <a href="https://www.desafiolatam.com" target="_blank">Desafío Latam</a>.</p>
+    <p>© 2026 Oportunidad País — Manual de Marca v1.0. Un podcast de <a href="https://www.desafiolatam.com" target="_blank">Desafío Latam</a>.</p>
   </div>
 </footer>
 
