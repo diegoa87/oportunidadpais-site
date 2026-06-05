@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual de Marca — Oportunidad País</title>
+  <link rel="icon" type="image/png" href="/static/favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --negro: #0A0A0A;
+      --grafito: #1F2937;
+      --grafito-2: #374151;
+      --blanco: #FFFFFF;
+      --azul: #0039A6;
+      --azul-oscuro: #002060;
+      --rojo: #D52B1E;
+      --bronce: #F5A623;
+      --bronce-oscuro: #D4890F;
+      --azul-letras: #1E3A5F;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--negro); color: var(--blanco); line-height: 1.7; max-width: 100vw; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(14px);
+      z-index: 1000;
+      padding: 14px 0;
+      border-bottom: 2px solid var(--azul);
+    }
+    nav .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo img { height: 50px; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--blanco); font-size: 0.88rem; opacity: 0.7; transition: all 0.3s; font-weight: 500; }
+    .nav-links a:hover { opacity: 1; color: var(--bronce); }
+    .nav-links a.active { opacity: 1; color: var(--bronce); }
+    .nav-cta { background: var(--bronce); color: var(--negro) !important; padding: 8px 20px; border-radius: 8px; font-weight: 600 !important; opacity: 1 !important; }
+    .nav-cta:hover { background: var(--bronce-oscuro); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 6px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--blanco); border-radius: 2px; }
+
+    @media(max-width:768px) {
+      .hamburger { display: flex; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,10,10,0.97); padding: 24px; gap: 20px; border-bottom: 1px solid rgba(232,168,56,0.12); }
+      .nav-links.open { display: flex; }
+    }
+
+    /* HERO */
+    .hero {
+      padding: 140px 0 60px;
+      background: var(--negro);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(0,57,166,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(213,43,30,0.06) 0%, transparent 50%);
+      z-index: 0;
+    }
+    .hero > * { position: relative; z-index: 1; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,57,166,0.1); border: 1px solid rgba(0,57,166,0.25); border-radius: 100px; padding: 6px 16px; font-size: 0.78rem; color: var(--azul); margin-bottom: 20px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.1; margin-bottom: 16px; letter-spacing: -0.5px; }
+    .hero h1 span { color: var(--bronce); }
+    .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.6); max-width: 600px; line-height: 1.7; }
+    .hero-logo { margin-top: 48px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+    .hero-logo img { height: 100px; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 16px; background: rgba(255,255,255,0.03); }
+    .hero-logo-label { font-size: 0.82rem; color: rgba(255,255,255,0.4); }
+
+    /* SECTION */
+    section { padding: 80px 0; }
+    .section-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--bronce); font-weight: 700; margin-bottom: 10px; }
+    h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 12px; }
+    h2 span { color: var(--bronce); }
+    .section-intro { color: rgba(255,255,255,0.5); font-size: 0.95rem; margin-bottom: 40px; max-width: 620px; }
+
+    .bg-section { background: var(--grafito); }
+    .bg-dark { background: var(--negro); }
+
+    /* GRID */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    @media(max-width:900px) { .grid-3 { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:600px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+    /* COLOR CARDS */
+    .color-card { border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); }
+    .color-swatch { height: 100px; }
+    .color-info { padding: 16px; background: var(--grafito-2); }
+    .color-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+    .color-hex { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-bottom: 2px; }
+    .color-usage { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+
+    /* LOGO VARIANTS */
+    .logo-variant-card { background: var(--grafito-2); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 32px; text-align: center; }
+    .logo-variant-card .preview { height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+    .logo-variant-card .preview img { max-height: 80px; }
+    .logo-variant-card.light-preview { background: #F8F8F8; }
+    .logo-variant-card.dark-preview { background: var(--negro); }
+    .logo-variant-label { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+    .logo-variant-desc { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+
+    /* SPACING GUIDE */
+    .spacing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .spacing-item { text-align: center; }
+    .spacing-box { margin: 0 auto 10px; background: rgba(245,166,35,0.15); border: 1px dashed var(--bronce); border-radius: 4px; }
+    .spacing-label { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--bronce); font-weight: 500; }
+
+    /* TYPOGRAPHY */
+    .type-sample { margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .type-sample:last-child { border: none; }
+    .type-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--bronce); font-weight: 700; margin-bottom: 8px; }
+    .type-name { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
+    .type-sample h1 { font-family: 'Playfair Display', serif; margin-bottom: 8px; }
+    .type-sample h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 8px; }
+    .type-sample p { font-size: 0.95rem; color: rgba(255,255,255,0.6); }
+
+    /* DO's and DON'Ts */
+    .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .rule-card { border-radius: 12px; padding: 24px; }
+    .rule-card.do { background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.2); }
+    .rule-card.dont { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.2); }
+    .rule-icon { font-size: 1.5rem; margin-bottom: 12px; }
+    .rule-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 6px; }
+    .rule-desc { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+
+    /* DOWNLOAD CTA */
+    .download-cta { background: linear-gradient(135deg, var(--azul) 0%, var(--azul-oscuro) 100%); border-radius: 20px; padding: 48px; text-align: center; border: 1px solid rgba(0,57,166,0.3); }
+    .download-cta h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 12px; }
+    .download-cta p { color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .btn-download { display: inline-flex; align-items: center; gap: 10px; background: var(--bronce); color: var(--negro); padding: 14px 32px; border-radius: 10px; font-weight: 600; font-size: 0.95rem; transition: all 0.25s; }
+    .btn-download:hover { background: var(--bronce-oscuro); transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { background: var(--grafito); border-top: 1px solid rgba(255,255,255,0.05); padding: 40px 0; text-align: center; }
+    footer p { color: rgba(255,255,255,0.35); font-size: 0.82rem; }
+    footer a { color: var(--bronce); }
+
+    @media(max-width:768px) {
+      .rules-grid { grid-template-columns: 1fr; }
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .spacing-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="/" class="logo"><img src="/static/go-logo-white.png" alt="Diego Arias"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/#episodes">Capítulos</a></li>
+      <li><a href="/#about">Sobre el Podcast</a></li>
+      <li><a href="/manual-marca" class="active">Manual de Marca</a></li>
+      <li><a href="https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ" target="_blank" class="nav-cta">Escuchar ahora</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">Manual de Marca</div>
+    <h1>Identidad Visual<br><span>Oportunidad País</span></h1>
+    <p class="hero-sub">Guía oficial de uso de la marca Oportunidad País. Aquí encontrarás todo lo necesario para aplicar correctamente nuestra identidad visual en cualquier pieza de comunicación.</p>
+    <div class="hero-logo">
+      <img src="/static/oportunidad-pais-logo.png" alt="Logo Oportunidad País">
+      <div>
+        <div class="hero-logo-label">Logo principal — versión actual</div>
+        <div class="hero-logo-label" style="opacity:0.5; font-size:0.75rem; margin-top:6px;">PNG transparente · 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO SECTION -->
+<section class="bg-section">
+  <div class="container">
+    <div class="section-tag">Logo</div>
+    <h2>Variantes del <span>Logo</span></h2>
+    <p class="section-intro">El logo de Oportunidad País se presenta en dos variantes: una versión oscura para fondos claros y una versión clara para fondos oscuros. Usar siempre el archivo correcto según el contexto.</p>
+
+    <div class="grid-2">
+      <div class="logo-variant-card light-preview">
+        <div class="preview">
+          <img src="/static/oportunidad-pais-logo.png" alt="Logo fondo claro">
+        </div>
+        <div class="logo-variant-label" style="color:#1a1a1a;">Versión oscura</div>
+        <div class="logo-variant-desc" style="color:#888;">Para fondos claros y páginas blancas</div>
+      </div>
+      <div class="logo-variant-card dark-preview">
+        <div class="preview">
+          <img src="/static/oportunidad-pais-logo.png" alt="Logo fondo oscuro" style="filter: brightness(1.3);">
+        </div>
+        <div class="logo-variant-label" style="color:#fff;">Versión clara</div>
+        <div class="logo-variant-desc" style="color:rgba(255,255,255,0.4);">Para fondos oscuros y secciones dark</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLORS -->
+<section class="bg-dark">
+  <div class="container">
+    <div class="section-tag">Paleta de Colores</div>
+    <h2>Colores <span>Oficiales</span></h2>
+    <p class="section-intro">Nuestra paleta se inspira en los colores de Chile: el azul profundo de la bandera y el rojo vibrante. El bronce/dorado funciona como color de acento para dar personalidad y calidez a la marca.</p>
+
+    <div class="grid-4" style="margin-top:40px;">
+      <div class="color-card">
+        <div class="color-swatch" style="background:#0039A6;"></div>
+        <div class="color-info">
+          <div class="color-name">Azul Chile</div>
+          <div class="color-hex">#0039A6</div>
+          <div class="color-usage">Color primario. Navegación, headers y acentos principales.</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#002060;"></div>
+        <div class="color-info">
+          <div class="color-name">Azul Oscuro</div>
+          <div class="color-hex">#002060</div>
+          <div class="color-usage">Fondos profundos. Secciones hero y elementos de peso.</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#D52B1E;"></div>
+        <div class="color-info">
+          <div class="color-name">Rojo Chile</div>
+          <div class="color-hex">#D52B1E</div>
+          <div class="color-usage">Acentos secundarios. Botones CTA y highlights.</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#F5A623;"></div>
+        <div class="color-info">
+          <div class="color-name">Bronce</div>
+          <div class="color-hex">#F5A623</div>
+          <div class="color-usage">Color destaque. Tags, badges y elementos interactivos.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-4" style="margin-top:20px;">
+      <div class="color-card">
+        <div class="color-swatch" style="background:#0A0A0A; border:1px solid rgba(255,255,255,0.1);"></div>
+        <div class="color-info">
+          <div class="color-name">Negro</div>
+          <div class="color-hex">#0A0A0A</div>
+          <div class="color-usage">Fondo principal del sitio. Color base de toda la composición.</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#1F2937;"></div>
+        <div class="color-info">
+          <div class="color-name">Grafito</div>
+          <div class="color-hex">#1F2937</div>
+          <div class="color-usage">Fondos de secciones alternas y cards. Texto secundario.</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#374151;"></div>
+        <div class="color-info">
+          <div class="color-name">Grafito 2</div>
+          <div class="color-hex">#374151</div>
+          <div class="color-usage">Cards, componentes y elementos elevados de la interfaz.</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#FFFFFF;"></div>
+        <div class="color-info">
+          <div class="color-name">Blanco</div>
+          <div class="color-hex">#FFFFFF</div>
+          <div class="color-usage">Texto principal sobre fondos oscuros. Contraste máximo.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPOGRAPHY -->
+<section class="bg-section">
+  <div class="container">
+    <div class="section-tag">Tipografía</div>
+    <h2>Familias <span>Tipográficas</span></h2>
+    <p class="section-intro">Usamos tres familias tipográficas que se complementan: Playfair Display para títulos transmite autoridad y sofisticación; Inter para cuerpo aporta legibilidad y modernidad; JetBrains Mono para datos y código.</p>
+
+    <div class="grid-2" style="margin-top:40px;">
+      <div class="type-sample">
+        <div class="type-label">Display / Títulos</div>
+        <div class="type-name">Playfair Display — 600, 700</div>
+        <h1 style="font-family:'Playfair Display',serif;">Oportunidad País</h1>
+        <p>Se usa en títulos de sección, headings principales y elementos destacados. Transmite sofisticación, autoridad editorial y profesionalismo. Nunca usar para cuerpo de texto.</p>
+      </div>
+      <div class="type-sample">
+        <div class="type-label">Cuerpo / UI</div>
+        <div class="type-name">Inter — 300, 400, 500, 600, 700</div>
+        <h1 style="font-family:'Inter',sans-serif; font-size:2rem;">Oportunidad País</h1>
+        <p>Tipografía principal para textos de lectura, descripciones, navegación y elementos de interfaz. Excelente legibilidad en pantalla. Peso base: 400. Títulos: 600–700.</p>
+      </div>
+      <div class="type-sample" style="grid-column:1/-1; border:none; padding-bottom:0;">
+        <div class="type-label">Código / Datos</div>
+        <div class="type-name">JetBrains Mono — 400, 500</div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:1.1rem; background:rgba(255,255,255,0.04); padding:16px; border-radius:8px; display:inline-block; margin-bottom:12px;">
+          #0039A6 · Azul Chile · RGB(0,57,166)
+        </div>
+        <p>Para valores hexadecimales, métricas, badges y cualquier dato técnico. Transmite precisión y rigor técnico.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPACING -->
+<section class="bg-dark">
+  <div class="container">
+    <div class="section-tag">Espaciado</div>
+    <h2>Área de <span>Protección</span></h2>
+    <p class="section-intro">Mantener un área de protección mínima alrededor del logo equivale a la altura del isotipo. Ningún elemento visual debe invadir esta zona.</p>
+
+    <div class="spacing-grid" style="margin-top:40px;">
+      <div class="spacing-item">
+        <div style="display:flex; justify-content:center; align-items:center; height:120px;">
+          <div style="border:1px dashed rgba(245,166,35,0.3); width:120px; height:120px; display:flex; justify-content:center; align-items:center;">
+            <div style="width:60px; height:60px; background:rgba(245,166,35,0.15); border:1px dashed var(--bronce); border-radius:4px; display:flex; justify-content:center; align-items:center;">
+              <span style="font-size:1.2rem;">🔵</span>
+            </div>
+          </div>
+        </div>
+        <div class="spacing-label">X = Altura logo</div>
+        <div style="font-size:0.78rem; color:rgba(255,255,255,0.35); margin-top:4px;">Mínimo requerido</div>
+      </div>
+      <div class="spacing-item">
+        <div style="display:flex; justify-content:center; align-items:center; height:120px;">
+          <div style="border:1px dashed rgba(245,166,35,0.3); width:160px; height:120px; display:flex; justify-content:center; align-items:center;">
+            <div style="width:60px; height:60px; background:rgba(245,166,35,0.15); border:1px dashed var(--bronce); border-radius:4px; display:flex; justify-content:center; align-items:center;">
+              <span style="font-size:1.2rem;">🔵</span>
+            </div>
+          </div>
+        </div>
+        <div class="spacing-label">2X = Recomendado</div>
+        <div style="font-size:0.78rem; color:rgba(255,255,255,0.35); margin-top:4px;">Para más aire</div>
+      </div>
+      <div class="spacing-item">
+        <div style="display:flex; justify-content:center; align-items:center; height:120px;">
+          <img src="/static/oportunidad-pais-logo.png" style="height:60px;">
+        </div>
+        <div class="spacing-label">Ejemplo aplicado</div>
+        <div style="font-size:0.78rem; color:rgba(255,255,255,0.35); margin-top:4px;">En contexto real</div>
+      </div>
+      <div class="spacing-item">
+        <div style="display:flex; justify-content:center; align-items:center; height:120px;">
+          <div style="background:var(--grafito); border-radius:8px; padding:16px; width:140px; height:90px; display:flex; justify-content:center; align-items:center; border:1px solid rgba(255,255,255,0.06);">
+            <img src="/static/oportunidad-pais-logo.png" style="height:50px;">
+          </div>
+        </div>
+        <div class="spacing-label">En tarjeta</div>
+        <div style="font-size:0.78rem; color:rgba(255,255,255,0.35); margin-top:4px;">Con fondo oscuro</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DO's and DON'Ts -->
+<section class="bg-section">
+  <div class="container">
+    <div class="section-tag">Directrices</div>
+    <h2>Usos <span>Correctos</span> e Incorrectos</h2>
+    <p class="section-intro">Para mantener la integridad de la marca, respetá estas reglas básicas de aplicación.</p>
+
+    <div class="rules-grid" style="margin-top:40px;">
+      <div class="rule-card do">
+        <div class="rule-icon">✅</div>
+        <div class="rule-title">Usar sobre fondos oscuros</div>
+        <div class="rule-desc">El logo funciona perfectamente sobre negro (#0A0A0A) y azul oscuro (#002060). Estos son los contextos preferidos.</div>
+      </div>
+      <div class="rule-card dont">
+        <div class="rule-icon">❌</div>
+        <div class="rule-title">No deformar el logo</div>
+        <div class="rule-desc">Nunca estirar, comprimir ni alterar las proporciones del logo. Siempre mantener su aspect ratio original.</div>
+      </div>
+      <div class="rule-card do">
+        <div class="rule-icon">✅</div>
+        <div class="rule-title">Usar los colores oficiales</div>
+        <div class="rule-desc">Aplicar la paleta exacta definida en este manual. No inventar colores adicionales ni hacer variaciones.</div>
+      </div>
+      <div class="rule-card dont">
+        <div class="rule-icon">❌</div>
+        <div class="rule-title">No agregar sombras ni efectos</div>
+        <div class="rule-desc">No aplicar sombras, gradientes, blur ni efectos visuales al logo. Mantenerlo limpio y plano.</div>
+      </div>
+      <div class="rule-card do">
+        <div class="rule-icon">✅</div>
+        <div class="rule-title">Respetar el espaciado mínimo</div>
+        <div class="rule-desc">Mantener el área de protección equivalente a la altura del isotipo alrededor del logo en todo momento.</div>
+      </div>
+      <div class="rule-card dont">
+        <div class="rule-icon">❌</div>
+        <div class="rule-title">No cambiar tipografía</div>
+        <div class="rule-desc">No reemplazar Playfair Display o Inter por otras tipografías. Usar únicamente las familias definidas.</div>
+      </div>
+      <div class="rule-card do">
+        <div class="rule-icon">✅</div>
+        <div class="rule-title">Tamaño mínimo legible</div>
+        <div class="rule-desc">No usar el logo a un ancho menor a 120px en pantalla. Para impresión, mínimo 30mm de ancho.</div>
+      </div>
+      <div class="rule-card dont">
+        <div class="rule-icon">❌</div>
+        <div class="rule-title">No recolorear el logo</div>
+        <div class="rule-desc">No aplicar filtros de color ni cambiar los colores del logo. Usar la versión correcta según el fondo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="bg-dark">
+  <div class="container">
+    <div class="download-cta">
+      <h3>Descargá los activos</h3>
+      <p>Todos los archivos de marca están disponibles en el repositorio de GitHub. Incluye logo en PNG, versión para fondos claros y versión oscura.</p>
+      <a href="https://github.com/diegoa87/oportunidadpais-site/tree/main/static" target="_blank" class="btn-download">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        Ver en GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Oportunidad País — Manual de Marca. Un podcast de <a href="https://www.desafiolatam.com" target="_blank">Desafío Latam</a>.</p>
+  </div>
+</footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
