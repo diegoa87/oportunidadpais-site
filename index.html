@@ -18,17 +18,15 @@
 
   <style>
     :root {
-      --azul-profundo: #1A3A5C;
-      --dorado: #F5A623;
-      --rojo-coral: #E84C3D;
-      --texto: #2C3E50;
-      --azul-oscuro: #122D4A;
-      --azul-medio: #1A3A5C;
+      --azul: #0039A6;
+      --azul-oscuro: #002060;
+      --rojo: #D52B1E;
+      --bronce: #F5A623;
+      --bronce-oscuro: #D4890F;
+      --negro: #0A0A0A;
+      --grafito: #1F2937;
+      --grafito-2: #374151;
       --blanco: #FFFFFF;
-      --crema: #FDF6EC;
-      --gris: #4A5568;
-      --gris-oscuro: #4A5568;
-      --azul-acento: #1A3A5C;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -45,7 +43,7 @@
       backdrop-filter: blur(14px);
       z-index: 1000;
       padding: 14px 0;
-      border-bottom: 1px solid rgba(232,168,56,0.12);
+      border-bottom: 2px solid var(--azul);
     }
     nav .container { display: flex; justify-content: space-between; align-items: center; }
     .logo img { height: 50px; width: auto; }
@@ -84,11 +82,11 @@
     }
     .hero > * { position: relative; z-index: 1; }
     .hero .container { display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: center; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(232,168,56,0.1); border: 1px solid rgba(232,168,56,0.25); border-radius: 100px; padding: 6px 16px; font-size: 0.8rem; color: var(--bronce); margin-bottom: 24px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
-    .hero-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--bronce); animation: pulse 2s infinite; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,57,166,0.1); border: 1px solid rgba(0,57,166,0.25); border-radius: 100px; padding: 6px 16px; font-size: 0.8rem; color: var(--azul); margin-bottom: 24px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+    .hero-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--azul); animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
     .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 6vw, 5rem); font-weight: 700; line-height: 1.1; margin-bottom: 20px; letter-spacing: -1px; }
-    .hero h1 span { color: var(--bronce); }
+    .hero h1 span { color: var(--azul); }
     .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.7); max-width: 560px; margin-bottom: 36px; line-height: 1.7; font-weight: 400; }
     .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
     .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 10px; font-size: 0.95rem; font-weight: 600; transition: all 0.25s; cursor: pointer; border: none; }
@@ -99,12 +97,12 @@
     .hero-meta { display: flex; gap: 32px; }
     .hero-meta-item { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
     .hero-meta-item strong { color: var(--bronce); font-size: 1.1rem; display: block; font-family: 'Playfair Display', serif; }
-    .podcast-icon { width: 260px; height: 260px; background: linear-gradient(135deg, var(--grafito-2) 0%, #16324F 100%); border: 1px solid rgba(232,168,56,0.2); border-radius: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; position: relative; }
-    .podcast-icon::before { content: ''; position: absolute; inset: -1px; border-radius: 24px; padding: 1px; background: linear-gradient(135deg, rgba(232,168,56,0.4), transparent, rgba(214,40,40,0.3)); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
-    .podcast-icon .icon-emoji { font-size: 3.5rem; }
-    .podcast-icon .icon-label { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; color: var(--bronce); }
-    .podcast-icon .icon-label-sm { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
-    .podcast-icon .icon-ep { position: absolute; bottom: 16px; right: 16px; background: var(--bronce); color: var(--negro); font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 100px; }
+    .podcast-icon { width: 260px; height: 260px; background: linear-gradient(135deg, var(--grafito-2) 0%, #002060 100%); border: 1px solid rgba(0,57,166,0.2); border-radius: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; position: relative; }
+    .podcast-icon::before { content: ''; position: absolute; inset: -1px; border-radius: 24px; padding: 1px; background: linear-gradient(135deg, rgba(0,57,166,0.5), transparent, rgba(213,43,30,0.3)); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+    .podcast-icon .icon-img { width: 130px; height: auto; margin-bottom: 4px; }
+    .podcast-icon .icon-label { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 600; color: var(--azul); }
+    .podcast-icon .icon-label-sm { font-size: 0.75rem; color: rgba(255,255,255,0.5); }
+    .podcast-icon .icon-ep { position: absolute; bottom: 16px; right: 16px; background: var(--azul); color: white; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 100px; }
 
     @media(max-width:768px) {
       .hero .container { grid-template-columns: 1fr; }
@@ -222,7 +220,7 @@
       </div>
     </div>
     <div class="podcast-icon">
-      <div class="icon-emoji">🇨🇱</div>
+      <img src="/static/oportunidad-pais-logo.png" alt="Oportunidad País" class="icon-img">
       <div class="icon-label">Oportunidad</div>
       <div class="icon-label">País</div>
       <div class="icon-label-sm">Desafío Latam</div>
