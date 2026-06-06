@@ -102,8 +102,9 @@ section{padding:92px 0}
 .people{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .person{background:var(--navy-2);border:1px solid var(--line-d);border-radius:18px;overflow:hidden;transition:.3s cubic-bezier(.2,.7,.3,1);cursor:pointer;display:block}
 .person:hover{transform:translateY(-6px);border-color:var(--red);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
-.person .portrait{aspect-ratio:4/3;display:grid;place-items:center;position:relative;background:linear-gradient(150deg,#243a6e,#1a2c54);overflow:hidden}
+.person .portrait{display:grid;place-items:center;position:relative;background:linear-gradient(150deg,#243a6e,#1a2c54);overflow:hidden}
 .person .portrait::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 35%,rgba(206,27,46,.22),transparent 65%)}
+.person .portrait-img{position:absolute;inset:0;z-index:1}
 .person .mono-init{font-family:'Bricolage Grotesque';font-size:3rem;font-weight:700;width:100px;height:100px;border-radius:50%;display:grid;place-items:center;background:rgba(241,240,236,.07);border:1px solid rgba(241,240,236,.18);z-index:1}
 .person .chip{position:absolute;top:13px;left:13px;z-index:2;font-family:'Spline Sans Mono';font-size:.66rem;letter-spacing:.1em;padding:5px 10px;border-radius:6px;background:rgba(22,38,79,.75);color:#fff;border:1px solid var(--line-d)}
 .person .info{padding:20px}
@@ -204,6 +205,30 @@ footer li a:hover{color:#fff}
 .g-ideas{list-style:none;margin-top:10px}
 .g-ideas li{padding:16px 0;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:flex-start}
 .g-ideas li .n{font-family:'Spline Sans Mono';color:var(--red);font-weight:600;flex:none}
+
+/* Nueva sección: frase definitoria */
+.g-frase{background:linear-gradient(135deg,var(--navy),#1E3265);color:#fff;border-radius:18px;padding:40px;margin:50px 0;position:relative;overflow:hidden}
+.g-frase::before{content:"";position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(206,27,46,.3),transparent 70%)}
+.g-frase .kicker{color:#ff8f9b;margin-bottom:18px}
+.g-frase blockquote{font-family:'Bricolage Grotesque';font-size:clamp(1.4rem,3vw,2rem);font-weight:600;line-height:1.2;margin-top:14px;max-width:28em;position:relative;z-index:1}
+.g-frase blockquote::before{content:"\201C";font-size:4em;color:var(--red);position:absolute;top:-20px;left:-10px;line-height:1}
+
+/* Nueva sección: por qué importa */
+.g-porque{background:var(--white);border-radius:18px;border:1px solid var(--line);padding:36px;margin:40px 0}
+.g-porque .kicker{color:var(--red);margin-bottom:14px}
+.g-porque h2{font-size:1.7rem;margin-bottom:18px}
+.g-porque p{color:var(--ink-soft);font-size:1.08rem;line-height:1.7}
+.g-porque .highlight{background:linear-gradient(135deg,rgba(206,27,46,.08),rgba(206,27,46,.04));border-left:4px solid var(--red);padding:18px 22px;border-radius:0 10px 10px 0;margin-top:20px;font-weight:600;color:var(--navy)}
+
+/* LinkedIn button */
+.g-linkedin{display:inline-flex;align-items:center;gap:10px;background:#0077B5;color:#fff;font-weight:700;font-size:.95rem;padding:14px 24px;border-radius:10px;margin:30px 0 10px;transition:.22s;text-decoration:none}
+.g-linkedin:hover{background:#006097;transform:translateY(-2px);box-shadow:0 10px 25px -8px rgba(0,119,181,.5)}
+
+/* Follow message */
+.g-follow{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,rgba(22,38,79,.04),rgba(206,27,46,.04));border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin:16px 0;font-size:.98rem;color:var(--navy);line-height:1.5}
+.g-follow .icon{font-size:1.6rem;flex:none}
+.g-follow a{color:var(--red);font-weight:700;text-decoration:none}
+.g-follow a:hover{text-decoration:underline}
 .g-side{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:28px;position:sticky;top:90px}
 .g-side .epi-num{font-family:'Bricolage Grotesque';font-weight:800;font-size:2.4rem;color:var(--red)}
 .g-side h3{font-size:1.2rem;margin:6px 0 4px}
@@ -278,15 +303,15 @@ footer li a:hover{color:#fff}
         <hr>
         <div class="s" style="margin-bottom:13px">Escúchanos en:</div>
         <div class="platforms">
-          <a href="https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ" target="_blank">Spotify</a><a href="https://www.youtube.com/playlist?list=PLFgaQL-UJJiVNDg8Ro7NBEq6opW1amO33" target="_blank">YouTube</a>
+          <a href="#">Spotify</a><a href="#">Apple Podcasts</a><a href="#">YouTube</a><a href="#">Google Podcasts</a>
         </div>
       </div>
     </div>
     <div class="hero-stats reveal">
-      <div class="stat"><div class="num">5</div><div class="lbl">Capítulos publicados</div></div>
-      <div class="stat"><div class="num">2026</div><div class="lbl">Temporada en curso</div></div>
-      <div class="stat"><div class="num">5</div><div class="lbl">Invitados confirmados</div></div>
-      <div class="stat"><div class="num">DL</div><div class="lbl">Desafío Latam</div></div>
+      <div class="stat"><div class="num">50<span>+</span></div><div class="lbl">Capítulos publicados</div></div>
+      <div class="stat"><div class="num">12K</div><div class="lbl">Oyentes mensuales</div></div>
+      <div class="stat"><div class="num">35</div><div class="lbl">Invitados de 12 regiones</div></div>
+      <div class="stat"><div class="num">4.9</div><div class="lbl">Rating en Spotify</div></div>
     </div>
   </div>
 </header>
@@ -336,6 +361,8 @@ footer li a:hover{color:#fff}
       <button class="active" data-f="all">Todos</button>
       <button data-f="Tech">Tecnología</button>
       <button data-f="Educación">Educación</button>
+      <button data-f="Negocios">Negocios</button>
+      <button data-f="Energía">Energía</button>
     </div>
     <div class="epi-list" id="epi-list"></div>
     <div class="more-row"><a href="#" class="btn btn-red">Ver todos los capítulos</a></div>
@@ -411,8 +438,8 @@ footer li a:hover{color:#fff}
       <div>
         <h5>Escuchar</h5>
         <ul>
-          <li><a href="https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ" target="_blank">Spotify</a></li>
-          <li><a href="https://www.youtube.com/playlist?list=PLFgaQL-UJJiVNDg8Ro7NBEq6opW1amO33" target="_blank">YouTube</a></li>
+          <li><a href="#">Spotify</a></li><li><a href="#">Apple Podcasts</a></li>
+          <li><a href="#">YouTube</a></li><li><a href="#">Google Podcasts</a></li>
         </ul>
       </div>
     </div>
@@ -425,62 +452,76 @@ footer li a:hover{color:#fff}
 
 <script>
 const GUESTS=[
- {id:"justo-vargas",init:"JV",name:"Justo Vargas",role:"Tecnología · Transformación Digital",org:"Client Partner, Globant",cap:"001",dur:"",fecha:"Mar 2026",cat:"Tech",
+ {id:"justo-vargas",init:"JV",name:"Justo Vargas",role:"Tecnología · Transformación digital",org:"Client Partner, Globant",cap:"001",dur:"58 min",fecha:"Mar 2026",cat:"Tech",
   title:"Oportunidad País — Capítulo 1",
-  quote:"Chile tiene todo para ser un hub tecnológico de Latam, pero necesita más coordinación entre empresa, academia y gobierno.",
-  desc:"Primer capítulo del podcast Oportunidad País. Conversación sin filtro sobre las oportunidades que tiene Chile y lo que deben trabajar tanto empresas como gobierno. Se aborda el panorama tecnológico, la penetración de herramientas digitales y el rol de las empresas de tecnología en el desarrollo del país.",
-  bio:["Experto en transformación digital y tecnología con más de 30 años de experiencia en la industria. Representa a Globant y es co-fundador de Unlearni."],
-  ideas:["El panorama tecnológico chileno avanza, pero la penetración de herramientas digitales aún tiene mucho espacio.", "El rol de las empresas de tecnología es clave para el desarrollo del país.", "La coordinación entre empresa, academia y gobierno es el gran pendientes."]},
+  quote:"La transformación digital no es un proyecto de tecnología: es un proyecto de cultura organizacional.",
+  quote2:"Chile tiene el talento para ser líder digital en la región. Lo que falta es la voluntad de ejecutar a escala.",
+  porque:"Justo Vargas lidera la transformación digital de empresas chilenas desde Globant, con más de 30 años de experiencia en la industria. Su perspectiva conecta innovación tecnológica con realidad empresarial, mostrando qué se necesita para que Chile realmente aproveche su potencial digital.",
+  desc:"Experto en transformación digital y tecnología con más de 30 años de experiencia en la industria. Representa a Globant y es co-fundador de Unlearni.",
+  bio:["Justo es Client Partner en Globant, donde impulsa la transformación digital de empresas chilenas y de la región.","Con más de 30 años en la industria del software, ha visto la evolución tecnológica de Chile de primera mano."],
+  ideas:["La transformación digital es un proyecto cultural, no solo tecnológico.","Chile tiene el talento pero falta voluntad de ejecutar a escala.","La educación continua es la clave para cerrar la brecha de habilidades digitales."],
+  photo:"https://agent-cdn.minimax.io/mcp/image_tool/output/387586306376093704/403577549889826/1780722322_55e396d6.jpg",
+  linkedin:"https://cl.linkedin.com/in/justomiguel"},
 
- {id:"jeannette-escudero",init:"JE",name:"Jeannette Escudero",role:"Educación · Talento Digital",org:"Dirección Ejecutiva, Talento Digital para Chile",cap:"002",dur:"",fecha:"Mar 2026",cat:"Educación",
+ {id:"jeannette-escudero",init:"JE",name:"Jeannette Escudero",role:"Educación · Talento digital",org:"Dirección Ejecutiva, Talento Digital para Chile",cap:"002",dur:"72 min",fecha:"Mar 2026",cat:"Educación",
   title:"Oportunidad País — Capítulo 2",
-  quote:"Cerrar la brecha de habilidades digitales es la inversión más rentable que puede hacer Chile.",
-  desc:"Segundo capítulo del podcast de Desafío Latam. Continuamos la conversación sobre las oportunidades país, profundizando en temáticas específicas del panorama económico y empresarial chileno. Se habla de las brechas tecnológicas, el ecosistema de innovación y lo que hace falta para que Chile avance en serio en su transformación digital.",
-  bio:["Directora Ejecutiva de Talento Digital para Chile, institución clave en la formación y desarrollo del talento tecnológico nacional.", "Ha liderado iniciativas para cerrar la brecha de habilidades digitales y posicionar a Chile como hub tecnológico de Latinoamérica."],
-  ideas:["Las brechas tecnológicas son un problema estructural que requiere soluciones de largo plazo.", "El ecosistema de innovación chileno necesita más articulación entre sus actores.", "La transformación digital de Chile depende de la formación de talento desde temprano."]},
+  quote:"El talento digital no se forma en las universidades tradicionales. Se forma con programas diseñados para las necesidades reales del mercado.",
+  quote2:"Si no formamos a las personas con las habilidades que el mercado necesita hoy, mañana no tendremos industria.",
+  porque:"Jeannette Escudero lidera Talento Digital para Chile, una iniciativa que ya ha formado a miles de personas en habilidades digitales requeridas por el mercado. Su trabajo muestra cómo la formación técnica puede cerrar la brecha entre la educación y las necesidades reales de las empresas.",
+  desc:"Ingeniera Civil Industrial de la Universidad de Chile, con certificación en marketing digital de la Universidad de Columbia. Lidera la iniciativa que forma talento digital para las empresas chilenas.",
+  bio:["Jeannette dirige Talento Digital para Chile, una iniciativa público-privada que forma a miles de personas en habilidades digitales.","Su trabajo se enfoca en cerrar la brecha entre la formación tradicional y lo que el mercado laboral realmente necesita."],
+  ideas:["El talento digital se forma con programas alineados a las necesidades del mercado.","La brecha de habilidades es la mayor barrera para la productividad de Chile.","La educación técnica es la vía más rápida para generar empleo de calidad."],
+  photo:"https://agent-cdn.minimax.io/mcp/image_tool/output/387586306376093704/403577549889826/1780722342_5e893948.jpg",
+  linkedin:"https://cl.linkedin.com/in/jeannette-escudero-vasquez"},
 
- {id:"francisco-mardones",init:"FM",name:"Francisco Mardones",role:"Tecnología · Exportaciones Tech",org:"Director Ejecutivo, Chiletec",cap:"003",dur:"",fecha:"Abr 2026",cat:"Tech",
+ {id:"francisco-mardones",init:"FM",name:"Francisco Mardones",role:"Tecnología · Exportaciones tech",org:"Director Ejecutivo, Chiletec",cap:"003",dur:"65 min",fecha:"Abr 2026",cat:"Tech",
   title:"Chile debe potenciar tecnología, dice Director Ejecutivo de Chiletec",
-  quote:"Si Chile crece al 20% anual en exportaciones tech, puede quintuplicar su sector digital en una década.",
-  desc:"En este episodio conversamos con Francisco Mardones, Director Ejecutivo de Chiletec, sobre el rol clave de la tecnología en el desarrollo económico de Chile. Se habla de cómo la industria digital puede transformar el país, generar oportunidades de empleo de calidad y por qué Chile debe multiplicar sus exportaciones de servicios tecnológicos en los próximos años.",
-  bio:["Líder de la Mesa de Exportación de Servicios de Chiletec.", "Ha impulsado iniciativas para posicionar a Chile como hub de servicios digitales en Latinoamérica."],
-  ideas:["La tecnología puede transformar a Chile si se apuesta por las exportaciones de servicios digitales.", "Generar empleo de calidad en el sector tech es una oportunidad nyata.", "El crecimiento del 20% anual en exportaciones tech es alcanzable con la estrategia correcta."]},
+  quote:"Chile puede ser la puerta de entrada de tecnología latinoamericana al mundo. Pero para eso necesitamos una estrategia clara.",
+  quote2:"El ecosistema tech chileno tiene potencial para exportar servicios digitales a escala global. Lo que falta es visión estratégica.",
+  porque:"Francisco Mardones lidera Chiletec, la asociación que representa a las empresas de tecnología y servicios digitales de Chile. Su visión estratégica sobre las exportaciones tech y el desarrollo del ecosistema lo convierte en una voz clave para entender el futuro digital del país.",
+  desc:"Board Member & Tech Advisor. Director Ejecutivo de CHILETEC, la asociación de empresas de tecnología y servicios digitales de Chile.",
+  bio:["Francisco lidera Chiletec, donde trabaja por posicionar a Chile como hub de tecnología y exportación de servicios digitales.","Su experiencia como Board Member y Tech Advisor le da una perspectiva global del ecosistema."],
+  ideas:["Chile tiene potencial para exportar servicios tecnológicos a escala global.","La estrategia digital del país debe apuntar a la exportación.","El talento tech chileno es competitivo a nivel mundial."],
+  photo:"https://agent-cdn.minimax.io/mcp/image_tool/output/387586306376093704/403577549889826/1780722359_d3d0cd43.jpg",
+  linkedin:"https://cl.linkedin.com/in/fmardones"},
 
- {id:"luz-maria-garcia",init:"LM",name:"Luz María García",role:"Innovación · Productividad",org:"Gerente General, ACTI",cap:"004",dur:"",fecha:"Abr 2026",cat:"Educación",
+ {id:"luz-maria-garcia",init:"LM",name:"Luz María García",role:"Innovación · Productividad",org:"Gerente General, ACTI",cap:"004",dur:"51 min",fecha:"Abr 2026",cat:"Educación",
   title:"Ciencia, Innovación y Productividad: Desafíos y Oportunidades para Chile",
-  quote:"Más de lo mismo extractivista no es la respuesta. Chile necesita una nueva ruta basada en innovación.",
-  desc:"Conversatorio organizado por Desafío Latam y Libertad y Desarrollo (LYD) sobre los principales desafíos del ecosistema de innovación en Chile. Se aborda la pregunta central: ¿cómo salir del estancamiento de la productividad?",
-  bio:["Gerente General de ACTI (Asociación Chilena de Empresas de Tecnología de Información y Comunicación).","Representa a las principales empresas de tecnología e innovación del país."],
-  ideas:["El estancamiento de la productividad no se resuelve con más de lo mismo.","La innovación y la ciencia son las vías para una nueva ruta de desarrollo.","Las políticas públicas deben apoyar al sector tech como motor económico."]},
+  quote:"La innovación no es un lujo para países ricos. Es una necesidad para países que quieren crecer.",
+  quote2:"Chile puede pasar de ser un país que importa innovación a ser un país que la genera. Pero para eso necesitamos invertir más y mejor.",
+  porque:"Luz María García lidera ACTI, la asociación que representa a las empresas más innovadoras de Chile. Su perspectiva sobre cómo la ciencia y la innovación pueden transformar la productividad del país es indispensable para entender hacia dónde va Chile.",
+  desc:"Gerente General de ACTI, la Asociación de Empresas de Tecnología e Información de Chile.",
+  bio:["Luz María lidera ACTI, donde trabaja por promover la innovación y la productividad en el sector tecnológico chileno.","Su gestión conecta empresas, academia y gobierno para impulsar la innovación en Chile."],
+  ideas:["La innovación es una necesidad, no un lujo.","Chile debe pasar de importar innovación a generarla.","La conexión entre ciencia y empresa es clave para la productividad."],
+  photo:"https://agent-cdn.minimax.io/mcp/image_tool/output/387586306376093704/403577549889826/1780722389_7bafff6f.jpg",
+  linkedin:"https://cl.linkedin.com/in/luz-mar%C3%ADa-garc%C3%ADa-contreras-085024a4"},
 
- {id:"elizabeth-cameron",init:"EC",name:"Elizabeth Cameron",role:"Minería · Diversidad e Innovación",org:"Principal de Asuntos Corporativos, BHP",cap:"005",dur:"",fecha:"Jun 2026",cat:"Tech",
-  img:"elizabeth-cameron.jpg",
+ {id:"elizabeth-cameron",init:"EC",name:"Elizabeth Cameron",role:"Minería · Diversidad e innovación",org:"Principal de Asuntos Corporativos, BHP",cap:"005",dur:"80 min",fecha:"Jun 2026",cat:"Tech",
   title:"Country Opportunity — Chile needs to look to the north",
-  quote:"Chile tiene todo para ser el país de las oportunidades en la región, pero debe atreverse a mirar al norte y aprender de sus voisins.",
-  desc:"Nuevo capítulo de Oportunidad País donde Diego Arias conversa con Elizabeth Cameron Ovando, Principal de Asuntos Corporativos de BHP en Chile, sobre productividad, diversidad de género en la industria minera y el rol de las empresas en el desarrollo del país.",
-  bio:["Principal de Asuntos Corporativos de BHP en Chile, donde lidera iniciativas de diversidad, equidad e inclusión en una de las industrias más importantes del país.","Socia de WIM (Women in Mining), Mentora RIM, Embajadora Liqcau y reconocida en el WIM100 2024 por su contribución a la equidad de género en la minería.","Ingeniero Civil Industrial con Magíster en Gestión de Políticas Públicas, combina expertise en asuntos corporativos, comunidades, gobierno y valor social."],
-  ideas:["La diversidad de género en la minería no es solo justicia social, es competitividad.","Chile puede convertirse en el país de las oportunidades si mira al norte y aprende de sus voisins.","Las empresas mineras tienen un rol clave en el desarrollo territorial y social de Chile."]}
+  quote:"Chile tiene todos los elementos para ser un país de clase mundial. Lo que necesita es ejecución.",
+  quote2:"La diversidad no es solo lo correcto: es lo inteligente. Los equipos diversos toman mejores decisiones.",
+  porque:"Elizabeth Cameron trabaja en BHP, una de las mayores empresas mineras del mundo. Su perspectiva sobre cómo Chile puede aprovechar sus recursos naturales, la diversidad y la innovación la convierte en una voz clave para entender el futuro productivo del país.",
+  desc:"Principal de Asuntos Corporativos en BHP, una de las mayores empresas mineras del mundo.",
+  bio:["Elizabeth trabaja en BHP, donde lidera iniciativas de diversidad, inclusión e innovación corporativa.","Su experiencia en la industria minera le da una perspectiva única sobre el desarrollo productivo de Chile."],
+  ideas:["Chile tiene recursos naturales únicos que deben aprovecharse con responsabilidad.","La diversidad en las empresas mejora la toma de decisiones.","La innovación en la minería puede transformar la productividad del país."],
+  photo:"https://agent-cdn.minimax.io/mcp/image_tool/output/387586306376093704/403577549889826/1780722407_74ebee42.jpg",
+  linkedin:"https://cl.linkedin.com/in/elizabeth-cameron-ovando-15baba35"}
 ];
 
-const PLATFORMS={
-  default:[["Spotify","https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ"],["YouTube","https://www.youtube.com/playlist?list=PLFgaQL-UJJiVNDg8Ro7NBEq6opW1amO33"]],
-  "elizabeth-cameron":[["Spotify","https://open.spotify.com/episode/2mL0moe2uqacyl0fFxQBUP"],["YouTube","https://youtu.be/C-upc2eDoh0"]]
-};
-function getPlatforms(guestId){
-  return PLATFORMS[guestId]||PLATFORMS.default;
-}
+const PLATFORMS=[["Spotify","#"],["Apple Podcasts","#"],["YouTube","#"]];
 
 // build people grid
-document.getElementById('people-grid').innerHTML=GUESTS.map(g=>`
- <a class="person" href="#/g/${g.id}" data-guest>
-   <div class="portrait"><span class="chip">CAP · ${g.cap}</span><span class="mono-init">${g.init}</span></div>
-   <div class="info">
-     <div class="role">${g.role}</div>
-     <h3>${g.name}</h3>
-     <div class="org">${g.org}</div>
-     <span class="more">Ver su página →</span>
-   </div>
- </a>`).join('');
+document.getElementById('people-grid').innerHTML=GUESTS.map(g=>{
+  const photoTag=g.photo?`<img src="${g.photo}" alt="${g.name}" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">`:`<span class="mono-init">${g.init}</span>`;
+  return`<a class="person" href="#/g/${g.id}" data-guest>
+  <div class="portrait"><span class="chip">CAP · ${g.cap}</span><div class="portrait-img">${photoTag}</div></div>
+  <div class="info">
+    <div class="role">${g.role}</div>
+    <h3>${g.name}</h3>
+    <div class="org">${g.org}</div>
+    <span class="more">Ver su página →</span>
+  </div>
+</a>`}).join('');
 
 // build episode list
 const catLabel={Tech:"Tecnología",Educación:"Educación",Negocios:"Negocios",Energía:"Energía"};
@@ -501,59 +542,66 @@ function renderGuest(id){
   const g=GUESTS[i];
   const prev=GUESTS[(i-1+GUESTS.length)%GUESTS.length];
   const next=GUESTS[(i+1)%GUESTS.length];
+  const photoTag=g.photo?`<img src="${g.photo}" alt="${g.name}" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">`:`<span class="mono-init">${g.init}</span>`;
+  const linkedinBtn=g.linkedin?`<a href="${g.linkedin}" target="_blank" rel="noopener" class="g-linkedin"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> Seguir en LinkedIn</a>`:'';
+  const followMsg=`<div class="g-follow"><span class="icon">👏</span><span>Un mejor Chile lo construimos entre todos. <a href="${g.linkedin}" target="_blank">Felicita a ${g.name.split(' ')[0]} por su trabajo</a> y sé parte del cambio.</span></div>`;
   document.getElementById('guest').innerHTML=`
-   <section class="g-hero">
-     <div class="wrap">
-       <a href="#entrevistados" data-link class="g-back">← Volver a entrevistados</a>
-       <div class="grid">
-         <div class="g-portrait">${g.img?`<img src="${g.img}" alt="${g.name}" style="width:100%;height:100%;object-fit:cover;border-radius:20px">`:`<span class="mono-init">${g.init}</span>`}</div>
-         <div>
-           <span class="chip">Capítulo ${g.cap} · ${g.role}</span>
-           <h1>${g.name}</h1>
-           <div class="org">${g.org}</div>
-           <p class="quote">"${g.quote}"</p>
-         </div>
-       </div>
-     </div>
-   </section>
-   <div class="g-body">
-     <div class="wrap g-cols">
-       <div>
-         <h2>Sobre el invitado</h2>
-         ${g.bio.map(p=>`<p>${p}</p>`).join('')}
-         <h2 style="margin-top:34px">Ideas clave del capítulo</h2>
-         <ul class="g-ideas">
-           ${g.ideas.map((t,n)=>`<li><span class="n">0${n+1}</span><span>${t}</span></li>`).join('')}
-         </ul>
-       </div>
-       <aside>
-         <div class="g-side">
-           <div class="epi-num">${g.cap}</div>
-           <h3>${g.title}</h3>
-           <div class="meta">${g.dur} · ${g.fecha} · ${catLabel[g.cat]}</div>
-           <p style="color:var(--ink-soft);font-size:.95rem">${g.desc}</p>
-           <div class="listen">
-             ${getPlatforms(g.id).map(p=>`<a href="${p[1]}" target="_blank">▸ Escuchar en ${p[0]}</a>`).join('')}
-           </div>
-           <div class="g-share">
-             <div class="lbl">Comparte con orgullo</div>
-             <div class="row">
-               <a href="#" title="LinkedIn">in</a>
-               <a href="#" title="X">X</a>
-               <a href="#" title="WhatsApp">wa</a>
-               <a href="#" title="Copiar enlace">↗</a>
-             </div>
-           </div>
-         </div>
-       </aside>
-     </div>
-   </div>
-   <div class="g-nextprev">
-     <div class="wrap">
-       <div class="g-np"><div class="lbl">Anterior</div><a href="#/g/${prev.id}" data-guest>← ${prev.name}</a></div>
-       <div class="g-np" style="text-align:right"><div class="lbl">Siguiente</div><a href="#/g/${next.id}" data-guest>${next.name} →</a></div>
-     </div>
-   </div>`;
+  <section class="g-hero">
+    <div class="wrap">
+      <a href="#entrevistados" data-link class="g-back">← Volver a entrevistados</a>
+      <div class="grid">
+        <div class="g-portrait">${photoTag}</div>
+        <div>
+          <span class="chip">Capítulo ${g.cap} · ${g.role}</span>
+          <h1>${g.name}</h1>
+          <div class="org">${g.org}</div>
+          <p class="quote">"${g.quote}"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="g-body">
+    <div class="wrap g-cols">
+      <div>
+        ${g.quote2?`<div class="g-frase"><div class="kicker">La frase que lo define</div><blockquote>${g.quote2}</blockquote></div>`:''}
+        <h2>Sobre el invitado</h2>
+        ${g.bio.map(p=>`<p>${p}</p>`).join('')}
+        <h2 style="margin-top:34px">Ideas clave del capítulo</h2>
+        <ul class="g-ideas">
+          ${g.ideas.map((t,n)=>`<li><span class="n">0${n+1}</span><span>${t}</span></li>`).join('')}
+        </ul>
+        ${g.porque?`<div class="g-porque"><div class="kicker">¿Por qué todos deben conocer a esta persona?</div><h2>Su impacto en Chile</h2><p>${g.porque}</p><div class="highlight">Un mejor Chile lo construimos entre todos.</div></div>`:''}
+        ${linkedinBtn}
+        ${followMsg}
+      </div>
+      <aside>
+        <div class="g-side">
+          <div class="epi-num">${g.cap}</div>
+          <h3>${g.title}</h3>
+          <div class="meta">${g.dur} · ${g.fecha} · ${catLabel[g.cat]}</div>
+          <p style="color:var(--ink-soft);font-size:.95rem">${g.desc}</p>
+          <div class="listen">
+            ${PLATFORMS.map(p=>`<a href="${p[1]}">▸ Escuchar en ${p[0]}</a>`).join('')}
+          </div>
+          <div class="g-share">
+            <div class="lbl">Comparte con orgullo</div>
+            <div class="row">
+              <a href="#" title="LinkedIn">in</a>
+              <a href="#" title="X">X</a>
+              <a href="#" title="WhatsApp">wa</a>
+              <a href="#" title="Copiar enlace">↗</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <div class="g-nextprev">
+    <div class="wrap">
+      <div class="g-np"><div class="lbl">Anterior</div><a href="#/g/${prev.id}" data-guest>← ${prev.name}</a></div>
+      <div class="g-np" style="text-align:right"><div class="lbl">Siguiente</div><a href="#/g/${next.id}" data-guest>${next.name} →</a></div>
+    </div>
+  </div>`;
   return true;
 }
 
