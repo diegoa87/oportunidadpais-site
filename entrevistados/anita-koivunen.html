@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anita Koivunen — Experta en Educación Finlandesa | Oportunidad País</title>
+  <meta name="description" content="Anita Koivunen, experta en educación finlandesa. Entrevistada en Oportunidad País sobre el modelo educativo de Finlandia aplicado a Chile.">
+  <link rel="icon" href="/static/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root { --azul-chile: #0033A0; --azul-chile-oscuro: #002060; --rojo-chile: #D52B1E; --blanco: #FFFFFF; --grafito-3: #1E293B; --grafito: #1F2937; --gris: #94A3B8; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: var(--grafito-3); color: var(--blanco); line-height: 1.7; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+    nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(15,23,42,0.94); backdrop-filter: blur(16px); z-index: 1000; padding: 14px 0; border-bottom: 1px solid rgba(213,43,30,0.15); }
+    nav .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo img { height: 46px; filter: brightness(0) invert(1); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { font-size: 0.88rem; opacity: 0.65; transition: all 0.3s; font-weight: 500; }
+    .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--rojo-chile); }
+    .nav-cta { background: var(--rojo-chile); padding: 8px 20px; border-radius: 8px; font-weight: 600 !important; opacity: 1 !important; }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; padding: 100px 0 24px; color: var(--gris); font-size: 0.88rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--blanco); }
+    .back-link svg { width: 16px; height: 16px; }
+    .entrevistado-header { display: grid; grid-template-columns: 280px 1fr; gap: 48px; padding: 48px 0; align-items: start; }
+    .entrevistado-photo-wrap { position: relative; }
+    .entrevistado-photo { width: 100%; aspect-ratio: 1; border-radius: 20px; object-fit: cover; border: 2px solid rgba(213,43,30,0.2); }
+    .entrevistado-photo-overlay { position: absolute; bottom: -14px; right: -14px; background: var(--rojo-chile); color: var(--blanco); font-size: 0.7rem; font-weight: 700; padding: 6px 14px; border-radius: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .entrevistado-meta { padding-top: 8px; }
+    .entrevistado-tag { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px; color: var(--rojo-chile); font-weight: 700; margin-bottom: 8px; }
+    .entrevistado-nombre { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; margin-bottom: 4px; line-height: 1.15; }
+    .entrevistado-cargo { font-size: 1.05rem; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+    .entrevistado-institucion { display: flex; align-items: center; gap: 10px; background: rgba(0,51,160,0.1); border: 1px solid rgba(0,51,160,0.2); border-radius: 12px; padding: 12px 18px; margin-bottom: 24px; font-size: 0.88rem; }
+    .entrevistado-institucion svg { width: 18px; height: 18px; color: var(--azul-chile); flex-shrink: 0; }
+    .entrevistado-descripcion { font-size: 0.98rem; color: rgba(255,255,255,0.65); line-height: 1.75; }
+    .episodio-relacionado { background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; padding: 32px; margin-bottom: 48px; }
+    .episodio-relacionado h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 16px; }
+    .episodio-card { display: flex; gap: 20px; align-items: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 20px; transition: all 0.3s; cursor: pointer; }
+    .episodio-card:hover { border-color: rgba(213,43,30,0.2); transform: translateY(-2px); }
+    .episodio-thumb { width: 80px; height: 80px; border-radius: 12px; background: linear-gradient(135deg, var(--azul-chile), #004FCA); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.1rem; color: rgba(255,255,255,0.3); flex-shrink: 0; }
+    .episodio-info { flex: 1; }
+    .episodio-num { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--rojo-chile); font-weight: 600; margin-bottom: 4px; }
+    .episodio-titulo { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
+    .episodio-fecha { font-size: 0.75rem; color: var(--gris); font-family: 'JetBrains Mono', monospace; }
+    .episodio-play { width: 44px; height: 44px; border-radius: 50%; background: var(--rojo-chile); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.2s; }
+    .episodio-play:hover { transform: scale(1.1); }
+    .episodio-play svg { width: 16px; height: 16px; fill: white; margin-left: 2px; }
+    .social-section { margin-bottom: 48px; }
+    .social-section h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 16px; }
+    .social-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .social-link { display: flex; align-items: center; gap: 8px; padding: 10px 18px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; font-size: 0.82rem; color: var(--blanco); opacity: 0.6; transition: all 0.2s; }
+    .social-link:hover { opacity: 1; border-color: rgba(213,43,30,0.2); }
+    .social-link svg { width: 16px; height: 16px; }
+    footer { background: var(--grafito); border-top: 1px solid rgba(255,255,255,0.05); padding: 32px 0; margin-top: 48px; }
+    footer p { text-align: center; font-size: 0.78rem; color: rgba(255,255,255,0.25); }
+    @media(max-width: 700px) { .entrevistado-header { grid-template-columns: 1fr; gap: 24px; } .entrevistado-photo-wrap { max-width: 240px; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="/" class="logo"><img src="/static/oportunidad-pais-logo.png" alt="Oportunidad País"></a>
+    <ul class="nav-links">
+      <li><a href="/#about">Sobre el Podcast</a></li>
+      <li><a href="/#episodes">Capítulos</a></li>
+      <li><a href="/entrevistados" class="active">Entrevistados</a></li>
+      <li><a href="/#newsletter" class="nav-cta">Suscribirme</a></li>
+    </ul>
+  </div>
+</nav>
+
+<a href="/entrevistados" class="back-link container">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+  Volver a Entrevistados
+</a>
+
+<div class="container">
+  <div class="entrevistado-header">
+    <div class="entrevistado-photo-wrap">
+      <img src="/entrevistados/img/anita-koivunen.jpg" alt="Anita Koivunen" class="entrevistado-photo">
+      <div class="entrevistado-photo-overlay">Entrevistada</div>
+    </div>
+    <div class="entrevistado-meta">
+      <div class="entrevistado-tag">Episodio #005 · Educación</div>
+      <h1 class="entrevistado-nombre">Anita Koivunen</h1>
+      <p class="entrevistado-cargo">Experta Internacional en Educación y Políticas Educativas</p>
+      <div class="entrevistado-institucion">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        <span>Universidad de Helsinki · Asesora Internacional</span>
+      </div>
+      <p class="entrevistado-descripcion">
+        Asesora internacional especializada en el modelo educativo finlandés, reconocido mundialmente por sus resultados en alfabetización y equidad. Ha trabajado con gobiernos de América Latina para adaptar las mejores prácticas del sistema educativo de Finlandia a contextos locales. Candidata a la Academia Finlandesa de Ciencias y autora de múltiples publicaciones sobre innovación pedagógica.
+      </p>
+    </div>
+  </div>
+
+  <div class="episodio-relacionado">
+    <h3>Capítulo relacionado</h3>
+    <div class="episodio-card" onclick="window.open('#', '_blank')">
+      <div class="episodio-thumb">#005</div>
+      <div class="episodio-info">
+        <div class="episodio-num">Educación · 65 min</div>
+        <div class="episodio-titulo">¿Por qué Finlandia le gana a Chile en educación?</div>
+        <div class="episodio-fecha">Mayo 2026</div>
+      </div>
+      <div class="episodio-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+  </div>
+
+  <div class="social-section">
+    <h3>Conectar</h3>
+    <div class="social-links">
+      <a href="#" class="social-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Oportunidad País · <a href="https://godiegoarias.com" target="_blank">Diego Arias</a> · Desafío Latam</p>
+  </div>
+</footer>
+
+</body>
+</html>

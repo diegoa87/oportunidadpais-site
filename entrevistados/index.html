@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrevistados — Oportunidad País</title>
+  <meta name="description" content="Conoce a los líderes, emprendedores y expertos entrevistados en Oportunidad País, el podcast de Diego Arias sobre las oportunidades de Chile.">
+  <link rel="icon" href="/static/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root { --azul-chile: #0033A0; --azul-chile-oscuro: #002060; --rojo-chile: #D52B1E; --blanco: #FFFFFF; --grafito-3: #1E293B; --grafito: #1F2937; --gris: #94A3B8; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: var(--grafito-3); color: var(--blanco); line-height: 1.7; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+    nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(15,23,42,0.94); backdrop-filter: blur(16px); z-index: 1000; padding: 14px 0; border-bottom: 1px solid rgba(213,43,30,0.15); }
+    nav .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo img { height: 46px; filter: brightness(0) invert(1); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { font-size: 0.88rem; opacity: 0.65; transition: all 0.3s; font-weight: 500; }
+    .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--rojo-chile); }
+    .nav-cta { background: var(--rojo-chile); padding: 8px 20px; border-radius: 8px; font-weight: 600 !important; opacity: 1 !important; }
+    .hero { padding: 140px 0 64px; text-align: center; }
+    .hero-eyebrow { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 3px; color: var(--rojo-chile); font-weight: 700; margin-bottom: 12px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; margin-bottom: 16px; line-height: 1.15; }
+    .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.5); max-width: 600px; margin: 0 auto; line-height: 1.75; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; padding: 24px 0 80px; }
+    .card { background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; overflow: hidden; transition: all 0.3s; cursor: pointer; }
+    .card:hover { border-color: rgba(213,43,30,0.25); transform: translateY(-4px); background: rgba(255,255,255,0.04); }
+    .card-img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+    .card-body { padding: 20px 24px 24px; }
+    .card-eyebrow { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--rojo-chile); font-weight: 700; margin-bottom: 6px; }
+    .card-nombre { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+    .card-cargo { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-bottom: 10px; }
+    .card-institucion { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: rgba(255,255,255,0.35); padding: 6px 10px; background: rgba(0,51,160,0.08); border-radius: 6px; display: inline-flex; }
+    .card-institucion svg { width: 12px; height: 12px; color: var(--azul-chile); }
+    footer { background: var(--grafito); border-top: 1px solid rgba(255,255,255,0.05); padding: 32px 0; }
+    footer p { text-align: center; font-size: 0.78rem; color: rgba(255,255,255,0.25); }
+    @media(max-width: 768px) { .hero h1 { font-size: 2rem; } .grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="/" class="logo"><img src="/static/oportunidad-pais-logo.png" alt="Oportunidad País"></a>
+    <ul class="nav-links">
+      <li><a href="/#about">Sobre el Podcast</a></li>
+      <li><a href="/#episodes">Capítulos</a></li>
+      <li><a href="/entrevistados" class="active">Entrevistados</a></li>
+      <li><a href="/#newsletter" class="nav-cta">Suscribirme</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="hero">
+    <div class="hero-eyebrow">El equipo detrás de las conversaciones</div>
+    <h1>Nuestras voces</h1>
+    <p>Líderes, emprendedores, expertos y decisores de políticas públicas. Cada entrevistado aporta una perspectiva única sobre las oportunidades y desafíos de Chile.</p>
+  </div>
+
+  <div class="grid">
+
+    <a href="/entrevistados/camila-sanchez" class="card">
+      <img src="/entrevistados/img/camila-sanchez.jpg" alt="Camila Sánchez" class="card-img">
+      <div class="card-body">
+        <div class="card-eyebrow">#001 · Tech</div>
+        <div class="card-nombre">Camila Sánchez</div>
+        <div class="card-cargo">Chief Technology Officer (CTO)</div>
+        <div class="card-institucion">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Entel Chile
+        </div>
+      </div>
+    </a>
+
+    <a href="/entrevistados/jose-miguel-torres" class="card">
+      <img src="/entrevistados/img/jose-miguel-torres.jpg" alt="José Miguel Torres" class="card-img">
+      <div class="card-body">
+        <div class="card-eyebrow">#002 · Educación</div>
+        <div class="card-nombre">José Miguel Torres</div>
+        <div class="card-cargo">Director de Vinculación con el Medio</div>
+        <div class="card-institucion">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          INACAP Chile
+        </div>
+      </div>
+    </a>
+
+    <a href="/entrevistados/maria-jose-villamayor" class="card">
+      <img src="/entrevistados/img/maria-jose-villamayor.jpg" alt="María José Villamayor" class="card-img">
+      <div class="card-body">
+        <div class="card-eyebrow">#003 · Negocios</div>
+        <div class="card-nombre">María José Villamayor</div>
+        <div class="card-cargo">Fundadora y CEO</div>
+        <div class="card-institucion">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Aval — Fintech Social
+        </div>
+      </div>
+    </a>
+
+    <a href="/entrevistados/sebastian-pincheira" class="card">
+      <img src="/entrevistados/img/sebastian-pincheira.jpg" alt="Sebastián Pincheira" class="card-img">
+      <div class="card-body">
+        <div class="card-eyebrow">#004 · Tecnología</div>
+        <div class="card-nombre">Sebastián Pincheira</div>
+        <div class="card-cargo">Jefe del Depto. de Conectividad</div>
+        <div class="card-institucion">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Subtel Chile
+        </div>
+      </div>
+    </a>
+
+    <a href="/entrevistados/anita-koivunen" class="card">
+      <img src="/entrevistados/img/anita-koivunen.jpg" alt="Anita Koivunen" class="card-img">
+      <div class="card-body">
+        <div class="card-eyebrow">#005 · Educación</div>
+        <div class="card-nombre">Anita Koivunen</div>
+        <div class="card-cargo">Experta Internacional en Educación</div>
+        <div class="card-institucion">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Universidad de Helsinki
+        </div>
+      </div>
+    </a>
+
+    <a href="/entrevistados/rodrigo-ahumada" class="card">
+      <img src="/entrevistados/img/rodrigo-ahumada.jpg" alt="Rodrigo Ahumada" class="card-img">
+      <div class="card-body">
+        <div class="card-eyebrow">#006 · Educación</div>
+        <div class="card-nombre">Rodrigo Ahumada</div>
+        <div class="card-cargo">Director de Liceo Bicentenario</div>
+        <div class="card-institucion">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Liceo Bicentenario · RM
+        </div>
+      </div>
+    </a>
+
+    <a href="/entrevistados/carmen-gloria-torres" class="card">
+      <img src="/entrevistados/img/carmen-gloria-torres.jpg" alt="Carmen Gloria Torres" class="card-img">
+      <div class="card-body">
+        <div class="card-eyebrow">#007 · Sostenibilidad</div>
+        <div class="card-nombre">Carmen Gloria Torres</div>
+        <div class="card-cargo">Gerenta de Sostenibilidad</div>
+        <div class="card-institucion">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Colbún S.A.
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Oportunidad País · <a href="https://godiegoarias.com" target="_blank">Diego Arias</a> · Desafío Latam</p>
+  </div>
+</footer>
+
+</body>
+</html>
