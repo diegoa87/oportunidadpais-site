@@ -1,7 +1,10 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "oportunidadpais-site",
+  "main": "src/index.js",
   "compatibility_date": "2026-06-06",
-  "pages_build_output_dir": ".",
-  "compatibility_flags": ["nodejs_compat"]
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "."
+  }
 }

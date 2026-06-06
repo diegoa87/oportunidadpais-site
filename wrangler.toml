@@ -1,0 +1,8 @@
+name = "oportunidadpais-site"
+main = "src/index.js"
+compatibility_date = "2026-06-06"
+account_id = "7426511883333d726e94f6988eafb07e"
+
+[assets]
+binding = "ASSETS"
+directory = "."
