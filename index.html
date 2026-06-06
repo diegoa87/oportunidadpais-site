@@ -102,9 +102,8 @@ section{padding:92px 0}
 .people{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .person{background:var(--navy-2);border:1px solid var(--line-d);border-radius:18px;overflow:hidden;transition:.3s cubic-bezier(.2,.7,.3,1);cursor:pointer;display:block}
 .person:hover{transform:translateY(-6px);border-color:var(--red);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
-.person .portrait{display:grid;place-items:center;position:relative;background:linear-gradient(150deg,#243a6e,#1a2c54);overflow:hidden}
+.person .portrait{aspect-ratio:4/3;display:grid;place-items:center;position:relative;background:linear-gradient(150deg,#243a6e,#1a2c54);overflow:hidden}
 .person .portrait::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 35%,rgba(206,27,46,.22),transparent 65%)}
-.person .portrait-img{position:absolute;inset:0;z-index:1}
 .person .mono-init{font-family:'Bricolage Grotesque';font-size:3rem;font-weight:700;width:100px;height:100px;border-radius:50%;display:grid;place-items:center;background:rgba(241,240,236,.07);border:1px solid rgba(241,240,236,.18);z-index:1}
 .person .chip{position:absolute;top:13px;left:13px;z-index:2;font-family:'Spline Sans Mono';font-size:.66rem;letter-spacing:.1em;padding:5px 10px;border-radius:6px;background:rgba(22,38,79,.75);color:#fff;border:1px solid var(--line-d)}
 .person .info{padding:20px}
@@ -205,30 +204,6 @@ footer li a:hover{color:#fff}
 .g-ideas{list-style:none;margin-top:10px}
 .g-ideas li{padding:16px 0;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:flex-start}
 .g-ideas li .n{font-family:'Spline Sans Mono';color:var(--red);font-weight:600;flex:none}
-
-/* Nueva sección: frase definitoria */
-.g-frase{background:linear-gradient(135deg,var(--navy),#1E3265);color:#fff;border-radius:18px;padding:40px;margin:50px 0;position:relative;overflow:hidden}
-.g-frase::before{content:"";position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(206,27,46,.3),transparent 70%)}
-.g-frase .kicker{color:#ff8f9b;margin-bottom:18px}
-.g-frase blockquote{font-family:'Bricolage Grotesque';font-size:clamp(1.4rem,3vw,2rem);font-weight:600;line-height:1.2;margin-top:14px;max-width:28em;position:relative;z-index:1}
-.g-frase blockquote::before{content:"\201C";font-size:4em;color:var(--red);position:absolute;top:-20px;left:-10px;line-height:1}
-
-/* Nueva sección: por qué importa */
-.g-porque{background:var(--white);border-radius:18px;border:1px solid var(--line);padding:36px;margin:40px 0}
-.g-porque .kicker{color:var(--red);margin-bottom:14px}
-.g-porque h2{font-size:1.7rem;margin-bottom:18px}
-.g-porque p{color:var(--ink-soft);font-size:1.08rem;line-height:1.7}
-.g-porque .highlight{background:linear-gradient(135deg,rgba(206,27,46,.08),rgba(206,27,46,.04));border-left:4px solid var(--red);padding:18px 22px;border-radius:0 10px 10px 0;margin-top:20px;font-weight:600;color:var(--navy)}
-
-/* LinkedIn button */
-.g-linkedin{display:inline-flex;align-items:center;gap:10px;background:#0077B5;color:#fff;font-weight:700;font-size:.95rem;padding:14px 24px;border-radius:10px;margin:30px 0 10px;transition:.22s;text-decoration:none}
-.g-linkedin:hover{background:#006097;transform:translateY(-2px);box-shadow:0 10px 25px -8px rgba(0,119,181,.5)}
-
-/* Follow message */
-.g-follow{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,rgba(22,38,79,.04),rgba(206,27,46,.04));border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin:16px 0;font-size:.98rem;color:var(--navy);line-height:1.5}
-.g-follow .icon{font-size:1.6rem;flex:none}
-.g-follow a{color:var(--red);font-weight:700;text-decoration:none}
-.g-follow a:hover{text-decoration:underline}
 .g-side{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:28px;position:sticky;top:90px}
 .g-side .epi-num{font-family:'Bricolage Grotesque';font-weight:800;font-size:2.4rem;color:var(--red)}
 .g-side h3{font-size:1.2rem;margin:6px 0 4px}
@@ -266,6 +241,83 @@ footer li a:hover{color:#fff}
   .foot-grid{grid-template-columns:1fr}
   section{padding:64px 0}
 }
+
+/* ===== RANKING EMPRESAS ===== */
+.ranking{background:var(--paper)}
+.ranking .filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:32px}
+.ranking .filters button{font-family:'Hanken Grotesk';font-size:.84rem;font-weight:600;cursor:pointer;padding:8px 17px;border-radius:7px;border:1px solid var(--line);background:transparent;color:var(--ink-soft);transition:.2s}
+.ranking .filters button.active,.ranking .filters button:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.rank-table{width:100%;border-collapse:collapse}
+.rank-table thead th{padding:10px 16px;text-align:left;font-family:'Spline Sans Mono';font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);border-bottom:2px solid var(--line);font-weight:600;white-space:nowrap}
+.rank-table thead th:nth-child(n+4){text-align:right}
+.rank-table tbody tr{transition:.2s;cursor:pointer}
+.rank-table tbody tr:hover{background:rgba(206,27,46,.04)}
+.rank-table tbody tr:nth-child(even){background:rgba(22,38,79,.03)}
+.rank-table tbody td{padding:18px 16px;border-bottom:1px solid var(--line);vertical-align:middle}
+.rank-table tbody td:nth-child(n+4){text-align:right}
+.rank-table .pos{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.5rem;color:var(--navy);min-width:48px}
+.rank-table .pos.gold{color:#D4A017}
+.rank-table .pos.silver{color:#6B7280}
+.rank-table .pos.bronze{color:#92400E}
+.rank-table .company-cell{display:flex;align-items:center;gap:14px}
+.rank-table .company-logo{width:44px;height:44px;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:'Bricolage Grotesque';font-weight:800;font-size:1.1rem;flex:none}
+.rank-table .company-name{font-weight:700;font-size:1.05rem}
+.rank-table .company-sector{font-size:.8rem;color:var(--ink-soft);margin-top:2px}
+.rank-table .impact-tag{display:inline-block;padding:4px 10px;border-radius:5px;font-size:.72rem;font-weight:600;letter-spacing:.05em}
+.rank-table .impact-tag.alto{background:rgba(206,27,46,.1);color:var(--red)}
+.rank-table .impact-tag.medio{background:rgba(22,38,79,.08);color:var(--navy)}
+.rank-table .impact-tag.estrategico{background:rgba(212,160,23,.12);color:#92400E}
+.rank-table .num{font-family:'Bricolage Grotesque';font-weight:700;font-size:1.2rem}
+.rank-table .bar-cell{min-width:120px}
+.rank-table .bar{height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.rank-table .bar-fill{height:100%;border-radius:3px;background:var(--red)}
+.rank-table .sub{font-size:.82rem;color:var(--ink-soft)}
+.rank-table .more-row td{padding:20px 16px;text-align:center;border-bottom:none}
+.rank-table .more-row button{font-family:'Hanken Grotesk';font-size:.88rem;font-weight:600;cursor:pointer;padding:10px 24px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--navy);transition:.2s}
+.rank-table .more-row button:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+.rank-detail{display:none;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:32px;margin-top:24px}
+.rank-detail.visible{display:block}
+.rank-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.rank-detail .company-header{display:flex;align-items:center;gap:18px;margin-bottom:20px}
+.rank-detail .company-header .logo{width:60px;height:60px;border-radius:14px;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:'Bricolage Grotesque';font-weight:800;font-size:1.4rem}
+.rank-detail h3{font-size:1.6rem;margin-bottom:4px}
+.rank-detail .rank-meta{font-size:.88rem;color:var(--ink-soft);margin-bottom:16px}
+.rank-detail h4{font-size:1.1rem;margin-bottom:12px}
+.rank-detail .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}
+.rank-detail .metric{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center}
+.rank-detail .metric .val{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.8rem;color:var(--navy)}
+.rank-detail .metric .lbl{font-size:.78rem;color:var(--ink-soft);margin-top:4px}
+.rank-detail .desc{color:var(--ink-soft);font-size:.98rem;line-height:1.6}
+.rank-detail .close-btn{float:right;font-family:'Hanken Grotesk';font-size:.82rem;font-weight:600;cursor:pointer;padding:8px 16px;border-radius:7px;border:1px solid var(--line);background:transparent;color:var(--navy);transition:.2s}
+.rank-detail .close-btn:hover{background:var(--red);color:#fff;border-color:var(--red)}
+
+/* ===== REGISTRO APORTES ===== */
+.registro{background:var(--white)}
+.reg-form{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:800px}
+.reg-form .field{grid-column:1/-1}
+.reg-form label{display:block;font-size:.88rem;font-weight:600;margin-bottom:8px;color:var(--navy)}
+.reg-form input,.reg-form select,.reg-form textarea{width:100%;padding:13px 16px;border-radius:8px;border:1px solid var(--line);background:var(--paper);font-family:'Hanken Grotesk';font-size:.95rem;color:var(--navy);transition:.2s}
+.reg-form input:focus,.reg-form select:focus,.reg-form textarea:focus{outline:none;border-color:var(--red);background:#fff}
+.reg-form textarea{resize:vertical;min-height:120px}
+.reg-form .btn{margin-top:8px}
+.reg-success{display:none;background:rgba(16,101,49,.08);border:1px solid rgba(16,101,49,.2);border-radius:12px;padding:24px;text-align:center}
+.reg-success.visible{display:block}
+.reg-success h3{color:#106531;font-size:1.3rem;margin-bottom:8px}
+.reg-success p{color:var(--ink-soft);font-size:.95rem}
+.reg-list{margin-top:48px}
+.reg-list h3{font-size:1.5rem;margin-bottom:24px}
+.reg-entries{display:flex;flex-direction:column;gap:16px}
+.reg-entry{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px 26px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;transition:.2s}
+.reg-entry:hover{border-color:var(--navy);box-shadow:0 8px 24px -12px rgba(22,38,79,.2)}
+.reg-entry .entry-company{font-weight:700;font-size:1.1rem}
+.reg-entry .entry-type{font-size:.82rem;color:var(--ink-soft);margin-top:4px}
+.reg-entry .entry-impact{font-family:'Spline Sans Mono';font-size:.72rem;font-weight:600;padding:5px 12px;border-radius:6px}
+.reg-entry .entry-impact.alto{background:rgba(206,27,46,.1);color:var(--red)}
+.reg-entry .entry-impact.medio{background:rgba(22,38,79,.08);color:var(--navy)}
+.reg-entry .entry-impact.estrategico{background:rgba(212,160,23,.12);color:#92400E}
+.reg-empty{text-align:center;padding:48px 24px;color:var(--ink-soft)}
+.reg-empty p{font-size:1.05rem}
 </style>
 </head>
 <body>
@@ -276,6 +328,8 @@ footer li a:hover{color:#fff}
     <a href="#momento" data-link>El momento</a>
     <a href="#entrevistados" data-link>Entrevistados</a>
     <a href="#episodes" data-link>Capítulos</a>
+    <a href="#ranking" data-link>Ranking</a>
+    <a href="#registro" data-link>Registro</a>
     <a href="#desafio" data-link>Desafío Latam</a>
     <a href="#cta" data-link class="nav-cta">Participar</a>
   </div>
@@ -303,7 +357,10 @@ footer li a:hover{color:#fff}
         <hr>
         <div class="s" style="margin-bottom:13px">Escúchanos en:</div>
         <div class="platforms">
-          <a href="#">Spotify</a><a href="#">Apple Podcasts</a><a href="#">YouTube</a><a href="#">Google Podcasts</a>
+          <a href="https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ" target="_blank">Spotify</a>
+          <a href="#">Apple Podcasts</a>
+          <a href="https://www.youtube.com/playlist?list=PLFgaQL-UJJiVNDg8Ro7NBEq6opW1amO33" target="_blank">YouTube</a>
+          <a href="#">Google Podcasts</a>
         </div>
       </div>
     </div>
@@ -402,6 +459,66 @@ footer li a:hover{color:#fff}
   </div>
 </section>
 
+<div id="ranking" class="ranking">
+  <div class="wrap">
+    <div class="section-tag">OPORTUNIDAD PAÍS</div>
+    <h2>Ranking de Empresas<br>que Transforman Chile</h2>
+    <p class="lead">Las empresas que más invierten en formación de talento tecnológico y que más aportan al desarrollo del país.</p>
+    <div class="filters">
+      <button class="active" data-filter="all">Todos</button>
+      <button data-filter="alto">Alto Impacto</button>
+      <button data-filter="estrategico">Estratégico</button>
+      <button data-filter="medio">Medio Impacto</button>
+    </div>
+    <div class="table-wrap">
+      <table class="rank-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Empresa</th>
+            <th>Impacto</th>
+            <th>Programas</th>
+            <th>Becas</th>
+            <th>Inversión</th>
+            <th>Progreso</th>
+          </tr>
+        </thead>
+        <tbody id="rankBody"></tbody>
+      </table>
+    </div>
+    <div class="more-row"><button id="rankMore">Ver más empresas</button></div>
+    <div class="rank-detail" id="rankDetail"></div>
+  </div>
+</div>
+
+<div id="registro" class="registro">
+  <div class="wrap">
+    <div class="section-tag">REGISTRO</div>
+    <h2>Registro de Aportes<br>al País</h2>
+    <p class="lead">Registra aquí la inversión que tu empresa realiza en programas sociales y formación para que quede reflejada en el ranking.</p>
+    <div class="reg-form" id="regForm">
+      <div class="field"><label>Nombre de la empresa</label><input type="text" id="regCompany" placeholder="Ej: Microsoft Chile" required></div>
+      <div class="field"><label>Rut de la empresa</label><input type="text" id="regRut" placeholder="Ej: 76.123.456-7"></div>
+      <div class="field"><label>Nombre de contacto</label><input type="text" id="regName" placeholder="Ej: Juan Pérez"></div>
+      <div class="field"><label>Correo electrónico</label><input type="email" id="regEmail" placeholder="juan@empresa.cl"></div>
+      <div class="field"><label>Tipo de aporte</label><select id="regType"><option value="">Selecciona una opción</option><option>Donación en dinero</option><option>Becas de estudio</option><option>Voluntarios</option><option>Mentoría</option><option>Equipamiento</option><option>Alianzas educativas</option><option>Otro</option></select></div>
+      <div class="field"><label>Monto estimado (CLP)</label><input type="number" id="regAmount" placeholder="Ej: 5000000"></div>
+      <div class="field"><label>Descripción del aporte</label><textarea id="regDesc" placeholder="Describe brevemente en qué consiste tu aporte..."></textarea></div>
+      <div class="field"><label>Nivel de impacto</label><select id="regImpact"><option value="">Selecciona</option><option>Alto Impacto</option><option>Estratégico</option><option>Medio Impacto</option></select></div>
+      <div class="field btn"><button class="btn" onclick="submitRegistro()">Registrar aporte</button></div>
+    </div>
+    <div class="reg-success" id="regSuccess">
+      <h3>✅ ¡Registro exitoso!</h3>
+      <p>Tu aporte ha sido registrado correctamente. Lo revisaremos y publicaremos pronto.</p>
+    </div>
+    <div class="reg-list">
+      <h3>Aportes registrados</h3>
+      <div class="reg-entries" id="regEntries"></div>
+      <div class="reg-empty" id="regEmpty"><p>No hay registros aún. ¡Sé el primero en registrar tu aporte!</p></div>
+    </div>
+  </div>
+</div>
+
 <section class="cta" id="cta">
   <div class="wrap">
     <h2 class="reveal">Sé parte de la <span class="red">conversación</span></h2>
@@ -438,8 +555,10 @@ footer li a:hover{color:#fff}
       <div>
         <h5>Escuchar</h5>
         <ul>
-          <li><a href="#">Spotify</a></li><li><a href="#">Apple Podcasts</a></li>
-          <li><a href="#">YouTube</a></li><li><a href="#">Google Podcasts</a></li>
+          <li><a href="https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ" target="_blank">Spotify</a></li>
+          <li><a href="#">Apple Podcasts</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLFgaQL-UJJiVNDg8Ro7NBEq6opW1amO33" target="_blank">YouTube</a></li>
+          <li><a href="#">Google Podcasts</a></li>
         </ul>
       </div>
     </div>
@@ -452,76 +571,62 @@ footer li a:hover{color:#fff}
 
 <script>
 const GUESTS=[
- {id:"justo-vargas",init:"JV",name:"Justo Vargas",role:"Tecnología · Transformación digital",org:"Client Partner, Globant",cap:"001",dur:"58 min",fecha:"Mar 2026",cat:"Tech",
-  title:"Oportunidad País — Capítulo 1",
-  quote:"La transformación digital no es un proyecto de tecnología: es un proyecto de cultura organizacional.",
-  quote2:"Chile tiene el talento para ser líder digital en la región. Lo que falta es la voluntad de ejecutar a escala.",
-  porque:"Justo Vargas lidera la transformación digital de empresas chilenas desde Globant, con más de 30 años de experiencia en la industria. Su perspectiva conecta innovación tecnológica con realidad empresarial, mostrando qué se necesita para que Chile realmente aproveche su potencial digital.",
-  desc:"Experto en transformación digital y tecnología con más de 30 años de experiencia en la industria. Representa a Globant y es co-fundador de Unlearni.",
-  bio:["Justo es Client Partner en Globant, donde impulsa la transformación digital de empresas chilenas y de la región.","Con más de 30 años en la industria del software, ha visto la evolución tecnológica de Chile de primera mano."],
-  ideas:["La transformación digital es un proyecto cultural, no solo tecnológico.","Chile tiene el talento pero falta voluntad de ejecutar a escala.","La educación continua es la clave para cerrar la brecha de habilidades digitales."],
-  photo:"https://agent-cdn.minimax.io/mcp/image_tool/output/387586306376093704/403577549889826/1780722322_55e396d6.jpg",
-  linkedin:"https://cl.linkedin.com/in/justomiguel"},
+ {id:"camila-sanchez",init:"CS",name:"Camila Sánchez",role:"Tecnología · Conectividad",org:"CTO de Entel",cap:"001",dur:"58 min",fecha:"Ene 2026",cat:"Tech",
+  title:"La brecha digital que frena a Chile",
+  quote:"Cerrar la brecha digital es la inversión de mayor retorno que Chile puede hacer hoy.",
+  desc:"Por qué el 40% de los hogares chilenos sigue sin acceso a internet de alta velocidad y qué propone el sector para cerrar esa brecha antes de 2030.",
+  bio:["Camila lidera la estrategia tecnológica de una de las mayores operadoras del país, donde impulsa el despliegue de infraestructura digital en zonas históricamente desatendidas.","Su trabajo conecta inversión privada, política pública y necesidad territorial, con un foco claro: que la conectividad deje de ser un privilegio urbano."],
+  ideas:["La conectividad es infraestructura productiva, no un lujo.","El 40% de los hogares aún sin banda ancha de calidad es un freno medible al PIB.","Cerrar la brecha al 2030 requiere coordinación público-privada, no subsidios aislados."]},
 
- {id:"jeannette-escudero",init:"JE",name:"Jeannette Escudero",role:"Educación · Talento digital",org:"Dirección Ejecutiva, Talento Digital para Chile",cap:"002",dur:"72 min",fecha:"Mar 2026",cat:"Educación",
-  title:"Oportunidad País — Capítulo 2",
-  quote:"El talento digital no se forma en las universidades tradicionales. Se forma con programas diseñados para las necesidades reales del mercado.",
-  quote2:"Si no formamos a las personas con las habilidades que el mercado necesita hoy, mañana no tendremos industria.",
-  porque:"Jeannette Escudero lidera Talento Digital para Chile, una iniciativa que ya ha formado a miles de personas en habilidades digitales requeridas por el mercado. Su trabajo muestra cómo la formación técnica puede cerrar la brecha entre la educación y las necesidades reales de las empresas.",
-  desc:"Ingeniera Civil Industrial de la Universidad de Chile, con certificación en marketing digital de la Universidad de Columbia. Lidera la iniciativa que forma talento digital para las empresas chilenas.",
-  bio:["Jeannette dirige Talento Digital para Chile, una iniciativa público-privada que forma a miles de personas en habilidades digitales.","Su trabajo se enfoca en cerrar la brecha entre la formación tradicional y lo que el mercado laboral realmente necesita."],
-  ideas:["El talento digital se forma con programas alineados a las necesidades del mercado.","La brecha de habilidades es la mayor barrera para la productividad de Chile.","La educación técnica es la vía más rápida para generar empleo de calidad."],
-  photo:"https://agent-cdn.minimax.io/mcp/image_tool/output/387586306376093704/403577549889826/1780722342_5e893948.jpg",
-  linkedin:"https://cl.linkedin.com/in/jeannette-escudero-vasquez"},
+ {id:"jose-miguel-torres",init:"JT",name:"José Miguel Torres",role:"Educación · Capital humano",org:"Director de INACAP",cap:"002",dur:"72 min",fecha:"Ene 2026",cat:"Educación",
+  title:"Educación técnica: el secreto que nadie cuenta",
+  quote:"La educación técnica es el motor silencioso de la productividad del país.",
+  desc:"El 70% de las empresas chilenas no encuentra trabajadores con las habilidades que necesita. La educación técnica es la respuesta, pero falta información.",
+  bio:["José Miguel dirige una de las instituciones de formación técnica más grandes de Chile, donde trabaja para alinear los programas con la demanda real del mercado laboral.","Defiende la educación técnico-profesional como la vía más rápida y efectiva para cerrar la brecha de habilidades del país."],
+  ideas:["El 70% de las empresas no encuentra el talento técnico que necesita.","La formación técnica tiene mejor empleabilidad que muchas carreras tradicionales.","Falta información para que jóvenes y familias valoren esta ruta."]},
 
- {id:"francisco-mardones",init:"FM",name:"Francisco Mardones",role:"Tecnología · Exportaciones tech",org:"Director Ejecutivo, Chiletec",cap:"003",dur:"65 min",fecha:"Abr 2026",cat:"Tech",
-  title:"Chile debe potenciar tecnología, dice Director Ejecutivo de Chiletec",
-  quote:"Chile puede ser la puerta de entrada de tecnología latinoamericana al mundo. Pero para eso necesitamos una estrategia clara.",
-  quote2:"El ecosistema tech chileno tiene potencial para exportar servicios digitales a escala global. Lo que falta es visión estratégica.",
-  porque:"Francisco Mardones lidera Chiletec, la asociación que representa a las empresas de tecnología y servicios digitales de Chile. Su visión estratégica sobre las exportaciones tech y el desarrollo del ecosistema lo convierte en una voz clave para entender el futuro digital del país.",
-  desc:"Board Member & Tech Advisor. Director Ejecutivo de CHILETEC, la asociación de empresas de tecnología y servicios digitales de Chile.",
-  bio:["Francisco lidera Chiletec, donde trabaja por posicionar a Chile como hub de tecnología y exportación de servicios digitales.","Su experiencia como Board Member y Tech Advisor le da una perspectiva global del ecosistema."],
-  ideas:["Chile tiene potencial para exportar servicios tecnológicos a escala global.","La estrategia digital del país debe apuntar a la exportación.","El talento tech chileno es competitivo a nivel mundial."],
-  photo:"https://agent-cdn.minimax.io/mcp/image_tool/output/387586306376093704/403577549889826/1780722359_d3d0cd43.jpg",
-  linkedin:"https://cl.linkedin.com/in/fmardones"},
+ {id:"maria-jose-villamayor",init:"MV",name:"María José Villamayor",role:"Negocios · Emprendimiento",org:"Fundadora de Aval",cap:"003",dur:"65 min",fecha:"Feb 2026",cat:"Negocios",
+  title:"Startups chilenas: por qué somos el Silicon Valley de Latam",
+  quote:"Chile demostró que puede ser el hub de startups de Latinoamérica.",
+  desc:"En 5 años Chile se posicionó como el hub de startups más grande de Latinoamérica. ¿Qué salió bien, qué falta y cómo sigue la historia?",
+  bio:["María José fundó y escaló una startup chilena hasta convertirla en referente regional, y hoy es una voz activa del ecosistema emprendedor.","Conoce de primera mano lo que funcionó del modelo chileno y lo que aún falta para sostener el crecimiento."],
+  ideas:["Chile escaló como hub de startups en apenas cinco años.","El acceso temprano a capital fue decisivo, pero la siguiente etapa exige más.","Retener y atraer talento es el próximo gran desafío del ecosistema."]},
 
- {id:"luz-maria-garcia",init:"LM",name:"Luz María García",role:"Innovación · Productividad",org:"Gerente General, ACTI",cap:"004",dur:"51 min",fecha:"Abr 2026",cat:"Educación",
-  title:"Ciencia, Innovación y Productividad: Desafíos y Oportunidades para Chile",
-  quote:"La innovación no es un lujo para países ricos. Es una necesidad para países que quieren crecer.",
-  quote2:"Chile puede pasar de ser un país que importa innovación a ser un país que la genera. Pero para eso necesitamos invertir más y mejor.",
-  porque:"Luz María García lidera ACTI, la asociación que representa a las empresas más innovadoras de Chile. Su perspectiva sobre cómo la ciencia y la innovación pueden transformar la productividad del país es indispensable para entender hacia dónde va Chile.",
-  desc:"Gerente General de ACTI, la Asociación de Empresas de Tecnología e Información de Chile.",
-  bio:["Luz María lidera ACTI, donde trabaja por promover la innovación y la productividad en el sector tecnológico chileno.","Su gestión conecta empresas, academia y gobierno para impulsar la innovación en Chile."],
-  ideas:["La innovación es una necesidad, no un lujo.","Chile debe pasar de importar innovación a generarla.","La conexión entre ciencia y empresa es clave para la productividad."],
-  photo:"https://agent-cdn.minimax.io/mcp/image_tool/output/387586306376093704/403577549889826/1780722389_7bafff6f.jpg",
-  linkedin:"https://cl.linkedin.com/in/luz-mar%C3%ADa-garc%C3%ADa-contreras-085024a4"},
+ {id:"sebastian-pincheira",init:"SP",name:"Sebastián Pincheira",role:"Tecnología · Estado",org:"Subtel",cap:"004",dur:"51 min",fecha:"Feb 2026",cat:"Tech",
+  title:"La revolución de los datos abiertos en el gobierno",
+  quote:"Los datos abiertos cambian cómo el Estado toma decisiones.",
+  desc:"Cómo Chile está usando datos abiertos para tomar mejores decisiones de política pública y qué podemos aprender de otros países.",
+  bio:["Sebastián trabaja en la modernización digital del Estado, impulsando políticas de datos abiertos y transparencia.","Su mirada combina tecnología, gestión pública y aprendizaje de experiencias internacionales."],
+  ideas:["Los datos abiertos mejoran la calidad de la política pública.","La transparencia de datos genera confianza y nuevos servicios.","Chile puede aprender de modelos internacionales ya probados."]},
 
- {id:"elizabeth-cameron",init:"EC",name:"Elizabeth Cameron",role:"Minería · Diversidad e innovación",org:"Principal de Asuntos Corporativos, BHP",cap:"005",dur:"80 min",fecha:"Jun 2026",cat:"Tech",
-  title:"Country Opportunity — Chile needs to look to the north",
-  quote:"Chile tiene todos los elementos para ser un país de clase mundial. Lo que necesita es ejecución.",
-  quote2:"La diversidad no es solo lo correcto: es lo inteligente. Los equipos diversos toman mejores decisiones.",
-  porque:"Elizabeth Cameron trabaja en BHP, una de las mayores empresas mineras del mundo. Su perspectiva sobre cómo Chile puede aprovechar sus recursos naturales, la diversidad y la innovación la convierte en una voz clave para entender el futuro productivo del país.",
-  desc:"Principal de Asuntos Corporativos en BHP, una de las mayores empresas mineras del mundo.",
-  bio:["Elizabeth trabaja en BHP, donde lidera iniciativas de diversidad, inclusión e innovación corporativa.","Su experiencia en la industria minera le da una perspectiva única sobre el desarrollo productivo de Chile."],
-  ideas:["Chile tiene recursos naturales únicos que deben aprovecharse con responsabilidad.","La diversidad en las empresas mejora la toma de decisiones.","La innovación en la minería puede transformar la productividad del país."],
-  photo:"https://agent-cdn.minimax.io/mcp/image_tool/output/387586306376093704/403577549889826/1780722407_74ebee42.jpg",
-  linkedin:"https://cl.linkedin.com/in/elizabeth-cameron-ovando-15baba35"}
+ {id:"koivunen-ahumada",init:"KA",name:"Koivunen + Ahumada",role:"Educación · Innovación",org:"Modelo educativo finlandés en Chile",cap:"005",dur:"68 min",fecha:"Mar 2026",cat:"Educación",
+  title:"El modelo finlandés que está cambiando colegios en Chile",
+  quote:"Llevamos al aula chilena lo que tiene a Finlandia en el top mundial.",
+  desc:"Una profesora finlandesa y un director chileno cuentan cómo implementaron el modelo educativo que tiene a Finlandia en el top 5 mundial.",
+  bio:["Anita Koivunen, docente finlandesa, y Rodrigo Ahumada, director de colegio en Chile, unieron mundos para adaptar un modelo educativo de clase mundial a la realidad local.","Su experiencia muestra que la innovación pedagógica es transferible cuando se adapta con rigor al contexto."],
+  ideas:["El modelo finlandés prioriza el aprendizaje profundo sobre la prueba estandarizada.","La adaptación al contexto chileno fue clave para que funcionara.","La formación y autonomía docente son el corazón del cambio."]},
+
+ {id:"carmen-gloria-torres",init:"CT",name:"Carmen Gloria Torres",role:"Energía · Sostenibilidad",org:"Acciona",cap:"006",dur:"80 min",fecha:"Mar 2026",cat:"Energía",
+  title:"Energía limpia: Chile tiene la solución, le falta ejecución",
+  quote:"Chile tiene la solución energética; el desafío es la ejecución.",
+  desc:"Chile tiene el potencial para ser la Arabia Saudita de las energías renovables. ¿Qué se necesita para que esa visión se convierta en realidad?",
+  bio:["Carmen Gloria lidera proyectos de energías renovables en Chile, un país con potencial solar y eólico de clase mundial.","Su trabajo apunta a cerrar la brecha entre el enorme potencial del país y su capacidad real de ejecución."],
+  ideas:["Chile tiene condiciones naturales únicas para las renovables.","El cuello de botella no es el recurso, sino la ejecución y permisos.","La transmisión eléctrica es la pieza que falta destrabar."]}
 ];
 
-const PLATFORMS=[["Spotify","#"],["Apple Podcasts","#"],["YouTube","#"]];
+const PLATFORMS=[["Spotify","https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ"],["Apple Podcasts","#"],["YouTube","https://www.youtube.com/playlist?list=PLFgaQL-UJJiVNDg8Ro7NBEq6opW1amO33"]];
 
 // build people grid
-document.getElementById('people-grid').innerHTML=GUESTS.map(g=>{
-  const photoTag=g.photo?`<img src="${g.photo}" alt="${g.name}" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">`:`<span class="mono-init">${g.init}</span>`;
-  return`<a class="person" href="#/g/${g.id}" data-guest>
-  <div class="portrait"><span class="chip">CAP · ${g.cap}</span><div class="portrait-img">${photoTag}</div></div>
-  <div class="info">
-    <div class="role">${g.role}</div>
-    <h3>${g.name}</h3>
-    <div class="org">${g.org}</div>
-    <span class="more">Ver su página →</span>
-  </div>
-</a>`}).join('');
+document.getElementById('people-grid').innerHTML=GUESTS.map(g=>`
+ <a class="person" href="#/g/${g.id}" data-guest>
+   <div class="portrait"><span class="chip">CAP · ${g.cap}</span><span class="mono-init">${g.init}</span></div>
+   <div class="info">
+     <div class="role">${g.role}</div>
+     <h3>${g.name}</h3>
+     <div class="org">${g.org}</div>
+     <span class="more">Ver su página →</span>
+   </div>
+ </a>`).join('');
 
 // build episode list
 const catLabel={Tech:"Tecnología",Educación:"Educación",Negocios:"Negocios",Energía:"Energía"};
@@ -542,66 +647,59 @@ function renderGuest(id){
   const g=GUESTS[i];
   const prev=GUESTS[(i-1+GUESTS.length)%GUESTS.length];
   const next=GUESTS[(i+1)%GUESTS.length];
-  const photoTag=g.photo?`<img src="${g.photo}" alt="${g.name}" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">`:`<span class="mono-init">${g.init}</span>`;
-  const linkedinBtn=g.linkedin?`<a href="${g.linkedin}" target="_blank" rel="noopener" class="g-linkedin"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> Seguir en LinkedIn</a>`:'';
-  const followMsg=`<div class="g-follow"><span class="icon">👏</span><span>Un mejor Chile lo construimos entre todos. <a href="${g.linkedin}" target="_blank">Felicita a ${g.name.split(' ')[0]} por su trabajo</a> y sé parte del cambio.</span></div>`;
   document.getElementById('guest').innerHTML=`
-  <section class="g-hero">
-    <div class="wrap">
-      <a href="#entrevistados" data-link class="g-back">← Volver a entrevistados</a>
-      <div class="grid">
-        <div class="g-portrait">${photoTag}</div>
-        <div>
-          <span class="chip">Capítulo ${g.cap} · ${g.role}</span>
-          <h1>${g.name}</h1>
-          <div class="org">${g.org}</div>
-          <p class="quote">"${g.quote}"</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="g-body">
-    <div class="wrap g-cols">
-      <div>
-        ${g.quote2?`<div class="g-frase"><div class="kicker">La frase que lo define</div><blockquote>${g.quote2}</blockquote></div>`:''}
-        <h2>Sobre el invitado</h2>
-        ${g.bio.map(p=>`<p>${p}</p>`).join('')}
-        <h2 style="margin-top:34px">Ideas clave del capítulo</h2>
-        <ul class="g-ideas">
-          ${g.ideas.map((t,n)=>`<li><span class="n">0${n+1}</span><span>${t}</span></li>`).join('')}
-        </ul>
-        ${g.porque?`<div class="g-porque"><div class="kicker">¿Por qué todos deben conocer a esta persona?</div><h2>Su impacto en Chile</h2><p>${g.porque}</p><div class="highlight">Un mejor Chile lo construimos entre todos.</div></div>`:''}
-        ${linkedinBtn}
-        ${followMsg}
-      </div>
-      <aside>
-        <div class="g-side">
-          <div class="epi-num">${g.cap}</div>
-          <h3>${g.title}</h3>
-          <div class="meta">${g.dur} · ${g.fecha} · ${catLabel[g.cat]}</div>
-          <p style="color:var(--ink-soft);font-size:.95rem">${g.desc}</p>
-          <div class="listen">
-            ${PLATFORMS.map(p=>`<a href="${p[1]}">▸ Escuchar en ${p[0]}</a>`).join('')}
-          </div>
-          <div class="g-share">
-            <div class="lbl">Comparte con orgullo</div>
-            <div class="row">
-              <a href="#" title="LinkedIn">in</a>
-              <a href="#" title="X">X</a>
-              <a href="#" title="WhatsApp">wa</a>
-              <a href="#" title="Copiar enlace">↗</a>
-            </div>
-          </div>
-        </div>
-      </aside>
-    </div>
-  </div>
-  <div class="g-nextprev">
-    <div class="wrap">
-      <div class="g-np"><div class="lbl">Anterior</div><a href="#/g/${prev.id}" data-guest>← ${prev.name}</a></div>
-      <div class="g-np" style="text-align:right"><div class="lbl">Siguiente</div><a href="#/g/${next.id}" data-guest>${next.name} →</a></div>
-    </div>
-  </div>`;
+   <section class="g-hero">
+     <div class="wrap">
+       <a href="#entrevistados" data-link class="g-back">← Volver a entrevistados</a>
+       <div class="grid">
+         <div class="g-portrait"><span class="mono-init">${g.init}</span></div>
+         <div>
+           <span class="chip">Capítulo ${g.cap} · ${g.role}</span>
+           <h1>${g.name}</h1>
+           <div class="org">${g.org}</div>
+           <p class="quote">"${g.quote}"</p>
+         </div>
+       </div>
+     </div>
+   </section>
+   <div class="g-body">
+     <div class="wrap g-cols">
+       <div>
+         <h2>Sobre el invitado</h2>
+         ${g.bio.map(p=>`<p>${p}</p>`).join('')}
+         <h2 style="margin-top:34px">Ideas clave del capítulo</h2>
+         <ul class="g-ideas">
+           ${g.ideas.map((t,n)=>`<li><span class="n">0${n+1}</span><span>${t}</span></li>`).join('')}
+         </ul>
+       </div>
+       <aside>
+         <div class="g-side">
+           <div class="epi-num">${g.cap}</div>
+           <h3>${g.title}</h3>
+           <div class="meta">${g.dur} · ${g.fecha} · ${catLabel[g.cat]}</div>
+           <p style="color:var(--ink-soft);font-size:.95rem">${g.desc}</p>
+           <div class="listen">
+             ${PLATFORMS.map(p=>`<a href="${p[1]}">▸ Escuchar en ${p[0]}</a>`).join('')}
+           </div>
+           <div class="g-share">
+             <div class="lbl">Comparte con orgullo</div>
+             <div class="row">
+               <a href="#" title="LinkedIn">in</a>
+               <a href="#" title="X">X</a>
+               <a href="#" title="WhatsApp">wa</a>
+               <a href="#" title="Copiar enlace">↗</a>
+             </div>
+           </div>
+         </div>
+       </aside>
+     </div>
+   </div>
+   <div class="g-nextprev">
+     <div class="wrap">
+       <div class="g-np"><div class="lbl">Anterior</div><a href="#/g/${prev.id}" data-guest>← ${prev.name}</a></div>
+       <div class="g-np" style="text-align:right"><div class="lbl">Siguiente</div><a href="#/g/${next.id}" data-guest>${next.name} →</a></div>
+     </div>
+   </div>`;
   return true;
 }
 
@@ -650,6 +748,95 @@ document.addEventListener('click',e=>{
   const f=b.dataset.f;
   document.querySelectorAll('.epi').forEach(el=>{el.style.display=(f==='all'||el.dataset.cat===f)?'grid':'none'});
 });
+
+// ===== RANKING =====
+const companies=[
+  {rank:1,name:'Microsoft',sector:'Tecnología',logo:'M',impact:'alto',programs:8,becas:420,investment:2800000000,desc:'Líder global en tecnología con programas sólidos de inclusión digital y formación de talento en IA y nube en Chile.'},
+  {rank:2,name:'Google',sector:'Tecnología',logo:'G',impact:'estrategico',programs:6,becas:310,investment:1950000000,desc:'Impulsa la transformación digital en el país con Google for Startups, Grow with Google y alianzas con universidades chilenas.'},
+  {rank:3,name:'Amazon Web Services',sector:'Cloud Computing',logo:'A',impact:'estrategico',programs:5,becas:240,investment:1600000000,desc:'Con su programa AWS re/Start y alianzas con centros de formación técnica, forma talento en computación en la nube.'},
+  {rank:4,name:'Falabella',sector:'Retail',logo:'F',impact:'alto',programs:12,becas:580,investment:1500000000,desc:'La multilatina líder en retail mantiene programas de empleo juvenil, capacitación laboral y alianzas con institutos técnicos.'},
+  {rank:5,name:'Entel',sector:'Telecomunicaciones',logo:'E',impact:'medio',programs:7,becas:190,investment:980000000,desc:'Compañía de telecomunicaciones con programas de formación en redes y tecnología para jóvenes de zonas vulnerables.'},
+  {rank:6,name:'Codelco',sector:'Minería',logo:'C',impact:'estrategico',programs:9,becas:350,investment:1400000000,desc:'La estatal minera invierte en formación técnica y profesionalización de trabajadores para la minería del futuro.'},
+  {rank:7,name:'Copec',sector:'Energía',logo:'Co',impact:'medio',programs:6,becas:210,investment:850000000,desc:'A través de su fundación y programas de scholarships, impulsa la formación técnica y profesional en zonas rurales.'},
+  {rank:8,name:'SQM',sector:'Química y Minería',logo:'S',impact:'estrategico',programs:5,becas:180,investment:920000000,desc:'Con su programa SQM Scholarship apoya a estudiantes de matemáticas y ciencias en universidades chilenas.'},
+  {rank:9,name:'CCNI',sector:'Retail Financiero',logo:'C',impact:'alto',programs:4,becas:160,investment:750000000,desc:'Con su programa Talento Mujer y alianzas con Desafío Latam, forma desarrolladores junior en contextos vulnerables.'},
+  {rank:10,name:'Desafío Latam',sector:'Educación',logo:'DL',impact:'alto',programs:14,becas:1200,investment:680000000,desc:'Organización líder en formación tecnológica gratuita, con alianzas corporativas para conectar graduados con empleo.'},
+  {rank:11,name:'Bci',sector:'Banca',logo:'B',impact:'medio',programs:5,becas:140,investment:620000000,desc:'Banco con programas de inclusión financiera y alianzas educativas para formar talento en el sector fintech.'},
+  {rank:12,name:'CMPC',sector:'Forestal',logo:'CM',impact:'medio',programs:4,becas:120,investment:540000000,desc:'Empresa forestal con programas de formación técnica y profesionalización en comunidades donde opera.'},
+];
+const PAGE=8;
+let shown=PAGE;
+function fmt(n){if(n>=1e9)return'$'+(n/1e9).toFixed(1)+'B';if(n>=1e6)return'$'+(n/1e6).toFixed(0)+'M';return'$'+(n/1e3).toFixed(0)+'K';}
+function renderRank(filter='all'){
+  const tb=document.getElementById('rankBody');
+  const max=Math.max(...companies.map(c=>c.investment));
+  const vis=companies.filter(c=>filter==='all'||c.impact===filter);
+  tb.innerHTML=vis.slice(0,shown).map(c=>`<tr onclick="showDetail(${c.rank})">
+<td><span class="pos ${c.rank===1?'gold':c.rank===2?'silver':c.rank===3?'bronze':''}">${c.rank}</span></td>
+<td><div class="company-cell"><div class="company-logo">${c.logo}</div><div><div class="company-name">${c.name}</div><div class="company-sector">${c.sector}</div></div></div></td>
+<td><span class="impact-tag ${c.impact}">${c.impact==='alto'?'Alto Impacto':c.impact==='estrategico'?'Estratégico':'Medio Impacto'}</span></td>
+<td><span class="num">${c.programs}</span></td>
+<td><span class="num">${c.becas.toLocaleString()}</span></td>
+<td><span class="num">${fmt(c.investment)}</span></td>
+<td class="bar-cell"><div class="bar"><div class="bar-fill" style="width:${(c.investment/max*100).toFixed(0)}%"></div></div><span class="sub">${(c.investment/max*100).toFixed(0)}% del líder</span></td>
+</tr>`).join('');
+  document.getElementById('rankMore').style.display=shown<vis.length?'block':'none';
+}
+function showDetail(r){
+  const c=companies.find(x=>x.rank===r);
+  if(!c)return;
+  const max=Math.max(...companies.map(x=>x.investment));
+  document.getElementById('rankDetail').innerHTML=`<button class="close-btn" onclick="document.getElementById('rankDetail').classList.remove('visible')">✕ Cerrar</button>
+<div class="company-header"><div class="logo">${c.logo}</div><div><h3>${c.name}</h3><div class="rank-meta">${c.sector} · Posición #${c.rank}</div></div></div>
+<div class="rank-detail-grid"><div><h4>Métricas clave</h4>
+<div class="metrics"><div class="metric"><div class="val">${c.programs}</div><div class="lbl">Programas activos</div></div>
+<div class="metric"><div class="val">${c.becas.toLocaleString()}</div><div class="lbl">Becas otorgadas</div></div>
+<div class="metric"><div class="val">${fmt(c.investment)}</div><div class="lbl">Inversión anual</div></div></div>
+<h4>Sobre su aporte</h4><p class="desc">${c.desc}</p></div>
+<div><h4>Comparativa de inversión</h4>
+<div style="margin-top:12px"><div style="display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:6px"><span>${companies[0].name}</span><span>${fmt(companies[0].investment)}</span></div>
+<div style="height:8px;border-radius:4px;background:var(--red);width:100%;margin-bottom:16px"></div>
+<div style="display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:6px"><span>${c.name}</span><span>${fmt(c.investment)}</span></div>
+<div style="height:8px;border-radius:4px;background:var(--line);overflow:hidden"><div style="height:100%;border-radius:4px;background:var(--navy);width:${(c.investment/max*100).toFixed(0)}%"></div></div></div>
+<div style="margin-top:24px"><span class="impact-tag ${c.impact}" style="font-size:.9rem;padding:6px 14px">${c.impact==='alto'?'Alto Impacto':c.impact==='estrategico'?'Estratégico':'Medio Impacto'}</span></div></div></div>`;
+  document.getElementById('rankDetail').classList.add('visible');
+  document.getElementById('rankDetail').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('.ranking .filters button');
+  if(!b)return;
+  document.querySelectorAll('.ranking .filters button').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  shown=PAGE;
+  renderRank(b.dataset.filter);
+});
+document.getElementById('rankMore')&&document.getElementById('rankMore').addEventListener('click',()=>{shown+=5;renderRank(document.querySelector('.ranking .filters button.active')?.dataset.filter||'all');});
+
+// ===== REGISTRO =====
+const REGISTRY_KEY='op-pais-registros';
+function getRegs(){try{return JSON.parse(localStorage.getItem(REGISTRY_KEY)||'[]');}catch{return[];}}
+function saveRegs(r){localStorage.setItem(REGISTRY_KEY,JSON.stringify(r));}
+function renderEntries(){
+  const regs=getRegs();
+  const list=document.getElementById('regEntries');
+  const empty=document.getElementById('regEmpty');
+  if(!regs.length){list.innerHTML='';empty.style.display='block';return;}
+  empty.style.display='none';
+  list.innerHTML=regs.map(r=>`<div class="reg-entry"><div><div class="entry-company">${r.company}</div><div class="entry-type">${r.type||'Aporte general'}${r.amount?' · '+fmt(Number(r.amount)):''}</div></div><span class="entry-impact ${r.impact==='Alto Impacto'?'alto':r.impact==='Estratégico'?'estrategico':'medio'}">${r.impact||'Medio Impacto'}</span></div>`).join('');
+}
+function submitRegistro(){
+  const company=document.getElementById('regCompany').value.trim();
+  if(!company){alert('Por favor ingresa el nombre de la empresa.');return;}
+  const regs=getRegs();
+  regs.unshift({company,rut:document.getElementById('regRut').value.trim(),name:document.getElementById('regName').value.trim(),email:document.getElementById('regEmail').value.trim(),type:document.getElementById('regType').value,amount:document.getElementById('regAmount').value,desc:document.getElementById('regDesc').value.trim(),impact:document.getElementById('regImpact').value||'Medio Impacto',date:new Date().toISOString()});
+  saveRegs(regs);
+  document.getElementById('regForm').reset();
+  document.getElementById('regSuccess').classList.add('visible');
+  setTimeout(()=>document.getElementById('regSuccess').classList.remove('visible'),6000);
+  renderEntries();
+}
+renderEntries();
+renderRank();
 
 // arranque inicial: al final, cuando io y observeReveals ya están declarados (evita TDZ)
 route();
