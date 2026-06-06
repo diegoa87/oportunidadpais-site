@@ -39,7 +39,7 @@
       border-bottom: 1px solid rgba(213,43,30,0.2);
     }
     nav .container { display: flex; justify-content: space-between; align-items: center; }
-    .logo img { height: 50px; }
+    .logo img { height: 50px; filter: brightness(0) invert(1); }
     .nav-links { display: flex; gap: 28px; list-style: none; }
     .nav-links a { color: var(--blanco); font-size: 0.88rem; opacity: 0.7; transition: all 0.3s; font-weight: 500; }
     .nav-links a:hover { opacity: 1; color: var(--rojo-chile); }
@@ -193,12 +193,14 @@
 
 <nav>
   <div class="container">
-    <a href="/" class="logo"><img src="/static/go-logo-white.png" alt="Diego Arias"></a>
+    <a href="/" class="logo"><img src="/static/oportunidad-pais-logo.png" alt="Oportunidad País"></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="/#episodes">Capítulos</a></li>
       <li><a href="/#about">Sobre el Podcast</a></li>
-      <li><a href="/manual-marca" class="active">Manual de Marca</a></li>
-      <li><a href="https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ" target="_blank" class="nav-cta">Escuchar ahora</a></li>
+      <li><a href="/#episodes">Capítulos</a></li>
+      <li><a href="/entrevistados">Entrevistados</a></li>
+      <li><a href="/#proof">Impacto</a></li>
+      <li><a href="/#brand">Manual de Marca</a></li>
+      <li><a href="/#newsletter" class="nav-cta">Suscribirme</a></li>
     </ul>
     <button class="hamburger" id="hamburger" onclick="toggleNav()">
       <span></span><span></span><span></span>
