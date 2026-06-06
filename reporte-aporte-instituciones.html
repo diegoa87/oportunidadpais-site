@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reportes de Aporte — Oportunidad País</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#16264F;--navy-2:#1E3265;--red:#CE1B2E;--red-dd:#9F1424;--paper:#F1F0EC;--white:#FFFFFF;--ink-soft:#43506b;--line:rgba(22,38,79,.14);--line-d:rgba(241,240,236,.16);--shadow:0 26px 60px -30px rgba(22,38,79,.5)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Hanken Grotesk',sans-serif;background:var(--paper);color:var(--navy);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;line-height:1.03;letter-spacing:-.02em}
+.mono{font-family:'Spline Sans Mono',monospace}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.93rem;font-family:'Hanken Grotesk',sans-serif;padding:13px 24px;border-radius:8px;transition:.22s;cursor:pointer;border:none}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-dd);transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(206,27,46,.6)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-2);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 2px var(--line)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 2px var(--navy)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 28px;transition:.35s;background:rgba(241,240,236,.7);backdrop-filter:blur(12px)}
+nav.scrolled{background:rgba(241,240,236,.95);box-shadow:0 1px 0 var(--line)}
+.nav-logo{height:46px;width:auto;cursor:pointer}
+.navlinks{display:flex;gap:28px;align-items:center}
+.navlinks a{font-size:.88rem;font-weight:600;color:var(--navy);transition:.2s}
+.navlinks a:hover{color:var(--red)}
+.navlinks a.active{color:var(--red)}
+.nav-cta{background:var(--red);color:#fff !important;padding:9px 18px;border-radius:8px}
+.nav-cta:hover{background:var(--red-dd);color:#fff !important}
+
+/* HERO */
+.page-hero{background:var(--navy);color:#fff;padding:140px 0 70px;position:relative;overflow:hidden}
+.page-hero::before{content:"";position:absolute;top:-100px;left:-60px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(206,27,46,.18),transparent 70%)}
+.page-hero::after{content:"";position:absolute;bottom:-140px;right:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(22,38,79,.5),transparent 70%)}
+.page-hero .wrap{position:relative;z-index:2}
+.page-hero .chip{font-family:'Spline Sans Mono';font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#ff8f9b;font-weight:600}
+.page-hero h1{font-size:clamp(2.4rem,5.5vw,4rem);font-weight:800;margin:12px 0 18px}
+.page-hero p{font-size:1.12rem;max-width:28em;color:rgba(241,240,236,.8);line-height:1.5}
+.page-hero .hero-meta{display:flex;gap:32px;margin-top:28px;flex-wrap:wrap}
+.page-hero .meta-item{text-align:left}
+.page-hero .meta-item .num{font-family:'Bricolage Grotesque';font-size:1.8rem;font-weight:800;color:#fff}
+.page-hero .meta-item .lbl{font-size:.8rem;color:rgba(241,240,236,.6);margin-top:2px}
+
+/* REPORTES */
+.reportes-section{padding:80px 0}
+.section-header{margin-bottom:48px}
+.section-header h2{font-size:2rem;margin-bottom:10px}
+.section-header p{color:var(--ink-soft);max-width:36em}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:40px}
+.filters button{font-family:'Hanken Grotesk';font-size:.84rem;font-weight:600;cursor:pointer;padding:8px 17px;border-radius:7px;border:1px solid var(--line);background:transparent;color:var(--ink-soft);transition:.2s}
+.filters button.active,.filters button:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+.reporte-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px}
+.reporte-card{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.28s cubic-bezier(.2,.7,.3,1);cursor:pointer;display:flex;flex-direction:column}
+.reporte-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px -20px rgba(22,38,79,.25);border-color:var(--navy)}
+.reporte-card .card-img{height:160px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);display:grid;place-items:center;position:relative;overflow:hidden}
+.reporte-card .card-img::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 60%,rgba(206,27,46,.3),transparent 60%)}
+.reporte-card .card-img .icon{font-size:3.2rem;z-index:1}
+.reporte-card .card-body{padding:24px;flex:1;display:flex;flex-direction:column}
+.reporte-card .card-tag{font-family:'Spline Sans Mono';font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+.reporte-card h3{font-size:1.25rem;margin-bottom:10px;line-height:1.2}
+.reporte-card .card-excerpt{font-size:.92rem;color:var(--ink-soft);flex:1;margin-bottom:18px;line-height:1.5}
+.reporte-card .card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid var(--line)}
+.reporte-card .card-meta{font-size:.8rem;color:var(--ink-soft)}
+.reporte-card .card-meta span{display:block}
+.reporte-card .card-arrow{width:36px;height:36px;border-radius:8px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:.9rem;transition:.2s}
+.reporte-card:hover .card-arrow{background:var(--red)}
+
+/* FEATURED */
+.reporte-destacado{background:var(--white);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-bottom:60px;display:grid;grid-template-columns:1fr 1.2fr}
+.reporte-destacado .feat-img{background:linear-gradient(135deg,var(--navy),var(--navy-2));display:grid;place-items:center;position:relative;overflow:hidden;min-height:320px}
+.reporte-destacado .feat-img::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 40% 50%,rgba(206,27,46,.35),transparent 65%)}
+.reporte-destacado .feat-img .icon{font-size:5rem;z-index:1}
+.reporte-destacado .feat-body{padding:44px;display:flex;flex-direction:column;justify-content:center}
+.reporte-destacado .feat-tag{font-family:'Spline Sans Mono';font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.reporte-destacado h2{font-size:1.9rem;margin-bottom:14px}
+.reporte-destacado p{color:var(--ink-soft);font-size:1rem;line-height:1.6;margin-bottom:24px}
+.reporte-destacado .feat-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+.reporte-destacado .feat-stat{background:var(--paper);border-radius:10px;padding:16px;text-align:center}
+.reporte-destacado .feat-stat .num{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.5rem;color:var(--navy)}
+.reporte-destacado .feat-stat .lbl{font-size:.76rem;color:var(--ink-soft);margin-top:4px}
+
+/* ESTADISTICAS */
+.stats-section{background:var(--navy);color:#fff;padding:80px 0}
+.stats-section h2{font-size:2rem;margin-bottom:40px;text-align:center}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.stat-card{background:rgba(241,240,236,.06);border:1px solid rgba(241,240,236,.1);border-radius:16px;padding:28px;text-align:center}
+.stat-card .num{font-family:'Bricolage Grotesque';font-size:2.8rem;font-weight:800;color:var(--red);margin-bottom:8px}
+.stat-card .lbl{font-size:.9rem;color:rgba(241,240,236,.7);line-height:1.4}
+
+/* CTA */
+.cta-section{background:var(--paper);color:var(--navy);text-align:center;padding:80px 0}
+.cta-section h2{font-size:2.2rem;margin-bottom:14px}
+.cta-section p{font-size:1.05rem;max-width:26em;margin:0 auto 30px;color:var(--ink-soft)}
+
+/* FOOTER */
+footer{background:#0F1B3A;color:rgba(241,240,236,.7);padding:60px 0 32px}
+footer .grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:48px}
+footer .blurb{font-size:.94rem;max-width:30em;line-height:1.6}
+footer h5{font-family:'Spline Sans Mono';font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:#ff8f9b;margin-bottom:14px;font-weight:500}
+footer ul{list-style:none}
+footer li{margin-bottom:9px}
+footer li a:hover{color:#fff}
+footer .bottom{border-top:1px solid rgba(241,240,236,.1);padding-top:28px;font-size:.84rem}
+footer .bottom a:hover{color:#fff}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(22,38,79,.55);backdrop-filter:blur(6px);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.visible{display:flex}
+.modal{background:var(--white);border-radius:20px;max-width:820px;width:100%;max-height:88vh;overflow-y:auto;position:relative}
+.modal-header{background:var(--navy);color:#fff;padding:40px 44px 32px;position:relative}
+.modal-header .modal-icon{font-size:2.8rem;margin-bottom:12px}
+.modal-header h2{font-size:1.8rem;margin-bottom:8px}
+.modal-header .modal-tag{font-family:'Spline Sans Mono';font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#ff8f9b}
+.modal-close{position:absolute;top:20px;right:20px;width:36px;height:36px;border-radius:8px;border:1px solid rgba(241,240,236,.2);background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer;font-size:1rem;transition:.2s}
+.modal-close:hover{background:rgba(241,240,236,.15)}
+.modal-body{padding:40px 44px}
+.modal-body h3{font-size:1.2rem;margin:28px 0 12px}
+.modal-body h3:first-child{margin-top:0}
+.modal-body p{color:var(--ink-soft);line-height:1.7;margin-bottom:14px}
+.modal-body ul{color:var(--ink-soft);padding-left:20px;margin-bottom:14px}
+.modal-body ul li{margin-bottom:8px}
+.modal-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+.modal-metric{background:var(--paper);border-radius:12px;padding:20px;text-align:center}
+.modal-metric .val{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.6rem;color:var(--navy)}
+.modal-metric .lbl{font-size:.78rem;color:var(--ink-soft);margin-top:4px}
+
+/* MOBILE */
+@media(max-width:768px){
+  .navlinks{display:none}
+  .page-hero{padding:120px 0 50px}
+  .page-hero h1{font-size:2rem}
+  .hero-meta{gap:20px}
+  .reporte-grid{grid-template-columns:1fr}
+  .reporte-destacado{grid-template-columns:1fr}
+  .reporte-destacado .feat-img{min-height:200px}
+  .reporte-destacado .feat-body{padding:28px}
+  .reporte-destacado .feat-stats{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .modal-header,.modal-body{padding:28px 24px}
+  .modal-metrics{grid-template-columns:1fr}
+  footer .grid{grid-template-columns:1fr;gap:32px}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUEBAQEAwUEBAQGBQUGCA0ICAcHCBALDAkNExAUExIQEhIUFx0ZFBYcFhISGiMaHB4fISEhFBkkJyQgJh0gISD/wAARCAE4AlgDASIAAhEBAxEB/8QAHQABAAICAwEBAAAAAAAAAAAAAAcIAQYCBQkEA//EAGUQAAECBQEDBQgJDA0KBAcBAQECAwAEBQYRBxIhMQgTQVFhFCIycYGRobEVGEJSdHWys9EWFyM2N1ZicoKUosEkMzQ1OENEU3OSk5XSJicoRVVXY3aE4SVGg/BUZGWFo6TTwvH/xAAbAQEAAgMBAQAAAAAAAAAAAAAAAwQBAgUGB//EADsRAAICAgECBAIHBgUFAQEAAAABAgMEERIhMQUTQVEiMgYUM1JhgZEjQnGhscEVNDVDUxYlRNHwJHL/2gAMAwEAAhEDEQA/ALcQhiEAI4OHendnfwjnGCnKgc8IA/NQXnbwAR0RknbCQneCd8fpCAOCkb9pO4xnZ77a6eEcoQAhCEAIQhACEMQgDEZhCAEIQgBCEIAQhCAEIQgBCEIAQhCAEIQgBCEIAQhCAEIQgBGEYhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACMRmEAIQhACEIQBiEZhACEIQAhCEAIxGYQAhCEAIQhACEIQBiMwhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACMRmEAIQhACEI6S4brt61ZIzdfqzEijGUpWrK1/ioG9XkEbRjKT1FbZrKSittndxjPXFfrh5SEsl0ytqUFyZWrvUPzpKQo/gtpyT5SI1pNY5Ql6bXcLc/Jyy/dMspkkAdilYUfITHRj4dbrlY1FfiUpZ1e9QTf8Atc18x4nxxpxHfxjXK3XK+kKczddtVBCXDUZqTcQ6orygNNqGwAprkHGx5jW7G3bCq3quqU+ry9QmJhx6YfmG0rcW4skqKiM5Ji8VilS3iV5tJydvYkqY6YQhFYnEIQzACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAxGYQAhCEAIQhACMRmEAIQhACEIQBiEZhACEIQAhCEAYjMIQA/9k=" alt="Oportunidad País" class="nav-logo"></a>
+  <div class="navlinks">
+    <a href="index.html" data-link>Podcast</a>
+    <a href="index.html#entrevistados" data-link>Entrevistados</a>
+    <a href="index.html#episodes" data-link>Capítulos</a>
+    <a href="ranking-empresas.html" data-link>Ranking</a>
+    <a href="reporte-aporte-instituciones.html" data-link class="active">Reportes</a>
+    <a href="index.html#registro" data-link>Registro</a>
+    <a href="index.html#cta" data-link class="nav-cta">Participar</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="chip mono">📊 Reportes 2026</div>
+    <h1>Datos abiertos sobre el aporte de <span style="color:var(--red)">instituciones</span></h1>
+    <p>Reportes periódicos que miden y transparentan el impacto real de empresas e instituciones en la productividad, formación de talento y desarrollo económico de Chile.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <div class="num">4</div>
+        <div class="lbl">Reportes publicados</div>
+      </div>
+      <div class="meta-item">
+        <div class="num">$14.5B</div>
+        <div class="lbl">Inversión rastrillada</div>
+      </div>
+      <div class="meta-item">
+        <div class="num">76</div>
+        <div class="lbl">Programas analizados</div>
+      </div>
+      <div class="meta-item">
+        <div class="num">12</div>
+        <div class="lbl">Organizaciones</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- DESTACADO -->
+<section class="reportes-section">
+  <div class="wrap">
+    <div class="reporte-destacado" onclick="openReporte('t1')">
+      <div class="feat-img">
+        <span class="icon">📈</span>
+      </div>
+      <div class="feat-body">
+        <div class="feat-tag">Reporte trimestral · Q1 2026</div>
+        <h2>Panorama del Aporte Corporativo en Chile</h2>
+        <p>Análisis completo del ecosistema de inversión social y formación de talento en Chile durante el primer trimestre de 2026. Incluye ranking actualizado de las 12 empresas con mayor impacto, análisis por sector económico y recomendaciones para fortalecer la conexión entre inversión corporativa y productividad nacional.</p>
+        <div class="feat-stats">
+          <div class="feat-stat">
+            <div class="num">$14.5B</div>
+            <div class="lbl">Inversión total</div>
+          </div>
+          <div class="feat-stat">
+            <div class="num">4.290</div>
+            <div class="lbl">Becas otorgadas</div>
+          </div>
+          <div class="feat-stat">
+            <div class="num">76</div>
+            <div class="lbl">Programas</div>
+          </div>
+        </div>
+        <button class="btn btn-red" onclick="event.stopPropagation();openReporte('t1')">Leer reporte completo →</button>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <h2>Reportes anteriores</h2>
+      <p>Explora los reportes temáticos y análisis por sector que hemos publicado en el marco de Oportunidad País.</p>
+    </div>
+
+    <div class="filters">
+      <button data-cat="all" class="active">Todos</button>
+      <button data-cat="tecnologia">Tecnología</button>
+      <button data-cat="educacion">Educación</button>
+      <button data-cat="energia">Energía</button>
+      <button data-cat="finanzas">Finanzas</button>
+    </div>
+
+    <div class="reporte-grid" id="reporteGrid">
+      <!-- cards renderizadas por JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ESTADISTICAS -->
+<section class="stats-section">
+  <div class="wrap">
+    <h2>El panorama en números</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="num">$14.5B</div>
+        <div class="lbl">Inversión corporativa en formación y talento durante 2026</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">4.290</div>
+        <div class="lbl">Becas otorgadas por las 12 principales organizaciones rankeadas</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">76</div>
+        <div class="lbl">Programas activos de formación, becas e inversión social</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">12</div>
+        <div class="lbl">Organizaciones analizadas en el ranking de aporte al país</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="wrap">
+    <h2>¿Quieres que analicemos tu organización?</h2>
+    <p>Si tu empresa o institución tiene programas de formación, becas o inversión en talento, podemos incluirla en nuestro próximo reporte. Regístrala en el sistema.</p>
+    <a href="index.html#registro" class="btn btn-red">Registrar organización →</a>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h5>Oportunidad País</h5>
+        <p class="blurb">El podcast que visibiliza a quienes —desde empresas, instituciones y territorios— están aportando de verdad a la productividad del país.</p>
+      </div>
+      <div>
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="index.html">Podcast</a></li>
+          <li><a href="index.html#entrevistados">Entrevistados</a></li>
+          <li><a href="index.html#episodes">Capítulos</a></li>
+          <li><a href="ranking-empresas.html">Ranking</a></li>
+          <li><a href="reporte-aporte-instituciones.html">Reportes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Conecta</h5>
+        <ul>
+          <li><a href="index.html#registro">Registrar empresa</a></li>
+          <li><a href="index.html#desafio">Desafío Latam</a></li>
+          <li><a href="https://godiegoarias.com" target="_blank">Diego Arias</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <a href="index.html">Oportunidad País</a> · Podcast impulsado por Desafío Latam · 2026
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>20);});
+if(window.scrollY>20)document.getElementById('nav').classList.add('scrolled');
+
+const reportes=[
+  {
+    id:'t1',cat:'all',title:'Panorama del Aporte Corporativo en Chile — Q1 2026',tag:'Reporte trimestral',
+    icon:'📈',excerpt:'Análisis completo del ecosistema de inversión social y formación de talento en Chile durante el primer trimestre de 2026. Ranking actualizado de las 12 empresas con mayor impacto.',
+    date:'Marzo 2026',pages:'24 páginas',metrics:[{v:'$14.5B',l:'Inversión total'},{v:'4.290',l:'Becas'},{v:'76',l:'Programas'}],
+    sections:[
+      {t:'Resumen ejecutivo',p:'El primer trimestre de 2026 marca un punto de inflexión en la inversión corporativa en talento y formación en Chile. Las 12 principales organizaciones analizadas han invertido colectivamente más de $14.500 millones de pesos, con un total de 76 programas activos que benefician a miles de personas en todo el país.'},
+      {t:'Principales hallazgos',items:['Microsoft lidera la inversión con $2.8B направленные a programas de formación en IA y nube','Google y AWS concentran el 35% de la inversión en tecnología cloud','Falabella es la multilatina con mayor número de programas activos (12)','Desafío Latam destaca como la organización con mayor número de becas otorgadas (1.200)','El sector tecnología representa el 45% de la inversión total']},
+      {t:'Metodología',p:'Este ranking se construye a partir de información pública de reportes de sostenibilidad, alianzas con organizaciones educativas y datos reportados directamente por las empresas participantes. Se evalúan tres dimensiones: programas activos, becas otorgadas e inversión directa en formación.'}
+    ]
+  },
+  {
+    id:'tecnologia',cat:'tecnologia',title:'El rol de las Big Tech en la formación de talento chileno',tag:'Análisis sectorial · Tecnología',
+    icon:'💻',excerpt:'Las principales empresas de tecnología están redefiniendo el ecosistema de formación en Chile. Este reporte analiza cómo Microsoft, Google y AWS están moldeando el futuro del talento digital.',
+    date:'Febrero 2026',pages:'18 páginas',metrics:[{v:'$6.35B',l:'Inversión Tech'},{v:'970',l:'Becas Tech'},{v:'19',l:'Programas'}],
+    sections:[
+      {t:'Contexto',p:'Las grandes empresas tecnológicas han acelerado sus programas de formación en América Latina, y Chile se ha posicionado como un hub estratégico. La inversión combinada de Microsoft, Google y AWS supera los $6.300 millones, con programas que van desde bootcamps de programación hasta certificaciones avanzadas en nube e inteligencia artificial.'},
+      {t:'Hallazgos clave',items:['AWS re/Start ha graduateado más de 240 personas en programas de computación en la nube','Google for Startups apoya a más de 80 startups chilenas con herramientas y mentoría','Microsoft Learn for Partners reacheda a más de 15 universidades chilenas','El 62% de los programas tech se enfocan en perfiles junior y sin experiencia previa']},
+      {t:'Oportunidades',p:'Existe una ventana de oportunidad para que empresas chilenas y gobiernos locales se alian con estas corporaciones para amplificar el impacto en territorios específicos, especialmente en regiones fuera de Santiago.'}
+    ]
+  },
+  {
+    id:'educacion',cat:'educacion',title:'Educación y formación: el sector más diverso en aporte',tag:'Análisis sectorial · Educación',
+    icon:'🎓',excerpt:'Organizaciones educativas y fundaciones están generando un impacto significativo en la formación de talento. Este reporte mapea el ecosistema y sus principales tendencias.',
+    date:'Enero 2026',pages:'16 páginas',metrics:[{v:'$680M',l:'Inversión educación'},{v:'1.200',l:'Becas'},{v:'14',l:'Programas'}],
+    sections:[
+      {t:'Panorama del sector',p:'El sector educativo presenta la mayor diversidad de programas, desde cursos cortos hasta carreras técnicas completas. Desafío Latam se destaca como la organización con mayor volumen de becas, con más de 1.200 personas formadas anualmente en habilidades tecnológicas.'},
+      {t:'Tendencias emergentes',items:['Los bootcamps intensivos de 3-6 meses están reemplazando a carreras tradicionales en áreas tech','La conexión directa con empleadores es el factor diferenciador más valorado por estudiantes','El 78% de los graduados de programas de formación tech logran inserción laboral en menos de 6 meses','La modalidad híbrida se consolidó como el formato preferido por estudiantes y empresas']},
+      {t:'Recomendaciones',p:'Para maximizar el impacto, las organizaciones educativas deben fortalecer sus alianzas con el sector privado desde el diseño curricular, asegurando que las competencias enseñadas respondan a necesidades reales del mercado.'}
+    ]
+  },
+  {
+    id:'energia',cat:'energia',title:'Energía y transición: programas de formación para el futuro',tag:'Análisis sectorial · Energía',
+    icon:'⚡',excerpt:'Las empresas del sector energía están invirtiendo en programas de formación para la transición energética. Análisis de los programas de Copec, SQM y Codelco.',
+    date:'Diciembre 2025',pages:'14 páginas',metrics:[{v:'$3.27B',l:'Inversión energía'},{v:'740',l:'Becas'},{v:'20',l:'Programas'}],
+    sections:[
+      {t:'Contexto del sector',p:'La transición energética está generando una demanda sin precedentes de profesionales capacitados en energías renovables, hidrógeno verde y eficiencia energética. Las principales empresas del sector están respondiendo con programas de formación que alcanzan a miles de personas.'},
+      {t:'Programas destacados',items:['Codelco invierte $1.4B en formación técnica para la minería del futuro','SQM ofrece scholarships para estudiantes de matemáticas y ciencias en 8 universidades','Copec impulsa programas de formación técnica en comunidades rurales cerca de sus operaciones','El programa CMPC Bosque Docente forma a futuros profesionales del sector foresto-industrial']},
+      {t:'Mirada al futuro',p:'La formación para la transición energética debe extenderse más allá de los centros urbanos. Las empresas con operaciones en zonas rurales tienen la oportunidad de generar impacto directo en comunidades que históricamente han tenido menor acceso a oportunidades de formación especializada.'}
+    ]
+  },
+  {
+    id:'finanzas',cat:'finanzas',title:'Finanzas e inclusión: programas bancarios con impacto social',tag:'Análisis sectorial · Finanzas',
+    icon:'🏦',excerpt:'Los bancos están ampliando su rol más allá de los servicios financieros, con programas de inclusión y formación. Análisis de Bci, CCNI y su aporte al ecosistema.',
+    date:'Noviembre 2025',pages:'12 páginas',metrics:[{v:'$1.91B',l:'Inversión finanzas'},{v:'420',l:'Becas'},{v:'13',l:'Programas'}],
+    sections:[
+      {t:'La evolución del sector bancario',p:'Los principales bancos chilenos están redefiniendo su rol social a través de programas de inclusión financiera y formación empresarial. Bci y CCNI lideran el sector con programas enfocados en emprendedores, mujeres y jóvenes.'},
+      {t:'Programas destacados',items:['Bci Momentum apoya a emprendedores tecnológicos en etapas tempranas con capital y mentoría','CCNI Talento Mujer forma desarrolladores junior en contextos vulnerables','La alianza CCNI-Desafío Latam ha graduateado a más de 160 desarrolladores en los últimos 12 meses','El 45% de los programas financieros se enfocan en mujeres emprendedoras']},
+      {t:'Conclusión',p:'El sector financiero tiene un potencial enorme para amplificar su impacto social conectando sus programas de inclusión con el ecosistema de formación tecnológica, creando un círculo virtuoso que beneficie tanto a las instituciones como a las comunidades.'}
+    ]
+  }
+];
+
+function renderReportes(cat='all'){
+  const grid=document.getElementById('reporteGrid');
+  const filtered=cat==='all'?reportes:reportes.filter(r=>r.cat===cat||r.id==='t1');
+  grid.innerHTML=filtered.map(r=>`<div class="reporte-card" onclick="openReporte('${r.id}')">
+  <div class="card-img"><span class="icon">${r.icon}</span></div>
+  <div class="card-body">
+    <div class="card-tag">${r.tag}</div>
+    <h3>${r.title}</h3>
+    <p class="card-excerpt">${r.excerpt}</p>
+    <div class="card-footer">
+      <div class="card-meta"><span>${r.date}</span><span>${r.pages}</span></div>
+      <div class="card-arrow">→</div>
+    </div>
+  </div>
+</div>`).join('');
+}
+
+function openReporte(id){
+  const r=reportes.find(x=>x.id===id);
+  if(!r)return;
+  document.getElementById('modalContent').innerHTML=`
+<button class="modal-close" onclick="closeModal()">✕</button>
+<div class="modal-header">
+  <div class="modal-icon">${r.icon}</div>
+  <div class="modal-tag">${r.tag}</div>
+  <h2>${r.title}</h2>
+</div>
+<div class="modal-body">
+  <div class="modal-metrics">${r.metrics.map(m=>`<div class="modal-metric"><div class="val">${m.v}</div><div class="lbl">${m.l}</div></div>`).join('')}</div>
+  ${r.sections.map(s=>`<h3>${s.t}</h3>${s.p?`<p>${s.p}</p>`:''}${s.items?`<ul>${s.items.map(i=>`<li>${i}</li>`).join('')}</ul>`:''}`).join('')}
+</div>`;
+  document.getElementById('modalOverlay').classList.add('visible');
+  document.body.style.overflow='hidden';
+}
+
+function closeModal(){
+  document.getElementById('modalOverlay').classList.remove('visible');
+  document.body.style.overflow='';
+}
+document.getElementById('modalOverlay').addEventListener('click',e=>{if(e.target===document.getElementById('modalOverlay'))closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+document.addEventListener('click',e=>{
+  const b=e.target.closest('.filters button');
+  if(!b)return;
+  document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  renderReportes(b.dataset.cat);
+});
+
+renderReportes();
+</script>
+</body>
+</html>
