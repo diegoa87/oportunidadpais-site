@@ -1,12 +1,3 @@
 name = "oportunidadpais-site"
-main = "src/index.js"
 compatibility_date = "2026-06-06"
-account_id = "7426511883333d726e94f6988eafb07e"
-
-[assets]
-binding = "ASSETS"
-directory = "."
-
-[[kv_namespaces]]
-binding = "OPORTUNIDADPAIS"
-id = "7bc80ecd329c4c05b247301e2f350c4c"
+pages_build_output_dir = "."

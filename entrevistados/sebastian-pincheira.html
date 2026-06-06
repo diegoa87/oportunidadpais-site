@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sebastián Pincheira — Subtel Chile | Oportunidad País</title>
-  <meta name="description" content="Sebastián Pincheira, Jefe del Departamento de Conectividad de Subtel. Entrevistado en Oportunidad País sobre brecha digital y políticas públicas.">
+  <title>Sebastián Pincheira — Jefe del Departamento de Conectividad | Oportunidad País</title>
+  <meta name="description" content="Sebastián Pincheira, Jefe del Departamento de Conectividad. Entrevistada en Oportunidad País sobre conectividad, inclusión digital y políticas públicas de tecnología.">
   <link rel="icon" href="/static/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    :root { --azul-chile: #0033A0; --azul-chile-oscuro: #002060; --rojo-chile: #D52B1E; --blanco: #FFFFFF; --grafito-3: #1E293B; --grafito: #1F2937; --gris: #94A3B8; }
+    :root { --azul-chile: #0033A0; --rojo-chile: #D52B1E; --blanco: #FFFFFF; --grafito-3: #1E293B; --grafito: #1F2937; --gris: #94A3B8; --gratitud: #8B5CF6; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', sans-serif; background: var(--grafito-3); color: var(--blanco); line-height: 1.7; }
     a { text-decoration: none; color: inherit; }
@@ -28,37 +28,61 @@
     .entrevistado-photo { width: 100%; aspect-ratio: 1; border-radius: 20px; object-fit: cover; border: 2px solid rgba(213,43,30,0.2); }
     .entrevistado-photo-overlay { position: absolute; bottom: -14px; right: -14px; background: var(--rojo-chile); color: var(--blanco); font-size: 0.7rem; font-weight: 700; padding: 6px 14px; border-radius: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
     .entrevistado-meta { padding-top: 8px; }
-    .entrevistado-tag { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px; color: var(--rojo-chile); font-weight: 700; margin-bottom: 8px; }
-    .entrevistado-nombre { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; margin-bottom: 4px; line-height: 1.15; }
-    .entrevistado-cargo { font-size: 1.05rem; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
-    .entrevistado-institucion { display: flex; align-items: center; gap: 10px; background: rgba(0,51,160,0.1); border: 1px solid rgba(0,51,160,0.2); border-radius: 12px; padding: 12px 18px; margin-bottom: 24px; font-size: 0.88rem; }
-    .entrevistado-institucion svg { width: 18px; height: 18px; color: var(--azul-chile); flex-shrink: 0; }
-    .entrevistado-descripcion { font-size: 0.98rem; color: rgba(255,255,255,0.65); line-height: 1.75; }
-    .episodio-relacionado { background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; padding: 32px; margin-bottom: 48px; }
-    .episodio-relacionado h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 16px; }
-    .episodio-card { display: flex; gap: 20px; align-items: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 20px; transition: all 0.3s; cursor: pointer; }
-    .episodio-card:hover { border-color: rgba(213,43,30,0.2); transform: translateY(-2px); }
-    .episodio-thumb { width: 80px; height: 80px; border-radius: 12px; background: linear-gradient(135deg, var(--rojo-chile), #8B1A12); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.1rem; color: rgba(255,255,255,0.3); flex-shrink: 0; }
-    .episodio-info { flex: 1; }
-    .episodio-num { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--rojo-chile); font-weight: 600; margin-bottom: 4px; }
-    .episodio-titulo { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
-    .episodio-fecha { font-size: 0.75rem; color: var(--gris); font-family: 'JetBrains Mono', monospace; }
-    .episodio-play { width: 44px; height: 44px; border-radius: 50%; background: var(--rojo-chile); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.2s; }
-    .episodio-play:hover { transform: scale(1.1); }
-    .episodio-play svg { width: 16px; height: 16px; fill: white; margin-left: 2px; }
-    .social-section { margin-bottom: 48px; }
-    .social-section h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 16px; }
-    .social-links { display: flex; gap: 12px; flex-wrap: wrap; }
-    .social-link { display: flex; align-items: center; gap: 8px; padding: 10px 18px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; font-size: 0.82rem; color: var(--blanco); opacity: 0.6; transition: all 0.2s; }
-    .social-link:hover { opacity: 1; border-color: rgba(213,43,30,0.2); }
-    .social-link svg { width: 16px; height: 16px; }
+    .entrevistado-nombre { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 6px; line-height: 1.15; }
+    .entrevistado-mision { font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 20px; line-height: 1.6; font-weight: 400; }
+    .entrevistado-lugar { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--gris); margin-bottom: 8px; }
+    .entrevistado-lugar svg { width: 16px; height: 16px; color: var(--rojo-chile); }
+    .quote-section { background: linear-gradient(135deg, rgba(213,43,30,0.08), rgba(139,92,246,0.05)); border-left: 4px solid var(--rojo-chile); border-radius: 0 16px 16px 0; padding: 28px 32px; margin-bottom: 36px; }
+    .quote-text { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-style: italic; color: rgba(255,255,255,0.95); line-height: 1.6; margin-bottom: 12px; }
+    .quote-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px; color: var(--rojo-chile); font-weight: 700; }
+    .crack-section { margin-bottom: 36px; }
+    .crack-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .crack-icon { font-size: 1.5rem; }
+    .crack-content { display: grid; gap: 16px; }
+    .crack-item { display: flex; gap: 16px; align-items: flex-start; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 20px 24px; }
+    .crack-icon-item { font-size: 1.4rem; flex-shrink: 0; }
+    .crack-text h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
+    .crack-text p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+    .impacto-section { margin-bottom: 36px; }
+    .impacto-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .impacto-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .impacto-card { background: rgba(0,51,160,0.08); border: 1px solid rgba(0,51,160,0.15); border-radius: 14px; padding: 20px; text-align: center; }
+    .impacto-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--azul-chile); margin-bottom: 4px; }
+    .impacto-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; }
+    .tags-section { margin-bottom: 36px; }
+    .tags-title { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gris); font-weight: 600; margin-bottom: 12px; }
+    .tags { display: flex; gap: 10px; flex-wrap: wrap; }
+    .tag { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 6px 14px; font-size: 0.78rem; color: rgba(255,255,255,0.6); }
+    .agradecemos { background: linear-gradient(135deg, rgba(139,92,246,0.1), rgba(168,85,247,0.05)); border: 2px solid rgba(139,92,246,0.3); border-radius: 20px; padding: 32px; margin-bottom: 32px; text-align: center; }
+    .agradecemos-icon { font-size: 2.5rem; margin-bottom: 16px; }
+    .agradecemos-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 12px; color: rgba(255,255,255,0.95); }
+    .agradecemos-text { font-size: 0.92rem; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 8px; }
+    .agradecemos-text:last-of-type { margin-bottom: 0; }
+    .linkedin-section { margin-bottom: 32px; }
+    .linkedin-card { background: linear-gradient(135deg, rgba(0,119,181,0.12), rgba(0,80,130,0.08)); border: 2px solid rgba(0,119,181,0.4); border-radius: 20px; padding: 32px; text-align: center; }
+    .linkedin-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; }
+    .linkedin-text { font-size: 0.88rem; color: rgba(255,255,255,0.55); margin-bottom: 20px; line-height: 1.6; }
+    .linkedin-btn { display: inline-flex; align-items: center; gap: 10px; background: #0077B5; color: #fff; padding: 14px 28px; border-radius: 10px; font-weight: 700; font-size: 0.95rem; transition: all 0.25s; }
+    .linkedin-btn:hover { background: #006097; transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,119,181,0.4); }
+    .linkedin-btn svg { width: 20px; height: 20px; }
+    .capitulo-section { background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; padding: 32px; margin-bottom: 32px; }
+    .capitulo-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 16px; }
+    .capitulo-card { display: flex; gap: 20px; align-items: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 20px; transition: all 0.3s; cursor: pointer; }
+    .capitulo-card:hover { border-color: rgba(213,43,30,0.2); transform: translateY(-2px); }
+    .capitulo-thumb { width: 80px; height: 80px; border-radius: 12px; background: linear-gradient(135deg, var(--rojo-chile), #8B1A12); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.1rem; color: rgba(255,255,255,0.3); flex-shrink: 0; }
+    .capitulo-info { flex: 1; }
+    .capitulo-num { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--rojo-chile); font-weight: 600; margin-bottom: 4px; }
+    .capitulo-titulo { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
+    .capitulo-fecha { font-size: 0.75rem; color: var(--gris); font-family: 'JetBrains Mono', monospace; }
+    .capitulo-play { width: 44px; height: 44px; border-radius: 50%; background: var(--rojo-chile); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.2s; }
+    .capitulo-play:hover { transform: scale(1.1); }
+    .capitulo-play svg { width: 16px; height: 16px; fill: white; margin-left: 2px; }
     footer { background: var(--grafito); border-top: 1px solid rgba(255,255,255,0.05); padding: 32px 0; margin-top: 48px; }
     footer p { text-align: center; font-size: 0.78rem; color: rgba(255,255,255,0.25); }
-    @media(max-width: 700px) { .entrevistado-header { grid-template-columns: 1fr; gap: 24px; } .entrevistado-photo-wrap { max-width: 240px; } }
+    @media(max-width: 700px) { .entrevistado-header { grid-template-columns: 1fr; gap: 24px; } .entrevistado-photo-wrap { max-width: 240px; } .impacto-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-
 <nav>
   <div class="container">
     <a href="/" class="logo"><img src="/static/oportunidad-pais-logo.png" alt="Oportunidad País"></a>
@@ -80,51 +104,117 @@
   <div class="entrevistado-header">
     <div class="entrevistado-photo-wrap">
       <img src="/entrevistados/img/sebastian-pincheira.jpg" alt="Sebastián Pincheira" class="entrevistado-photo">
-      <div class="entrevistado-photo-overlay">Entrevistado</div>
+      <div class="entrevistado-photo-overlay">Entrevistada</div>
     </div>
     <div class="entrevistado-meta">
-      <div class="entrevistado-tag">Episodio #004 · Tecnología</div>
       <h1 class="entrevistado-nombre">Sebastián Pincheira</h1>
-      <p class="entrevistado-cargo">Jefe del Departamento de Conectividad</p>
-      <div class="entrevistado-institucion">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-        <span>Subtel — Ministerio de Transportes y Telecomunicaciones</span>
+      <p class="entrevistado-mision">Trabaja para que la conectividad llegue a todos los rincones de Chile. No ve la conectividad como un servicio más: la ve como un derecho fundamental en el siglo XXI.</p>
+      <div class="entrevistado-lugar">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        Chile
       </div>
-      <p class="entrevistado-descripcion">
-        Jefe del Departamento de Conectividad de la Subsecretaría de Telecomunicaciones de Chile (Subtel), donde diseña e implementa políticas públicas para expandir el acceso a internet en zonas rurales y comunidades aisladas. Economista de la Universidad de Chile con especialización en regulación de telecomunicaciones. Lidera el programa de conectidad rural que busca reducir la brecha digital en las regiones del sur del país.
-      </p>
     </div>
   </div>
 
-  <div class="episodio-relacionado">
-    <h3>Capítulo relacionado</h3>
-    <div class="episodio-card" onclick="window.open('#', '_blank')">
-      <div class="episodio-thumb">#004</div>
-      <div class="episodio-info">
-        <div class="episodio-num">Tecnología · 60 min</div>
-        <div class="episodio-titulo">Chile se desconecta: la realidad de las zonas rurales</div>
-        <div class="episodio-fecha">Abril 2026</div>
+  <div class="quote-section">
+    <div class="quote-label">Lo que piensa</div>
+    <p class="quote-text">"Sin conectividad no hay acceso a la información, al trabajo remoto, a la salud digital ni a la educación online. Es la puerta de entrada a todo."</p>
+  </div>
+
+  <div class="crack-section">
+    <h2 class="crack-title"><span class="crack-icon">🔥</span> Por qué es un crack</h2>
+    <div class="crack-content">
+      <div class="crack-item">
+        <span class="crack-icon-item">🌐</span>
+        <div class="crack-text">
+          <h4>Trabaja para cerrar la brecha de conectividad en Chile</h4>
+          <p>Desde el sector público, lidera iniciativas para llevar internet a zonas rurales y comunidades que hoy están desconectadas.</p>
+        </div>
       </div>
-      <div class="episodio-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="crack-item">
+        <span class="crack-icon-item">📋</span>
+        <div class="crack-text">
+          <h4>Entiende la tecnología como política pública</h4>
+          <p>No se trata solo de tender cables. Su trabajo incluye regulación, subsidios, alianzas con operadores y medición de impacto en las comunidades.</p>
+        </div>
+      </div>
+      <div class="crack-item">
+        <span class="crack-icon-item">🏔️</span>
+        <div class="crack-text">
+          <h4>Conecta territorios aislados</h4>
+          <p>Las zonas rurales y comunidades apartadas son su prioridad. Sabe que la conectividad cambia la vida de las personas que viven lejos de los centros urbanos.</p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="social-section">
-    <h3>Conectar</h3>
-    <div class="social-links">
-      <a href="#" class="social-link">
+  <div class="impacto-section">
+    <h2 class="impacto-title">🌍 Su impacto</h2>
+    <div class="impacto-grid">
+      <div class="impacto-card">
+        <div class="impacto-num">Conectividad</div>
+        <div class="impacto-label">pública</div>
+      </div>
+      <div class="impacto-card">
+        <div class="impacto-num">Territorios</div>
+        <div class="impacto-label">aislados</div>
+      </div>
+      <div class="impacto-card">
+        <div class="impacto-num">Chile</div>
+        <div class="impacto-label">Territorio</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tags-section">
+    <div class="tags-title">Etiquetas de su trabajo</div>
+    <div class="tags">
+<span class="tag">#conectividad</span>
+      <span class="tag">#inclusiónDigital</span>
+      <span class="tag">#derechoDigital</span>
+      <span class="tag">#políticasPúblicas</span>
+      <span class="tag">#zonasRurales</span>
+      <span class="tag">#infraestructura</span>
+    </div>
+  </div>
+
+  <div class="agradecemos">
+    <div class="agradecemos-icon">💜</div>
+    <h3 class="agradecemos-title">Agradecemos a Sebastián Pincheira</h3>
+    <p class="agradecemos-text">Sebastián no vino a este proyecto por protocolo de oficina.</p>
+    <p class="agradecemos-text">Compartió su visión para que más personas entiendan que la conectividad es un derecho y que cerrar la brecha digital es urgente.</p>
+    <p class="agradecemos-text">Gracias por aportar a construir un mejor Chile.</p>
+  </div>
+
+  <div class="linkedin-section">
+    <div class="linkedin-card">
+      <h3 class="linkedin-title">Sígue en LinkedIn</h3>
+      <p class="linkedin-text">Te invitamos a conectar con Sebastián para conocer más sobre conectividad e inclusión digital en Chile.</p>
+      <a href="https://cl.linkedin.com/in/sebastian-pincheira" target="_blank" class="linkedin-btn">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
+        Conectar en LinkedIn
       </a>
+    </div>
+  </div>
+
+  <div class="capitulo-section">
+    <h3 class="capitulo-title">🎧 Capítulo relacionado</h3>
+    <div class="capitulo-card" onclick="window.open('https://www.youtube.com/watch?v=VIDEO011', '_blank')">
+      <div class="capitulo-thumb">#011</div>
+      <div class="capitulo-info">
+        <div class="capitulo-num">Seguros · 1h 03min</div>
+        <div class="capitulo-titulo">Conectividad como derecho, no como privilegio</div>
+        <div class="capitulo-fecha">Junio 2026</div>
+      </div>
+      <div class="capitulo-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
   </div>
 </div>
 
 <footer>
   <div class="container">
-    <p>&copy; 2026 Oportunidad País · <a href="https://godiegoarias.com" target="_blank">Diego Arias</a> · Desafío Latam</p>
+    <p>© 2026 Oportunidad País · <a href="https://godiegoarias.com" target="_blank">Diego Arias</a> · Desafío Latam</p>
   </div>
 </footer>
-
 </body>
 </html>
