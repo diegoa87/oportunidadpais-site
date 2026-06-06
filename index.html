@@ -283,9 +283,9 @@ footer li a:hover{color:#fff}
       </div>
     </div>
     <div class="hero-stats reveal">
-      <div class="stat"><div class="num">4</div><div class="lbl">Capítulos publicados</div></div>
+      <div class="stat"><div class="num">5</div><div class="lbl">Capítulos publicados</div></div>
       <div class="stat"><div class="num">2026</div><div class="lbl">Temporada en curso</div></div>
-      <div class="stat"><div class="num">4</div><div class="lbl">Invitados confirmados</div></div>
+      <div class="stat"><div class="num">5</div><div class="lbl">Invitados confirmados</div></div>
       <div class="stat"><div class="num">DL</div><div class="lbl">Desafío Latam</div></div>
     </div>
   </div>
@@ -449,12 +449,26 @@ const GUESTS=[
  {id:"luz-maria-garcia",init:"LM",name:"Luz María García",role:"Innovación · Productividad",org:"Gerente General, ACTI",cap:"004",dur:"",fecha:"Abr 2026",cat:"Educación",
   title:"Ciencia, Innovación y Productividad: Desafíos y Oportunidades para Chile",
   quote:"Más de lo mismo extractivista no es la respuesta. Chile necesita una nueva ruta basada en innovación.",
-  desc:"Conversatorio organizado por Desafío Latam y Libertad y Desarrollo (LYD) sobre los principales desafíos del ecosistema de innovación en Chile. Se aborda la pregunta central: ¿cómo salir del estancamiento de la productividad? ¿Más de lo mismo extractivista pero mejor, o una nueva ruta? Análisis profundo sobre ciencia, innovación, políticas públicas y el futuro productivo de Chile.",
-  bio:["Gerente General de ACTI (Asociación Chilena de Empresas de Tecnología de Información y Comunicación).", "Representa a las principales empresas de tecnología e innovación del país, defendiendo el rol del sector tech como motor de desarrollo económico y transformación productiva."],
-  ideas:["El estancamiento de la productividad no se resuelve con más de lo mismo.", "La innovación y la ciencia son las vías para una nueva ruta de desarrollo.", "Las políticas públicas deben apoyar al sector tech como motor económico."]}
+  desc:"Conversatorio organizado por Desafío Latam y Libertad y Desarrollo (LYD) sobre los principales desafíos del ecosistema de innovación en Chile. Se aborda la pregunta central: ¿cómo salir del estancamiento de la productividad?",
+  bio:["Gerente General de ACTI (Asociación Chilena de Empresas de Tecnología de Información y Comunicación).","Representa a las principales empresas de tecnología e innovación del país."],
+  ideas:["El estancamiento de la productividad no se resuelve con más de lo mismo.","La innovación y la ciencia son las vías para una nueva ruta de desarrollo.","Las políticas públicas deben apoyar al sector tech como motor económico."]},
+
+ {id:"elizabeth-cameron",init:"EC",name:"Elizabeth Cameron",role:"Minería · Diversidad e Innovación",org:"Principal de Asuntos Corporativos, BHP",cap:"005",dur:"",fecha:"Jun 2026",cat:"Tech",
+  img:"elizabeth-cameron.jpg",
+  title:"Country Opportunity — Chile needs to look to the north",
+  quote:"Chile tiene todo para ser el país de las oportunidades en la región, pero debe atreverse a mirar al norte y aprender de sus voisins.",
+  desc:"Nuevo capítulo de Oportunidad País donde Diego Arias conversa con Elizabeth Cameron Ovando, Principal de Asuntos Corporativos de BHP en Chile, sobre productividad, diversidad de género en la industria minera y el rol de las empresas en el desarrollo del país.",
+  bio:["Principal de Asuntos Corporativos de BHP en Chile, donde lidera iniciativas de diversidad, equidad e inclusión en una de las industrias más importantes del país.","Socia de WIM (Women in Mining), Mentora RIM, Embajadora Liqcau y reconocida en el WIM100 2024 por su contribución a la equidad de género en la minería.","Ingeniero Civil Industrial con Magíster en Gestión de Políticas Públicas, combina expertise en asuntos corporativos, comunidades, gobierno y valor social."],
+  ideas:["La diversidad de género en la minería no es solo justicia social, es competitividad.","Chile puede convertirse en el país de las oportunidades si mira al norte y aprende de sus voisins.","Las empresas mineras tienen un rol clave en el desarrollo territorial y social de Chile."]}
 ];
 
-const PLATFORMS=[["Spotify","https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ"],["YouTube","https://www.youtube.com/playlist?list=PLFgaQL-UJJiVNDg8Ro7NBEq6opW1amO33"]];
+const PLATFORMS={
+  default:[["Spotify","https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ"],["YouTube","https://www.youtube.com/playlist?list=PLFgaQL-UJJiVNDg8Ro7NBEq6opW1amO33"]],
+  "elizabeth-cameron":[["Spotify","https://open.spotify.com/episode/2mL0moe2uqacyl0fFxQBUP"],["YouTube","https://youtu.be/C-upc2eDoh0"]]
+};
+function getPlatforms(guestId){
+  return PLATFORMS[guestId]||PLATFORMS.default;
+}
 
 // build people grid
 document.getElementById('people-grid').innerHTML=GUESTS.map(g=>`
@@ -492,7 +506,7 @@ function renderGuest(id){
      <div class="wrap">
        <a href="#entrevistados" data-link class="g-back">← Volver a entrevistados</a>
        <div class="grid">
-         <div class="g-portrait"><span class="mono-init">${g.init}</span></div>
+         <div class="g-portrait">${g.img?`<img src="${g.img}" alt="${g.name}" style="width:100%;height:100%;object-fit:cover;border-radius:20px">`:`<span class="mono-init">${g.init}</span>`}</div>
          <div>
            <span class="chip">Capítulo ${g.cap} · ${g.role}</span>
            <h1>${g.name}</h1>
@@ -519,7 +533,7 @@ function renderGuest(id){
            <div class="meta">${g.dur} · ${g.fecha} · ${catLabel[g.cat]}</div>
            <p style="color:var(--ink-soft);font-size:.95rem">${g.desc}</p>
            <div class="listen">
-             ${PLATFORMS.map(p=>`<a href="${p[1]}">▸ Escuchar en ${p[0]}</a>`).join('')}
+             ${getPlatforms(g.id).map(p=>`<a href="${p[1]}" target="_blank">▸ Escuchar en ${p[0]}</a>`).join('')}
            </div>
            <div class="g-share">
              <div class="lbl">Comparte con orgullo</div>
