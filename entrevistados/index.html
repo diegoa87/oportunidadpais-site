@@ -24,19 +24,19 @@
     .hero-eyebrow { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 3px; color: var(--rojo-chile); font-weight: 700; margin-bottom: 12px; }
     .hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; margin-bottom: 16px; line-height: 1.15; }
     .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.5); max-width: 600px; margin: 0 auto; line-height: 1.75; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; padding: 24px 0 80px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; padding: 24px 0 80px; }
     .card { background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; overflow: hidden; transition: all 0.3s; cursor: pointer; }
     .card:hover { border-color: rgba(213,43,30,0.25); transform: translateY(-4px); background: rgba(255,255,255,0.04); }
     .card-img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
     .card-body { padding: 20px 24px 24px; }
     .card-eyebrow { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--rojo-chile); font-weight: 700; margin-bottom: 6px; }
-    .card-nombre { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
-    .card-cargo { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-bottom: 10px; }
-    .card-institucion { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: rgba(255,255,255,0.35); padding: 6px 10px; background: rgba(0,51,160,0.08); border-radius: 6px; display: inline-flex; }
-    .card-institucion svg { width: 12px; height: 12px; color: var(--azul-chile); }
+    .card-nombre { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; }
+    .card-cargo { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 10px; }
+    .card-institucion { display: inline-flex; align-items: center; gap: 6px; font-size: 0.73rem; color: rgba(255,255,255,0.35); padding: 5px 10px; background: rgba(0,51,160,0.08); border-radius: 6px; }
+    .card-institucion svg { width: 12px; height: 12px; color: var(--azul-chile); flex-shrink: 0; }
     footer { background: var(--grafito); border-top: 1px solid rgba(255,255,255,0.05); padding: 32px 0; }
     footer p { text-align: center; font-size: 0.78rem; color: rgba(255,255,255,0.25); }
-    @media(max-width: 768px) { .hero h1 { font-size: 2rem; } .grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); } }
+    @media(max-width: 768px) { .hero h1 { font-size: 2rem; } .grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); } }
   </style>
 </head>
 <body>
@@ -71,6 +71,58 @@
         <div class="card-institucion">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
           Entel Chile
+        </div>
+      </div>
+    </a>
+
+    <a href="/entrevistados/elizabeth-cameron" class="card">
+      <img src="/entrevistados/img/elizabeth-cameron.jpg" alt="Elizabeth Cameron" class="card-img">
+      <div class="card-body">
+        <div class="card-eyebrow">#005 · Negocios</div>
+        <div class="card-nombre">Elizabeth Cameron</div>
+        <div class="card-cargo">Principal de Asuntos Corporativos</div>
+        <div class="card-institucion">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          BHP · Antofagasta
+        </div>
+      </div>
+    </a>
+
+    <a href="/entrevistados/luz-maria-garcia" class="card">
+      <img src="/entrevistados/img/luz-maria-garcia.jpg" alt="Luz María García" class="card-img">
+      <div class="card-body">
+        <div class="card-eyebrow">#004 · Tecnología</div>
+        <div class="card-nombre">Luz María García</div>
+        <div class="card-cargo">Gerente General</div>
+        <div class="card-institucion">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          ACTI · Chile
+        </div>
+      </div>
+    </a>
+
+    <a href="/entrevistados/francisco-mardones" class="card">
+      <img src="/entrevistados/img/francisco-mardones.jpg" alt="Francisco Mardones" class="card-img">
+      <div class="card-body">
+        <div class="card-eyebrow">#003 · Tecnología</div>
+        <div class="card-nombre">Francisco Mardones</div>
+        <div class="card-cargo">Director Ejecutivo</div>
+        <div class="card-institucion">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          CHILETEC · Chile
+        </div>
+      </div>
+    </a>
+
+    <a href="/entrevistados/jeannette-escudero" class="card">
+      <img src="/entrevistados/img/jeannette-escudero.jpg" alt="Jeannette Escudero" class="card-img">
+      <div class="card-body">
+        <div class="card-eyebrow">#002 · Educación</div>
+        <div class="card-nombre">Jeannette Escudero</div>
+        <div class="card-cargo">Educación Digital</div>
+        <div class="card-institucion">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Desafío Latam · Chile
         </div>
       </div>
     </a>
