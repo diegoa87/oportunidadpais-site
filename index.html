@@ -251,6 +251,9 @@ footer li a:hover{color:#fff}
 
 /* ===== RANKING EMPRESAS ===== */
 .ranking{background:var(--paper)}
+.ranking-soon{text-align:center;padding:32px 20px;margin-bottom:24px;background:rgba(206,27,46,.08);border:2px dashed rgba(206,27,46,.3);border-radius:12px}
+.ranking-soon .soon-tag{display:inline-block;font-family:'Spline Sans Mono',monospace;font-size:.82rem;letter-spacing:.15em;text-transform:uppercase;color:#fff;background:var(--red);padding:8px 20px;border-radius:6px;margin-bottom:12px;font-weight:700}
+.ranking-soon p{color:var(--ink);font-size:.95rem;max-width:480px;margin:0 auto}
 .ranking .filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:32px}
 .ranking .filters button{font-family:'Hanken Grotesk';font-size:.84rem;font-weight:600;cursor:pointer;padding:8px 17px;border-radius:7px;border:1px solid var(--line);background:transparent;color:var(--ink-soft);transition:.2s}
 .ranking .filters button.active,.ranking .filters button:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
@@ -411,7 +414,7 @@ footer li a:hover{color:#fff}
       <p>Cada invitado es un referente en lo suyo. Toca su tarjeta para entrar a su página dedicada, con su historia, sus ideas clave y su capítulo.</p>
     </div>
     <div class="people" id="people-grid"></div>
-    <p class="share-note">¿Fuiste invitado? Cada quien tiene su propia página para compartir con orgullo. <a href="#cta" data-link style="color:#ff8f9b;font-weight:600;border-bottom:1px solid">Solicita la tuya →</a></p>
+    
   </div>
 </section>
 
@@ -478,7 +481,11 @@ footer li a:hover{color:#fff}
       <button data-filter="estrategico">Estratégico</button>
       <button data-filter="medio">Medio Impacto</button>
     </div>
-    <div class="table-wrap">
+    <div class="ranking-soon">
+      <span class="soon-tag">¡PRÓXIMAMENTE!</span>
+      <p>Se lanzará pronto con información pública de reportes de empresas publicados.</p>
+    </div>
+    <div class="table-wrap" style="opacity:.4;pointer-events:none">
       <table class="rank-table">
         <thead>
           <tr>
@@ -494,7 +501,7 @@ footer li a:hover{color:#fff}
         <tbody id="rankBody"></tbody>
       </table>
     </div>
-    <div class="more-row"><button id="rankMore">Ver más empresas</button></div>
+    <div class="more-row" style="opacity:.4"><button id="rankMore" disabled>Ver más empresas</button></div>
     <div class="rank-detail" id="rankDetail"></div>
   </div>
 </div>
@@ -504,13 +511,13 @@ footer li a:hover{color:#fff}
     <div class="section-tag">RECOMENDACIÓN</div>
     <h2>¿A quién deberíamos<br>entrevistar?</h2>
     <p class="lead">Recomienda a una persona que, desde su empresa o institución, esté aportando a la productividad de Chile. La recomendación es confidencial y nos ayuda a identificar a los próximos invitados del podcast.</p>
-    <div class="reg-form" id="regForm">
+<div class="reg-form" id="regForm">
       <div class="field"><label>Nombre de la persona que recomiendas</label><input type="text" id="regCompany" placeholder="Ej: María José López" required></div>
-      <div class="field"><label>Empresa o institución</label><input type="text" id="regRut" placeholder="Ej: Microsoft Chile"></div>
+      <div class="field"><label>Empresa o institución donde trabaja</label><input type="text" id="regRut" placeholder="Ej: Microsoft Chile"></div>
+      <div class="field"><label>Cargo</label><input type="text" id="regType" placeholder="Ej: Gerente de Talento"></div>
       <div class="field"><label>Tu nombre</label><input type="text" id="regName" placeholder="Ej: Juan Pérez"></div>
       <div class="field"><label>Tu correo electrónico</label><input type="email" id="regEmail" placeholder="juan@empresa.cl"></div>
-      <div class="field"><label>Cargo de la persona recomendada</label><input type="text" id="regType" placeholder="Ej: Gerente de Talento"></div>
-      <div class="field"><label>¿Por qué es importante entrevistarla?</label><textarea id="regDesc" placeholder="Cuéntanos brevemente qué está haciendo esta persona y por qué aporta a la productividad del país..."></textarea></div>
+      <div class="field"><label>¿Por qué es importante entrevistarla?</label><textarea id="regDesc" placeholder="Cuéntanos brevemente qué está haciendo esta persona y por qué aporta a la productividad del país...\"></textarea></div>
       <div class="field btn"><button class="btn" onclick="submitRegistro()">Enviar recomendación</button></div>
     </div>
     <div class="reg-success" id="regSuccess">
