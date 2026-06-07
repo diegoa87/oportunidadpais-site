@@ -338,7 +338,7 @@ footer li a:hover{color:#fff}
     <a href="https://oportunidadpais.cl#episodes" data-link>Capítulos</a>
     <a href="https://oportunidadpais.cl/ranking-aporte-instituciones.html" data-link>Ranking</a>
     <a href="https://oportunidadpais.cl/reporte-aporte-instituciones.html" data-link>Reportes</a>
-    <a href="https://oportunidadpais.cl#registro" data-link>Registro</a>
+    <a href="https://oportunidadpais.cl#registro" data-link>Recomendar</a>
     <a href="https://oportunidadpais.cl#cta" data-link class="nav-cta">Participar</a>
   </div>
 </nav>
@@ -501,28 +501,21 @@ footer li a:hover{color:#fff}
 
 <div id="registro" class="registro">
   <div class="wrap">
-    <div class="section-tag">REGISTRO</div>
-    <h2>Registro de Aportes<br>al País</h2>
-    <p class="lead">Registra aquí la inversión que tu empresa realiza en programas sociales y formación para que quede reflejada en el ranking.</p>
+    <div class="section-tag">RECOMENDACIÓN</div>
+    <h2>¿A quién deberíamos<br>entrevistar?</h2>
+    <p class="lead">Recomienda a una persona que, desde su empresa o institución, esté aportando a la productividad de Chile. La recomendación es confidencial y nos ayuda a identificar a los próximos invitados del podcast.</p>
     <div class="reg-form" id="regForm">
-      <div class="field"><label>Nombre de la empresa</label><input type="text" id="regCompany" placeholder="Ej: Microsoft Chile" required></div>
-      <div class="field"><label>Rut de la empresa</label><input type="text" id="regRut" placeholder="Ej: 76.123.456-7"></div>
-      <div class="field"><label>Nombre de contacto</label><input type="text" id="regName" placeholder="Ej: Juan Pérez"></div>
-      <div class="field"><label>Correo electrónico</label><input type="email" id="regEmail" placeholder="juan@empresa.cl"></div>
-      <div class="field"><label>Tipo de aporte</label><select id="regType"><option value="">Selecciona una opción</option><option>Donación en dinero</option><option>Becas de estudio</option><option>Voluntarios</option><option>Mentoría</option><option>Equipamiento</option><option>Alianzas educativas</option><option>Otro</option></select></div>
-      <div class="field"><label>Monto estimado (CLP)</label><input type="number" id="regAmount" placeholder="Ej: 5000000"></div>
-      <div class="field"><label>Descripción del aporte</label><textarea id="regDesc" placeholder="Describe brevemente en qué consiste tu aporte..."></textarea></div>
-      <div class="field"><label>Nivel de impacto</label><select id="regImpact"><option value="">Selecciona</option><option>Alto Impacto</option><option>Estratégico</option><option>Medio Impacto</option></select></div>
-      <div class="field btn"><button class="btn" onclick="submitRegistro()">Registrar aporte</button></div>
+      <div class="field"><label>Nombre de la persona que recomiendas</label><input type="text" id="regCompany" placeholder="Ej: María José López" required></div>
+      <div class="field"><label>Empresa o institución</label><input type="text" id="regRut" placeholder="Ej: Microsoft Chile"></div>
+      <div class="field"><label>Tu nombre</label><input type="text" id="regName" placeholder="Ej: Juan Pérez"></div>
+      <div class="field"><label>Tu correo electrónico</label><input type="email" id="regEmail" placeholder="juan@empresa.cl"></div>
+      <div class="field"><label>Cargo de la persona recomendada</label><input type="text" id="regType" placeholder="Ej: Gerente de Talento"></div>
+      <div class="field"><label>¿Por qué es importante entrevistarla?</label><textarea id="regDesc" placeholder="Cuéntanos brevemente qué está haciendo esta persona y por qué aporta a la productividad del país..."></textarea></div>
+      <div class="field btn"><button class="btn" onclick="submitRegistro()">Enviar recomendación</button></div>
     </div>
     <div class="reg-success" id="regSuccess">
-      <h3>✅ ¡Registro exitoso!</h3>
-      <p>Tu aporte ha sido registrado correctamente. Lo revisaremos y publicaremos pronto.</p>
-    </div>
-    <div class="reg-list">
-      <h3>Aportes registrados</h3>
-      <div class="reg-entries" id="regEntries"></div>
-      <div class="reg-empty" id="regEmpty"><p>No hay registros aún. ¡Sé el primero en registrar tu aporte!</p></div>
+      <h3>✅ ¡Recomendación enviada!</h3>
+      <p>Gracias por tu recomendación. La revisaremos y nos pondremos en contacto si es relevante para el podcast.</p>
     </div>
   </div>
 </div>
@@ -530,12 +523,12 @@ footer li a:hover{color:#fff}
 <section class="cta" id="cta">
   <div class="wrap">
     <h2 class="reveal">Sé parte de la <span class="red">conversación</span></h2>
-    <p class="reveal">Recibe cada nuevo capítulo, o propón a una persona o institución que esté aportando a la productividad del país.</p>
+    <p class="reveal">¿Conoces a alguien que esté aportando de verdad a la productividad del país? Recomiéndalo para el próximo capítulo del podcast.</p>
     <div class="subform reveal">
       <input type="email" placeholder="tu@correo.cl" aria-label="correo">
-      <button class="btn btn-red">Suscribirme</button>
+      <button class="btn btn-red">Recomendar →</button>
     </div>
-    <p class="fine reveal">Sin spam. Solo capítulos nuevos. Puedes desuscribirte cuando quieras.</p>
+    <p class="fine reveal">Sin spam. Solo capítulos nuevos y noticias del proyecto.</p>
   </div>
 </section>
 
