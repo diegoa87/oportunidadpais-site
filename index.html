@@ -96,15 +96,16 @@ section{padding:92px 0}
 .pillar p{font-size:.9rem;color:var(--ink-soft)}
 
 /* ENTREVISTADOS */
-.people{background:var(--navy);color:#fff}
-.people .sec-head h2{color:#fff}
-.people .sec-head p{color:rgba(241,240,236,.75)}
+.people-section{background:var(--navy);color:#fff}
+.people-section .sec-head h2{color:#fff}
+.people-section .sec-head p{color:rgba(241,240,236,.75)}
 .people{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .person{background:var(--navy-2);border:1px solid var(--line-d);border-radius:18px;overflow:hidden;transition:.3s cubic-bezier(.2,.7,.3,1);cursor:pointer;display:block}
 .person:hover{transform:translateY(-6px);border-color:var(--red);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
 .person .portrait{aspect-ratio:4/3;display:grid;place-items:center;position:relative;background:linear-gradient(150deg,#243a6e,#1a2c54);overflow:hidden}
 .person .portrait::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 35%,rgba(206,27,46,.22),transparent 65%)}
-.person .mono-init{font-family:'Bricolage Grotesque';font-size:3rem;font-weight:700;width:100px;height:100px;border-radius:50%;display:grid;place-items:center;background:rgba(241,240,236,.07);border:1px solid rgba(241,240,236,.18);z-index:1}
+.person .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;border-radius:0}
+.person .portrait span.mono-init{display:flex;z-index:1}
 .person .chip{position:absolute;top:13px;left:13px;z-index:2;font-family:'Spline Sans Mono';font-size:.66rem;letter-spacing:.1em;padding:5px 10px;border-radius:6px;background:rgba(22,38,79,.75);color:#fff;border:1px solid var(--line-d)}
 .person .info{padding:20px}
 .person .info .role{font-family:'Spline Sans Mono';font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:#ff8f9b;font-weight:600}
@@ -151,7 +152,8 @@ section{padding:92px 0}
 /* HOST */
 .host{background:var(--white)}
 .host .grid{display:grid;grid-template-columns:260px 1fr;gap:50px;align-items:center}
-.host .portrait{aspect-ratio:1;border-radius:18px;background:linear-gradient(150deg,#243a6e,#16264F);display:grid;place-items:center;box-shadow:var(--shadow)}
+.host .portrait{aspect-ratio:1;border-radius:18px;background:linear-gradient(150deg,#243a6e,#16264F);display:grid;place-items:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.host .portrait img{display:block;width:100%;height:100%;object-fit:cover}
 .host .portrait .mono-init{font-family:'Bricolage Grotesque';font-weight:700;font-size:4rem;color:#fff;width:130px;height:130px;border-radius:50%;display:grid;place-items:center;background:rgba(241,240,236,.07);border:1px solid rgba(241,240,236,.2)}
 .host .title-line{font-family:'Spline Sans Mono';font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;color:var(--red);font-weight:600}
 .host h2{font-size:clamp(1.9rem,3.5vw,2.6rem);margin:12px 0 0}
@@ -193,6 +195,7 @@ footer li a:hover{color:#fff}
 .g-portrait{aspect-ratio:1;border-radius:20px;background:linear-gradient(150deg,#2a437d,#16264F);display:grid;place-items:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
 .g-portrait::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(206,27,46,.22),transparent 65%)}
 .g-portrait .mono-init{font-family:'Bricolage Grotesque';font-weight:700;font-size:4.6rem;width:150px;height:150px;border-radius:50%;display:grid;place-items:center;background:rgba(241,240,236,.07);border:1px solid rgba(241,240,236,.2);z-index:1}
+.g-portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;border-radius:20px}
 .g-hero .chip{font-family:'Spline Sans Mono';font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#ff8f9b;font-weight:600}
 .g-hero h1{font-size:clamp(2.4rem,5vw,3.8rem);font-weight:800;margin:12px 0 6px}
 .g-hero .org{font-size:1.2rem;color:rgba(241,240,236,.8)}
@@ -396,7 +399,7 @@ footer li a:hover{color:#fff}
   </div>
 </section>
 
-<section class="people" id="personas">
+<section class="people-section" id="personas">
   <div class="wrap">
     <div class="sec-head">
       <span class="kicker" style="color:#ff8f9b">Las personas</span>
@@ -450,7 +453,7 @@ footer li a:hover{color:#fff}
 <section class="host">
   <div class="wrap">
     <div class="grid">
-      <div class="portrait reveal"><span class="mono-init">DA</span></div>
+      <div class="portrait reveal"><img src="/fotos/diego-arias.jpg" alt="Diego Arias" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" style="width:100%;height:100%;object-fit:cover;border-radius:0"><span class="mono-init" style="display:none">DA</span></div>
       <div class="reveal">
         <div class="title-line">Conduce</div>
         <h2>Diego Arias</h2>
@@ -574,7 +577,7 @@ footer li a:hover{color:#fff}
 
 <script>
 const GUESTS=[
- {id:"elizabeth-cameron",init:"EC",name:"Elizabeth Cameron",role:"Asuntos Corporativos",org:"BHP",cap:"005",dur:"1h 05min",fecha:"Jun 2026",cat:"Negocios",
+ {id:"elizabeth-cameron",init:"EC",img:"/entrevistados/img/elizabeth-cameron.jpg",name:"Elizabeth Cameron",role:"Asuntos Corporativos",org:"BHP",cap:"005",dur:"1h 05min",fecha:"Jun 2026",cat:"Negocios",
   title:"Chile necesita mirar al norte",
   quote:"Chile tiene una ventana de oportunidad única para posicionarse como líder global en transición energética.",
   desc:"Elizabeth Cameron Ovando, Principal de Asuntos Corporativos de BHP, habla sobre minería, inclusión, talento local y el rol estratégico del norte de Chile en la productividad del país.",
@@ -582,7 +585,7 @@ const GUESTS=[
   ideas:["El norte de Chile tiene recursos naturales únicos que lo posicionan como hub energético global.","La minería puede ser motor de inclusión: más mujeres, más talento local, más oportunidades.","La productividad minera y la formación del talento van de la mano."],
   youtube:"https://www.youtube.com/watch?v=C-upc2eDoh0"},
 
- {id:"luz-maria-garcia",init:"LG",name:"Luz María García",role:"Gerente General",org:"ACTI",cap:"004",dur:"1h 13min",fecha:"May 2026",cat:"Tech",
+ {id:"luz-maria-garcia",init:"LG",img:"/entrevistados/img/luz-maria-garcia.jpg",name:"Luz María García",role:"Gerente General",org:"ACTI",cap:"004",dur:"1h 13min",fecha:"May 2026",cat:"Tech",
   title:"Qué debe hacer Chile según la Gerente General de ACTI",
   quote:"La tecnología no es un sector más: es la plataforma sobre la que se construye toda la competitividad del país.",
   desc:"Luz María García, Gerente General de ACTI, habla sobre la hoja de ruta tecnológica de Chile, el déficit de profesionales tech y las oportunidades que el país no puede seguir dejando pasar.",
@@ -590,7 +593,7 @@ const GUESTS=[
   ideas:["Chile necesita una estrategia tecnológica de país, no solo de empresas.","El déficit de profesionales tech se profundiza con la transformación digital: hay que acelerar la formación.","Las regulaciones deben acompañar la velocidad de la innovación para no quedar atrás."],
   youtube:"https://www.youtube.com/watch?v=GbMk7umUWig"},
 
- {id:"francisco-mardones",init:"FM",name:"Francisco Mardones",role:"Director Ejecutivo",org:"CHILETEC",cap:"003",dur:"57 min",fecha:"Abr 2026",cat:"Tech",
+ {id:"francisco-mardones",init:"FM",img:"/entrevistados/img/francisco-mardones.jpg",name:"Francisco Mardones",role:"Director Ejecutivo",org:"CHILETEC",cap:"003",dur:"57 min",fecha:"Abr 2026",cat:"Tech",
   title:"Chile debe impulsar la tecnología, dice el CEO de Chiletec",
   quote:"Chile exporta más software que vino. Eso es un dato que debería cambiar cómo pensamos la economía del país.",
   desc:"Francisco Mardones, Director Ejecutivo de CHILETEC, habla sobre el ecosistema tech chileno, las exportaciones de software que ya superan al vino y por qué Chile puede convertirse en el hub tecnológico de Latinoamérica.",
@@ -598,7 +601,7 @@ const GUESTS=[
   ideas:["Chile ya exporta más software que vino. El próximo paso es escalar las empresas tecnológicas chilenas.","El nearshoring es la oportunidad más grande de esta década para el ecosistema tech chileno.","La educación técnica digital es la clave para cerrar la brecha de talento y sostener el crecimiento."],
   youtube:"https://www.youtube.com/watch?v=-jepRqm50g4"},
 
- {id:"jeannette-escudero",init:"JE",name:"Jeannette Escudero",role:"Socia",org:"Globant",cap:"002",dur:"31 min",fecha:"Mar 2026",cat:"Educación",
+ {id:"jeannette-escudero",init:"JE",img:"/fotos/jeannette-escudero.jpg",name:"Jeannette Escudero",role:"Socia",org:"Globant",cap:"002",dur:"31 min",fecha:"Mar 2026",cat:"Educación",
   title:"La formación digital como igualador social",
   quote:"La formación digital es el igualador social más poderoso que tiene Chile hoy.",
   desc:"Jeannette Escudero, socia de Globant y líder del programa Talento Ready, conversa sobre el rol de la educación digital en la productividad del país y cómo Chile puede cerrar la brecha de talento en Latinoamérica.",
@@ -606,7 +609,7 @@ const GUESTS=[
   ideas:["La formación digital gratuita es posible y funciona a escala.","El talento está distribuido en todo Chile, pero las oportunidades no lo están.","Conectar educación con empleo es el modelo que Chile necesita replicar."],
   youtube:"https://www.youtube.com/watch?v=GbMk7umUWig"},
 
- {id:"justo-vargas",init:"JV",name:"Justo Vargas",role:"Client Partner",org:"Globant",cap:"001",dur:"55 min",fecha:"Mar 2026",cat:"Negocios",
+ {id:"justo-vargas",init:"JV",img:"/fotos/justo-vargas.jpg",name:"Justo Vargas",role:"Client Partner",org:"Globant",cap:"001",dur:"55 min",fecha:"Mar 2026",cat:"Negocios",
   title:"Country Opportunity — Chapter 1",
   quote:"Chile vive un momento bisagra. Este podcast es nuestra forma de poner las historias correctas al centro.",
   desc:"Primer capítulo del podcast Oportunidad País. Diego Arias conversa con Justo Vargas, Client Partner de Globant, sobre la visión del proyecto: por qué es urgente hablar de productividad en Chile y quiénes son las personas que están moviendo la aguja.",
@@ -620,7 +623,7 @@ const PLATFORMS=[["Spotify","https://open.spotify.com/show/2nGzjakwUUOf7AAqui0Tn
 // build people grid
 document.getElementById('people-grid').innerHTML=GUESTS.map(g=>`
  <a class="person" href="/entrevistados/${g.id}.html" data-link>
-   <div class="portrait"><span class="chip">CAP · ${g.cap}</span><span class="mono-init">${g.init}</span></div>
+   <div class="portrait"><span class="chip">CAP · ${g.cap}</span><img src="${g.img}" alt="${g.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"><span class="mono-init">${g.init}</span></div>
    <div class="info">
      <div class="role">${g.role}</div>
      <h3>${g.name}</h3>
@@ -653,7 +656,7 @@ function renderGuest(id){
      <div class="wrap">
        <a href="https://oportunidadpais.cl#personas" data-link class="g-back">← Volver a personas</a>
        <div class="grid">
-         <div class="g-portrait"><span class="mono-init">${g.init}</span></div>
+         <div class="g-portrait"><img src="${g.img}" alt="${g.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="mono-init" style="display:none">${g.init}</span></div>
          <div>
            <span class="chip">Capítulo ${g.cap} · ${g.role}</span>
            <h1>${g.name}</h1>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Francisco Mardones — Director Ejecutivo de CHILETEC | Oportunidad País</title>
-  <meta name="description" content="Francisco Mardones, Director Ejecutivo de CHILETEC. Entrevistada en Oportunidad País sobre nearshoring, exportaciones de software y ecosistema tech chileno.">
+  <title>Francisco Mardones — Presidente Chiletec | Oportunidad País</title>
+  <meta name="description" content="Francisco Mardones, Presidente de Chiletec. Entrevistado en Oportunidad País sobre exportación de servicios tecnológicos, regulación startup y el futuro digital de Chile.">
   <link rel="icon" href="/static/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
@@ -25,30 +25,34 @@
     .back-link svg { width: 16px; height: 16px; }
     .entrevistado-header { display: grid; grid-template-columns: 280px 1fr; gap: 48px; padding: 48px 0; align-items: start; }
     .entrevistado-photo-wrap { position: relative; }
-    .entrevistado-photo { width: 100%; aspect-ratio: 1; border-radius: 20px; object-fit: cover; border: 2px solid rgba(213,43,30,0.2); }
+    .entrevistado-photo { width: 100%; aspect-ratio: 1; border-radius: 20px; object-fit: cover; border: 2px solid rgba(213,43,30,0.3); }
     .entrevistado-photo-overlay { position: absolute; bottom: -14px; right: -14px; background: var(--rojo-chile); color: var(--blanco); font-size: 0.7rem; font-weight: 700; padding: 6px 14px; border-radius: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
     .entrevistado-meta { padding-top: 8px; }
     .entrevistado-nombre { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 6px; line-height: 1.15; }
-    .entrevistado-mision { font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 20px; line-height: 1.6; font-weight: 400; }
+    .entrevistado-mision { font-size: 1.05rem; color: rgba(255,255,255,0.75); margin-bottom: 20px; line-height: 1.65; font-weight: 400; }
     .entrevistado-lugar { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--gris); margin-bottom: 8px; }
     .entrevistado-lugar svg { width: 16px; height: 16px; color: var(--rojo-chile); }
     .quote-section { background: linear-gradient(135deg, rgba(213,43,30,0.08), rgba(139,92,246,0.05)); border-left: 4px solid var(--rojo-chile); border-radius: 0 16px 16px 0; padding: 28px 32px; margin-bottom: 36px; }
-    .quote-text { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-style: italic; color: rgba(255,255,255,0.95); line-height: 1.6; margin-bottom: 12px; }
+    .quote-text { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-style: italic; color: rgba(255,255,255,0.95); line-height: 1.6; margin-bottom: 12px; }
     .quote-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px; color: var(--rojo-chile); font-weight: 700; }
     .crack-section { margin-bottom: 36px; }
     .crack-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
     .crack-icon { font-size: 1.5rem; }
     .crack-content { display: grid; gap: 16px; }
-    .crack-item { display: flex; gap: 16px; align-items: flex-start; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 20px 24px; }
-    .crack-icon-item { font-size: 1.4rem; flex-shrink: 0; }
-    .crack-text h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
-    .crack-text p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+    .crack-item { display: flex; gap: 16px; align-items: flex-start; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 20px 24px; transition: border-color 0.3s; }
+    .crack-item:hover { border-color: rgba(213,43,30,0.2); }
+    .crack-icon-item { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .crack-text h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
+    .crack-text p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.65; }
     .impacto-section { margin-bottom: 36px; }
     .impacto-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
     .impacto-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .impacto-card { background: rgba(0,51,160,0.08); border: 1px solid rgba(0,51,160,0.15); border-radius: 14px; padding: 20px; text-align: center; }
     .impacto-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--azul-chile); margin-bottom: 4px; }
     .impacto-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; }
+    .bio-section { margin-bottom: 36px; }
+    .bio-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+    .bio-text { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.8; }
     .tags-section { margin-bottom: 36px; }
     .tags-title { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gris); font-weight: 600; margin-bottom: 12px; }
     .tags { display: flex; gap: 10px; flex-wrap: wrap; }
@@ -58,13 +62,6 @@
     .agradecemos-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 12px; color: rgba(255,255,255,0.95); }
     .agradecemos-text { font-size: 0.92rem; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 8px; }
     .agradecemos-text:last-of-type { margin-bottom: 0; }
-    .linkedin-section { margin-bottom: 32px; }
-    .linkedin-card { background: linear-gradient(135deg, rgba(0,119,181,0.12), rgba(0,80,130,0.08)); border: 2px solid rgba(0,119,181,0.4); border-radius: 20px; padding: 32px; text-align: center; }
-    .linkedin-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; }
-    .linkedin-text { font-size: 0.88rem; color: rgba(255,255,255,0.55); margin-bottom: 20px; line-height: 1.6; }
-    .linkedin-btn { display: inline-flex; align-items: center; gap: 10px; background: #0077B5; color: #fff; padding: 14px 28px; border-radius: 10px; font-weight: 700; font-size: 0.95rem; transition: all 0.25s; }
-    .linkedin-btn:hover { background: #006097; transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,119,181,0.4); }
-    .linkedin-btn svg { width: 20px; height: 20px; }
     .capitulo-section { background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; padding: 32px; margin-bottom: 32px; }
     .capitulo-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 16px; }
     .capitulo-card { display: flex; gap: 20px; align-items: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 20px; transition: all 0.3s; cursor: pointer; }
@@ -103,12 +100,13 @@
 <div class="container">
   <div class="entrevistado-header">
     <div class="entrevistado-photo-wrap">
-      <img src="/entrevistados/img/francisco-mardones.jpg" alt="Francisco Mardones" class="entrevistado-photo">
-      <div class="entrevistado-photo-overlay">Entrevistada</div>
+      <img src="/fotos/francisco-mardones.jpg" alt="Francisco Mardones" class="entrevistado-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="entrevistado-photo" style="display:none;align-items:center;justify-content:center;font-size:4rem;font-weight:700;color:rgba(255,255,255,0.25);font-family:'Playfair Display',serif;">FM</div>
+      <div class="entrevistado-photo-overlay">Entrevistado</div>
     </div>
     <div class="entrevistado-meta">
       <h1 class="entrevistado-nombre">Francisco Mardones</h1>
-      <p class="entrevistado-mision">Construye puentes entre el ecosistema tech chileno y el mundo. Lidera CHILETEC para que las empresas de tecnología de Chile puedan exportar servicios y atraer inversión.</p>
+      <p class="entrevistado-mision">Presidente de Chiletec y Managing Director de DynWrk. Ex-director de Softline International. Forbes Council Member. Lidera la exportación de servicios tecnológicos desde Chile hacia el mundo.</p>
       <div class="entrevistado-lugar">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
         Santiago, Chile
@@ -118,31 +116,43 @@
 
   <div class="quote-section">
     <div class="quote-label">Lo que piensa</div>
-    <p class="quote-text">"Chile tiene todo para convertirse en el hub de software de Latinoamérica. El nearshoring es la oportunidad de nuestra generación."</p>
+    <p class="quote-text">"Chile debe dejar de ser un país que consume tecnología y convertirse en uno que la crea y la exporta. Esa es la diferencia entre ser un país rico en recursos naturales y ser una economía del conocimiento."</p>
+  </div>
+
+  <div class="bio-section">
+    <h2 class="bio-title">📖 Su historia</h2>
+    <p class="bio-text">Francisco Mardones es una de las voces más reconocidas de Chile en materia de tecnología y exportación de servicios digitales. Como presidente de Chiletec, lidera los esfuerzos para posicionar a Chile como un hub tecnológico regional, articulando empresas, startups y talento para competir en mercados globales. Su carrera incluye roles de liderazgo en Softline International y la dirección de DynWrk, donde conecta empresas chilenas con oportunidades de expansión internacional. Además, su membresía en el Forbes Business Council lo posiciona en la conversación global sobre innovación y crecimiento empresarial en América Latina.</p>
   </div>
 
   <div class="crack-section">
     <h2 class="crack-title"><span class="crack-icon">🔥</span> Por qué es un crack</h2>
     <div class="crack-content">
       <div class="crack-item">
-        <span class="crack-icon-item">🌐</span>
+        <span class="crack-icon-item">🏛️</span>
         <div class="crack-text">
-          <h4>Conecta Chile con la economía global del software</h4>
-          <p>Como Director Ejecutivo de CHILETEC, lidera la promoción del ecosistema tech chileno en mercados internacionales. El nearshoring no es tendencia: es estrategia.</p>
+          <h4>Presidente de Chiletec, la voz del ecosistema tech chileno</h4>
+          <p>Como líder de la asociación que nuclea a las empresas tecnológicas chilenas, Francisco articula un ecosistema completo: startups, empresas de software, servicios de TI y educación tech. Su visión va más allá de representar a las empresas: busca construir un país que exporte tecnología, no solo materias primas.</p>
         </div>
       </div>
       <div class="crack-item">
-        <span class="crack-icon-item">🚀</span>
+        <span class="crack-icon-item">💼</span>
         <div class="crack-text">
-          <h4>Impulsa startups y empresas consolidadas por igual</h4>
-          <p>Trabaja para que Chile no solo tenga empresas grandes de tecnología, sino todo un ecosistema: desde la startup más pequeña hasta la empresa que exporta a Fortune 500.</p>
+          <h4>Forbes Business Council Member, voz global desde Chile</h4>
+          <p>Su inclusión en el Forbes Business Council lo pone en la mesa de conversación con líderes empresariales y tecnólogos de todo el mundo. No es un título decorativo: implica que su pensamiento sobre negocios, innovación y crecimiento es reconocido en las principales conversaciones sobre economía del conocimiento a nivel global.</p>
         </div>
       </div>
       <div class="crack-item">
-        <span class="crack-icon-item">📈</span>
+        <span class="crack-icon-item">🌎</span>
         <div class="crack-text">
-          <h4>Documenta y cuantifica el impacto del sector tech</h4>
-          <p>Ingeniero Civil Electrónico de la Universidad de Concepción. Aporta rigor técnico y visión estratégica al liderazgo del grembio.</p>
+          <h4>Managing Director de DynWrk, conectando Chile con el mundo</h4>
+          <p>Su rol en DynWrk lo lleva a trabajar directamente con empresas que buscan escalar internacionalmente. Esa experiencia práctica lo diferencia de muchos que solo hablan de nearshoring desde la teoría. Francisco vive en terreno lo que significa exportar servicios tecnológicos y conoce las barreras reales que enfrentan las empresas chilenas.</p>
+        </div>
+      </div>
+      <div class="crack-item">
+        <span class="crack-icon-item">📊</span>
+        <div class="crack-text">
+          <h4>Ex-director de Softline International, experiencia Fortune 500</h4>
+          <p>Su paso por Softline International le dio exposición a operaciones de escala global y una comprensión profunda de cómo funcionan las grandes empresas tecnológicas. Esa experiencia no se improvisa: es conocimiento acumulado que ahora vuelca en la construcción del ecosistema chileno.</p>
         </div>
       </div>
     </div>
@@ -152,16 +162,16 @@
     <h2 class="impacto-title">🌍 Su impacto</h2>
     <div class="impacto-grid">
       <div class="impacto-card">
-        <div class="impacto-num">CHILETEC</div>
-        <div class="impacto-label">Gremio tech</div>
+        <div class="impacto-num">Chiletec</div>
+        <div class="impacto-label">Presidente de la asociación tech</div>
       </div>
       <div class="impacto-card">
-        <div class="impacto-num">U. de Concepción</div>
-        <div class="impacto-label">Formación</div>
+        <div class="impacto-num">Forbes</div>
+        <div class="impacto-label">Business Council Member</div>
       </div>
       <div class="impacto-card">
-        <div class="impacto-num">Chile</div>
-        <div class="impacto-label">Territorio</div>
+        <div class="impacto-num">Global</div>
+        <div class="impacto-label">Voz del nearshoring chileno</div>
       </div>
     </div>
   </div>
@@ -169,42 +179,33 @@
   <div class="tags-section">
     <div class="tags-title">Etiquetas de su trabajo</div>
     <div class="tags">
-<span class="tag">#nearshoring</span>
-      <span class="tag">#exportaciones</span>
-      <span class="tag">#software</span>
-      <span class="tag">#startups</span>
-      <span class="tag">#ecosistemaTech</span>
-      <span class="tag">#inversión</span>
+      <span class="tag">#chiletec</span>
+      <span class="tag">#exportaciónTech</span>
+      <span class="tag">#nearshoring</span>
+      <span class="tag">#forbescouncil</span>
+      <span class="tag">#startupsChile</span>
+      <span class="tag">#transformaciónDigital</span>
+      <span class="tag">#economíadelconocimiento</span>
+      <span class="tag">#dynwrk</span>
     </div>
   </div>
 
   <div class="agradecemos">
     <div class="agradecemos-icon">💜</div>
     <h3 class="agradecemos-title">Agradecemos a Francisco Mardones</h3>
-    <p class="agradecemos-text">Francisco no vino a este proyecto por compromiso de grembio.</p>
-    <p class="agradecemos-text">Compartió su conocimiento y visión para que más personas entiendan el momento histórico que vive el sector tech en Chile.</p>
+    <p class="agradecemos-text">Francisco trajo una perspectiva que pocos pueden dar: la de alguien que lidera la asociación tecnológica más importante de Chile y al mismo tiempo opera en mercados globales. Su visión de Chile como país exportador de tecnología, no solo consumidor, es el tipo de pensamiento que mueve a los países.</p>
+    <p class="agradecemos-text">No vino a dar una entrevista corporativa. Vino a plantar una bandera sobre lo que Chile puede ser si toma las decisiones correctas en los próximos años. Eso vale oro.</p>
     <p class="agradecemos-text">Gracias por aportar a construir un mejor Chile.</p>
-  </div>
-
-  <div class="linkedin-section">
-    <div class="linkedin-card">
-      <h3 class="linkedin-title">Sígue en LinkedIn</h3>
-      <p class="linkedin-text">Te invitamos a conectar con Francisco para conocer más sobre el nearshoring y las oportunidades para el sector tech chileno.</p>
-      <a href="https://cl.linkedin.com/in/fmardones" target="_blank" class="linkedin-btn">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        Conectar en LinkedIn
-      </a>
-    </div>
   </div>
 
   <div class="capitulo-section">
     <h3 class="capitulo-title">🎧 Capítulo relacionado</h3>
-    <div class="capitulo-card" onclick="window.open('https://www.youtube.com/watch?v=VIDEO007', '_blank')">
-      <div class="capitulo-thumb">#007</div>
+    <div class="capitulo-card" onclick="window.open('https://www.youtube.com/@OportunidadPais', '_blank')">
+      <div class="capitulo-thumb">#001</div>
       <div class="capitulo-info">
-        <div class="capitulo-num">Energía · 1h 05min</div>
-        <div class="capitulo-titulo">Chile necesita mirar al norte</div>
-        <div class="capitulo-fecha">Mayo 2026</div>
+        <div class="capitulo-num">Negocios · 55 min</div>
+        <div class="capitulo-titulo">Nearshoring: la oportunidad de Chile como hub tecnológico</div>
+        <div class="capitulo-fecha">Marzo 2026</div>
       </div>
       <div class="capitulo-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
     </div>
