@@ -3,38 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ranking de Aporte de Instituciones — Oportunidad País</title>
+<title>Premios — Oportunidad País</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#16264F;--navy-2:#1E3265;--red:#CE1B2E;--red-dd:#9F1424;--paper:#F1F0EC;--white:#FFFFFF;--ink-soft:#43506b;--line:rgba(22,38,79,.14);--line-d:rgba(241,240,236,.16);--shadow:0 26px 60px -30px rgba(22,38,79,.5)}
+:root{--navy:#16264F;--navy-2:#1E3265;--red:#CE1B2E;--paper:#F1F0EC;--white:#FFFFFF;--ink-soft:#43506b;--line:rgba(22,38,79,.14)}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Hanken Grotesk',sans-serif;background:var(--paper);color:var(--navy);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,h4{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;line-height:1.03;letter-spacing:-.02em}
-.mono{font-family:'Spline Sans Mono',monospace}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
-.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.93rem;font-family:'Hanken Grotesk',sans-serif;padding:13px 24px;border-radius:8px;transition:.22s;cursor:pointer;border:none}
-.btn-red{background:var(--red);color:#fff}
-.btn-red:hover{background:var(--red-dd);transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(206,27,46,.6)}
-.btn-navy{background:var(--navy);color:#fff}
-.btn-navy:hover{background:var(--navy-2);transform:translateY(-2px)}
-.btn-ghost{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 2px var(--line)}
-.btn-ghost:hover{box-shadow:inset 0 0 0 2px var(--navy)}
+body{font-family:'Hanken Grotesk',sans-serif;background:var(--paper);color:var(--navy);line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;line-height:1.03;letter-spacing:-.02em}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 28px;transition:.35s;background:rgba(241,240,236,.7);backdrop-filter:blur(12px)}
-nav.scrolled{background:rgba(241,240,236,.95);box-shadow:0 1px 0 var(--line)}
-.nav-logo{height:46px;width:auto;cursor:pointer}
-.navlinks{display:flex;gap:28px;align-items:center}
-.navlinks a{font-size:.88rem;font-weight:600;color:var(--navy);transition:.2s}
-.navlinks a:hover{color:var(--red)}
-.navlinks a.active{color:var(--red)}
-.nav-cta{background:var(--red);color:#fff !important;padding:9px 18px;border-radius:8px}
-.nav-cta:hover{background:var(--red-dd);color:#fff !important}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 28px;background:rgba(241,240,236,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav-logo{height:46px;width:auto}
 .nav-back{display:inline-flex;align-items:center;gap:6px;font-size:.82rem;font-weight:600;color:var(--ink-soft);transition:.2s}
 .nav-back:hover{color:var(--navy);gap:10px}
 
@@ -43,302 +25,59 @@ nav.scrolled{background:rgba(241,240,236,.95);box-shadow:0 1px 0 var(--line)}
 .page-hero::before{content:"";position:absolute;top:-100px;right:-80px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(206,27,46,.2),transparent 70%)}
 .page-hero::after{content:"";position:absolute;bottom:-140px;left:-60px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(22,38,79,.4),transparent 70%)}
 .page-hero .wrap{position:relative;z-index:2}
-.page-hero .chip{font-family:'Spline Sans Mono';font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#ff8f9b;font-weight:600}
+.page-hero .chip{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#ff8f9b;font-weight:600}
 .page-hero h1{font-size:clamp(2.4rem,5.5vw,4rem);font-weight:800;margin:12px 0 18px}
 .page-hero p{font-size:1.12rem;max-width:28em;color:rgba(241,240,236,.8);line-height:1.5}
-.page-hero .hero-meta{display:flex;gap:32px;margin-top:28px;flex-wrap:wrap}
-.page-hero .meta-item{text-align:left}
-.page-hero .meta-item .num{font-family:'Bricolage Grotesque';font-size:1.8rem;font-weight:800;color:#fff}
-.page-hero .meta-item .lbl{font-size:.8rem;color:rgba(241,240,236,.6);margin-top:2px}
 
-/* RANKING SECTION */
-.ranking-section{padding:80px 0}
-.section-header{margin-bottom:48px}
-.section-header h2{font-size:2rem;margin-bottom:10px}
-.section-header p{color:var(--ink-soft);max-width:36em}
-.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:32px}
-.filters button{font-family:'Hanken Grotesk';font-size:.84rem;font-weight:600;cursor:pointer;padding:8px 17px;border-radius:7px;border:1px solid var(--line);background:transparent;color:var(--ink-soft);transition:.2s}
-.filters button.active,.filters button:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
-
-/* TABLE */
-.rank-table{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.rank-table table{width:100%;border-collapse:collapse}
-.rank-table thead{background:var(--navy);color:#fff}
-.rank-table th{font-family:'Spline Sans Mono';font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:16px 20px;text-align:left}
-.rank-table th.num{text-align:right}
-.rank-table td{padding:18px 20px;border-bottom:1px solid var(--line);vertical-align:middle}
-.rank-table tr:last-child td{border:none}
-.rank-table tbody tr{cursor:pointer;transition:.2s}
-.rank-table tbody tr:hover{background:rgba(22,38,79,.04)}
-.pos{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.4rem;color:var(--navy);min-width:48px;text-align:center}
-.pos.gold{color:#C9881D}
-.pos.silver{color:#8E9BAB}
-.pos.bronze{color:#A05D2E}
-.company-cell{display:flex;align-items:center;gap:14px}
-.company-logo{width:44px;height:44px;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:'Bricolage Grotesque';font-weight:800;font-size:1rem;flex:none}
-.company-name{font-weight:700;font-size:.96rem}
-.company-sector{font-size:.8rem;color:var(--ink-soft)}
-.impact-tag{font-family:'Spline Sans Mono';font-size:.72rem;font-weight:600;padding:4px 10px;border-radius:5px;text-transform:uppercase;letter-spacing:.05em}
-.impact-tag.alto{background:rgba(206,27,46,.1);color:var(--red)}
-.impact-tag.estrategico{background:rgba(22,38,79,.1);color:var(--navy)}
-.impact-tag.medio{background:rgba(22,38,79,.08);color:var(--ink-soft)}
-.rank-table .num{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.1rem;text-align:right;display:block}
-.rank-table .sub{font-size:.76rem;color:var(--ink-soft)}
-.bar-cell{min-width:120px}
-.bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-bottom:4px}
-.bar-fill{height:100%;background:var(--red);border-radius:3px;transition:width .6s ease}
-.more-row{text-align:center;padding:20px !important}
-.more-row button{font-family:'Hanken Grotesk';font-size:.88rem;font-weight:600;cursor:pointer;padding:10px 24px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--navy);transition:.2s}
-.more-row button:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
-
-/* DETAIL OVERLAY */
-.rank-detail-overlay{position:fixed;inset:0;background:rgba(22,38,79,.5);backdrop-filter:blur(6px);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
-.rank-detail-overlay.visible{display:flex}
-.rank-detail{background:var(--white);border-radius:20px;max-width:760px;width:100%;max-height:85vh;overflow-y:auto;padding:40px;position:relative;box-shadow:var(--shadow)}
-.close-btn{float:right;font-family:'Hanken Grotesk';font-size:.82rem;font-weight:600;cursor:pointer;padding:8px 16px;border-radius:7px;border:1px solid var(--line);background:transparent;color:var(--navy);transition:.2s}
-.close-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
-.company-header{display:flex;align-items:center;gap:18px;margin-bottom:28px}
-.company-header .logo{width:64px;height:64px;border-radius:14px;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:'Bricolage Grotesque';font-weight:800;font-size:1.4rem}
-.company-header h3{font-size:1.6rem}
-.rank-meta{font-family:'Spline Sans Mono';font-size:.8rem;color:var(--ink-soft);margin-top:4px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}
-.metric{background:var(--paper);border-radius:12px;padding:18px;text-align:center}
-.metric .val{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.8rem;color:var(--navy)}
-.metric .lbl{font-size:.8rem;color:var(--ink-soft);margin-top:4px}
-.desc{color:var(--ink-soft);line-height:1.6}
-
-/* CTA SECTION */
-.cta-section{background:var(--navy);color:#fff;text-align:center;padding:80px 0}
-.cta-section h2{font-size:2.2rem;margin-bottom:14px}
-.cta-section p{font-size:1.05rem;max-width:26em;margin:0 auto 30px;color:rgba(241,240,236,.75)}
-.cta-section .btn-red{background:#fff;color:var(--red)}
-.cta-section .btn-red:hover{background:rgba(241,240,236,.9);transform:translateY(-2px)}
+/* CONSTRUCCION */
+.construccion-section{flex:1;display:flex;align-items:center;justify-content:center;padding:80px 28px}
+.construccion-box{text-align:center;max-width:540px}
+.construccion-box .icon{font-size:4rem;margin-bottom:24px}
+.construccion-box h2{font-size:1.8rem;margin-bottom:14px}
+.construccion-box p{color:var(--ink-soft);font-size:1rem;line-height:1.6}
+.construccion-box .btn{margin-top:32px;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.93rem;padding:13px 24px;border-radius:8px;background:var(--red);color:#fff;transition:.22s;cursor:pointer;border:none}
+.construccion-box .btn:hover{background:#9F1424;transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(206,27,46,.6)}
 
 /* FOOTER */
-footer{background:#0F1B3A;color:rgba(241,240,236,.7);padding:60px 0 32px}
-footer .grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:48px}
-footer .blurb{font-size:.94rem;max-width:30em;line-height:1.6}
-footer h5{font-family:'Spline Sans Mono';font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:#ff8f9b;margin-bottom:14px;font-weight:500}
-footer ul{list-style:none}
-footer li{margin-bottom:9px}
-footer li a:hover{color:#fff}
-footer .bottom{border-top:1px solid rgba(241,240,236,.1);padding-top:28px;font-size:.84rem}
-footer .bottom a:hover{color:#fff}
-
-/* MOBILE */
-@media(max-width:768px){
-  .navlinks{display:none}
-  .page-hero{padding:120px 0 50px}
-  .page-hero h1{font-size:2rem}
-  .rank-table{overflow-x:auto}
-  .rank-table table{min-width:700px}
-  .metrics{grid-template-columns:1fr}
-  footer .grid{grid-template-columns:1fr;gap:32px}
-  .hero-meta{gap:20px}
-}
+footer{background:var(--navy);color:rgba(241,240,236,.6);padding:28px;text-align:center;font-size:.82rem}
+footer a{color:rgba(241,240,236,.8);transition:.2s}
+footer a:hover{color:#fff}
 </style>
 </head>
 <body>
 
-<nav id="nav">
-  <a href="index.html"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUEBAQEAwUEBAQGBQUGCA0ICAcHCBALDAkNExAUExIQEhIUFx0ZFBYcFhISGiMaHB4fISEhFBkkJyQgJh0gISD/wAARCAE4AlgDASIAAhEBAxEB/8QAHQABAAICAwEBAAAAAAAAAAAAAAcIAQYCBQkEA//EAGUQAAECBQEDBQgJDA0KBAcBAQECAwAEBQYRBxIhMQgTQVFhFCIycYGRobEVGEJSdHWys9EWFyM2N1ZicoKUosEkMzQ1OENEU3OSk5XSJicoRVVXY3aE4SVGg/BUZGWFo6TTwvH/xAAbAQEAAgMBAQAAAAAAAAAAAAAAAwQBAgUGB//EADsRAAICAgECBAIHBgUFAQEAAAABAgMEERIhMQUTQVEiMgYUM1JhgZEjQnGhscEVNDVDUxYlRNHwJHL/2gAMAwEAAhEDEQA/ALcQhiEAI4OHendnfwjnGCnKgc8IA/NQXnbwAR0RknbCQneCd8fpCAOCkb9pO4xnZ77a6eEcoQAhCEAIQhACEMQgDEZhCAEIQgBCEIAQhCAEIQgBCEIAQhCAEIQgBCEIAQhCAEIQgBGEYhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACMRmEAIQhACEIQBiEZhACEIQAhCEAIxGYQAhCEAIQhACEIQBiMwhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACMRmEAIQhACEI6S4brt61ZIzdfqzEijGUpWrK1/ioG9XkEbRjKT1FbZrKSittndxjPXFfrh5SEsl0ytqUFyZWrvUPzpKQo/gtpyT5SI1pNY5Ql6bXcLc/Jyy/dMspkkAdilYUfITHRj4dbrlY1FfiUpZ1e9QTf8Atc18x4nxxpxHfxjXK3XK+kKczddtVBCXDUZqTcQ6orygNNqGwAprkHGx5jW7G3bCq3quqU+ry9QmJhx6YfmG0rcW4skqKiM5Ji8VilS3iV5tJydvYkqY6YQhFYnEIQzACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAxGYQAhCEAIQhACMRmEAIQhACEIQBiEZhACEIQAhCEAYjMIQA/9k=" alt="Oportunidad País" class="nav-logo"></a>
-  <div class="navlinks">
-    <a href="https://oportunidadpais.cl" data-link>Podcast</a>
-    <a href="https://oportunidadpais.cl#entrevistados" data-link>Entrevistados</a>
-    <a href="https://oportunidadpais.cl#episodes" data-link>Capítulos</a>
-    <a href="https://oportunidadpais.cl/ranking-aporte-instituciones.html" data-link class="active">Ranking</a>
-    <a href="https://oportunidadpais.cl/reporte-aporte-instituciones.html" data-link>Reportes</a>
-    <a href="https://oportunidadpais.cl#registro" data-link>Recomendar</a>
-    <a href="https://oportunidadpais.cl#cta" data-link class="nav-cta">Sumarse</a>
-  </div>
+<nav>
+  <a href="index.html" class="nav-back">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Volver al inicio
+  </a>
+  <a href="index.html"><img src="logos/ITvCx19PT1xK1LlHKfRpKRemVTTks.png" alt="Oportunidad País" class="nav-logo"></a>
+  <div style="width:100px"></div>
 </nav>
 
-<header class="page-hero">
+<section class="page-hero">
   <div class="wrap">
-    <div class="chip mono">🏆 Ranking 2026</div>
-    <h1>Empresas que más aportan <span style="color:var(--red)">a Chile</span></h1>
-    <p>El ranking que visibiliza a las organizaciones que están generando el mayor impacto real en la productividad, formación de talento y desarrollo del país.</p>
-    <div style="margin-top:28px;background:rgba(206,27,46,.12);border:1px solid rgba(206,27,46,.3);border-radius:12px;padding:18px 22px;max-width:600px">
-      <div style="font-family:'Spline Sans Mono';font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#ff8f9b;margin-bottom:6px">⚡ Próximamente</div>
-      <p style="font-size:.92rem;color:rgba(241,240,236,.85);margin:0;line-height:1.5">El ranking completo se lanzará pronto. Estará basado en información pública de reportes de sostenibilidad y programas publicados por las empresas.</p>
-    </div>
-    <div class="hero-meta">
-      <div class="meta-item">
-        <div class="num">12</div>
-        <div class="lbl">Empresas rankeadas</div>
-      </div>
-      <div class="meta-item">
-        <div class="num">$14.5B</div>
-        <div class="lbl">Inversión total estimada</div>
-      </div>
-      <div class="meta-item">
-        <div class="num">4.290</div>
-        <div class="lbl">Becas activas</div>
-      </div>
-      <div class="meta-item">
-        <div class="num">76</div>
-        <div class="lbl">Programas activos</div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<section class="ranking-section">
-  <div class="wrap">
-    <div class="section-header">
-      <h2>Ranking de Aporte al País</h2>
-      <p>Metodología basada en programas activos, becas otorgadas e inversión en formación y desarrollo. Haz clic en una empresa para ver su detalle completo.</p>
-    </div>
-
-    <div class="filters">
-      <button data-filter="all" class="active">Todas</button>
-      <button data-filter="alto">Alto Impacto</button>
-      <button data-filter="estrategico">Estratégico</button>
-      <button data-filter="medio">Medio Impacto</button>
-    </div>
-
-    <div class="rank-table">
-      <table>
-        <thead>
-          <tr>
-            <th style="width:60px">#</th>
-            <th>Empresa</th>
-            <th>Nivel</th>
-            <th class="num">Programas</th>
-            <th class="num">Becas</th>
-            <th class="num">Inversión</th>
-            <th style="width:140px">Comparativa</th>
-          </tr>
-        </thead>
-        <tbody id="rankBody"></tbody>
-      </table>
-    </div>
-    <div id="rankMore" class="more-row" style="display:none"><button>Ver más empresas</button></div>
+    <p class="chip">Oportunidad País</p>
+    <h1>Premios</h1>
+    <p>Reconocemos a las instituciones y empresas que aportan al desarrollo del país.</p>
   </div>
 </section>
 
-<section class="cta-section">
-  <div class="wrap">
-    <h2>¿Tu empresa debería estar en este ranking?</h2>
-    <p>Si tu organización está aportando a Chile a través de programas de formación, becas o inversión en talento, regístrala y forme parte de esta iniciativa.</p>
-    <a href="index.html#registro" class="btn btn-red">Registrar mi empresa →</a>
+<section class="construccion-section">
+  <div class="construccion-box">
+    <div class="icon">🚧</div>
+    <h2>Esta sección está en construcción</h2>
+    <p>Estamos preparando losPremios Oportunidad País. Muy pronto podrás conocer a los ganadores y nominees de este año.</p>
+    <a href="index.html" class="btn">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Volver al inicio
+    </a>
   </div>
 </section>
-
-<!-- DETAIL OVERLAY -->
-<div class="rank-detail-overlay" id="rankDetailOverlay">
-  <div class="rank-detail" id="rankDetail"></div>
-</div>
 
 <footer>
-  <div class="wrap">
-    <div class="grid">
-      <div>
-        <h5>Oportunidad País</h5>
-        <p class="blurb">El podcast que visibiliza a quienes —desde empresas, instituciones y territorios— están aportando de verdad a la productividad del país.</p>
-      </div>
-      <div>
-        <h5>Navegación</h5>
-        <ul>
-          <li><a href="https://oportunidadpais.cl">Podcast</a></li>
-          <li><a href="https://oportunidadpais.cl#entrevistados">Entrevistados</a></li>
-          <li><a href="https://oportunidadpais.cl#episodes">Capítulos</a></li>
-          <li><a href="https://oportunidadpais.cl/ranking-aporte-instituciones.html">Ranking</a></li>
-          <li><a href="https://oportunidadpais.cl/reporte-aporte-instituciones.html">Reportes</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Conecta</h5>
-        <ul>
-          <li><a href="https://oportunidadpais.cl#registro">Registrar empresa</a></li>
-          <li><a href="https://oportunidadpais.cl#desafio">Desafío Latam</a></li>
-          <li><a href="https://godiegoarias.com" target="_blank">Diego Arias</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="bottom">
-      <a href="index.html">Oportunidad País</a> · Podcast impulsado por Desafío Latam · 2026
-    </div>
-  </div>
+  <a href="index.html">Oportunidad País</a> · Todos los derechos reservados
 </footer>
 
-<script>
-// Nav scroll
-window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>20);});
-window.addEventListener('load',()=>{if(window.scrollY>20)document.getElementById('nav').classList.add('scrolled');});
-
-// Ranking data
-const companies=[
-  {rank:1,name:'Microsoft',sector:'Tecnología',logo:'M',impact:'alto',programs:8,becas:420,investment:2800000000,desc:'Líder global en tecnología con programas sólidos de inclusión digital y formación de talento en IA y nube en Chile. Su programa Microsoft Learn for Partners y alianzas con universidades chilenas posicionan a la compañía como un actor clave en la transformación digital del país.'},
-  {rank:2,name:'Google',sector:'Tecnología',logo:'G',impact:'estrategico',programs:6,becas:310,investment:1950000000,desc:'Impulsa la transformación digital en el país con Google for Startups, Grow with Google y alianzas con universidades chilenas. Su enfoque en inteligencia artificial y herramientas colaborativas define el estándar de la industria.'},
-  {rank:3,name:'Amazon Web Services',sector:'Cloud Computing',logo:'A',impact:'estrategico',programs:5,becas:240,investment:1600000000,desc:'Con su programa AWS re/Start y alianzas con centros de formación técnica, forma talento en computación en la nube. Su inversión en infraestructura en la región posiciona a Chile como hub tecnológico.'},
-  {rank:4,name:'Falabella',sector:'Retail',logo:'F',impact:'alto',programs:12,becas:580,investment:1500000000,desc:'La multilatina líder en retail mantiene programas de empleo juvenil, capacitación laboral y alianzas con institutos técnicos. Su programa Talento Falabella conecta a miles de jóvenes con oportunidades de empleo formal.'},
-  {rank:5,name:'Codelco',sector:'Minería',logo:'Co',impact:'estrategico',programs:9,becas:350,investment:1400000000,desc:'La estatal minera invierte en formación técnica y profesionalización de trabajadores para la minería del futuro. Su alianza con centros de formación técnica asegura mano de obra calificada para la industria.'},
-  {rank:6,name:'SQM',sector:'Química y Minería',logo:'S',impact:'estrategico',programs:5,becas:180,investment:920000000,desc:'Con su programa SQM Scholarship apoya a estudiantes de matemáticas y ciencias en universidades chilenas. Su foco en educación STEM posiciona a la compañía como un actor estratégico para el desarrollo del país.'},
-  {rank:7,name:'Entel',sector:'Telecomunicaciones',logo:'E',impact:'medio',programs:7,becas:190,investment:980000000,desc:'Compañía de telecomunicaciones con programas de formación en redes y tecnología para jóvenes de zonas vulnerables. Su programa Entel Ocean conecta a comunidades aisladas con conectividad y oportunidades.'},
-  {rank:8,name:'Copec',sector:'Energía',logo:'Cp',impact:'medio',programs:6,becas:210,investment:850000000,desc:'A través de su fundación y programas de scholarships, impulsa la formación técnica y profesional en zonas rurales. Su enfoque en energías renovables incluye programas de capacitación para la transición energética.'},
-  {rank:9,name:'CCNI',sector:'Retail Financiero',logo:'C',impact:'alto',programs:4,becas:160,investment:750000000,desc:'Con su programa Talento Mujer y alianzas con Desafío Latam, forma desarrolladores junior en contextos vulnerables. Su compromiso con la inclusión laboral femenina la posiciona como líder en diversidad.'},
-  {rank:10,name:'Bci',sector:'Banca',logo:'B',impact:'medio',programs:5,becas:140,investment:620000000,desc:'Banco con programas de inclusión financiera y alianzas educativas para formar talento en el sector fintech. Su programa Bci Momentum apoya a emprendedores tecnológicos en etapas tempranas.'},
-  {rank:11,name:'CMPC',sector:'Forestal',logo:'CM',impact:'medio',programs:4,becas:120,investment:540000000,desc:'Empresa forestal con programas de formación técnica y profesionalización en comunidades donde opera. Su programa CMPC Bosque docente forma a futuros profesionales del sector foresto-industrial.'},
-  {rank:12,name:'Desafío Latam',sector:'Educación',logo:'DL',impact:'alto',programs:14,becas:1200,investment:680000000,desc:'Organización líder en formación tecnológica gratuita, con alianzas corporativas para conectar graduados con empleo. Su modelo de formación intensiva ha posicionado a cientos de personas en el sector tech.'},
-];
-const PAGE=8;
-let shown=PAGE;
-function fmt(n){if(n>=1e9)return'$'+(n/1e9).toFixed(1)+'B';if(n>=1e6)return'$'+(n/1e6).toFixed(0)+'M';return'$'+(n/1e3).toFixed(0)+'K';}
-function renderRank(filter='all'){
-  const tb=document.getElementById('rankBody');
-  const max=Math.max(...companies.map(c=>c.investment));
-  const vis=companies.filter(c=>filter==='all'||c.impact===filter);
-  tb.innerHTML=vis.slice(0,shown).map(c=>`<tr onclick="showDetail(${c.rank})">
-<td><span class="pos ${c.rank===1?'gold':c.rank===2?'silver':c.rank===3?'bronze':''}">${c.rank}</span></td>
-<td><div class="company-cell"><div class="company-logo">${c.logo}</div><div><div class="company-name">${c.name}</div><div class="company-sector">${c.sector}</div></div></div></td>
-<td><span class="impact-tag ${c.impact}">${c.impact==='alto'?'Alto Impacto':c.impact==='estratégico'?'Estratégico':'Medio Impacto'}</span></td>
-<td><span class="num">${c.programs}</span></td>
-<td><span class="num">${c.becas.toLocaleString()}</span></td>
-<td><span class="num">${fmt(c.investment)}</span></td>
-<td class="bar-cell"><div class="bar"><div class="bar-fill" style="width:${(c.investment/max*100).toFixed(0)}%"></div></div><span class="sub">${(c.investment/max*100).toFixed(0)}% del líder</span></td>
-</tr>`).join('');
-  document.getElementById('rankMore').style.display=shown<vis.length?'block':'none';
-}
-function showDetail(r){
-  const c=companies.find(x=>x.rank===r);
-  if(!c)return;
-  const max=Math.max(...companies.map(x=>x.investment));
-  document.getElementById('rankDetail').innerHTML=`<button class="close-btn" onclick="closeDetail()">✕ Cerrar</button>
-<div class="company-header"><div class="logo">${c.logo}</div><div><h3>${c.name}</h3><div class="rank-meta">${c.sector} · Posición #${c.rank}</div></div></div>
-<div class="metrics"><div class="metric"><div class="val">${c.programs}</div><div class="lbl">Programas activos</div></div>
-<div class="metric"><div class="val">${c.becas.toLocaleString()}</div><div class="lbl">Becas otorgadas</div></div>
-<div class="metric"><div class="val">${fmt(c.investment)}</div><div class="lbl">Inversión anual</div></div></div>
-<h4 style="font-size:1.1rem;margin-bottom:10px">Sobre su aporte al país</h4>
-<p class="desc">${c.desc}</p>
-<div style="margin-top:28px"><h4 style="font-size:1.1rem;margin-bottom:12px">Comparativa de inversión</h4>
-<div style="margin-bottom:10px">
-<div style="display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:6px"><span>${companies[0].name}</span><span style="font-weight:700">${fmt(companies[0].investment)}</span></div>
-<div style="height:8px;border-radius:4px;background:var(--red);width:100%"></div>
-</div>
-<div>
-<div style="display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:6px"><span>${c.name}</span><span style="font-weight:700">${fmt(c.investment)}</span></div>
-<div style="height:8px;border-radius:4px;background:var(--line);overflow:hidden"><div style="height:100%;border-radius:4px;background:var(--navy);width:${(c.investment/max*100).toFixed(0)}%"></div></div>
-</div></div>
-<div style="margin-top:24px"><span class="impact-tag ${c.impact}">${c.impact==='alto'?'Alto Impacto':c.impact==='estratégico'?'Estratégico':'Medio Impacto'}</span></div>`;
-  document.getElementById('rankDetailOverlay').classList.add('visible');
-  document.body.style.overflow='hidden';
-}
-function closeDetail(){
-  document.getElementById('rankDetailOverlay').classList.remove('visible');
-  document.body.style.overflow='';
-}
-document.getElementById('rankDetailOverlay').addEventListener('click',e=>{if(e.target===document.getElementById('rankDetailOverlay'))closeDetail();});
-document.addEventListener('click',e=>{
-  const b=e.target.closest('.filters button');
-  if(!b)return;
-  document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('active'));
-  b.classList.add('active');
-  shown=PAGE;
-  renderRank(b.dataset.filter);
-});
-document.getElementById('rankMore')&&document.getElementById('rankMore').addEventListener('click',()=>{shown+=5;renderRank(document.querySelector('.filters button.active')?.dataset.filter||'all');});
-renderRank();
-</script>
 </body>
 </html>
