@@ -136,8 +136,9 @@
           <div class="photo" data-photo-wrap style="position:relative;overflow:hidden;">
             <img src="${photoUrl}" alt="${p.name}"
                  style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-md);"
+                 onload="this.nextElementSibling.style.display='none';"
                  onerror="this.style.display='none';var i=this.nextElementSibling;i.style.display='flex';">
-            <span class="init" style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;">${initials}</span>
+            <span class="init" style="display:none;align-items:center;justify-content:center;width:100%;height:100%;">${initials}</span>
             ${p.linkedinUrl ? `<a class="li-badge" href="${p.linkedinUrl}" target="_blank" rel="noopener" aria-label="Seguir a ${p.name} en LinkedIn" onclick="event.stopPropagation();">in</a>` : ''}
           </div>
           <div class="info">

@@ -426,7 +426,7 @@ const Helpers = {
 
   // Render una card de persona.
   // Si photoUrl está set, renderiza <img>; si no, fallback a iniciales.
-  // El <img> tiene onerror fallback a iniciales para robustez.
+  // Las iniciales solo se muestran si la imagen falla en cargar.
   personCard(p) {
     const photoUrl = Helpers.photoUrl(p);
     const init = Helpers.initials(p.name);
@@ -436,8 +436,9 @@ const Helpers = {
           <div class="person-photo" data-photo-wrap>
             <img src="${photoUrl}" alt="${p.name}" loading="lazy" decoding="async"
                  style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%;"
+                 onload="this.nextElementSibling.style.display='none';"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-            <span class="init" style="display:flex;">${init}</span>
+            <span class="init" style="display:none;">${init}</span>
           </div>
           ${p.linkedinUrl ? `<span class="li-badge li-badge-sm" role="button" tabindex="0" aria-label="Seguir a ${p.name} en LinkedIn" onclick="event.preventDefault();event.stopPropagation();window.open('${p.linkedinUrl}','_blank','noopener');">in</span>` : ''}
         </div>
