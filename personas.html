@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personas · Oportunidad País</title>
+  <meta name="description" content="Las personas e instituciones que están moviendo la productividad de Chile. Conocé a cada invitado y su historia.">
+  <meta name="theme-color" content="#0E1B33">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Personas · Oportunidad País">
+  <meta property="og:description" content="Las personas e instituciones que están moviendo la productividad de Chile.">
+  <meta property="og:url" content="https://oportunidadpais.cl/personas.html">
+  <meta property="og:image" content="https://oportunidadpais.cl/assets/og/personas.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Personas · Oportunidad País">
+  <meta name="twitter:description" content="Las personas que están moviendo la productividad de Chile.">
+  <meta name="twitter:image" content="https://oportunidadpais.cl/assets/og/personas.png">
+  <link rel="canonical" href="https://oportunidadpais.cl/personas.html">
+  <link rel="icon" type="image/svg+xml" href="assets/brand/isotipo-o-navy.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav" aria-label="Principal">
+    <a class="nav-brand" href="index.html" aria-label="Oportunidad País · Inicio">
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <path fill="#0E1B33" fill-rule="evenodd" d="M 60 6 A 54 54 0 1 1 60 114 A 54 54 0 1 1 60 6 Z M 60 24 A 36 36 0 1 0 60 96 A 36 36 0 1 0 60 24 Z"/>
+        <polygon fill="#E8B341" points="60,6 114,60 60,60"/>
+      </svg>
+      <span class="wm">oportunidad país<span class="dot">.</span></span>
+    </a>
+    <div class="nav-menu" role="navigation">
+      <a href="personas.html">Personas</a>
+      <a href="capitulos.html">Capítulos</a>
+      <a href="reportes.html">Reportes</a>
+      <a href="sobre.html">Sobre</a>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEAD ============ -->
+  <header class="page-head">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Inicio</a><span>/</span>Personas
+      </div>
+      <h1>Las <em>personas</em>.</h1>
+      <p class="lede">Cada uno de ellos está haciendo algo distinto en su industria. Les preguntamos qué —y por qué importa para Chile.</p>
+    </div>
+  </header>
+
+  <!-- ============ FILTERS ============ -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="sec-head" style="margin-bottom: var(--space-8);">
+        <div class="left">
+          <div class="eyebrow">— Filtrar por industria</div>
+        </div>
+        <div class="right">
+          <div class="filters" data-filter-group data-filter-target="[data-persona]" data-filter-empty="[data-empty]">
+            <button class="chip active" data-filter-value="all">Todos <span class="chip-count" data-count="all"></span></button>
+            <span data-industry-chips></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="person-grid" id="grid"></div>
+      <div class="loading hidden" data-empty>No hay personas en esta industria todavía.</div>
+    </div>
+  </section>
+
+  <!-- ============ CTA: RECOMENDAR ============ -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="cta-banner">
+        <div>
+          <div class="eyebrow on-dark">— ¿Falta alguien?</div>
+          <h2 style="margin-top: var(--space-3);">Hay gente cambiando las reglas.<br><em>Ayúdanos a encontrarla.</em></h2>
+          <p>Si conoces a alguien que está moviendo la aguja en su industria —en tecnología, educación, energía, minería, inclusión o donde sea— recomendalo. Lo contactamos y, si la historia está a la altura, va al micrófono.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://w.app/fqbnbn" target="_blank" rel="noopener">Recomendar por WhatsApp →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="foot-inner">
+      <div class="foot-brand">
+        <a class="nav-brand" href="index.html" style="color: var(--paper);">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <path fill="#F5F1E8" fill-rule="evenodd" d="M 60 6 A 54 54 0 1 1 60 114 A 54 54 0 1 1 60 6 Z M 60 24 A 36 36 0 1 0 60 96 A 36 36 0 1 0 60 24 Z"/>
+            <polygon fill="#E8B341" points="60,6 114,60 60,60"/>
+          </svg>
+          <span class="wm">oportunidad país<span class="dot">.</span></span>
+        </a>
+        <p>Visibilizar a las personas e instituciones que están moviendo la productividad de Chile. Una conversación a la vez.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="personas.html">Personas</a></li>
+          <li><a href="capitulos.html">Capítulos</a></li>
+          <li><a href="reportes.html">Reportes ESG</a></li>
+          <li><a href="sobre.html">Sobre OP</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Participar</h4>
+        <ul>
+          <li><a href="https://w.app/fqbnbn" target="_blank" rel="noopener">Escribir por WhatsApp</a></li>
+          <li><a href="reportes.html#sugerir">Sugerir empresa</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Escuchar</h4>
+        <ul>
+          <li><a href="https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ" target="_blank" rel="noopener">Spotify</a></li>
+          
+          <li><a href="https://www.youtube.com/@academiadesafiolatam" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Oportunidad País · Desafío Latam</span>
+      <span>Hecho con gente que cree en Chile</span>
+    </div>
+  </footer>
+
+  <a class="float-cta" href="https://w.app/fqbnbn" target="_blank" rel="noopener">
+    <span class="dot"></span>
+    Escríbenos por WhatsApp
+  </a>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Render industry chips
+    const chipWrap = document.querySelector('[data-industry-chips]');
+    chipWrap.innerHTML = DATA.industries.map(i =>
+      `<button class="chip" data-filter-value="${i.id}">${i.name} <span class="chip-count">${DATA.personas.filter(p => p.industry === i.id).length}</span></button>`
+    ).join('');
+
+    // Set total counts
+    document.querySelector('[data-count="all"]').textContent = DATA.personas.length;
+
+    // Render persona grid
+    const grid = document.getElementById('grid');
+    grid.innerHTML = DATA.personas.map(p =>
+      Helpers.personCard(p).replace('class="person-card', `data-persona data-filter-industry="${p.industry}" class="person-card`)
+    ).join('');
+
+    // Re-bind filter (since chips were injected after main.js ran)
+    // Quick re-init:
+    const group = document.querySelector('[data-filter-group]');
+    if (group) {
+      const chips = group.querySelectorAll('[data-filter-value]');
+      const targets = document.querySelectorAll('[data-persona]');
+      const empty = document.querySelector('[data-empty]');
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          chips.forEach(c => c.classList.remove('active'));
+          chip.classList.add('active');
+          const value = chip.dataset.filterValue;
+          let visible = 0;
+          targets.forEach(t => {
+            const show = value === 'all' || t.dataset.filterIndustry === value;
+            t.classList.toggle('hidden', !show);
+            if (show) visible++;
+          });
+          if (empty) empty.classList.toggle('hidden', visible > 0);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

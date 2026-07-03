@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title id="page-title">Persona · Oportunidad País</title>
+  <meta name="theme-color" content="#0E1B33">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Oportunidad País">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://oportunidadpais.cl/persona.html">
+  <link rel="icon" type="image/svg+xml" href="assets/brand/isotipo-o-navy.svg">
+  <link rel="apple-touch-icon" href="assets/brand/favicon-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <nav class="nav" aria-label="Principal">
+    <a class="nav-brand" href="index.html">
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <path fill="#0E1B33" fill-rule="evenodd" d="M 60 6 A 54 54 0 1 1 60 114 A 54 54 0 1 1 60 6 Z M 60 24 A 36 36 0 1 0 60 96 A 36 36 0 1 0 60 24 Z"/>
+        <polygon fill="#E8B341" points="60,6 114,60 60,60"/>
+      </svg>
+      <span class="wm">oportunidad país<span class="dot">.</span></span>
+    </a>
+    <div class="nav-menu" role="navigation">
+      <a href="personas.html">Personas</a>
+      <a href="capitulos.html">Capítulos</a>
+      <a href="reportes.html">Reportes</a>
+      <a href="sobre.html">Sobre</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="capitulos.html">▶ Escuchar último</a>
+      <button class="nav-toggle" aria-label="Abrir menú"><span></span></button>
+    </div>
+  </nav>
+
+  <section class="container" id="persona-root"></section>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <div class="foot-brand">
+        <a class="nav-brand" href="index.html" style="color: var(--paper);">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <path fill="#F5F1E8" fill-rule="evenodd" d="M 60 6 A 54 54 0 1 1 60 114 A 54 54 0 1 1 60 6 Z M 60 24 A 36 36 0 1 0 60 96 A 36 36 0 1 0 60 24 Z"/>
+            <polygon fill="#E8B341" points="60,6 114,60 60,60"/>
+          </svg>
+          <span class="wm">oportunidad país<span class="dot">.</span></span>
+        </a>
+        <p>Visibilizar a las personas e instituciones que están moviendo la productividad de Chile. Una conversación a la vez.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="personas.html">Personas</a></li>
+          <li><a href="capitulos.html">Capítulos</a></li>
+          <li><a href="reportes.html">Reportes ESG</a></li>
+          <li><a href="sobre.html">Sobre OP</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Participar</h4>
+        <ul>
+          <li><a href="https://w.app/fqbnbn" target="_blank" rel="noopener">Escribir por WhatsApp</a></li>
+          <li><a href="reportes.html#sugerir">Sugerir empresa</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Escuchar</h4>
+        <ul>
+          <li><a href="https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ" target="_blank" rel="noopener">Spotify</a></li>
+          
+          <li><a href="https://www.youtube.com/@academiadesafiolatam" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Oportunidad País · Desafío Latam</span>
+      <span>Hecho con gente que cree en Chile</span>
+    </div>
+  </footer>
+
+  <a class="float-cta" href="https://w.app/fqbnbn" target="_blank" rel="noopener">
+    <span class="dot"></span>
+    Escríbenos por WhatsApp
+  </a>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      const params = new URLSearchParams(location.search);
+      const slug = params.get('slug');
+      const p = Helpers.personaBySlug(slug);
+      const root = document.getElementById('persona-root');
+
+      if (!p) {
+        root.innerHTML = `
+          <div style="padding: 96px 0; text-align: center;">
+            <div class="eyebrow" style="justify-content: center;">— 404</div>
+            <h1 style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 56px; margin-top: 24px; color: var(--navy);">No encontramos a esa persona.</h1>
+            <p class="lede" style="margin-top: 24px;">Pero tenemos ${DATA.personas.length} otras que vale la pena conocer.</p>
+            <a class="btn btn-primary btn-lg" href="personas.html" style="margin-top: 32px;">Ver todas las personas →</a>
+          </div>
+        `;
+        document.title = 'No encontrada · Oportunidad País';
+        return;
+      }
+
+      const c = Helpers.capByNum(p.chapterNum);
+      const otherPersonas = DATA.personas.filter(x => x.slug !== p.slug).slice(0, 3);
+      const photoUrl = Helpers.photoUrl(p);
+      const initials = Helpers.initials(p.name);
+
+      document.title = `${p.name} · Oportunidad País`;
+
+      // Actualizar OG image (best-effort)
+      const og = document.querySelector('meta[property="og:image"]');
+      if (og) og.setAttribute("content", "https://oportunidadpais.cl/assets/og/personas.png");
+      if (og && p.photoUrl) og.setAttribute('content', p.photoUrl);
+
+      root.innerHTML = `
+        <div style="padding-top: 32px;">
+          <div class="breadcrumbs">
+            <a href="index.html">Inicio</a><span>/</span>
+            <a href="personas.html">Personas</a><span>/</span>
+            ${p.name}
+          </div>
+        </div>
+
+        <div class="persona-hero tone-${p.tone}">
+          <div class="photo" data-photo-wrap style="position:relative;overflow:hidden;">
+            <img src="${photoUrl}" alt="${p.name}"
+                 style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-md);"
+                 onerror="this.style.display='none';var i=this.nextElementSibling;i.style.display='flex';">
+            <span class="init" style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;">${initials}</span>
+            ${p.linkedinUrl ? `<a class="li-badge" href="${p.linkedinUrl}" target="_blank" rel="noopener" aria-label="Seguir a ${p.name} en LinkedIn" onclick="event.stopPropagation();">in</a>` : ''}
+          </div>
+          <div class="info">
+            <div class="meta">C${p.chapterNum} · ${Helpers.industryName(p.industry)} · ${p.city}</div>
+            <h1>${p.name}.</h1>
+            <div class="role">${p.role} · <span style="opacity: 0.7;">${p.org}</span></div>
+            <div class="fact-grid">
+              <div class="fact"><div class="lbl">Capítulo</div><div class="val">Nº ${String(p.chapterNum).padStart(2, '0')}</div></div>
+              <div class="fact"><div class="lbl">Industria</div><div class="val">${Helpers.industryName(p.industry)}</div></div>
+              <div class="fact"><div class="lbl">Ciudad</div><div class="val">${p.city}</div></div>
+              <div class="fact"><div class="lbl">Publicado</div><div class="val">${c ? c.date : '—'}</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-tight">
+          <div class="quote">
+            <p>"${p.keyIdea}"</p>
+            <cite>— ${p.name}, ${Helpers.industryName(p.industry)}</cite>
+          </div>
+        </div>
+
+        ${(p.linkedinUrl || true) ? `
+        <div class="section-tight">
+          <div class="connect-cta">
+            <div class="connect-eyebrow">— Conectá con ${p.gender === 'f' ? 'ella' : (p.gender === 'm' ? 'él' : 'esta persona')}</div>
+            <h3>${p.name} sigue moviendo la productividad de Chile.</h3>
+            <p>Si esta conversación te sirvió, tienes dos formas simples de apoyar su trabajo: seguir su recorrido en LinkedIn y, si quieres, escribirle a Diego para agradecerle por sumar a ${p.gender === 'f' ? 'ella' : 'él'} a la conversación.</p>
+            <div class="connect-buttons">
+              ${p.linkedinUrl ? `<a class="platform-btn" href="${p.linkedinUrl}" target="_blank" rel="noopener">Seguir ${p.gender === 'f' ? 'la' : 'lo'} en LinkedIn →</a>` : ''}
+              <a class="platform-btn alt" href="${Helpers.wzpUrlFor({ shareText: 'Hola Diego, te escribo para agradecerte por el capítulo ' + p.chapterNum + ' de Oportunidad País con ' + p.name + '. Aportó mucho a entender el país.' }, window.location.href)}" target="_blank" rel="noopener">Agradecer por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+        ` : ''}
+
+        ${p.whyKnow ? `
+        <div class="section-tight">
+          <div class="why-know">
+            <div class="why-know-eyebrow">— Por qué hay que conocerla</div>
+            <p class="why-know-text">${p.whyKnow}</p>
+          </div>
+        </div>
+        ` : ''}
+
+        ${c ? `
+        <div class="section-tight">
+          <div class="player-block">
+            <a class="play-btn" href="${c.youtubeUrl || c.spotifyUrl}" target="_blank" rel="noopener" aria-label="Reproducir capítulo en YouTube"></a>
+            <div>
+              <h3>${c.title}</h3>
+              <div class="sub">Capítulo ${String(c.num).padStart(2,'0')} · ${c.duration} · ${c.date}</div>
+            </div>
+            <div class="player-cta">
+              <a class="platform-btn" href="${c.youtubeUrl || c.spotifyUrl}" target="_blank" rel="noopener">▶ YouTube</a>
+              <a class="platform-btn alt" href="${c.spotifyUrl}" target="_blank" rel="noopener">Spotify</a>
+              <a class="platform-btn alt" href="${Helpers.wzpUrlForCap(c, window.location.href)}" target="_blank" rel="noopener">Compartir (wzp)</a>
+            </div>
+          </div>
+        </div>
+        ` : ''}
+
+        <div class="section">
+          <div class="eyebrow">— Sobre ${p.name.split(' ')[0]}</div>
+          <h2 class="section-title" style="margin-top: var(--space-3); max-width: 720px;">${p.bio}</h2>
+
+          <h3 style="margin-top: var(--space-12); font-family: var(--font-editorial); font-weight: 500; font-size: 32px; color: var(--navy);">
+            Las <em style="font-style: italic; color: var(--gold-deep);">ideas clave</em> del capítulo.
+          </h3>
+          <ul class="ideas-list" style="margin-top: var(--space-6);">
+            <li><span class="num">01</span><span class="text">${p.keyIdea}</span></li>
+            ${(p.keyPoints || []).map((kp, i) => `<li><span class="num">${String(i + 2).padStart(2, '0')}</span><span class="text">${kp}</span></li>`).join('')}
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="sec-head">
+            <div class="left">
+              <div class="eyebrow">— También en la conversación</div>
+              <h2 class="section-title">Otras <em>personas</em>.</h2>
+            </div>
+            <div class="right">
+              <a class="btn-link" href="personas.html">Ver todas →</a>
+            </div>
+          </div>
+          <div class="person-grid">${otherPersonas.map(Helpers.personCard).join('')}</div>
+        </div>
+
+        <div class="section">
+          <div class="cta-banner">
+            <div>
+              <div class="eyebrow on-dark">— También te puede interesar</div>
+              <h2 style="margin-top: var(--space-3);">¿A quién deberíamos <em>ponerle micrófono</em>?</h2>
+              <p>Si conoces a alguien cambiando las reglas en su industria y nadie lo está viendo, cuéntanos. Lo contactamos.</p>
+            </div>
+            <div class="actions">
+              <a class="btn btn-primary" href="https://w.app/fqbnbn" target="_blank" rel="noopener">Recomendar por WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+      `;
+    })();
+  </script>
+</body>
+</html>

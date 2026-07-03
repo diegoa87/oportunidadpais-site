@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Oportunidad País · Isotipo "O Productiva"
+  Versión: Default · Fondo claro
+  Color: Navy principal #0E1B33
+  Geometría: viewBox 120x120, anillo (r 54, r int 36), cuña dorada cuadrante superior derecho
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Oportunidad País">
+  <title>Oportunidad País — isotipo</title>
+  <!-- Anillo (donut) usando even-odd fill rule con dos círculos -->
+  <path fill="#0E1B33" fill-rule="evenodd" d="
+    M 60 6
+    A 54 54 0 1 1 60 114
+    A 54 54 0 1 1 60 6
+    Z
+    M 60 24
+    A 36 36 0 1 0 60 96
+    A 36 36 0 1 0 60 24
+    Z
+  "/>
+  <!-- Cuña dorada: cuadrante superior derecho, desde el centro hasta el borde -->
+  <polygon fill="#E8B341" points="60,6 114,60 60,60"/>
+</svg>

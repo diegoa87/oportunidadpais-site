@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Lockup apilado · secundario
+  Isotipo arriba, wordmark abajo
+  ViewBox 800x600
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Oportunidad País">
+  <title>Oportunidad País — lockup apilado</title>
+  <!-- Isotipo · 240x240 · centrado horizontal, x=280 -->
+  <g transform="translate(280, 60)">
+    <path fill="#0E1B33" fill-rule="evenodd" d="
+      M 60 6 A 54 54 0 1 1 60 114 A 54 54 0 1 1 60 6 Z
+      M 60 24 A 36 36 0 1 0 60 96 A 36 36 0 1 0 60 24 Z
+    "/>
+    <polygon fill="#E8B341" points="60,6 114,60 60,60"/>
+  </g>
+  <!-- Wordmark centrado · font-size 60 -->
+  <text x="400" y="500"
+        font-family="'Bricolage Grotesque', 'Inter Tight', sans-serif"
+        font-weight="700"
+        font-size="60"
+        letter-spacing="-2.4"
+        fill="#0E1B33"
+        text-anchor="middle">oportunidad país<tspan fill="#E8B341">.</tspan></text>
+</svg>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title id="page-title">Capítulo · Oportunidad País</title>
+  <meta name="theme-color" content="#0E1B33">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Oportunidad País">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://oportunidadpais.cl/capitulo.html">
+  <link rel="icon" type="image/svg+xml" href="assets/brand/isotipo-o-navy.svg">
+  <link rel="apple-touch-icon" href="assets/brand/favicon-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <nav class="nav" aria-label="Principal">
+    <a class="nav-brand" href="index.html">
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <path fill="#0E1B33" fill-rule="evenodd" d="M 60 6 A 54 54 0 1 1 60 114 A 54 54 0 1 1 60 6 Z M 60 24 A 36 36 0 1 0 60 96 A 36 36 0 1 0 60 24 Z"/>
+        <polygon fill="#E8B341" points="60,6 114,60 60,60"/>
+      </svg>
+      <span class="wm">oportunidad país<span class="dot">.</span></span>
+    </a>
+    <div class="nav-menu" role="navigation">
+      <a href="personas.html">Personas</a>
+      <a href="capitulos.html">Capítulos</a>
+      <a href="reportes.html">Reportes</a>
+      <a href="sobre.html">Sobre</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="capitulos.html">Ver todos</a>
+      <button class="nav-toggle" aria-label="Abrir menú"><span></span></button>
+    </div>
+  </nav>
+
+  <section class="container" id="root"></section>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <div class="foot-brand">
+        <a class="nav-brand" href="index.html" style="color: var(--paper);">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <path fill="#F5F1E8" fill-rule="evenodd" d="M 60 6 A 54 54 0 1 1 60 114 A 54 54 0 1 1 60 6 Z M 60 24 A 36 36 0 1 0 60 96 A 36 36 0 1 0 60 24 Z"/>
+            <polygon fill="#E8B341" points="60,6 114,60 60,60"/>
+          </svg>
+          <span class="wm">oportunidad país<span class="dot">.</span></span>
+        </a>
+        <p>Visibilizar a las personas e instituciones que están moviendo la productividad de Chile. Una conversación a la vez.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="personas.html">Personas</a></li>
+          <li><a href="capitulos.html">Capítulos</a></li>
+          <li><a href="reportes.html">Reportes ESG</a></li>
+          <li><a href="sobre.html">Sobre OP</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Participar</h4>
+        <ul>
+          <li><a href="https://w.app/fqbnbn" target="_blank" rel="noopener">Escribir por WhatsApp</a></li>
+          <li><a href="reportes.html#sugerir">Sugerir empresa</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Escuchar</h4>
+        <ul>
+          <li><a href="https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ" target="_blank" rel="noopener">Spotify</a></li>
+          
+          <li><a href="https://www.youtube.com/@academiadesafiolatam" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Oportunidad País · Desafío Latam</span>
+      <span>Hecho con gente que cree en Chile</span>
+    </div>
+  </footer>
+
+  <a class="float-cta" href="https://w.app/fqbnbn" target="_blank" rel="noopener">
+    <span class="dot"></span>
+    Escríbenos por WhatsApp
+  </a>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      const params = new URLSearchParams(location.search);
+      const num = parseInt(params.get('num'), 10);
+      const c = Helpers.capByNum(num);
+      const p = c ? Helpers.personaBySlug(c.personaSlug) : null;
+      const root = document.getElementById('root');
+
+      if (!c || !p) {
+        root.innerHTML = `
+          <div style="padding: 96px 0; text-align: center;">
+            <div class="eyebrow" style="justify-content: center;">— 404</div>
+            <h1 style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 56px; margin-top: 24px;">Ese capítulo no existe.</h1>
+            <a class="btn btn-primary btn-lg" href="capitulos.html" style="margin-top: 32px;">Ver todos los capítulos →</a>
+          </div>
+        `;
+        document.title = 'No encontrado · Oportunidad País';
+        return;
+      }
+
+      document.title = `Cap ${c.num} · ${p.name} · Oportunidad País`;
+
+      const prev = DATA.capitulos.find(x => x.num === c.num - 1);
+      const next = DATA.capitulos.find(x => x.num === c.num + 1);
+      const wzpUrl = Helpers.wzpUrlForCap(c, window.location.href);
+
+      // Update OG tags dynamically
+      const setMeta = (selector, attr, val) => {
+        const el = document.querySelector(selector);
+        if (el) el.setAttribute(attr, val);
+      };
+      setMeta('meta[property="og:title"]', 'content', `${p.name} · Cap ${c.num} · Oportunidad País`);
+      setMeta('meta[name="twitter:title"]', 'content', `${p.name} · Cap ${c.num}`);
+      const desc = `${p.name}, ${p.role}. ${c.title.replace(/^[^:]+: /, '')}`;
+      setMeta('meta[name="description"]', 'content', desc);
+      setMeta('meta[property="og:description"]', 'content', desc);
+      setMeta('meta[name="twitter:description"]', 'content', desc);
+
+      root.innerHTML = `
+        <div style="padding-top: 32px;">
+          <div class="breadcrumbs">
+            <a href="index.html">Inicio</a><span>/</span>
+            <a href="capitulos.html">Capítulos</a><span>/</span>
+            Cap ${c.num}
+          </div>
+        </div>
+
+        <div class="two-col" style="padding-block: clamp(48px, 6vw, 80px); align-items: center;">
+          <div>
+            <div class="eyebrow">— Capítulo ${String(c.num).padStart(2,'0')} · ${Helpers.industryName(c.industry)}</div>
+            <h1 style="font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; letter-spacing: -0.025em; color: var(--navy); margin-top: var(--space-4); margin-bottom: var(--space-6);">
+              ${c.title.split(':')[1] ? `<em style="font-style: italic; color: var(--gold-deep);">${c.title.split(':')[0]}:</em>${c.title.split(':').slice(1).join(':')}` : c.title}
+            </h1>
+            <p class="lede">Conversación con <a href="persona.html?slug=${p.slug}" style="border-bottom: 1px solid currentColor;"><strong>${p.name}</strong></a>, ${p.role}.</p>
+            <div class="hero-stats" style="margin-top: var(--space-8);">
+              <div class="stat"><div class="num">${c.duration.replace(' min','')}<span class="ac">′</span></div><div class="lbl">duración</div></div>
+              <div class="stat"><div class="num">${c.date}</div><div class="lbl">publicado</div></div>
+              <div class="stat"><div class="num">${Helpers.industryName(c.industry)}</div><div class="lbl">industria</div></div>
+            </div>
+          </div>
+          <div class="player-block" style="max-width: 480px; margin-inline: auto;">
+            <a class="play-btn" href="${c.youtubeUrl || c.spotifyUrl}" target="_blank" rel="noopener" aria-label="Reproducir en YouTube"></a>
+            <div>
+              <h3 style="font-family: 'Fraunces', serif; font-style: italic; font-weight: 500; font-size: 22px; line-height: 1.2; color: var(--paper);">Cap ${c.num}</h3>
+              <div class="sub" style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.6; margin-top: 4px;">${c.duration} · ${Helpers.industryName(c.industry)}</div>
+            </div>
+            <div class="player-cta">
+              <a class="platform-btn" href="${c.youtubeUrl || c.spotifyUrl}" target="_blank" rel="noopener">▶ YouTube</a>
+              <a class="platform-btn alt" href="${c.spotifyUrl}" target="_blank" rel="noopener">Spotify</a>
+              <a class="platform-btn alt" href="${wzpUrl}" target="_blank" rel="noopener">Compartir (wzp)</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="quote">
+            <p>"${p.keyIdea}"</p>
+            <cite>— ${p.name}, ${c.title.split(':')[0]}</cite>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="sec-head">
+            <div class="left">
+              <div class="eyebrow">— Sobre el invitado</div>
+              <h2 class="section-title">${p.name}.</h2>
+            </div>
+            <div class="right">
+              <a class="btn-link" href="persona.html?slug=${p.slug}">Ver página completa →</a>
+            </div>
+          </div>
+          <div class="persona-hero tone-${p.tone}" style="padding-block: 0;">
+            <div class="photo" data-photo-wrap style="position:relative;overflow:hidden;">
+              <img src="${Helpers.photoUrl(p)}" alt="${p.name}"
+                   style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-md);"
+                   onerror="this.style.display='none';var i=this.nextElementSibling;i.style.display='flex';">
+              <span class="init" style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;">${Helpers.initials(p.name)}</span>
+            </div>
+            <div class="info">
+              <div class="meta">${p.role}</div>
+              <p class="lede" style="margin-top: var(--space-4);">${p.bio}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="cta-banner">
+            <div>
+              <div class="eyebrow on-dark">— Compartir</div>
+              <h2 style="margin-top: var(--space-3);">¿Te pareció útil? <em>Pásalo</em>.</h2>
+              <p>Si alguien en tu red debería escuchar esta conversación, compartila directo por WhatsApp.</p>
+            </div>
+            <div class="actions">
+              <a class="btn btn-primary" href="${wzpUrl}" target="_blank" rel="noopener">Compartir por WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="sec-head">
+            <div class="left">
+              <div class="eyebrow">— Navega los capítulos</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            ${prev ? `<a class="btn btn-ghost" href="capitulo.html?num=${prev.num}">← Cap ${prev.num}</a>` : ''}
+            <a class="btn btn-ghost" href="capitulos.html">Ver todos</a>
+            ${next ? `<a class="btn btn-primary" href="capitulo.html?num=${next.num}">Cap ${next.num} →</a>` : ''}
+          </div>
+        </div>
+      `;
+    })();
+  </script>
+</body>
+</html>

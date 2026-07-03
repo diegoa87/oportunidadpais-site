@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Wordmark alternativo · Title Case
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 140" role="img" aria-label="Oportunidad País">
+  <title>Oportunidad País — wordmark title case</title>
+  <text x="0" y="100"
+        font-family="'Bricolage Grotesque', 'Inter Tight', sans-serif"
+        font-weight="700"
+        font-size="120"
+        letter-spacing="-3.6"
+        fill="#0E1B33">Oportunidad<tspan fill="#E8B341"> </tspan>País<tspan fill="#E8B341">.</tspan></text>
+</svg>
