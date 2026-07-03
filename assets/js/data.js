@@ -190,7 +190,7 @@ const DATA = {
       whyKnow: 'Porque logró algo casi imposible: que una gran empresa le pague a sus proveedores PYME en 7 días. Es evidencia concreta —no discurso— de que las grandes empresas pueden ser motor del ecosistema emprendedor. Si quieres ver un caso real de cómo se cambia la suerte de una PYME, escuchalo.',
       chapterNum: 9,
       tone: 2,
-      photoUrl: 'https://i.pravatar.cc/600?u=cristobal-aravena',
+      photoUrl: 'fotos/cristobal-aravena.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/cristóbal-aravena-concha-16a82b117',
       gender: 'm',
 
