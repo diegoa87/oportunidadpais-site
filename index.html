@@ -353,18 +353,25 @@
     const allPublished = DATA.capitulos.filter(c => c.youtubeUrl).length;
     if (statNum) statNum.textContent = String(allPublished);
 
-    // Hero person cells: 8 personas más recientes
+    // Hero person cells: 8 personas más recientes con foto real
     const heroPersonas = [...DATA.personas]
       .filter(p => p.chapterNum >= 1 && p.chapterNum <= 8)
       .sort((a, b) => b.chapterNum - a.chapterNum)
       .slice(0, 8);
     const heroCellsContainer = document.getElementById('hero-cells');
     if (heroCellsContainer) {
-      const toneClass = ['c1', 'c3', 'c4', 'c5', 'c6', 'c1', 'c3', 'c4'];
-      const colorClass = ['color-2', 'color-3', 'color-1', 'color-4', 'color-2', 'color-3', 'color-1', 'color-4'];
-      heroCellsContainer.innerHTML = heroPersonas.map((p, i) => `
-        <a href="persona.html?slug=${p.slug}" class="cell ${colorClass[i]} init ${toneClass[i]}">${Helpers.initials(p.name)}</a>
-      `).join('');
+      heroCellsContainer.innerHTML = heroPersonas.map(p => {
+        const photoUrl = Helpers.photoUrl(p);
+        const initials = Helpers.initials(p.name);
+        return `
+          <a href="persona.html?slug=${p.slug}" class="cell" style="display:flex;align-items:center;justify-content:center;border-radius:50%;overflow:hidden;padding:0;">
+            <img src="${photoUrl}" alt="${p.name}" loading="lazy" decoding="async"
+                 style="width:100%;height:100%;object-fit:cover;border-radius:50%;"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <span style="display:none;align-items:center;justify-content:center;width:100%;height:100%;font-family:var(--font-editorial);font-size:clamp(16px,2vw,28px);font-weight:600;color:var(--navy);letter-spacing:-0.05em;">${initials}</span>
+          </a>
+        `;
+      }).join('');
     }
   </script>
 </body>
