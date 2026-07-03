@@ -35,9 +35,8 @@ const DATA = {
     { id: 'politicas', name: 'Políticas públicas' }
   ],
 
-  // Fotos placeholder — Pravatar da retratos consistentes por identificador.
-  // Para usar fotos reales, reemplazá photoUrl por la URL del CDN/asset propio.
-  // Formato recomendado: 600x600 JPG/WebP.
+  // Fotos locales en /fotos/[slug].jpg (assets del sitio).
+  // Si falta foto real, fallback a Pravatar.
   _photoFallback(slug) {
     return `https://i.pravatar.cc/600?u=${encodeURIComponent(slug)}`;
   },
@@ -55,7 +54,7 @@ const DATA = {
       whyKnow: 'Es la voz más clara del país sobre cómo las empresas se están adaptando al nuevo paradigma de IA. Para entender qué está pasando en tecnología corporativa, hay que escucharlo. Si te importa saber cómo se pasa del discurso a la implementación real, esta conversación es para ti.',
       chapterNum: 1,
       tone: 2,
-      photoUrl: 'https://i.pravatar.cc/600?u=justo-vargas',
+      photoUrl: 'fotos/justo-vargas.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/justomiguel',
       gender: 'm',
 
@@ -72,7 +71,7 @@ const DATA = {
       whyKnow: 'Porque dirige el programa público-privado que ha reconvertido laboralmente a más de 35.000 personas en Chile hacia perfiles digitales. Si te importa la formación con impacto real, escuchar a Jeannette te cambia la perspectiva sobre lo que funciona.',
       chapterNum: 2,
       tone: 3,
-      photoUrl: 'https://i.pravatar.cc/600?u=jeannette-escudero',
+      photoUrl: 'fotos/jeannette-escudero.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/jeannette-escudero-vasquez',
       gender: 'f',
 
@@ -89,7 +88,7 @@ const DATA = {
       whyKnow: 'Porque lleva más de 40 años en la industria del software y actualmente es Director Ejecutivo de CHILETEC, el gremio que nuclea a las empresas de tecnología más grandes de Chile. Si te interesa entender hacia dónde va el sector tech —y por qué se está quedando atrás frente a la región— escuchalo. Habla con datos, no con slogans.',
       chapterNum: 3,
       tone: 4,
-      photoUrl: 'https://i.pravatar.cc/600?u=francisco-mardones',
+      photoUrl: 'fotos/francisco-mardones.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/fmardones',
       gender: 'm',
 
@@ -106,7 +105,7 @@ const DATA = {
       whyKnow: 'Porque lleva una década empujando la agenda digital del país desde el Estado, y hoy la empuja desde el gremio que reúne a las empresas tech. Si te interesa entender la diferencia entre política digital hecha y política digital escrita, esta conversación es para ti.',
       chapterNum: 4,
       tone: 1,
-      photoUrl: 'https://i.pravatar.cc/600?u=luz-maria-garcia',
+      photoUrl: 'fotos/luz-maria-garcia.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/luz-maría-garcía-contreras-085024a4',
       gender: 'f',
 
@@ -123,7 +122,7 @@ const DATA = {
       whyKnow: 'Porque lidera inclusión en una de las mineras más grandes del mundo desde adentro —no desde el PowerPoint. Es evidencia empírica de que la diversidad funciona, no solo un argumento. Si quieres ver cómo se mide de verdad, escuchala.',
       chapterNum: 5,
       tone: 2,
-      photoUrl: 'https://i.pravatar.cc/600?u=elizabeth-cameron',
+      photoUrl: 'fotos/elizabeth-cameron.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/elizabeth-cameron-ovando-15baba35',
       gender: 'f',
 
@@ -195,6 +194,22 @@ const DATA = {
       linkedinUrl: 'https://www.linkedin.com/in/cristóbal-aravena-concha-16a82b117',
       gender: 'm',
 
+    },
+    {
+      slug: 'diego-arias',
+      name: 'Diego Arias',
+      role: 'Director de Alianzas y Estrategias',
+      org: 'Desafío Latam',
+      industry: 'educacion',
+      city: 'Santiago',
+      bio: 'Socio Fundador de Desafío Latam. Lidera alianzas estratégicas y contenido del podcast Oportunidad País.',
+      keyIdea: 'Conversaciones que revelan la productividad de Chile.',
+      whyKnow: 'Host de Oportunidad País — conduce las conversaciones que revelan cómo las personas están transformando sus industrias.',
+      chapterNum: 0,
+      tone: 2,
+      photoUrl: 'fotos/diego-arias.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/diegoaarias',
+      gender: 'm',
     },
     {
       slug: 'proximamente-10',
