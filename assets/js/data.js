@@ -156,7 +156,7 @@ const DATA = {
       whyKnow: 'Porque lidera la agenda de educación financiera digital de una de las empresas más grandes de Chile, con foco en grupos vulnerables. Si quieres entender cómo se construye inclusión financiera real desde una empresa privada, esta conversación es para ti.',
       chapterNum: 7,
       tone: 4,
-      photoUrl: 'https://i.pravatar.cc/600?u=camila-forno',
+      photoUrl: 'fotos/camila-forno.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/camila-forno-2510a14a',
       gender: 'f',
 
