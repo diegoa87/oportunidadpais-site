@@ -478,9 +478,7 @@
   inset: 0;
 }
 .person-photo > .init {
-  position: relative;
-  z-index: 1;
-  display: flex;
+  display: none;
 }
 /* Editorial ring around avatar */
 .person-photo::before {
@@ -1078,6 +1076,7 @@
   position: relative;
   overflow: hidden;
 }
+.persona-hero .photo .init { display: none; }
 /* Decorative corner accent — editorial feel */
 .persona-hero .photo::before {
   content: "";

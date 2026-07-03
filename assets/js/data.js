@@ -436,9 +436,8 @@ const Helpers = {
           <div class="person-photo" data-photo-wrap>
             <img src="${photoUrl}" alt="${p.name}" loading="lazy" decoding="async"
                  style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%;"
-                 onload="this.nextElementSibling.style.display='none';"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-            <span class="init" style="display:none;">${init}</span>
+            <span class="init">${init}</span>
           </div>
           ${p.linkedinUrl ? `<span class="li-badge li-badge-sm" role="button" tabindex="0" aria-label="Seguir a ${p.name} en LinkedIn" onclick="event.preventDefault();event.stopPropagation();window.open('${p.linkedinUrl}','_blank','noopener');">in</span>` : ''}
         </div>
