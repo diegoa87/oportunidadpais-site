@@ -321,11 +321,11 @@
   <script src="assets/js/data.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
-    // Render featured personas (top 6 published by chapter, desc)
+    // Render featured personas (últimas 8 publicadas, desc por capítulo)
     const featuredPersonas = [...DATA.personas]
-      .filter(p => p.slug && !p.slug.startsWith('proximamente'))
+      .filter(p => p.chapterNum >= 1 && p.chapterNum <= 8)
       .sort((a, b) => b.chapterNum - a.chapterNum)
-      .slice(0, 6);
+      .slice(0, 8);
     document.querySelector('[data-grid="featured-personas"]').innerHTML =
       featuredPersonas.map(Helpers.personCard).join('');
     // Render recent episodes (3 latest published, by date desc)
@@ -353,15 +353,15 @@
     const allPublished = DATA.capitulos.filter(c => c.youtubeUrl).length;
     if (statNum) statNum.textContent = String(allPublished);
 
-    // Hero person cells: 5 most recent published personas (by chapterNum desc)
+    // Hero person cells: 8 personas más recientes
     const heroPersonas = [...DATA.personas]
-      .filter(p => p.slug && !p.slug.startsWith('proximamente'))
+      .filter(p => p.chapterNum >= 1 && p.chapterNum <= 8)
       .sort((a, b) => b.chapterNum - a.chapterNum)
-      .slice(0, 5);
+      .slice(0, 8);
     const heroCellsContainer = document.getElementById('hero-cells');
     if (heroCellsContainer) {
-      const toneClass = ['c1', 'c3', 'c4', 'c5', 'c6'];
-      const colorClass = ['color-2', 'color-3', 'color-1', 'color-4', 'color-2'];
+      const toneClass = ['c1', 'c3', 'c4', 'c5', 'c6', 'c1', 'c3', 'c4'];
+      const colorClass = ['color-2', 'color-3', 'color-1', 'color-4', 'color-2', 'color-3', 'color-1', 'color-4'];
       heroCellsContainer.innerHTML = heroPersonas.map((p, i) => `
         <a href="persona.html?slug=${p.slug}" class="cell ${colorClass[i]} init ${toneClass[i]}">${Helpers.initials(p.name)}</a>
       `).join('');
