@@ -141,17 +141,19 @@
   <script src="assets/js/data.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
-    // Render industry chips
+    // Personas publicadas (C1–C8)
+    const published = DATA.personas.filter(p => p.chapterNum >= 1 && p.chapterNum <= 8);
+
+    // Render industry chips — conteo solo sobre publicados
     const chipWrap = document.querySelector('[data-industry-chips]');
     chipWrap.innerHTML = DATA.industries.map(i =>
-      `<button class="chip" data-filter-value="${i.id}">${i.name} <span class="chip-count">${DATA.personas.filter(p => p.industry === i.id).length}</span></button>`
+      `<button class="chip" data-filter-value="${i.id}">${i.name} <span class="chip-count">${published.filter(p => p.industry === i.id).length}</span></button>`
     ).join('');
 
     // Set total counts
     document.querySelector('[data-count="all"]').textContent = published.length;
 
-    // Render persona grid — solo últimos 8 publicados (C1–C8)
-    const published = DATA.personas.filter(p => p.chapterNum >= 1 && p.chapterNum <= 8);
+    // Render persona grid
     const grid = document.getElementById('grid');
     grid.innerHTML = published.map(p =>
       Helpers.personCard(p).replace('class="person-card', `data-persona data-filter-industry="${p.industry}" class="person-card`)
