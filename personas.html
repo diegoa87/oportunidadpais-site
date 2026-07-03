@@ -148,11 +148,12 @@
     ).join('');
 
     // Set total counts
-    document.querySelector('[data-count="all"]').textContent = DATA.personas.length;
+    document.querySelector('[data-count="all"]').textContent = published.length;
 
-    // Render persona grid
+    // Render persona grid — solo últimos 8 publicados (C1–C8)
+    const published = DATA.personas.filter(p => p.chapterNum >= 1 && p.chapterNum <= 8);
     const grid = document.getElementById('grid');
-    grid.innerHTML = DATA.personas.map(p =>
+    grid.innerHTML = published.map(p =>
       Helpers.personCard(p).replace('class="person-card', `data-persona data-filter-industry="${p.industry}" class="person-card`)
     ).join('');
 
