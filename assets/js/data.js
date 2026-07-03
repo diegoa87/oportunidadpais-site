@@ -139,7 +139,7 @@ const DATA = {
       whyKnow: 'Porque lleva 15 años demostrando que Chile puede generar negocios de base científico-tecnológica de clase mundial, si se elimina la burocracia entre academia, Estado e industria. Si te importa entender por qué Chile invierte en I+D pero casi nada llega a la calle, esta conversación es para ti.',
       chapterNum: 6,
       tone: 3,
-      photoUrl: 'https://i.pravatar.cc/600?u=varinka-farren',
+      photoUrl: 'fotos/varinka-farren.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/vfarren',
       gender: 'f',
 
