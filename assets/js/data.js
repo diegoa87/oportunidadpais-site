@@ -173,7 +173,7 @@ const DATA = {
       whyKnow: 'Porque lleva una vida demostrando que la inclusión es productividad, no caridad. Si te importa construir equipos diversos y quieres argumentos con datos, no con consignas, esta conversación es imperdible. Es una de las voces más influyentes de Chile en D&I.',
       chapterNum: 8,
       tone: 1,
-      photoUrl: 'https://i.pravatar.cc/600?u=carolina-garcia',
+      photoUrl: 'fotos/carolina-garcia.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/carolinagarciaberguecio',
       gender: 'f',
 
