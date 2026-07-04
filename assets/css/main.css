@@ -650,11 +650,26 @@
   position: relative;
   overflow: hidden;
 }
-.ep-cover.tone-1 { background: var(--navy); color: var(--paper); }
-.ep-cover.tone-2 { background: var(--gold); color: var(--navy); }
-.ep-cover.tone-3 { background: var(--red); color: var(--paper); }
-.ep-cover.tone-4 { background: var(--paper-warm); color: var(--navy); }
-.ep-cover.tone-5 { background: var(--paper-deep); color: var(--navy); }
+.ep-cover-thumb {
+  background: var(--navy) !important;
+  position: relative;
+}
+.ep-cover-thumb .ep-meta-top,
+.ep-cover-thumb .ep-quote {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+.ep-cover-thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(14,26,54,0.15) 0%,
+    rgba(14,26,54,0.85) 100%
+  );
+}
 .ep-cover .ep-meta-top {
   font-family: var(--font-mono);
   font-size: 10px;

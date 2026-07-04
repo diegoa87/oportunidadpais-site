@@ -415,6 +415,12 @@ const DATA = {
 
 // Helpers — generan HTML de cards en cliente
 const Helpers = {
+  ytThumb(url) {
+    if (!url) return '';
+    const m = url.match(/[?&]v=([^&]+)|youtu\.be\/([^?&#]+)/);
+    const id = (m && (m[1] || m[2])) || '';
+    return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : '';
+  },
   initials(name) {
     return name.split(' ').filter(Boolean).slice(0, 2).map(p => p[0].toUpperCase()).join('');
   },
@@ -459,9 +465,10 @@ const Helpers = {
   // Render una card de capítulo
   capCard(c) {
     const p = Helpers.personaBySlug(c.personaSlug);
+    const thumb = Helpers.ytThumb(c.youtubeUrl);
     return `
       <a href="capitulo.html?num=${c.num}" class="ep-card">
-        <div class="ep-cover tone-${c.tone}">
+        <div class="ep-cover${thumb ? ' ep-cover-thumb' : ''}"${thumb ? ` style="background-image:url('${thumb}');background-size:cover;background-position:center;"` : ''}>
           <div class="ep-meta-top">C${c.num} · ${Helpers.industryName(c.industry).toUpperCase()} · ${c.duration}</div>
           <div class="ep-quote">"${c.title.replace(/^[^:]+: /, '').replace(/\.$/, '')}"</div>
         </div>
