@@ -195,6 +195,22 @@ const DATA = {
       gender: 'm',
 
     },
+    {
+      slug: 'diego-arias',
+      name: 'Diego Arias',
+      role: 'Director de Alianzas y Estrategias',
+      org: 'Desafío Latam',
+      industry: 'educacion',
+      city: 'Santiago',
+      bio: 'Socio Fundador de Desafío Latam.',
+      keyIdea: 'Conversaciones que revelan la productividad de Chile.',
+      whyKnow: 'Host de Oportunidad País.',
+      chapterNum: 8,
+      tone: 3,
+      photoUrl: 'fotos/diego-arias.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/diegoaarias',
+      gender: 'm',
+    },
   ],
 
   // Capítulos — con links reales a YouTube y Spotify, y shareText para wzp
