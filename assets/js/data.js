@@ -447,7 +447,7 @@ const DATA = {
       tone: 2,
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=OVEHWEDahA0',
-      teaserVideo: 'videos/teaser-camila-480.mp4',
+      teaserVideo: 'videos/teaser-camila-forno-480.mp4',
       shareText: 'IA y educación financiera: ¿oportunidad o riesgo? Cap 7 de Oportunidad País.'
     },
     {
