@@ -1528,6 +1528,18 @@
   background: white;
   font-size: var(--fs-body);
 }
+@media (max-width: 600px) {
+  .newsletter form { flex-direction: column; }
+  .newsletter form [style*="flex-direction: column"] { flex-direction: column; }
+  .newsletter form [style*="display: flex"][style*="gap: 12px"] {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .newsletter form [style*="display: flex"][style*="gap: 12px"] input[type="email"],
+  .newsletter form [style*="display: flex"][style*="gap: 12px"] button {
+    width: 100%;
+  }
+}
 
 /* --------------------------------------------------------------------------
    Two-column row
