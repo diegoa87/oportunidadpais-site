@@ -1,8 +1,7 @@
 name: Deploy to Cloudflare Workers
 on:
-  push:
-    branches: [main]
-  workflow_dispatch:
+  # Deshabilitado - token cfut_ expiro, deploy manual solo
+  # workflow_dispatch:
 
 jobs:
   deploy:
