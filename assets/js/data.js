@@ -6,6 +6,12 @@
  * Estructura de cada persona:
  *   slug, name, role, org, industry, city, bio, keyIdea, chapterNum, tone
  *   + photoUrl       — URL a foto real (600x600 recomendado). Si falta, fallback a iniciales.
+ *   + linkedinUrl    — perfil de LinkedIn
+ *   + story          — historia de vida (Markdown-like, 2-3 párrafos)
+ *   + logros         — array de logros [{year, title, detail}]
+ *   + aportacion     — por qué es modelo a seguir (1 párrafo)
+ *   + formacion      — array [{institution, title, year}]
+ *   + memberships    — array [{org, role}]
  *
  * Estructura de cada capítulo:
  *   num, title, personaSlug, industry, duration, date, tone
@@ -175,7 +181,86 @@ const DATA = {
       tone: 1,
       photoUrl: 'fotos/carolina-garcia.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/carolinagarciaberguecio',
-      gender: 'f',
+      story: `Hija de Fernando García —presidente del Colegio de Ingenieros de Chile y ejecutivo de IBM por más de tres décadas— y de Mireya Berguecio, creció en un entorno de alta exigencia académica y constante movilidad geográfica. Esa dinámica familiar instaló lo que ella misma denomina un "mandato" institucional: la creencia de que por poseer una mente matemática y racional no había espacio para la vulnerabilidad emocional.\n\nDurante su juventud canalizó esa energía hacia el deporte de alta competencia: spinning, montañismo, esquí y windsurf, consagrándose como campeona nacional de windsurf desde los 15 años. Motivada por su aptitud matemática y el consejo paterno, ingresó a la Facultad de Ciencias Físicas y Matemáticas de la Universidad de Chile para estudiar Ingeniería Civil Industrial, consolidándose como una de las pocas mujeres de su cohorte en acceder a disciplinas STEM en esa época.\n\nEl 12 de abril de 2006, mientras se dirigía a una reunión de negocios en Antofagasta, el taxi en que viajaba colisionó de frente con un camión debido a la conducción imprudente del chofer a alta velocidad. El impacto le causó una fractura de médula espinal a nivel cervical, resultando en una tetraplejia severa. Durante los primeros ocho meses solo podía mover los ojos y la boca. El diagnóstico médico inicial señaló una inmovilidad permanente del cuello hacia abajo y la necesidad de asistencia las 24 horas del día.\n\nTras regresar a la empresa donde trabajaba, fue relegada a funciones administrativas de soporte operativo (backoffice) y despedida un año después bajo la justificación corporativa de que "ya no servía" para el puesto para el cual había sido contratada. Entre 2007 y 2012 enfrentó el rechazo sistemático del mercado laboral chileno ante su condición, lo que la obligó a iniciar un proceso de reinvención personal.`,
+      logros: [
+        {
+          year: '2026',
+          title: 'Congreso Futuro',
+          detail: 'Expositora principal en la sesión de tecnologías emergentes con la conferencia "Derribar barreras para una humanidad inclusiva", hablando sobre exclusión algorítmica e IA.'
+        },
+        {
+          year: '2025',
+          title: 'Líder Minera 2025',
+          detail: 'Premio de la Fundación Minera de Chile en la categoría "Líder Minera 2025" por su gestión en BHP Minerals Americas.'
+        },
+        {
+          year: '2025',
+          title: 'Mujeres Influyentes #3 Chile',
+          detail: 'Posicionada en el puesto 3 del ranking de mujeres influyentes de LinkedIn en Chile según Favikon / Jeremy Boissinot.'
+        },
+        {
+          year: '2023',
+          title: 'Top Voice LinkedIn Chile',
+          detail: 'Reconocida como Top Voice #1 en Diversidad e Inclusión en el Trabajo para Chile por LinkedIn Corporation.'
+        },
+        {
+          year: '2022',
+          title: 'Premio Mujeres Influyentes',
+          detail: 'Galardonada en la categoría de Diversidad e Inclusión en Minería por su trabajo en BHP y Comunidad Inclusiva.'
+        },
+        {
+          year: '2020-2021',
+          title: '100 Mujeres Más Inspiradoras de la Minería Global',
+          detail: 'Incluida en la lista internacional de Women in Mining (WIM) UK por su labor de visibilización de la inclusión en el sector.'
+        },
+        {
+          year: '2018',
+          title: 'Fundación Comunidad Inclusiva',
+          detail: 'Co-fundó la fundación junto a las ingenieras Cecilia Barros y Beatriz, generando cambio cultural sistémico en empresas públicas y privadas.'
+        }
+      ],
+      formacion: [
+        {
+          institution: 'Universidad de Chile',
+          title: 'Ingeniería Civil Industrial',
+          year: 'Década de 1990'
+        },
+        {
+          institution: 'Newfield Network',
+          title: 'Certificación en Coaching Ontológico',
+          year: '2014'
+        },
+        {
+          institution: 'Universidad de Nueva York (NYU)',
+          title: 'Estudios de Postgrado en Mindfulness',
+          year: 'Post-2012'
+        },
+        {
+          institution: 'Formación con Humberto Maturana',
+          title: 'Dos programas — lenguaje, emociones y transformación',
+          year: 'Post-2012'
+        },
+        {
+          institution: 'Formación con Fernando Flores',
+          title: 'Programa "Navegando con templanza y serenidad" — gestión de crisis y liderazgo',
+          year: 'Post-2012'
+        }
+      ],
+      memberships: [
+        {
+          org: 'Women in Mining (WIM) Chile',
+          role: 'Socia'
+        },
+        {
+          org: 'Mujeres Influyentes',
+          role: 'Miembro'
+        },
+        {
+          org: 'HERGlobal Impact',
+          role: 'Participante — redes de mentoría femenina en sectores masculinizados'
+        }
+      ],
+      aportacion: 'Carolina representa la demostración vivant de que la inclusión no es un acto de caridad sino de productividad estratégica. Su historia es un caso de estudio sobre cómo la exclusión laboral sistemática obliga a las personas a reconstruirse ontológicamente, y cómo esa reconstrucción puede convertirse en palanca de cambio estructural para miles de otras personas. Su mayor aporte es haber convertido su experiencia de exclusión en un marco de trabajo técnico que empresas como BHP pueden replicar para generar inclusión sostenible — no por altruismo, sino por resultados medibles.',
 
     },
     {

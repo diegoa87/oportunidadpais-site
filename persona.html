@@ -217,7 +217,74 @@
         <div class="section">
           <div class="eyebrow">— Sobre ${p.name.split(' ')[0]}</div>
           <h2 class="section-title" style="margin-top: var(--space-3); max-width: 720px;">${p.bio}</h2>
+        </div>
 
+        ${p.story ? `
+        <div class="section">
+          <div class="eyebrow">— Historia de vida</div>
+          <div class="story-body">
+            ${p.story.split('\n\n').map(para => `<p>${para.trim()}</p>`).join('')}
+          </div>
+        </div>
+        ` : ''}
+
+        ${p.aportacion ? `
+        <div class="section-tight">
+          <div class="aportacion-block">
+            <div class="aportacion-eyebrow">— Modelo a seguir</div>
+            <p class="aportacion-text">${p.aportacion}</p>
+          </div>
+        </div>
+        ` : ''}
+
+        ${(p.logros && p.logros.length) ? `
+        <div class="section">
+          <div class="eyebrow">— Trayectoria y logros</div>
+          <div class="logros-timeline">
+            ${p.logros.map(l => `
+              <div class="logro-item">
+                <div class="logro-year">${l.year}</div>
+                <div class="logro-content">
+                  <div class="logro-title">${l.title}</div>
+                  <div class="logro-detail">${l.detail}</div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+        ` : ''}
+
+        ${(p.formacion && p.formacion.length) || (p.memberships && p.memberships.length) ? `
+        <div class="section-tight">
+          <div class="perfil-grid">
+            ${(p.formacion && p.formacion.length) ? `
+            <div class="perfil-col">
+              <div class="perfil-col-title">Formación</div>
+              ${p.formacion.map(f => `
+                <div class="perfil-item">
+                  <div class="perfil-item-inst">${f.institution}</div>
+                  <div class="perfil-item-title">${f.title}</div>
+                  <div class="perfil-item-year">${f.year}</div>
+                </div>
+              `).join('')}
+            </div>
+            ` : ''}
+            ${(p.memberships && p.memberships.length) ? `
+            <div class="perfil-col">
+              <div class="perfil-col-title">Afiliaciones</div>
+              ${p.memberships.map(m => `
+                <div class="perfil-item">
+                  <div class="perfil-item-inst">${m.org}</div>
+                  <div class="perfil-item-title">${m.role}</div>
+                </div>
+              `).join('')}
+            </div>
+            ` : ''}
+          </div>
+        </div>
+        ` : ''}
+
+        <div class="section">
           <h3 style="margin-top: var(--space-12); font-family: var(--font-editorial); font-weight: 500; font-size: 32px; color: var(--navy);">
             Las <em style="font-style: italic; color: var(--gold-deep);">ideas clave</em> del capítulo.
           </h3>
