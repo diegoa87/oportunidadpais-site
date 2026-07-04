@@ -1811,7 +1811,7 @@
   border-radius: 20px;
   padding: 4px 10px;
 }
-/* Video wrap — iframe Vimeo directo */
+/* Video wrap — HTML5 video nativo */
 .teaser-video-wrap {
   position: relative;
   aspect-ratio: 16 / 9;
@@ -1823,7 +1823,6 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  border: none;
   display: block;
 }
 /* Footer con meta info */
