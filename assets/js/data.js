@@ -205,7 +205,7 @@ const DATA = {
       bio: 'Socio Fundador de Desafío Latam.',
       keyIdea: 'Conversaciones que revelan la productividad de Chile.',
       whyKnow: 'Host de Oportunidad País.',
-      chapterNum: 8,
+      chapterNum: 0,
       tone: 3,
       photoUrl: 'fotos/diego-arias.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/diegoaarias',

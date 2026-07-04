@@ -1393,6 +1393,17 @@
   font-weight: 600;
   font-size: 200px;
   line-height: 1;
+  overflow: hidden;
+  position: relative;
+}
+.about-hero .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--r-md);
+}
+.about-hero .photo .initials {
+  font-size: 200px;
 }
 .about-hero h1 {
   font-family: var(--font-editorial);

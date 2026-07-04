@@ -323,7 +323,7 @@
   <script>
     // Render featured personas (últimas 8 publicadas, desc por capítulo)
     const featuredPersonas = [...DATA.personas]
-      .filter(p => p.chapterNum >= 0 && p.chapterNum <= 8)
+      .filter(p => p.chapterNum >= 1 && p.chapterNum <= 8)
       .sort((a, b) => b.chapterNum - a.chapterNum)
       .slice(0, 8);
     document.querySelector('[data-grid="featured-personas"]').innerHTML =
@@ -355,7 +355,7 @@
 
     // Hero person cells: 8 personas más recientes con foto real
     const heroPersonas = [...DATA.personas]
-      .filter(p => p.chapterNum >= 0 && p.chapterNum <= 8)
+      .filter(p => p.chapterNum >= 1 && p.chapterNum <= 8)
       .sort((a, b) => b.chapterNum - a.chapterNum)
       .slice(0, 8);
     const heroCellsContainer = document.getElementById('hero-cells');
