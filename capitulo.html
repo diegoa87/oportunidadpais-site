@@ -202,6 +202,22 @@
           </div>
         </div>
 
+        ${c.teaserId ? `
+        <div class="section">
+          <div class="eyebrow" style="justify-content: center;">— Preview del capítulo</div>
+          <div class="teaser-wrap">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/${c.teaserId}?rel=0&modestbranding=1&color=white"
+              title="Preview — ${p.name}"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+        ` : ''}
+
         <div class="section">
           <div class="quote">
             <p>"${p.keyIdea}"</p>
