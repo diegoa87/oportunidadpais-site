@@ -95,8 +95,116 @@ const DATA = {
       tone: 4,
       photoUrl: 'fotos/francisco-mardones.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/fmardones',
-      gender: 'm',
-
+      story: {
+        intro: "Ingeniero Civil Electrónico de la U. de Concepción. Managing Director en DynWrk y Director Ejecutivo Interino de Chiletec. Entre 2019 y 2023 construyó el hub de ingeniería de Evernote en Chile: de 5 a 85 profesionales. Lideró Industrias Inteligentes en Corfo y hoy impulsa la Ley de Economía Digital para llevar las exportaciones tecnológicas de Chile a US$15.000 millones en la próxima década.",
+        sections: [
+          {
+            title: "Formación y los cimientos de la ingeniería",
+            paragraphs: [
+              "Su rigurosidad analítica viene de la <strong>Universidad de Concepción</strong>, donde obtuvo el título de <strong>Ingeniero Civil Electrónico</strong>. Esa casa de estudios le gave las herramientas para comprender la infraestructura tecnológica desde el diseño de hardware hasta la arquitectura de software complejo —una base técnica que le ha dado credibilidad ante directores de tecnología y desarrolladores senior de empresas globales.",
+              "Complementó su formación con programas ejecutivos en instituciones estadounidenses: la certificación en <strong>Leading Strategic Growth</strong> por la <strong>Columbia Business School Executive Education</strong> (enero 2017) y la certificación en <strong>Product Strategy</strong> por la <strong>Northwestern University Kellogg School of Management</strong> (julio 2020). Esta combinación de ingeniería de base con pensamiento estratégico le permite ocupar un espacio único: traduce los objetivos de negocio de corporaciones tecnológicas globales en planes de ejecución técnica viables en el contexto latinoamericano."
+            ]
+          },
+          {
+            title: "Mentor Graphics y el estándar global",
+            paragraphs: [
+              "Su paso por <strong>Mentor Graphics</strong> —líder mundial en automatización de diseño electrónico (EDA)— como <strong>Director en Chile</strong> fue determinante. Supervisó operaciones de I+D que conectaban el talento chileno con los ciclos de diseño de semiconductores y sistemas electrónicos globales.",
+              "Esta experiencia consolidó su convicción de que Chile no debe competir por costos bajos, sino por <strong>calidad y capacidad de resolución de problemas complejos</strong>. También aquí comenzó su vínculo con el mundo gremial: fue elegido <strong>Presidente de GECHS</strong> (Asociación de Empresas de Software) en <strong>2008</strong>, marcando el inicio de su faceta como representante de la industria."
+            ]
+          },
+          {
+            title: "El modelo Soft Landing: conectar startups con talento chileno",
+            paragraphs: [
+              "En <strong>2005</strong>, cuando el trabajo remoto y los equipos distribuidos eran apenas embrionarios, Mardones fundó su primera empresa con una visión disruptiva: facilitar que startups tecnológicas de Estados Unidos formaran equipos de desarrollo en Chile. Su primer gran proyecto fue con <strong>AirSage</strong>, una startup de Atlanta dedicada al análisis de datos de movilidad.",
+              "Desarrolló un modelo de <strong>\"soft landing\"</strong> con tres dimensiones: <strong>Legal y Administrativa</strong> (cumplimiento laboral, tributario y estructura corporativa), <strong>Técnica</strong> (entornos de desarrollo con estándares de seguridad de Silicon Valley), y <strong>Cultural</strong> (puente entre fundadores estadounidenses y la cultura laboral chilena). Este éxito temprano lo posicionó como el referente para empresas tecnológicas globales que miraban al Cono Sur."
+            ]
+          },
+          {
+            title: "Evernote Chile: de 5 a 85 profesionales",
+            paragraphs: [
+              "Entre <strong>2019 y 2023</strong>, Mardones lideró la operación chilena de <strong>Evernote</strong> como <strong>Managing Director</strong>. La decisión de Evernote de instalar su primer gran centro fuera de EE.UU. en Santiago fue impulsada en gran medida por su propuesta y el respaldo de <strong>InvestChile</strong>.",
+              "Lo que comenzó con un equipo de <strong>5 desarrolladores</strong> grew hasta convertirse en una organización de <strong>más de 80 profesionales</strong> —no solo ingenieros, sino también diseñadores de producto (UX/UI) y analistas de datos. Su mayor aporte fue el codesarrollo del modelo de <strong>equipo distribuido</strong>: navegar las diferencias culturales y horarias para que la oficina de Santiago fuera un motor de innovación, no una unidad de soporte. Su visión: Chile no ofrece \"manos\", sino \"cabezas\" capaces de liderar entregas críticas del producto global."
+            ]
+          },
+          {
+            title: "Corfo: Industrias Inteligentes y la transformación digital",
+            paragraphs: [
+              "Como <strong>Presidente del Programa Estratégico de Industrias Inteligentes de Corfo</strong> (2014-2018), Mardones dirigió una instancia público-privada destinada a posicionar la tecnología chilena como habilitador de competitividad para los sectores productivos clave del país.",
+              "Su enfoque se articuló en cuatro ejes: <strong>Cierre de Brechas Digitales</strong> (ayudar a empresas tradicionales a adoptar IoT, Big Data e IA), <strong>Especialización de Proveedores</strong> (fomentar soluciones de nicho para desafíos locales como seguridad minera o eficiencia hídrica), <strong>Atracción de Talento</strong> (impulsar la VisaTech para atraer especialistas extranjeros), e <strong>Infraestructura Digital</strong> (colaborar con Subtel para asegurar conectividad como base de las industrias inteligentes)."
+            ]
+          },
+          {
+            title: "Chiletec y la Ley de Economía Digital",
+            paragraphs: [
+              "En su rol actual de <strong>Director Ejecutivo Interino de Chiletec</strong> (Asociación de Empresas Chilenas de Tecnología), Mardones ocupa un espacio de representación gremial que articula la visión del sector ante el gobierno y los grandes grupos económicos. Lideró la <strong>Mesa de Exportación de Servicios</strong> con ProChile y el <strong>Chile Tech Tour 2025</strong> para internacionalizar el ecosistema.",
+              "Su propuesta más ambiciosa: una <strong>Ley de Economía Digital</strong> para posicionar a Chile como referente en exportación de servicios basados en conocimiento, con la meta de alcanzar <strong>US$15.000 millones</strong> en exportaciones tecnológicas en la próxima década. Los cuatro pilares: <strong>1) Seguridad jurídica y regulatoria</strong> para inversiones en data centers y hubs de ingeniería. <strong>2) Transformación estructural</strong> como eje transversal de todas las políticas públicas. <strong>3) Fomento a la innovación</strong> para crear propiedad intelectual en Chile, no solo implementar tecnología de terceros. <strong>4) Capital humano diverso</strong>: flujo constante de talento desde la formación escolar hasta la inserción en Silicon Valley."
+            ]
+          },
+          {
+            title: "Kodea, la UC y el factor humano",
+            paragraphs: [
+              "Como miembro del directorio de <strong>Fundación Kodea</strong>, Mardones aporta su visión integral del capital humano. Kodea se enfoca en educar para el mundo digital e incluir a grupos subrepresentados, especialmente mujeres. Su participación no es solo filantrópica: es estratégica. A través de Kodea apoya iniciativas que despiertan la curiosidad por la programación en escuelas y bootcamps que reconvierten profesionales de otras áreas al sector TI.",
+              "En el ámbito académico, es docente de <strong>Educación Profesional de la Escuela de Ingeniería de la Pontificia Universidad Católica de Chile (UC)</strong>, donde transmite estrategia de producto, gestión de equipos técnicos y el entorno regulatorio de la tecnología a nuevos líderes del sector."
+            ]
+          }
+        ]
+      },
+      logros: [
+        {
+          year: '2025-2035',
+          title: 'Meta: US$15.000M en exportaciones de servicios tecnológicos',
+          detail: 'A través de la Ley de Economía Digital propuesta desde Chiletec: seguridad jurídica, transformación estructural, fomento a la innovación y capital humano.'
+        },
+        {
+          year: '2019-2023',
+          title: 'Evernote Chile: de 5 a 85+ profesionales',
+          detail: 'Managing Director del hub de ingeniería creado en Santiago: ingeniería completa, diseño UX/UI y análisis de datos para el producto global de Evernote.'
+        },
+        {
+          year: '2014-2018',
+          title: 'Presidente — Industrias Inteligentes, Corfo',
+          detail: 'Estrategia público-privada de digitalización industrial: cierre de brechas digitales, especialización de proveedores, VisaTech e infraestructura.'
+        },
+        {
+          year: '2005-presente',
+          title: 'Modelo Soft Landing — DynWrk',
+          detail: 'Consultoría para empresas de EE.UU. que buscan establecer operaciones de ingeniería en Sudamérica: 3 dimensiones (legal, técnica, cultural).'
+        },
+        {
+          year: '2008',
+          title: 'Presidente — GECHS',
+          detail: 'Primera defensa formal del gremio del software chileno: inicio de dos décadas de liderazgo gremial.'
+        },
+        {
+          year: 'Pre-2010',
+          title: 'Director Chile — Mentor Graphics',
+          detail: 'Supervisión de I+D en diseño de semiconductores: conectó al talento chileno con estándares globales de la industria tecnológica.'
+        }
+      ],
+      formacion: [
+        {
+          institution: 'Universidad de Concepción',
+          title: 'Ingeniero Civil Electrónico',
+          year: 'Título de pregrado'
+        },
+        {
+          institution: 'Columbia Business School — Executive Education',
+          title: 'Leading Strategic Growth',
+          year: 'Enero 2017'
+        },
+        {
+          institution: 'Northwestern University — Kellogg School of Management',
+          title: 'Product Strategy',
+          year: 'Julio 2020'
+        }
+      ],
+      memberships: [
+        { org: 'Chiletec — Director Ejecutivo Interino', role: '' },
+        { org: 'DynWrk — Managing Director Chile', role: '' },
+        { org: 'Fundación Kodea — Miembro del Directorio', role: '' },
+        { org: 'Pontificia Universidad Católica de Chile — Docente Educación Profesional Ingeniería', role: '' }
+      ],
+      aportacion: "Porque lleva 20 años construyendo la industria tech chilena desde dentro: como ingeniero, como consultor de soft landing, como gerente de Evernote y como director gremial. Si te interesa entender por qué Chile tiene talento pero necesita la ley correcta para exportar ingeniería de verdad —no solo código barato—, esta conversación es directa al punto."
     },
     {
       slug: 'luz-maria-garcia',
