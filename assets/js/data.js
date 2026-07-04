@@ -112,8 +112,106 @@ const DATA = {
       tone: 1,
       photoUrl: 'fotos/luz-maria-garcia.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/luz-maría-garcía-contreras-085024a4',
-      gender: 'f',
-
+      story: {
+        intro: "Gerenta General de ACTI Chile desde septiembre de 2023. De la编码 editorial y el diseño digital (1997-1998) a la gerencia del gremio tecnológico más antiguo de Chile. Residió y trabajó en Colombia y Argentina, especializándose en IA en la UBA. Lideró Sé Santiago Smart City (CORFO) y coordina la Agenda 2026-2030 del sector tech ante el Estado chileno bajo la Ley de Lobby.",
+        sections: [
+          {
+            title: "Orígenes y el giro hacia la tecnología",
+            paragraphs: [
+              "Su carrera comenzó a finales de la década de 1990, específicamente entre <strong>1997 y 1998</strong>, un período marcado por la transición de los medios impresos hacia las plataformas digitales interactivas. Inicialmente vinculada al diseño editorial y de libros, optó por un giro estratégico hacia el sector tecnológico durante el auge inicial de internet, integrándose en equipos multidisciplinarios donde adquirió competencias directas en <strong>programación y desarrollo web</strong>.",
+              "Esta experiencia inicial le otorgó una comprensión estructural de los sistemas de información desde sus bases operativas."
+            ]
+          },
+          {
+            title: "La movilidad regional en Sudamérica",
+            paragraphs: [
+              "Con el objetivo de ampliar su perspectiva profesional y asimilar las tendencias del mercado digital en el Cono Sur, residió y trabajó durante varios años en <strong>Colombia y Argentina</strong>. Durante su estancia en Argentina cursó estudios especializados en <strong>inteligencia artificial</strong> en la <strong>Universidad de Buenos Aires (UBA)</strong>.",
+              "Esta decisión académica resultó altamente anticipatoria: mientras la IA se percibía como una disciplina predominantemente teórica o distante de la aplicación comercial masiva, García Contreras asimiló los fundamentos conceptuales de los sistemas cognitivos que hoy rigen los procesos de automatización y la economía del conocimiento. A su regreso a Chile, consolidó esta preparación técnica con una especialización de más de <strong>15 años en articulación de alianzas público-privadas y diseño de estrategias digitales de alcance nacional</strong>."
+            ]
+          },
+          {
+            title: "ACTI y la agenda digital del Estado chileno",
+            paragraphs: [
+              "Su vinculación formal con la ACTI se inició entre <strong>2015 y 2018</strong>, cuando ejerció como <strong>Directora de la organización</strong>, participando activamente en la formulación de las primeras agendas y estrategias de desarrollo digital del Estado chileno, promoviendo la adopción de estándares internacionales de conectividad y ciberseguridad."
+            ]
+          },
+          {
+            title: "Sé Santiago Smart City y la gestión urbana",
+            paragraphs: [
+              "Posteriomente asumió la <strong>gerencia general de Sé Santiago Smart City</strong>, un programa estratégico metropolitano cofinanciado por <strong>CORFO</strong>. Bajo su liderazgo, este programa funcionó como un laboratorio de articulación urbana donde se implementaron pilotos tecnológicos orientados a mejorar la <strong>movilidad, la seguridad ciudadana y la resiliencia climática</strong> de Santiago, a través del uso de sensores, análisis de datos masivos e <strong>internet de las cosas (IoT)</strong>.",
+              "Su gestión en CORFO validó su capacidad para unificar los requerimientos de corporaciones multinacionales con las demandas de los municipios locales y las agencias gubernamentales."
+            ]
+          },
+          {
+            title: "Gerenta General de ACTI y la diplomacia tecnológica",
+            paragraphs: [
+              "En <strong>septiembre de 2023</strong>, la junta directiva de ACTI, encabezada por su presidente Francisco Guzmán, la designó <strong>Gerenta General de la asociación</strong>. Desde esta posición ejerce una representación activa del sector tecnológico ante los poderes del Estado, registrando audiencias oficiales bajo el marco de la <strong>Ley de Lobby</strong> con ministros, Subsecretarios y asesores de diversas carteras gubernamentales.",
+              "Entre sus intervenciones normativas más destacadas se encuentra la coordinación con el <strong>Equipo de Respuesta ante Incidentes de Seguridad Informática (CSIRT)</strong> de la Coordinación Nacional de Ciberseguridad, promoviendo el establecimiento de protocolos estandarizados para que las empresas privadas de telecomunicaciones y software colaboren directamente en la defensa de la infraestructura crítica del Estado ante amenazas persistentes y ciberataques coordinados."
+            ]
+          },
+          {
+            title: "La Agenda 2026-2030 y las 4 barreras del ecosistema",
+            paragraphs: [
+              "Ha liderado la presentación de la <strong>\"Agenda 2026-2030: Innovación, Emprendimiento y Futuro\"</strong>, entregando formalmente a las autoridades del Ministerio de Ciencia un documento poscional compuesto por <strong>ocho ejes estratégicos</strong>. Su gestión se articula en torno a la superación de cuatro barreras estructurales que limitan el crecimiento de la economía digital en Chile y América Latina:",
+              "<strong>1. Infraestructura e inversión:</strong> lentitud en permisos ambientales y normativos (\"permisología\") para data centers y proyectos de conectividad. Propuesta: desregulación con plazos ciertos para evitar la fuga de inversiones internacionales.",
+              "<strong>2. Capital humano:</strong> brecha proyectada de más de <strong>100.000 profesionales calificados</strong> en tecnología. Propuesta: alianzas con la academia (Universidad Adolfo Ibáñez), propuesta del Centro Nacional de Capacitación Digital para inserción expedita de egresados.",
+              "<strong>3. Equidad de género:</strong> baja representación femenina en directorios y áreas técnicas. Propuesta: participación en redes como <strong>Woman Geek Latam</strong>, fomento de liderazgos empáticos y colaborativos.",
+              "<strong>4. Descentralización:</strong> concentración del desarrollo tech en el área metropolitana de Santiago. Propuesta: rediseño de los <strong>Tech Awards</strong> para premiar innovaciones aplicadas a sectores tradicionales en regiones —minería de precisión, agricultura, construcción, servicios—, digitalizando la cadena de valor completa del país."
+            ]
+          }
+        ]
+      },
+      logros: [
+        {
+          year: '2023-presente',
+          title: 'Gerenta General ACTI Chile',
+          detail: 'Designada por la junta directiva en sep. 2023 para liderar el gremio tech más antiguo de Chile ante el Estado y los poderes públicos.'
+        },
+        {
+          year: '2026-2030',
+          title: 'Agenda de Innovación, Emprendimiento y Futuro',
+          detail: 'Documento poscional de 8 ejes estratégicos entregado al Ministerio de Ciencia para transformar la economía digital chilena.'
+        },
+        {
+          year: '2019-2023',
+          title: 'Gerenta General — Sé Santiago Smart City (CORFO)',
+          detail: 'Laboratorio urbano de articulación metropolitana: sensores, IoT, movilidad, seguridad y resiliencia climática para Santiago.'
+        },
+        {
+          year: '2015-2018',
+          title: 'Directora ACTI — Primeras agendas digitales del Estado',
+          detail: 'Formulación de estándares internacionales de conectividad y ciberseguridad para la agenda digital del gobierno chileno.'
+        },
+        {
+          year: '1997-1998',
+          title: 'Del diseño editorial a la tecnología',
+          detail: 'Giro estratégico de los medios impresos hacia plataformas digitales durante el primer auge de internet.'
+        },
+        {
+          year: 'Argentina',
+          title: 'Especialización en IA — Universidad de Buenos Aires',
+          detail: 'Formación anticipatoria en sistemas cognitivos y automatización mientras la IA aún se percibía como disciplina teórica.'
+        }
+      ],
+      formacion: [
+        {
+          institution: 'Universidad de Buenos Aires (UBA)',
+          title: 'Especialización en Inteligencia Artificial',
+          year: 'Durante residencia en Argentina'
+        },
+        {
+          institution: 'Chile / Colombia / Argentina',
+          title: 'Trayectoria regional en desarrollo digital',
+          year: '1997-presente'
+        }
+      ],
+      memberships: [
+        { org: 'ACTI Chile — Gerenta General', role: '' },
+        { org: 'Woman Geek Latam — Participante activa', role: '' },
+        { org: 'CSIRT — Coordinación de ciberseguridad con el Estado', role: '' },
+        { org: 'Ministerio de Ciencia — Mesas técnicas interministeriales', role: '' }
+      ],
+      aportacion: "Porque lleva la agenda digital de Chile desde el Estado al gremio y de vuelta al Estado — conoce las trincheras de ambas veredas. Si te interesa entender por qué Chile tiene talent tech pero tropieza en regulación, talento y desconcentración, esta conversación es clave."
     },
     {
       slug: 'elizabeth-cameron',
