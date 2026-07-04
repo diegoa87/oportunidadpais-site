@@ -254,11 +254,15 @@
         </div>
 
         ${p.story ? `
-        <div class="section">
+        <div class="story-section">
           <div class="eyebrow">— Historia de vida</div>
-          <div class="story-body">
-            ${p.story.split('\n\n').map(para => `<p>${para.trim()}</p>`).join('')}
-          </div>
+          ${p.story.intro ? `<p class="story-intro">${p.story.intro}</p>` : ''}
+          ${(p.story.sections || []).map(sec => `
+            <div class="story-chapter">
+              <div class="story-chapter-title">${sec.title}</div>
+              ${(sec.paragraphs || []).map(p => `<p>${p}</p>`).join('')}
+            </div>
+          `).join('')}
         </div>
         ` : ''}
 

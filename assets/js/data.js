@@ -7,9 +7,8 @@
  *   slug, name, role, org, industry, city, bio, keyIdea, chapterNum, tone
  *   + photoUrl       — URL a foto real (600x600 recomendado). Si falta, fallback a iniciales.
  *   + linkedinUrl    — perfil de LinkedIn
- *   + story          — historia de vida (Markdown-like, 2-3 párrafos)
- *   + logros         — array de logros [{year, title, detail}]
- *   + aportacion     — por qué es modelo a seguir (1 párrafo)
+ *   + story          — objeto {intro, sections: [{title, paragraphs: []}]}
+ *   + logros        — array de logros [{year, title, detail}]
  *   + formacion      — array [{institution, title, year}]
  *   + memberships    — array [{org, role}]
  *
@@ -181,7 +180,40 @@ const DATA = {
       tone: 1,
       photoUrl: 'fotos/carolina-garcia.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/carolinagarciaberguecio',
-      story: `Hija de Fernando García —presidente del Colegio de Ingenieros de Chile y ejecutivo de IBM por más de tres décadas— y de Mireya Berguecio, creció en un entorno de alta exigencia académica y constante movilidad geográfica. Esa dinámica familiar instaló lo que ella misma denomina un "mandato" institucional: la creencia de que por poseer una mente matemática y racional no había espacio para la vulnerabilidad emocional.\n\nDurante su juventud canalizó esa energía hacia el deporte de alta competencia: spinning, montañismo, esquí y windsurf, consagrándose como campeona nacional de windsurf desde los 15 años. Motivada por su aptitud matemática y el consejo paterno, ingresó a la Facultad de Ciencias Físicas y Matemáticas de la Universidad de Chile para estudiar Ingeniería Civil Industrial, consolidándose como una de las pocas mujeres de su cohorte en acceder a disciplinas STEM en esa época.\n\nEl 12 de abril de 2006, mientras se dirigía a una reunión de negocios en Antofagasta, el taxi en que viajaba colisionó de frente con un camión debido a la conducción imprudente del chofer a alta velocidad. El impacto le causó una fractura de médula espinal a nivel cervical, resultando en una tetraplejia severa. Durante los primeros ocho meses solo podía mover los ojos y la boca. El diagnóstico médico inicial señaló una inmovilidad permanente del cuello hacia abajo y la necesidad de asistencia las 24 horas del día.\n\nTras regresar a la empresa donde trabajaba, fue relegada a funciones administrativas de soporte operativo (backoffice) y despedida un año después bajo la justificación corporativa de que "ya no servía" para el puesto para el cual había sido contratada. Entre 2007 y 2012 enfrentó el rechazo sistemático del mercado laboral chileno ante su condición, lo que la obligó a iniciar un proceso de reinvención personal.`,
+      story: {
+        intro: "Ingeniera Civil Industrial de la Universidad de Chile. Hijo de Fernando García, presidente del Colegio de Ingenieros y ejecutivo de IBM. Deportista de alta competencia: campeona nacional de windsurf a los 15 años. Tetraplejia desde 2006 tras un accidente de tránsito. Hoy lidera inclusión en BHP y fundo Comunidad Inclusiva.",
+        sections: [
+          {
+            title: "Orígenes y formación",
+            paragraphs: [
+              "Hija de <strong>Fernando García</strong> —presidente del Colegio de Ingenieros de Chile y ejecutivo de IBM por más de tres décadas— y de Mireya Berguecio. Crecía en un entorno de alta exigencia académica y constante movilidad geográfica.",
+              "Esa dinámica familiar instaló lo que ella denomina un <strong>\"mandato\" institucional</strong>: la creencia de que por poseer una mente matemática y racional no había espacio para la vulnerabilidad emocional. Durante su juventud canalizó esa energía hacia el deporte de alta competencia: spinning, montañismo, esquí y windsurf, consagrándose como <strong>campeona nacional de windsurf</strong> desde los 15 años.",
+              "Motivada por su aptitud matemática y el consejo paterno, ingresó a la <strong>Universidad de Chile</strong> para estudiar Ingeniería Civil Industrial, consolidándose como una de las pocas mujeres de su cohorte en acceder a disciplinas STEM."
+            ]
+          },
+          {
+            title: "El accidente que lo cambió todo",
+            paragraphs: [
+              "El <strong>12 de abril de 2006</strong>, mientras se dirigía a una reunión de negocios en Antofagasta, el taxi en que viajaba colisionó de frente con un camión. El impacto le causó una fractura de médula espinal a nivel cervical, resultando en una tetraplejia severa. Durante los primeros ocho meses solo podía mover los ojos y la boca.",
+              "El diagnóstico médico inicial señaló una inmovilidad permanente y la necesidad de asistencia las 24 horas del día. Su cuerpo, que antes era su principal herramienta de expresión y conquista, cambió drásticamente para depender de una silla neurológica y asistencia externa."
+            ]
+          },
+          {
+            title: "La exclusión y la reconstrucción",
+            paragraphs: [
+              "Al regresar a la empresa donde trabajaba, fue relegada a funciones de backoffice y despedida un año después bajo la justificación corporativa de que <strong>\"ya no servía\"</strong> para el puesto. Entre 2007 y 2012 enfrentó el rechazo sistemático del mercado laboral chileno ante su condición.",
+              "La exclusión laboral la obligó a iniciar un proceso de reinvención personal. Se certificó como Coach Ontológico en <strong>Newfield Network</strong> en 2014, mentored por Esperanza Cueto. Cursó programas con <strong>Humberto Maturana</strong>, <strong>Fernando Flores</strong> y estudios de postgrado en mindfulness en NYU. Aprendió a nombrar y procesar emociones que había bloqueado bajo su antigua identidad racionalista."
+            ]
+          },
+          {
+            title: "Su impacto hoy",
+            paragraphs: [
+              "En <strong>2018</strong> co-fundó la <strong>Fundación Comunidad Inclusiva</strong>, generando cambio cultural sistémico en empresas públicas y privadas para la incorporación sostenible de personas con discapacidad y equidad de género. En BHP Minerals Americas lidera la gobernanza del entrenamiento técnico de operadores mineros.",
+              "Ha sido reconocida como <strong>Top Voice de LinkedIn en Diversidad e Inclusión para Chile</strong>, incluida en la lista de las 100 Mujeres Más Inspiradoras de la Minería Global, premiada como Líder Minera 2025 y expositora principal del Congreso Futuro 2026."
+            ]
+          }
+        ]
+      },
       logros: [
         {
           year: '2026',
