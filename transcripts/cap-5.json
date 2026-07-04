@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": "Chile necesita mirar al norte: la visión de Elizabeth Cameron de BHP. — Oportunidad País Cap 5",
+  "episodeNumber": 5,
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "Oportunidad País",
+    "url": "https://oportunidadpais.cl/"
+  },
+  "description": "Chile necesita mirar al norte: la visión de Elizabeth Cameron de BHP. — Conversación con Elizabeth Cameron Ovando, Principal Asuntos Corporativos en Cerro Colorado. Educación.",
+  "url": "https://oportunidadpais.cl/capitulo.html?num=5",
+  "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-5.json",
+  "datePublished": "2026-05-20",
+  "duration": "PT49M",
+  "author": {
+    "@type": "Person",
+    "name": "Elizabeth Cameron Ovando",
+    "jobTitle": "Principal Asuntos Corporativos",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Cerro Colorado"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Desafío Latam",
+    "url": "https://desafiolatam.com/"
+  },
+  "conductor": {
+    "@type": "Person",
+    "name": "Diego Arias",
+    "jobTitle": "Conductor y curador",
+    "url": "https://oportunidadpais.cl/sobre.html"
+  },
+  "keywords": "Educación, productividad Chile, talento, Cerro Colorado",
+  "segments": [
+    {
+      "speaker": "Diego Arias",
+      "start": "00:00:00",
+      "text": "[INTRO: Oportunidad País, Cap 5. Elizabeth Cameron Ovando.]"
+    },
+    {
+      "speaker": "Elizabeth Cameron Ovando",
+      "start": "00:02:00",
+      "text": "[AGREGAR TRANSCRIPCIÓN REAL — el contenido de esta conversación debe agregarse manualmente tras escuchar el episodio]"
+    }
+  ]
+}

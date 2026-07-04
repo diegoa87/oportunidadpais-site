@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": "Las PYME no quiebran por ventas: quiebran por caja. — Oportunidad País Cap 9",
+  "episodeNumber": 9,
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "Oportunidad País",
+    "url": "https://oportunidadpais.cl/"
+  },
+  "description": "Las PYME no quiebran por ventas: quiebran por caja. — Conversación con Cristóbal Aravena Concha, Líder de Propósito y Relacionamiento en Fundación. Negocios y productividad.",
+  "url": "https://oportunidadpais.cl/capitulo.html?num=9",
+  "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-9.json",
+  "datePublished": "2026-07-16",
+  "duration": "PT52M",
+  "author": {
+    "@type": "Person",
+    "name": "Cristóbal Aravena Concha",
+    "jobTitle": "Líder de Propósito y Relacionamiento",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Fundación"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Desafío Latam",
+    "url": "https://desafiolatam.com/"
+  },
+  "conductor": {
+    "@type": "Person",
+    "name": "Diego Arias",
+    "jobTitle": "Conductor y curador",
+    "url": "https://oportunidadpais.cl/sobre.html"
+  },
+  "keywords": "Negocios y productividad, productividad Chile, talento, Fundación",
+  "segments": [
+    {
+      "speaker": "Diego Arias",
+      "start": "00:00:00",
+      "text": "[INTRO: Oportunidad País, Cap 9. Cristóbal Aravena Concha.]"
+    },
+    {
+      "speaker": "Cristóbal Aravena Concha",
+      "start": "00:02:00",
+      "text": "[AGREGAR TRANSCRIPCIÓN REAL — el contenido de esta conversación debe agregarse manualmente tras escuchar el episodio]"
+    }
+  ]
+}

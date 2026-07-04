@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Oportunidad País</title>
+    <link>https://oportunidadpais.cl/</link>
+    <language>es-cl</language>
+    <copyright>© 2026 Desafío Latam</copyright>
+    <managingEditor>diego@desafiolatam.com (Diego Arias)</managingEditor>
+    <webMaster>diego@desafiolatam.com (Diego Arias)</webMaster>
+    <description>El podcast que visibiliza a las personas que están aportando a la productividad de Chile. Conversaciones sin filtro sobre talento, tecnología, inclusión y futuro del trabajo.</description>
+    <itunes:author>Diego Arias</itunes:author>
+    <itunes:owner>
+      <itunes:name>Diego Arias</itunes:name>
+      <itunes:email>diego@desafiolatam.com</itunes:email>
+    </itunes:owner>
+    <itunes:category text="Business"/>
+    <itunes:category text="Technology"/>
+    <itunes:image href="https://oportunidadpais.cl/assets/og/home.png"/>
+    <atom:link href="https://oportunidadpais.cl/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://oportunidadpais.cl/assets/og/home.png</url>
+      <title>Oportunidad País</title>
+      <link>https://oportunidadpais.cl/</link>
+    </image>
+    <item>
+      <title><![CDATA[Cap 9: Las PYME no quiebran por ventas: quiebran por caja.]]></title>
+      <link>https://oportunidadpais.cl/capitulo.html?num=9</link>
+      <guid isPermaLink="false">oportunidadpais-cl-cap-9</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Cristóbal Aravena Concha, Líder de Propósito y Relacionamiento. Negocios y productividad. Las PYME no quiebran por ventas: quiebran por caja.]]></description>
+      <content:encoded><![CDATA[<p><strong>Episodio 9</strong> — Cristóbal Aravena Concha, Líder de Propósito y Relacionamiento. Industria: Negocios y productividad. Duración: 52 min.</p>
+<p><strong> Tema: </strong>Las PYME no quiebran por ventas: quiebran por caja.</p>
+<p>Escuchá el episodio completo en Spotify o YouTube desde la página del capítulo.</p>
+<p><a href="https://oportunidadpais.cl/capitulo.html?num=9">Ver episodio completo →</a></p>
+<p><a href="https://oportunidadpais.cl/transcripts/cap-9.json">Descargar transcripción (JSON) →</a></p>]]></content:encoded>
+      <category><![CDATA[Negocios y productividad]]></category>
+      <itunes:duration>3120</itunes:duration>
+      <itunes:author>Diego Arias</itunes:author>
+      <itunes:explicit>false</itunes:explicit>
+      <enclosure url="https://oportunidadpais.cl/capitulo.html?num=9" length="0" type="text/html"/>
+    </item>
+    <item>
+      <title><![CDATA[Cap 8: La inclusión no es caridad: es productividad.]]></title>
+      <link>https://oportunidadpais.cl/capitulo.html?num=8</link>
+      <guid isPermaLink="false">oportunidadpais-cl-cap-8</guid>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Carolina García Berguecio, Fundadora Comunidad Inclusiva · Champion D&I BHP. Inclusión y diversidad. La inclusión no es caridad: es productividad.]]></description>
+      <content:encoded><![CDATA[<p><strong>Episodio 8</strong> — Carolina García Berguecio, Fundadora Comunidad Inclusiva · Champion D&I BHP. Industria: Inclusión y diversidad. Duración: 60 min.</p>
+<p><strong> Tema: </strong>La inclusión no es caridad: es productividad.</p>
+<p>Escuchá el episodio completo en Spotify o YouTube desde la página del capítulo.</p>
+<p><a href="https://oportunidadpais.cl/capitulo.html?num=8">Ver episodio completo →</a></p>
+<p><a href="https://oportunidadpais.cl/transcripts/cap-8.json">Descargar transcripción (JSON) →</a></p>]]></content:encoded>
+      <category><![CDATA[Inclusión y diversidad]]></category>
+      <itunes:duration>3600</itunes:duration>
+      <itunes:author>Diego Arias</itunes:author>
+      <itunes:explicit>false</itunes:explicit>
+      <enclosure url="https://oportunidadpais.cl/capitulo.html?num=8" length="0" type="text/html"/>
+    </item>
+    <item>
+      <title><![CDATA[Cap 7: IA y educación financiera: ¿oportunidad o riesgo?]]></title>
+      <link>https://oportunidadpais.cl/capitulo.html?num=7</link>
+      <guid isPermaLink="false">oportunidadpais-cl-cap-7</guid>
+      <pubDate>Thu, 18 Jun 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Camila Forno, Subgerente de Sostenibilidad Corporativo. Políticas públicas. IA y educación financiera: ¿oportunidad o riesgo?]]></description>
+      <content:encoded><![CDATA[<p><strong>Episodio 7</strong> — Camila Forno, Subgerente de Sostenibilidad Corporativo. Industria: Políticas públicas. Duración: 54 min.</p>
+<p><strong> Tema: </strong>IA y educación financiera: ¿oportunidad o riesgo?</p>
+<p>Escuchá el episodio completo en Spotify o YouTube desde la página del capítulo.</p>
+<p><a href="https://oportunidadpais.cl/capitulo.html?num=7">Ver episodio completo →</a></p>
+<p><a href="https://oportunidadpais.cl/transcripts/cap-7.json">Descargar transcripción (JSON) →</a></p>]]></content:encoded>
+      <category><![CDATA[Políticas públicas]]></category>
+      <itunes:duration>3240</itunes:duration>
+      <itunes:author>Diego Arias</itunes:author>
+      <itunes:explicit>false</itunes:explicit>
+      <enclosure url="https://oportunidadpais.cl/capitulo.html?num=7" length="0" type="text/html"/>
+    </item>
+    <item>
+      <title><![CDATA[Cap 6: Ciencia chilena al mercado con Varinka Farren, Hub APTA.]]></title>
+      <link>https://oportunidadpais.cl/capitulo.html?num=6</link>
+      <guid isPermaLink="false">oportunidadpais-cl-cap-6</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Varinka Farren, Directora ejecutiva de Hub APTA. Tecnología. Ciencia chilena al mercado con Varinka Farren, Hub APTA.]]></description>
+      <content:encoded><![CDATA[<p><strong>Episodio 6</strong> — Varinka Farren, Directora ejecutiva de Hub APTA. Industria: Tecnología. Duración: 48 min.</p>
+<p><strong> Tema: </strong>Ciencia chilena al mercado con Varinka Farren, Hub APTA.</p>
+<p>Escuchá el episodio completo en Spotify o YouTube desde la página del capítulo.</p>
+<p><a href="https://oportunidadpais.cl/capitulo.html?num=6">Ver episodio completo →</a></p>
+<p><a href="https://oportunidadpais.cl/transcripts/cap-6.json">Descargar transcripción (JSON) →</a></p>]]></content:encoded>
+      <category><![CDATA[Tecnología]]></category>
+      <itunes:duration>2880</itunes:duration>
+      <itunes:author>Diego Arias</itunes:author>
+      <itunes:explicit>false</itunes:explicit>
+      <enclosure url="https://oportunidadpais.cl/capitulo.html?num=6" length="0" type="text/html"/>
+    </item>
+    <item>
+      <title><![CDATA[Cap 5: Chile necesita mirar al norte: la visión de Elizabeth Cameron de BHP.]]></title>
+      <link>https://oportunidadpais.cl/capitulo.html?num=5</link>
+      <guid isPermaLink="false">oportunidadpais-cl-cap-5</guid>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Elizabeth Cameron Ovando, Principal Asuntos Corporativos Cerro Colorado. Educación. Chile necesita mirar al norte: la visión de Elizabeth Cameron de BHP.]]></description>
+      <content:encoded><![CDATA[<p><strong>Episodio 5</strong> — Elizabeth Cameron Ovando, Principal Asuntos Corporativos Cerro Colorado. Industria: Educación. Duración: 49 min.</p>
+<p><strong> Tema: </strong>Chile necesita mirar al norte: la visión de Elizabeth Cameron de BHP.</p>
+<p>Escuchá el episodio completo en Spotify o YouTube desde la página del capítulo.</p>
+<p><a href="https://oportunidadpais.cl/capitulo.html?num=5">Ver episodio completo →</a></p>
+<p><a href="https://oportunidadpais.cl/transcripts/cap-5.json">Descargar transcripción (JSON) →</a></p>]]></content:encoded>
+      <category><![CDATA[Educación]]></category>
+      <itunes:duration>2940</itunes:duration>
+      <itunes:author>Diego Arias</itunes:author>
+      <itunes:explicit>false</itunes:explicit>
+      <enclosure url="https://oportunidadpais.cl/capitulo.html?num=5" length="0" type="text/html"/>
+    </item>
+    <item>
+      <title><![CDATA[Cap 4: Qué debe hacer Chile, según la Gerente General ACTI.]]></title>
+      <link>https://oportunidadpais.cl/capitulo.html?num=4</link>
+      <guid isPermaLink="false">oportunidadpais-cl-cap-4</guid>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Luz María García Contreras, Gerente General ACTI Chile. Negocios y productividad. Qué debe hacer Chile, según la Gerente General ACTI.]]></description>
+      <content:encoded><![CDATA[<p><strong>Episodio 4</strong> — Luz María García Contreras, Gerente General ACTI Chile. Industria: Negocios y productividad. Duración: 73 min.</p>
+<p><strong> Tema: </strong>Qué debe hacer Chile, según la Gerente General ACTI.</p>
+<p>Escuchá el episodio completo en Spotify o YouTube desde la página del capítulo.</p>
+<p><a href="https://oportunidadpais.cl/capitulo.html?num=4">Ver episodio completo →</a></p>
+<p><a href="https://oportunidadpais.cl/transcripts/cap-4.json">Descargar transcripción (JSON) →</a></p>]]></content:encoded>
+      <category><![CDATA[Negocios y productividad]]></category>
+      <itunes:duration>4380</itunes:duration>
+      <itunes:author>Diego Arias</itunes:author>
+      <itunes:explicit>false</itunes:explicit>
+      <enclosure url="https://oportunidadpais.cl/capitulo.html?num=4" length="0" type="text/html"/>
+    </item>
+    <item>
+      <title><![CDATA[Cap 3: Chile debe potenciar tech.]]></title>
+      <link>https://oportunidadpais.cl/capitulo.html?num=3</link>
+      <guid isPermaLink="false">oportunidadpais-cl-cap-3</guid>
+      <pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Francisco Mardones, Board Member & Tech Advisor. Tecnología. Chile debe potenciar tech.]]></description>
+      <content:encoded><![CDATA[<p><strong>Episodio 3</strong> — Francisco Mardones, Board Member & Tech Advisor. Industria: Tecnología. Duración: 57 min.</p>
+<p><strong> Tema: </strong>Chile debe potenciar tech.</p>
+<p>Escuchá el episodio completo en Spotify o YouTube desde la página del capítulo.</p>
+<p><a href="https://oportunidadpais.cl/capitulo.html?num=3">Ver episodio completo →</a></p>
+<p><a href="https://oportunidadpais.cl/transcripts/cap-3.json">Descargar transcripción (JSON) →</a></p>]]></content:encoded>
+      <category><![CDATA[Tecnología]]></category>
+      <itunes:duration>3420</itunes:duration>
+      <itunes:author>Diego Arias</itunes:author>
+      <itunes:explicit>false</itunes:explicit>
+      <enclosure url="https://oportunidadpais.cl/capitulo.html?num=3" length="0" type="text/html"/>
+    </item>
+    <item>
+      <title><![CDATA[Cap 2: IA: ¿Amenaza u oportunidad?]]></title>
+      <link>https://oportunidadpais.cl/capitulo.html?num=2</link>
+      <guid isPermaLink="false">oportunidadpais-cl-cap-2</guid>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Jeannette Escudero Vásquez, Directora Ejecutiva Talento Digital para Chile. Políticas públicas. IA: ¿Amenaza u oportunidad?]]></description>
+      <content:encoded><![CDATA[<p><strong>Episodio 2</strong> — Jeannette Escudero Vásquez, Directora Ejecutiva Talento Digital para Chile. Industria: Políticas públicas. Duración: 32 min.</p>
+<p><strong> Tema: </strong>IA: ¿Amenaza u oportunidad?</p>
+<p>Escuchá el episodio completo en Spotify o YouTube desde la página del capítulo.</p>
+<p><a href="https://oportunidadpais.cl/capitulo.html?num=2">Ver episodio completo →</a></p>
+<p><a href="https://oportunidadpais.cl/transcripts/cap-2.json">Descargar transcripción (JSON) →</a></p>]]></content:encoded>
+      <category><![CDATA[Políticas públicas]]></category>
+      <itunes:duration>1920</itunes:duration>
+      <itunes:author>Diego Arias</itunes:author>
+      <itunes:explicit>false</itunes:explicit>
+      <enclosure url="https://oportunidadpais.cl/capitulo.html?num=2" length="0" type="text/html"/>
+    </item>
+    <item>
+      <title><![CDATA[Cap 1: ¿Ganas más usando IA en tu empresa?]]></title>
+      <link>https://oportunidadpais.cl/capitulo.html?num=1</link>
+      <guid isPermaLink="false">oportunidadpais-cl-cap-1</guid>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Justo Miguel Vargas, VP Technology & Tech Partner en Globant. Tecnología. ¿Ganas más usando IA en tu empresa?]]></description>
+      <content:encoded><![CDATA[<p><strong>Episodio 1</strong> — Justo Miguel Vargas, VP Technology & Tech Partner en Globant. Industria: Tecnología. Duración: 56 min.</p>
+<p><strong> Tema: </strong>¿Ganas más usando IA en tu empresa?</p>
+<p>Escuchá el episodio completo en Spotify o YouTube desde la página del capítulo.</p>
+<p><a href="https://oportunidadpais.cl/capitulo.html?num=1">Ver episodio completo →</a></p>
+<p><a href="https://oportunidadpais.cl/transcripts/cap-1.json">Descargar transcripción (JSON) →</a></p>]]></content:encoded>
+      <category><![CDATA[Tecnología]]></category>
+      <itunes:duration>3360</itunes:duration>
+      <itunes:author>Diego Arias</itunes:author>
+      <itunes:explicit>false</itunes:explicit>
+      <enclosure url="https://oportunidadpais.cl/capitulo.html?num=1" length="0" type="text/html"/>
+    </item>
+
+  </channel>
+</rss>

@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": "Chile debe potenciar tech. — Oportunidad País Cap 3",
+  "episodeNumber": 3,
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "Oportunidad País",
+    "url": "https://oportunidadpais.cl/"
+  },
+  "description": "Chile debe potenciar tech. — Conversación con Francisco Mardones, Board Member & Tech Advisor en Independiente. Tecnología.",
+  "url": "https://oportunidadpais.cl/capitulo.html?num=3",
+  "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-3.json",
+  "datePublished": "2026-04-15",
+  "duration": "PT57M",
+  "author": {
+    "@type": "Person",
+    "name": "Francisco Mardones",
+    "jobTitle": "Board Member & Tech Advisor",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Independiente"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Desafío Latam",
+    "url": "https://desafiolatam.com/"
+  },
+  "conductor": {
+    "@type": "Person",
+    "name": "Diego Arias",
+    "jobTitle": "Conductor y curador",
+    "url": "https://oportunidadpais.cl/sobre.html"
+  },
+  "keywords": "Tecnología, productividad Chile, talento, Independiente",
+  "segments": [
+    {
+      "speaker": "Diego Arias",
+      "start": "00:00:00",
+      "text": "[INTRO: Oportunidad País, Cap 3. Francisco Mardones.]"
+    },
+    {
+      "speaker": "Francisco Mardones",
+      "start": "00:02:00",
+      "text": "[AGREGAR TRANSCRIPCIÓN REAL — el contenido de esta conversación debe agregarse manualmente tras escuchar el episodio]"
+    }
+  ]
+}

@@ -447,6 +447,17 @@
   aspect-ratio: 1 !important;
 }
 
+/* Stats source footnote — para LLMs y verificabilidad */
+.stats-source {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--navy);
+  opacity: 0.45;
+  margin-top: var(--space-2);
+  line-height: 1.4;
+}
+.stat-source { color: var(--gold-deep); }
+
 /* --------------------------------------------------------------------------
    Mobile/desktop visibility
    -------------------------------------------------------------------------- */

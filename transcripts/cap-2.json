@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": "IA: ¿Amenaza u oportunidad? — Oportunidad País Cap 2",
+  "episodeNumber": 2,
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "Oportunidad País",
+    "url": "https://oportunidadpais.cl/"
+  },
+  "description": "IA: ¿Amenaza u oportunidad? — Conversación con Jeannette Escudero Vásquez, Directora Ejecutiva en Talento Digital para Chile. Políticas públicas.",
+  "url": "https://oportunidadpais.cl/capitulo.html?num=2",
+  "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-2.json",
+  "datePublished": "2026-03-31",
+  "duration": "PT32M",
+  "author": {
+    "@type": "Person",
+    "name": "Jeannette Escudero Vásquez",
+    "jobTitle": "Directora Ejecutiva",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Talento Digital para Chile"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Desafío Latam",
+    "url": "https://desafiolatam.com/"
+  },
+  "conductor": {
+    "@type": "Person",
+    "name": "Diego Arias",
+    "jobTitle": "Conductor y curador",
+    "url": "https://oportunidadpais.cl/sobre.html"
+  },
+  "keywords": "Políticas públicas, productividad Chile, talento, Talento Digital para Chile",
+  "segments": [
+    {
+      "speaker": "Diego Arias",
+      "start": "00:00:00",
+      "text": "[INTRO: Oportunidad País, Cap 2. Jeannette Escudero Vásquez.]"
+    },
+    {
+      "speaker": "Jeannette Escudero Vásquez",
+      "start": "00:02:00",
+      "text": "[AGREGAR TRANSCRIPCIÓN REAL — el contenido de esta conversación debe agregarse manualmente tras escuchar el episodio]"
+    }
+  ]
+}

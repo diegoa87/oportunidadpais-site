@@ -1,0 +1,152 @@
+{
+  "name": "Oportunidad País — Episodios",
+  "description": "Todos los episodios del podcast Oportunidad País. Podcast que visibiliza a quienes están aportando a la productividad de Chile.",
+  "url": "https://oportunidadpais.cl/capitulos.html",
+  "total": 9,
+  "episodes": [
+    {
+      "num": 9,
+      "title": "Las PYME no quiebran por ventas: quiebran por caja.",
+      "personaSlug": "cristobal-aravena",
+      "industry": "negocios",
+      "duration": "52 min",
+      "date": "2026-07-16",
+      "spotifyUrl": "",
+      "youtubeUrl": "",
+      "url": "https://oportunidadpais.cl/capitulo.html?num=9",
+      "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-9.json",
+      "series": {
+        "name": "Oportunidad País",
+        "url": "https://oportunidadpais.cl/"
+      }
+    },
+    {
+      "num": 8,
+      "title": "La inclusión no es caridad: es productividad.",
+      "personaSlug": "carolina-garcia",
+      "industry": "inclusion",
+      "duration": "60 min",
+      "date": "2026-07-02",
+      "spotifyUrl": "",
+      "youtubeUrl": "",
+      "url": "https://oportunidadpais.cl/capitulo.html?num=8",
+      "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-8.json",
+      "series": {
+        "name": "Oportunidad País",
+        "url": "https://oportunidadpais.cl/"
+      }
+    },
+    {
+      "num": 7,
+      "title": "IA y educación financiera: ¿oportunidad o riesgo?",
+      "personaSlug": "camila-forno",
+      "industry": "politicas",
+      "duration": "54 min",
+      "date": "2026-06-18",
+      "spotifyUrl": "",
+      "youtubeUrl": "",
+      "url": "https://oportunidadpais.cl/capitulo.html?num=7",
+      "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-7.json",
+      "series": {
+        "name": "Oportunidad País",
+        "url": "https://oportunidadpais.cl/"
+      }
+    },
+    {
+      "num": 6,
+      "title": "Ciencia chilena al mercado con Varinka Farren, Hub APTA.",
+      "personaSlug": "varinka-farren",
+      "industry": "tecnologia",
+      "duration": "48 min",
+      "date": "2026-06-03",
+      "spotifyUrl": "",
+      "youtubeUrl": "",
+      "url": "https://oportunidadpais.cl/capitulo.html?num=6",
+      "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-6.json",
+      "series": {
+        "name": "Oportunidad País",
+        "url": "https://oportunidadpais.cl/"
+      }
+    },
+    {
+      "num": 5,
+      "title": "Chile necesita mirar al norte: la visión de Elizabeth Cameron de BHP.",
+      "personaSlug": "elizabeth-cameron",
+      "industry": "educacion",
+      "duration": "49 min",
+      "date": "2026-05-20",
+      "spotifyUrl": "",
+      "youtubeUrl": "",
+      "url": "https://oportunidadpais.cl/capitulo.html?num=5",
+      "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-5.json",
+      "series": {
+        "name": "Oportunidad País",
+        "url": "https://oportunidadpais.cl/"
+      }
+    },
+    {
+      "num": 4,
+      "title": "Qué debe hacer Chile, según la Gerente General ACTI.",
+      "personaSlug": "luz-maria-garcia",
+      "industry": "negocios",
+      "duration": "73 min",
+      "date": "2026-05-06",
+      "spotifyUrl": "",
+      "youtubeUrl": "",
+      "url": "https://oportunidadpais.cl/capitulo.html?num=4",
+      "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-4.json",
+      "series": {
+        "name": "Oportunidad País",
+        "url": "https://oportunidadpais.cl/"
+      }
+    },
+    {
+      "num": 3,
+      "title": "Chile debe potenciar tech.",
+      "personaSlug": "francisco-mardones",
+      "industry": "tecnologia",
+      "duration": "57 min",
+      "date": "2026-04-15",
+      "spotifyUrl": "",
+      "youtubeUrl": "",
+      "url": "https://oportunidadpais.cl/capitulo.html?num=3",
+      "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-3.json",
+      "series": {
+        "name": "Oportunidad País",
+        "url": "https://oportunidadpais.cl/"
+      }
+    },
+    {
+      "num": 2,
+      "title": "IA: ¿Amenaza u oportunidad?",
+      "personaSlug": "jeannette-escudero",
+      "industry": "politicas",
+      "duration": "32 min",
+      "date": "2026-03-31",
+      "spotifyUrl": "",
+      "youtubeUrl": "",
+      "url": "https://oportunidadpais.cl/capitulo.html?num=2",
+      "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-2.json",
+      "series": {
+        "name": "Oportunidad País",
+        "url": "https://oportunidadpais.cl/"
+      }
+    },
+    {
+      "num": 1,
+      "title": "¿Ganas más usando IA en tu empresa?",
+      "personaSlug": "justo-vargas",
+      "industry": "tecnologia",
+      "duration": "56 min",
+      "date": "2026-03-17",
+      "spotifyUrl": "",
+      "youtubeUrl": "",
+      "url": "https://oportunidadpais.cl/capitulo.html?num=1",
+      "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-1.json",
+      "series": {
+        "name": "Oportunidad País",
+        "url": "https://oportunidadpais.cl/"
+      }
+    }
+  ]
+}

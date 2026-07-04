@@ -1,0 +1,116 @@
+{
+  "name": "Oportunidad País — Personas",
+  "description": "Todas las personas invitadas al podcast Oportunidad País. Referentes en productividad, talento y futuro del trabajo en Chile.",
+  "url": "https://oportunidadpais.cl/personas.html",
+  "total": 9,
+  "personas": [
+    {
+      "slug": "cristobal-aravena",
+      "name": "Cristóbal Aravena Concha",
+      "chapterNum": 9,
+      "industry": "negocios",
+      "role": "Líder de Propósito y Relacionamiento",
+      "org": "Independiente",
+      "keyIdea": "Las PYME no quiebran por ventas: quiebran por caja.",
+      "url": "https://oportunidadpais.cl/persona.html?slug=cristobal-aravena",
+      "photoUrl": "https://oportunidadpais.cl/fotos/cristobal-aravena.jpg",
+      "linkedinUrl": ""
+    },
+    {
+      "slug": "carolina-garcia",
+      "name": "Carolina García Berguecio",
+      "chapterNum": 8,
+      "industry": "inclusion",
+      "role": "Fundadora Comunidad Inclusiva",
+      "org": "Comunidad Inclusiva",
+      "keyIdea": "La inclusión no es caridad: es productividad.",
+      "url": "https://oportunidadpais.cl/persona.html?slug=carolina-garcia",
+      "photoUrl": "https://oportunidadpais.cl/fotos/carolina-garcia.jpg",
+      "linkedinUrl": ""
+    },
+    {
+      "slug": "camila-forno",
+      "name": "Camila Forno",
+      "chapterNum": 7,
+      "industry": "politicas",
+      "role": "Subgerente de Sostenibilidad Corporativo",
+      "org": "CChC",
+      "keyIdea": "IA y educación financiera: ¿oportunidad o riesgo?",
+      "url": "https://oportunidadpais.cl/persona.html?slug=camila-forno",
+      "photoUrl": "https://oportunidadpais.cl/fotos/camila-forno.jpg",
+      "linkedinUrl": ""
+    },
+    {
+      "slug": "varinka-farren",
+      "name": "Varinka Farren",
+      "chapterNum": 6,
+      "industry": "tecnologia",
+      "role": "Directora ejecutiva",
+      "org": "Hub APTA",
+      "keyIdea": "Ciencia chilena al mercado.",
+      "url": "https://oportunidadpais.cl/persona.html?slug=varinka-farren",
+      "photoUrl": "https://oportunidadpais.cl/fotos/varinka-farren.jpg",
+      "linkedinUrl": ""
+    },
+    {
+      "slug": "elizabeth-cameron",
+      "name": "Elizabeth Cameron Ovando",
+      "chapterNum": 5,
+      "industry": "educacion",
+      "role": "Principal Asuntos Corporativos",
+      "org": "Cerro Colorado",
+      "keyIdea": "Chile necesita mirar al norte.",
+      "url": "https://oportunidadpais.cl/persona.html?slug=elizabeth-cameron",
+      "photoUrl": "https://oportunidadpais.cl/fotos/elizabeth-cameron.jpg",
+      "linkedinUrl": ""
+    },
+    {
+      "slug": "luz-maria-garcia",
+      "name": "Luz María García Contreras",
+      "chapterNum": 4,
+      "industry": "negocios",
+      "role": "Gerente General",
+      "org": "ACTI Chile",
+      "keyIdea": "Qué debe hacer Chile según la Gerente General ACTI.",
+      "url": "https://oportunidadpais.cl/persona.html?slug=luz-maria-garcia",
+      "photoUrl": "https://oportunidadpais.cl/fotos/luz-maria-garcia.jpg",
+      "linkedinUrl": ""
+    },
+    {
+      "slug": "francisco-mardones",
+      "name": "Francisco Mardones",
+      "chapterNum": 3,
+      "industry": "tecnologia",
+      "role": "Board Member & Tech Advisor",
+      "org": "Independiente",
+      "keyIdea": "Chile debe potenciar tech.",
+      "url": "https://oportunidadpais.cl/persona.html?slug=francisco-mardones",
+      "photoUrl": "https://oportunidadpais.cl/fotos/francisco-mardones.jpg",
+      "linkedinUrl": ""
+    },
+    {
+      "slug": "jeannette-escudero",
+      "name": "Jeannette Escudero Vásquez",
+      "chapterNum": 2,
+      "industry": "politicas",
+      "role": "Directora Ejecutiva",
+      "org": "Talento Digital para Chile",
+      "keyIdea": "IA: ¿Amenaza u oportunidad?",
+      "url": "https://oportunidadpais.cl/persona.html?slug=jeannette-escudero",
+      "photoUrl": "https://oportunidadpais.cl/fotos/jeannette-escudero.jpg",
+      "linkedinUrl": ""
+    },
+    {
+      "slug": "justo-vargas",
+      "name": "Justo Miguel Vargas",
+      "chapterNum": 1,
+      "industry": "tecnologia",
+      "role": "VP Technology & Tech Partner",
+      "org": "Globant",
+      "keyIdea": "¿Ganas más usando IA en tu empresa?",
+      "url": "https://oportunidadpais.cl/persona.html?slug=justo-vargas",
+      "photoUrl": "https://oportunidadpais.cl/fotos/justo-vargas.jpg",
+      "linkedinUrl": ""
+    }
+  ]
+}

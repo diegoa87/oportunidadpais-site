@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": "La inclusión no es caridad: es productividad. — Oportunidad País Cap 8",
+  "episodeNumber": 8,
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "Oportunidad País",
+    "url": "https://oportunidadpais.cl/"
+  },
+  "description": "La inclusión no es caridad: es productividad. — Conversación con Carolina García Berguecio, Fundadora Comunidad Inclusiva en Comunidad Inclusiva. Inclusión y diversidad.",
+  "url": "https://oportunidadpais.cl/capitulo.html?num=8",
+  "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-8.json",
+  "datePublished": "2026-07-02",
+  "duration": "PT1H",
+  "author": {
+    "@type": "Person",
+    "name": "Carolina García Berguecio",
+    "jobTitle": "Fundadora Comunidad Inclusiva",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Comunidad Inclusiva"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Desafío Latam",
+    "url": "https://desafiolatam.com/"
+  },
+  "conductor": {
+    "@type": "Person",
+    "name": "Diego Arias",
+    "jobTitle": "Conductor y curador",
+    "url": "https://oportunidadpais.cl/sobre.html"
+  },
+  "keywords": "Inclusión y diversidad, productividad Chile, talento, Comunidad Inclusiva",
+  "segments": [
+    {
+      "speaker": "Diego Arias",
+      "start": "00:00:00",
+      "text": "[INTRO: Oportunidad País, Cap 8. Carolina García Berguecio.]"
+    },
+    {
+      "speaker": "Carolina García Berguecio",
+      "start": "00:02:00",
+      "text": "[AGREGAR TRANSCRIPCIÓN REAL — el contenido de esta conversación debe agregarse manualmente tras escuchar el episodio]"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": "¿Ganas más usando IA en tu empresa? — Oportunidad País Cap 1",
+  "episodeNumber": 1,
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "Oportunidad País",
+    "url": "https://oportunidadpais.cl/"
+  },
+  "description": "¿Ganas más usando IA en tu empresa? — Conversación con Justo Miguel Vargas, VP Technology & Tech Partner en Globant en Globant. Tecnología.",
+  "url": "https://oportunidadpais.cl/capitulo.html?num=1",
+  "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-1.json",
+  "datePublished": "2026-03-17",
+  "duration": "PT56M",
+  "author": {
+    "@type": "Person",
+    "name": "Justo Miguel Vargas",
+    "jobTitle": "VP Technology & Tech Partner en Globant",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Globant"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Desafío Latam",
+    "url": "https://desafiolatam.com/"
+  },
+  "conductor": {
+    "@type": "Person",
+    "name": "Diego Arias",
+    "jobTitle": "Conductor y curador",
+    "url": "https://oportunidadpais.cl/sobre.html"
+  },
+  "keywords": "Tecnología, productividad Chile, talento, Globant",
+  "segments": [
+    {
+      "speaker": "Diego Arias",
+      "start": "00:00:00",
+      "text": "[INTRO: Oportunidad País, Cap 1. Justo Miguel Vargas.]"
+    },
+    {
+      "speaker": "Justo Miguel Vargas",
+      "start": "00:02:00",
+      "text": "[AGREGAR TRANSCRIPCIÓN REAL — el contenido de esta conversación debe agregarse manualmente tras escuchar el episodio]"
+    }
+  ]
+}

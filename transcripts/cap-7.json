@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": "IA y educación financiera: ¿oportunidad o riesgo? — Oportunidad País Cap 7",
+  "episodeNumber": 7,
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "Oportunidad País",
+    "url": "https://oportunidadpais.cl/"
+  },
+  "description": "IA y educación financiera: ¿oportunidad o riesgo? — Conversación con Camila Forno, Subgerente de Sostenibilidad Corporativo en CChC. Políticas públicas.",
+  "url": "https://oportunidadpais.cl/capitulo.html?num=7",
+  "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-7.json",
+  "datePublished": "2026-06-18",
+  "duration": "PT54M",
+  "author": {
+    "@type": "Person",
+    "name": "Camila Forno",
+    "jobTitle": "Subgerente de Sostenibilidad Corporativo",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "CChC"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Desafío Latam",
+    "url": "https://desafiolatam.com/"
+  },
+  "conductor": {
+    "@type": "Person",
+    "name": "Diego Arias",
+    "jobTitle": "Conductor y curador",
+    "url": "https://oportunidadpais.cl/sobre.html"
+  },
+  "keywords": "Políticas públicas, productividad Chile, talento, CChC",
+  "segments": [
+    {
+      "speaker": "Diego Arias",
+      "start": "00:00:00",
+      "text": "[INTRO: Oportunidad País, Cap 7. Camila Forno.]"
+    },
+    {
+      "speaker": "Camila Forno",
+      "start": "00:02:00",
+      "text": "[AGREGAR TRANSCRIPCIÓN REAL — el contenido de esta conversación debe agregarse manualmente tras escuchar el episodio]"
+    }
+  ]
+}

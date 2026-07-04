@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": "Qué debe hacer Chile, según la Gerente General ACTI. — Oportunidad País Cap 4",
+  "episodeNumber": 4,
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "Oportunidad País",
+    "url": "https://oportunidadpais.cl/"
+  },
+  "description": "Qué debe hacer Chile, según la Gerente General ACTI. — Conversación con Luz María García Contreras, Gerente General en ACTI Chile. Negocios y productividad.",
+  "url": "https://oportunidadpais.cl/capitulo.html?num=4",
+  "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-4.json",
+  "datePublished": "2026-05-06",
+  "duration": "PT1H13M",
+  "author": {
+    "@type": "Person",
+    "name": "Luz María García Contreras",
+    "jobTitle": "Gerente General",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "ACTI Chile"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Desafío Latam",
+    "url": "https://desafiolatam.com/"
+  },
+  "conductor": {
+    "@type": "Person",
+    "name": "Diego Arias",
+    "jobTitle": "Conductor y curador",
+    "url": "https://oportunidadpais.cl/sobre.html"
+  },
+  "keywords": "Negocios y productividad, productividad Chile, talento, ACTI Chile",
+  "segments": [
+    {
+      "speaker": "Diego Arias",
+      "start": "00:00:00",
+      "text": "[INTRO: Oportunidad País, Cap 4. Luz María García Contreras.]"
+    },
+    {
+      "speaker": "Luz María García Contreras",
+      "start": "00:02:00",
+      "text": "[AGREGAR TRANSCRIPCIÓN REAL — el contenido de esta conversación debe agregarse manualmente tras escuchar el episodio]"
+    }
+  ]
+}

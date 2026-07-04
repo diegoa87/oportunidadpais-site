@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": "Ciencia chilena al mercado con Varinka Farren, Hub APTA. — Oportunidad País Cap 6",
+  "episodeNumber": 6,
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "Oportunidad País",
+    "url": "https://oportunidadpais.cl/"
+  },
+  "description": "Ciencia chilena al mercado con Varinka Farren, Hub APTA. — Conversación con Varinka Farren, Directora ejecutiva en Hub APTA. Tecnología.",
+  "url": "https://oportunidadpais.cl/capitulo.html?num=6",
+  "transcriptUrl": "https://oportunidadpais.cl/transcripts/cap-6.json",
+  "datePublished": "2026-06-03",
+  "duration": "PT48M",
+  "author": {
+    "@type": "Person",
+    "name": "Varinka Farren",
+    "jobTitle": "Directora ejecutiva",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Hub APTA"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Desafío Latam",
+    "url": "https://desafiolatam.com/"
+  },
+  "conductor": {
+    "@type": "Person",
+    "name": "Diego Arias",
+    "jobTitle": "Conductor y curador",
+    "url": "https://oportunidadpais.cl/sobre.html"
+  },
+  "keywords": "Tecnología, productividad Chile, talento, Hub APTA",
+  "segments": [
+    {
+      "speaker": "Diego Arias",
+      "start": "00:00:00",
+      "text": "[INTRO: Oportunidad País, Cap 6. Varinka Farren.]"
+    },
+    {
+      "speaker": "Varinka Farren",
+      "start": "00:02:00",
+      "text": "[AGREGAR TRANSCRIPCIÓN REAL — el contenido de esta conversación debe agregarse manualmente tras escuchar el episodio]"
+    }
+  ]
+}
