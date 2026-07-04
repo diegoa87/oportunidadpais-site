@@ -163,8 +163,87 @@ const DATA = {
       tone: 4,
       photoUrl: 'fotos/camila-forno.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/camila-forno-2510a14a',
-      gender: 'f',
-
+      story: {
+        intro: "Subgerente Corporativa de Sostenibilidad en Falabella Financiero. Ingeniera Comercial de la Universidad de Valparaíso. Lidera educación financiera, diversidad e inclusión con un enfoque basado en evidencia y alianzas intersectoriales. Reconocida como Top Voice de LinkedIn en Sostenibilidad ASG para Chile.",
+        sections: [
+          {
+            title: "Orígenes y formación",
+            paragraphs: [
+              "Originaria de la Región de Valparaíso. Estudió <strong>Ingeniería Comercial</strong> en la Universidad de Valparaíso, titulándose a fines de la década de 2000. Esa base disciplinaria le dio el herramental cuantitativo y estratégico que hoy aplica a la sostenibilidad corporativa.",
+              "En su juventud fue campeona de cueca universitaria (2009), lo que refleja una faceta cultural y comunitaria que anticipó su لاحق trajetória profesional enfocada en el bienestar colectivo."
+            ]
+          },
+          {
+            title: "De Responsabilidad Social a Sostenibilidad Estratégica",
+            paragraphs: [
+              "En <strong>2017</strong> assumió como <strong>Jefa Corporativa de Responsabilidad Social</strong> de Falabella Financiero, en una época en que la industria bancaria operaba bajo el marco clásico de la RSE: vinculación comunitaria, donación y voluntariado corporativo.",
+              "A medida que el mercado de capitales global empezó a exigir mayor rendición de cuentas y los marcos normativos internacionales —como los lineamientos del <strong>Global Reporting Initiative (GRI)</strong>— adquirieron carácter vinculante, la organización evolucionó. Para <strong>2020</strong>, el cargo se expandió formalmente a <strong>Subgerencia Corporativa de Sostenibilidad</strong> con alcance regional en Chile, Perú, Colombia y la empresa conjunta en México.",
+              "Esa transición nominal encapsula un giro estratégico profundo: el abandono de la filantropía como centro de gravedad en favor de la integración sistemática de variables ambientales y sociales en el núcleo del negocio de originación de crédito y medios de pago."
+            ]
+          },
+          {
+            title: "La Radiografía UC que cambió todo",
+            paragraphs: [
+              "El hito analítico más trascendental de su gestión fue la alianza investigativa de casi tres años con el <strong>Centro de Políticas Públicas de la Pontificia Universidad Católica de Chile (PUC)</strong>. El estudio resultante, \"Radiografía de la Educación e Inclusión Financiera en Chile\", utilizó bases de datos levantadas durante 2024 y published entre 2025 y 2026.",
+              "Los hallazgos fueron devastadores: el ciudadano chileno se autoevalúa con un <strong>3.0 sobre 5</strong> en conocimientos financieros, pero su dominio real mide apenas <strong>1.6 sobre 5</strong>. Solo el <strong>30%</strong> responde correctamente tres preguntas económicas basales. Apenas el <strong>20%</strong> comprende cómo opera una tasa de interés. La planificación presupuestaria familiar es inexistente para más de la mitad de los hogares. Únicamente el <strong>34%</strong> de la población declara poder cubrir sus gastos sin dificultad.",
+              "Estos datos forzaron una redefinición completa de la política de riesgo crediticio y los modelos de vinculación comunitaria del banco."
+            ]
+          },
+          {
+            title: "Su impacto hoy",
+            paragraphs: [
+              "Hoy lidera el <strong>Movimiento Gennials</strong> —un programa con foco en educación financiera, desarrollo local, diversidad e inclusión— y coordina alianzas con entidades como la Pontificia Universidad Católica de Chile, Entel, Pacto Global y la Comisión Asesora para la Inclusión Financiera del Ministerio de Hacienda.",
+              "También conduce programas como <strong>EDDU</strong> (plataforma de edutainment financiero), el podcast <strong>\"Detrás del Fraude\"</strong> (que dominó los charts radiales), <strong>Fondo 55+</strong> y <strong>OpenSeniors</strong> para adultos mayores, y la tarjeta <strong>CMR con Garantía</strong> diseñada para perfiles no bancarizados.",
+              "Bajo su liderazgo, Falabella Financiero logró un <strong>ROE de 21,94%</strong>, un expansión crediticia de <strong>18,8%</strong> (superando los MM$4.900.000 en colocaciones) y se encamina hacia <strong>Cero Netas 2035</strong>."
+            ]
+          }
+        ]
+      },
+      logros: [
+        {
+          year: '2025',
+          title: 'ROE histórico 21,94%',
+          detail: 'Falabella Financiero supera su techo operacional con retornos de capital ajustados a máximos históricos.'
+        },
+        {
+          year: '2025',
+          title: 'Podcast "Detrás del Fraude"',
+          detail: 'Contenido de prevención de fraude cibernético que dominó los charts radiales y demostró la demanda masiva de educación financiera.'
+        },
+        {
+          year: '2024',
+          title: 'MM$ 4.900.000 en colocaciones',
+          detail: 'Expansión de 18,8% del libro total de crédito, con provisiones saneadas y bajo índice de morosidad.'
+        },
+        {
+          year: '2023',
+          title: 'Radiografía UC — Educación Financiera',
+          detail: 'Alianza investigativa con el Centro de Políticas Públicas UC: el estudio más completo sobre educación financiera en Chile.'
+        },
+        {
+          year: '2022',
+          title: 'Net Zero 2035',
+          detail: 'Anuncio formal del compromiso de Falabella Financiero con cero emisiones netas para 2035.'
+        },
+        {
+          year: '2020',
+          title: 'Subgerencia de Sostenibilidad',
+          detail: 'Creación y liderazgo de la nueva Subgerencia Corporativa de Sostenibilidad con alcance regional.'
+        }
+      ],
+      formacion: [
+        {
+          institution: 'Universidad de Valparaíso',
+          title: 'Ingeniería Comercial',
+          year: '~2009'
+        }
+      ],
+      memberships: [
+        { org: 'Pacto Global Chile', role: '' },
+        { org: 'Comisión Asesora para la Inclusión Financiera — Ministerio de Hacienda', role: '' },
+        { org: 'GRI — Global Reporting Initiative', role: '' }
+      ],
+      aportacion: "Porque demuestra que la sostenibilidad bancaria no es un costo sino una herramienta de mitigación de riesgo y generación de valor. Si te interesa cómo el sector privado puede abordar problemas estructurales de inequidad financiera con data y rigor, esta conversación es clave."
     },
     {
       slug: 'carolina-garcia',
