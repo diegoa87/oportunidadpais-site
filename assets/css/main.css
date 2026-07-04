@@ -1725,7 +1725,7 @@
   background: var(--navy);
   color: var(--paper);
   border-color: var(--navy);
-.esg-card-cap { background: var(--navy); color: var(--paper); border-color: var(--navy); }
+}
 .esg-card-cap h3 { color: var(--paper); }
 .esg-card-cap p { color: var(--paper); opacity: 0.78; }
 .esg-card-cap .esg-card-link { color: var(--gold); }
