@@ -146,6 +146,40 @@
           </div>
         </div>
 
+        ${c.youtubeUrl ? `
+        <div class="teaser-hero-wrap" id="teaser-hero">
+          <div class="teaser-video-container" id="teaser-video-container">
+            <img
+              class="teaser-thumb"
+              src="https://img.youtube.com/vi/${c.teaserId || c.youtubeUrl.split('v=')[1] || ''}/maxresdefault.jpg"
+              alt="Preview de ${p.name}"
+              onerror="this.src='https://img.youtube.com/vi/${c.teaserId || c.youtubeUrl.split('v=')[1] || ''}/hqdefault.jpg'"
+            />
+            <div class="teaser-overlay"></div>
+            <button class="teaser-play-btn" id="teaser-play-btn" aria-label="Reproducir preview">
+              <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="29" stroke="white" stroke-width="1.5" stroke-opacity="0.6"/>
+                <polygon points="24,18 48,30 24,42" fill="white"/>
+              </svg>
+            </button>
+            <div class="teaser-meta">
+              <span class="teaser-label">Preview · Cap ${String(c.num).padStart(2,'0')}</span>
+              <span class="teaser-duration">${c.duration}</span>
+            </div>
+          </div>
+          <iframe
+            id="teaser-iframe"
+            class="teaser-iframe"
+            src=""
+            title="Preview — ${p.name}"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            style="display:none;">
+          </iframe>
+        </div>
+        ` : ''}
+
         <div class="persona-hero tone-${p.tone}">
           <div class="photo" data-photo-wrap style="position:relative;overflow:hidden;">
             <img src="${photoUrl}" alt="${p.name}"
@@ -320,6 +354,35 @@
           </div>
         </div>
       `;
+    if (c && c.youtubeUrl) {
+        const playBtn = document.getElementById('teaser-play-btn');
+        const container = document.getElementById('teaser-video-container');
+        const iframe = document.getElementById('teaser-iframe');
+        const heroWrap = document.getElementById('teaser-hero');
+        if (playBtn && container && iframe) {
+          playBtn.addEventListener('click', function() {
+            // Build autoplay URL
+            const vid = (c.teaserId || (c.youtubeUrl && c.youtubeUrl.split('v=')[1])) + '?autoplay=1&rel=0&modestbranding=1&color=white';
+            iframe.src = 'https://www.youtube-nocookie.com/embed/' + vid;
+            container.style.display = 'none';
+            iframe.style.display = 'block';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+          });
+          // Reveal on scroll
+          if (heroWrap) {
+            const observer = new IntersectionObserver(function(entries) {
+              entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                  heroWrap.classList.add('visible');
+                  observer.unobserve(heroWrap);
+                }
+              });
+            }, { threshold: 0.1 });
+            observer.observe(heroWrap);
+          }
+        }
+      }
     })();
   </script>
 </body>
