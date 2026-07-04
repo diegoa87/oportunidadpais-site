@@ -146,8 +146,116 @@ const DATA = {
       tone: 3,
       photoUrl: 'fotos/varinka-farren.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/vfarren',
-      gender: 'f',
-
+      story: {
+        intro: "Ingeniera Comercial de la Universidad Católica del Norte. MVP en banca PYME en Banco Santander (2002-2003). Traffic Area Manager en MSC USA (2005-2008), operando en Nueva York, Houston y Charleston. Desde 2018 es CEO de Hub APTA, donde ha transferido más de 60 tecnologías científicas chilenas al mercado. Premiada por Her Global Impact 2026.",
+        sections: [
+          {
+            title: "Orígenes y formación",
+            paragraphs: [
+              "Originaria de Chile, estudió <strong>Ingeniería Comercial</strong> en la Universidad Católica del Norte (1996-2001), un programa de nivel licenciamiento/maestría que combina microeconomía, macroeconomía, administración de empresas y finanzas corporativas.",
+              "Para profundizar en financiamiento e inclusión, cursó un <strong>Diplomado en Venture Capital</strong> en la Universidad Adolfo Ibáñez y un <strong>Diplomado en Economía de la Igualdad y Brechas de Género</strong> en la Universidad de Chile."
+            ]
+          },
+          {
+            title: "La banca y el tránsito a la innovación",
+            paragraphs: [
+              "Su carrera comenzó en el sector financiero tradicional. Entre <strong>2002 y 2003</strong> se desempeñó como <strong>Ejecutiva de Banca PYME</strong> en Banco Santander-Santiago, evaluando riesgo crediticio, viabilidad financiera y líneas de financiamiento para pequeñas y medianas empresas.",
+              "Esa experiencia le dio una comprensión profunda de los mecanismos de asignación de capital y gestión del riesgo corporativo — competencias que luego resultaron críticas para diseñar modelos de valorización y comercialización de tecnologías científicas."
+            ]
+          },
+          {
+            title: "EE.UU. y el visado H-1B1",
+            paragraphs: [
+              "Entre <strong>2005 y 2008/2009</strong> migró a los Estados Unidos para trabajar en <strong>Mediterranean Shipping Company (MSC) USA, Inc.</strong> —una de las navieras más grandes del mundo— escalando posiciones hasta convertirse en <strong>Traffic Area Manager</strong>, operando en los tres hubs portuarios más importantes del país: <strong>Nueva York, Charleston (Carolina del Sur) y Houston (Texas)</strong>.",
+              "Su visado fue un <strong>H-1B1</strong> —categoría exclusiva para profesionales chilenos bajo el Tratado de Libre Comercio Chile-EE.UU. (vigente desde enero 2004)— que evita el sorteo de la lotería H-1B estándar. Regresó a Chile a finales de 2008, coincidando con el estallido de la crisis financiera global de las hipotecas subprime."
+            ]
+          },
+          {
+            title: "El regreso y la transferencia tecnológica",
+            paragraphs: [
+              "De vuelta en Chile, identificó un vacío sistémico: la vinculación entre la ciencia de los laboratorios universitarios y las necesidades de la industria productiva era prácticamente nula. Se incorporó a <strong>Laboratorios Andrómaco</strong> para liderar su división de innovación.",
+              "En <strong>2011</strong> diseñó e implementó el programa <strong>\"Farma Innova\"</strong>, una iniciativa altamente disruptiva para la industria local, logrando levantar y adjudicar hasta <strong>USD 2 millones</strong> para financiar la maduración y empaquetamiento comercial de tecnologías biomédicas de origen académico chileno.",
+              "Este éxito la llevó a la <strong>Universidad de Chile</strong>, donde assumió como <strong>Jefa de la Unidad de Negocios</strong> de la Dirección de Innovación (VID). Ahí estructuró formalmente el área de transferencia tecnológica y negoció el hito más importante de su carrera: el licenciamiento de la tecnología \"electrofarma\" —electrotransmisores implantables para tratar el síndrome de ovario poliquístico— desarrollada por el químico chileno <strong>Hernán Lara</strong>, a <strong>Verylife</strong> (compañía vinculada a Google y Claxon). Este acuerdo marcó un precedente para la ciencia aplicada chilena a nivel internacional.",
+              "Luego coordinó la iniciativa <strong>KNOW HUB Chile</strong>, un consorcio universitario orientado a la transferencia tecnológica financiado por CORFO."
+            ]
+          },
+          {
+            title: "CEO de Hub APTA — más de 60 tecnologías transferidas",
+            paragraphs: [
+              "Desde <strong>2018</strong> es <strong>CEO y Directora Ejecutiva de Hub APTA</strong> (Andes Pacific Technology Access), una corporación de transferencia tecnológica cofinanciada por CORFO que integra <strong>10 universidades socias y más de 17 instituciones asociadas</strong>, centros de investigación y empresas del sector productivo.",
+              "Bajo su liderazgo, Hub APTA ha estructurado e implementado estrategias comerciales exitosas que han permitido la transferencia de <strong>más de 60 tecnologías científicas chilenas</strong> a mercados nacionales e internacionales, impulsando la productividad y diversificación económica del país. En 2025 lanzó la hoja de ruta estratégica <strong>\"Efecto APTA\" (2025-2027)</strong>, orientanda a fortalecer la articulación trilateral entre academia, industrias privadas y sector público, con programas como <strong>\"APTA Builder\"</strong> (creación de EBCTs) y <strong>\"APTA Woman Power\"</strong> (innovación liderada por científicas)."
+            ]
+          },
+          {
+            title: "Gobernanza, políticas públicas e impacto global",
+            paragraphs: [
+              "Su gestión en Hub APTA se complementa con una participación activa en directórios, mesas de políticas públicas y organismos internacionales: es <strong>Presidenta del Consejo de Sociedad Civil del INAPI</strong>, donde asesora en políticas de patentes y estrategias de fomento a la INVENTION nacional.",
+              "Cofundadora y <strong>Presidenta de la Asociación de Directoras de Empresas de Base Científico-Tecnológica \"Women Board Up\"</strong> —pionera en América Latina en capacitar e incorporar mujeres profesionales en juntas directivas de startups científicas para mejorar su gobernanza corporativa.",
+              "Integra la <strong>Mesa de Políticas Públicas de Inteligencia Artificial del Senado de Chile</strong>, diseñando marcos éticos y regulatorios para la adopción tecnológica del país. A nivel global, es miembro del comité asesor de <strong>Latam-GPT</strong>, impulsando la soberanía lingüística y la repatriación segura de patrimonios culturales indígenas mediante IA ética.",
+              "En <strong>2026</strong> asumió como <strong>Directora del Concurso de Innovación y Startups Madera21</strong> de la Corporación Chilena de la Madera (CORMA), acelerando la sustentabilidad forestal y el desarrollo del sector cacaotero sostenible en la región andina. También es miembro del consejo estratégico de <strong>Village Capital</strong> (EE.UU.), fondo de inversión de impacto social, y Evaluadora Experta del <strong>Premio Nacional a la Innovación (AVONNI)</strong>."
+            ]
+          }
+        ]
+      },
+      logros: [
+        {
+          year: '2026',
+          title: 'Premio Her Global Impact — Catalizadora de Impacto en Ciencia y Tecnología',
+          detail: 'Reconocimiento internacional entregado por la organización Her Global Impact en la categoría de mayor impacto en transferencia tecnológica.'
+        },
+        {
+          year: '2026',
+          title: 'Directora Madera21 / CORMA',
+          detail: 'Nombramiento como Directora del Concurso de Innovación y Startups Madera21, acelerando sustentabilidad forestal y sector cacaotero andino.'
+        },
+        {
+          year: '2025',
+          title: 'Hoja de ruta "Efecto APTA" 2025-2027',
+          detail: ' roadmap estratégico para fortalecer la articulación academia-industria-estado con programas APTA Builder y APTA Woman Power.'
+        },
+        {
+          year: '2018',
+          title: 'CEO de Hub APTA',
+          detail: 'Liderazgo de la corporación de transferencia tecnológica más grande de Chile: 10 universidades, 17 instituciones, 60+ tecnologías transferidas.'
+        },
+        {
+          year: '2013-2017',
+          title: 'Acuerdo "electrofarma" con Verylife (Google/Claxon)',
+          detail: 'Negociación y licenciamiento de tecnología de electrotransmisores implantables del químico Hernán Lara a Verylife — precedente internacional para la ciencia chilena.'
+        },
+        {
+          year: '2011',
+          title: 'Programa Farma Innova — USD 2 millones',
+          detail: 'Creación e implementación del programa en Laboratorios Andrómaco para financiar la maduración de tecnologías biomédicas académicas.'
+        }
+      ],
+      formacion: [
+        {
+          institution: 'Universidad Católica del Norte',
+          title: 'Ingeniería Comercial',
+          year: '~2001'
+        },
+        {
+          institution: 'Universidad Adolfo Ibáñez',
+          title: 'Diplomado en Venture Capital',
+          year: 'Post-2015'
+        },
+        {
+          institution: 'Universidad de Chile',
+          title: 'Diplomado en Economía de la Igualdad y Brechas de Género',
+          year: 'Post-2010'
+        }
+      ],
+      memberships: [
+        { org: 'INAPI — Presidenta del Consejo de Sociedad Civil', role: '' },
+        { org: 'Women Board Up — Cofundadora y Presidenta', role: '' },
+        { org: 'Mesa de Políticas Públicas de IA — Senado de Chile', role: '' },
+        { org: 'Village Capital — Miembro del Consejo Estratégico', role: '' },
+        { org: 'LANEK — Miembro del Directorio', role: '' },
+        { org: 'EIVA Valparaíso — Miembro del Consejo Consultivo', role: '' },
+        { org: 'Latam-GPT — Miembro del Comité Asesor', role: '' }
+      ],
+      aportacion: "Porque demuestra que Chile puede generar negocios de base científico-tecnológica de clase mundial si se elimina la burocracia entre academia, Estado e industria. Su trayectoria —banca, logística global, transferencia tecnológica, gobernanza— es un caso de estudio sobre cómo la experiencia跨国acional se convierte en palanca para construir ecosistemas de innovación sostenibles."
     },
     {
       slug: 'camila-forno',
