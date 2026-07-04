@@ -146,38 +146,6 @@
           </div>
         </div>
 
-        ${c.teaserVideo ? `
-        <div class="teaser-hero-wrap" id="teaser-hero">
-          <div class="teaser-video-container" id="teaser-video-container">
-            <video
-              class="teaser-video"
-              id="teaser-video"
-              src="${c.teaserVideo}"
-              poster="https://img.youtube.com/vi/${c.teaserId || ''}/hqdefault.jpg"
-              playsinline
-              muted
-              loop
-              preload="none"
-              onerror="this.poster=''"
-              aria-label="Preview de ${p.name}">
-            </video>
-            <div class="teaser-overlay"></div>
-            <div class="teaser-play-ring">
-              <button class="teaser-play-btn" id="teaser-play-btn" aria-label="Reproducir preview">
-                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="30" cy="30" r="29" fill="rgba(14,26,54,0.8)" stroke="white" stroke-width="1.5"/>
-                  <polygon points="24,18 48,30 24,42" fill="white"/>
-                </svg>
-              </button>
-            </div>
-            <div class="teaser-meta">
-              <span class="teaser-label">Preview · Cap ${String(c.num).padStart(2,'0')}</span>
-              <span class="teaser-duration">${c.duration}</span>
-            </div>
-          </div>
-        </div>
-        ` : ''}
-
         <div class="persona-hero tone-${p.tone}">
           <div class="photo" data-photo-wrap style="position:relative;overflow:hidden;">
             <img src="${photoUrl}" alt="${p.name}"
@@ -198,6 +166,44 @@
             </div>
           </div>
         </div>
+
+        ${c.teaserVideo ? `
+        <div class="teaser-section" id="teaser-section">
+          <div class="teaser-section-inner">
+            <div class="teaser-header">
+              <div class="teaser-cap-label">Cap ${String(c.num).padStart(2,'0')} · ${p.name}</div>
+              <div class="teaser-badge">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <polygon points="2,1 11,6 2,11" fill="currentColor"/>
+                </svg>
+                Preview en video
+              </div>
+            </div>
+            <div class="teaser-video-wrap" id="teaser-video-wrap">
+              <video
+                class="teaser-video"
+                id="teaser-video"
+                src="${c.teaserVideo}"
+                playsinline
+                preload="none"
+                aria-label="Preview de ${p.name}">
+              </video>
+              <div class="teaser-overlay-dark" id="teaser-overlay-dark"></div>
+              <button class="teaser-play-circle" id="teaser-play-circle" aria-label="Reproducir">
+                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="40" cy="40" r="38" fill="rgba(14,26,54,0.85)" stroke="white" stroke-width="2"/>
+                  <polygon points="32,22 64,40 32,58" fill="white"/>
+                </svg>
+              </button>
+            </div>
+            <div class="teaser-footer">
+              <span class="teaser-footer-duration">${c.duration}</span>
+              <span class="teaser-footer-topic">${Helpers.industryName(p.industry)}</span>
+              <span class="teaser-footer-cta">Escucha el capítulo completo en Spotify →</span>
+            </div>
+          </div>
+        </div>
+        ` : ''}
 
         <div class="section-tight">
           <div class="quote">
@@ -353,30 +359,26 @@
         </div>
       `;
     if (c && c.teaserVideo) {
-        const playBtn = document.getElementById('teaser-play-btn');
-        const container = document.getElementById('teaser-video-container');
-        const heroWrap = document.getElementById('teaser-hero');
+        const playBtn = document.getElementById('teaser-play-circle');
+        const wrap = document.getElementById('teaser-video-wrap');
         const video = document.getElementById('teaser-video');
-        if (playBtn && container && video) {
+        if (playBtn && wrap && video) {
           playBtn.addEventListener('click', function() {
             video.play().catch(function() {});
-            container.classList.add('playing');
+            wrap.classList.add('playing');
           });
           // Scroll reveal
-          if (heroWrap) {
+          const section = document.getElementById('teaser-section');
+          if (section) {
             const observer = new IntersectionObserver(function(entries) {
               entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
-                  heroWrap.classList.add('visible');
-                  // Auto-play video when visible (muted)
-                  if (video) {
-                    video.play().catch(function() {});
-                  }
-                  observer.unobserve(heroWrap);
+                  section.classList.add('visible');
+                  observer.unobserve(section);
                 }
               });
             }, { threshold: 0.1 });
-            observer.observe(heroWrap);
+            observer.observe(section);
           }
         }
       }

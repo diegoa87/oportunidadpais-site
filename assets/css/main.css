@@ -1737,7 +1737,63 @@
   display: block;
 }
 
-/* Video nativo */
+/* ============================================================
+   TEASER SECTION — video integrado estéticamente
+   ============================================================ */
+.teaser-section {
+  max-width: 760px;
+  margin: var(--space-8) auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.teaser-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.teaser-section-inner {
+  border: 1px solid rgba(14, 26, 54, 0.1);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--navy);
+}
+/* Header: capítulo + badge */
+.teaser-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.teaser-cap-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.05em;
+}
+.teaser-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(232,179,65,0.12);
+  border: 1px solid rgba(232,179,65,0.25);
+  border-radius: 20px;
+  padding: 4px 10px;
+}
+/* Video wrap */
+.teaser-video-wrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #0a0a14;
+  cursor: pointer;
+  overflow: hidden;
+}
 .teaser-video {
   position: absolute;
   inset: 0;
@@ -1745,94 +1801,38 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  background: #0a1a3a;
-  /* Oculta controles hasta que se interactúa */
-  pointer-events: none;
 }
-.teaser-video-container.playing .teaser-video {
-  pointer-events: auto;
-}
-.teaser-video-container.playing .teaser-play-ring,
-.teaser-video-container.playing .teaser-overlay {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s;
-}
-
-/* ============================================================
-   TEASER HERO — video inline con efecto wow
-   ============================================================ */
-.teaser-hero-wrap {
-  max-width: 960px;
-  margin-inline: auto;
-  margin-top: var(--space-8);
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-  /* Start hidden for scroll reveal */
-  opacity: 0;
-  transform: translateY(24px) scale(0.97);
-  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.teaser-hero-wrap.visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-.teaser-video-container {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  background: #0a0a14;
-  cursor: pointer;
-  /* Fallback si thumbnail no carga */
-  background: linear-gradient(135deg, #0a1a3a 0%, #1a3a6a 50%, #0a1a3a 100%);
-}
-/* Thumbnail con zoom lento — efecto parallax */
-.teaser-thumb {
+.teaser-overlay-dark {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  will-change: transform;
+  background: rgba(14, 26, 54, 0.45);
+  transition: background 0.3s;
 }
-/* Overlay oscuro con gradiente */
-.teaser-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(14, 26, 54, 0.72) 0%,
-    rgba(14, 26, 54, 0.25) 50%,
-    rgba(14, 26, 54, 0.55) 100%
-  );
-  transition: background 0.4s;
+.teaser-video-wrap:hover .teaser-overlay-dark {
+  background: rgba(14, 26, 54, 0.25);
 }
-.teaser-video-container:hover .teaser-overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(14, 26, 54, 0.55) 0%,
-    rgba(14, 26, 54, 0.1) 50%,
-    rgba(14, 26, 54, 0.4) 100%
-  );
-}
-/* Hover zoom en thumbnail */
-.teaser-video-container:hover .teaser-thumb {
-  transform: scale(1.04);
-}
-/* Ring exterior del play button — siempre visible y pulsante */
-.teaser-play-ring {
+/* Play button — círculo grande centrado */
+.teaser-play-circle {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
   z-index: 2;
-  pointer-events: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-/* Pulso en el anillo — animation que llama la atención */
-.teaser-play-ring::before {
+.teaser-play-circle svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.5));
+}
+.teaser-play-circle::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -1841,90 +1841,60 @@
   width: 96px;
   height: 96px;
   border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.5);
-  animation: playPulse 2s ease-out infinite;
+  border: 2px solid rgba(255,255,255,0.4);
+  animation: playPulse 2.4s ease-out infinite;
+  pointer-events: none;
 }
 @keyframes playPulse {
   0%   { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
-  100% { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
 }
-/* Botón de play — grande para móvil, clickeable */
-.teaser-play-btn {
-  position: relative;
-  z-index: 3;
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  width: 88px;
-  height: 88px;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
+.teaser-video-wrap:hover .teaser-play-circle,
+.teaser-play-circle:active {
+  transform: translate(-50%, -50%) scale(1.1);
 }
-.teaser-play-btn svg {
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.5));
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+/* Ocultar play cuando está reproduciendo */
+.teaser-video-wrap.playing .teaser-play-circle,
+.teaser-video-wrap.playing .teaser-overlay-dark {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
 }
-/* Hover/tap: agranda play button */
-.teaser-video-container:hover .teaser-play-btn svg,
-.teaser-play-btn:active svg {
-  transform: scale(1.12);
-  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.6));
-}
-/* Meta inferior */
-.teaser-meta {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
+/* Footer con meta info */
+.teaser-footer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
-  z-index: 2;
+  gap: 16px;
+  padding: 12px 20px;
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  flex-wrap: wrap;
 }
-.teaser-label {
+.teaser-footer-duration {
   font-family: var(--font-mono);
   font-size: 11px;
-  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.4);
+}
+.teaser-footer-topic {
+  font-family: var(--font-mono);
+  font-size: 10px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  background: rgba(232,179,65,0.1);
+  padding: 2px 8px;
+  border-radius: 10px;
 }
-.teaser-duration {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: rgba(255,255,255,0.55);
-  letter-spacing: 0.05em;
+.teaser-footer-cta {
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  margin-left: auto;
+  font-style: italic;
 }
-/* Iframe del video (oculto hasta que clickean play) */
-.teaser-iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Móvil — mayor área táctil y play más grande */
 @media (max-width: 640px) {
-  .teaser-play-btn {
-    width: 100px;
-    height: 100px;
-  }
-  .teaser-play-ring::before {
-    width: 112px;
-    height: 112px;
-  }
-  .teaser-meta {
-    bottom: 16px;
-    padding: 0 16px;
-  }
-  .teaser-label,
-  .teaser-duration {
-    font-size: 10px;
-  }
+  .teaser-footer-cta { display: none; }
+  .teaser-play-circle { width: 70px; height: 70px; }
+  .teaser-play-circle::before { width: 84px; height: 84px; }
 }
 
 /* Historia de vida */
