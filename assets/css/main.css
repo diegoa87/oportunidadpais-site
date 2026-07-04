@@ -651,8 +651,16 @@
   overflow: hidden;
 }
 .ep-cover-thumb {
-  background: var(--navy) !important;
+  background-color: var(--navy);
   position: relative;
+}
+.ep-cover-thumb .ep-thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .ep-cover-thumb .ep-meta-top,
 .ep-cover-thumb .ep-quote {
@@ -660,15 +668,17 @@
   z-index: 1;
   color: #fff;
 }
+/* Overlay oscuro sobre la imagen para que se lea el texto */
 .ep-cover-thumb::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(14,26,54,0.15) 0%,
-    rgba(14,26,54,0.85) 100%
+    rgba(14,26,54,0.1) 0%,
+    rgba(14,26,54,0.75) 100%
   );
+  z-index: 1;
 }
 .ep-cover .ep-meta-top {
   font-family: var(--font-mono);

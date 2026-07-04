@@ -468,7 +468,8 @@ const Helpers = {
     const thumb = Helpers.ytThumb(c.youtubeUrl);
     return `
       <a href="capitulo.html?num=${c.num}" class="ep-card">
-        <div class="ep-cover${thumb ? ' ep-cover-thumb' : ''}"${thumb ? ` style="background-image:url('${thumb}');background-size:cover;background-position:center;"` : ''}>
+        <div class="ep-cover${thumb ? ' ep-cover-thumb' : ''}">
+          ${thumb ? `<img class="ep-thumb" src="${thumb}" alt="Thumbnail" loading="lazy" onerror="this.parentElement.classList.remove(&apos;ep-cover-thumb&apos;)">` : ''}
           <div class="ep-meta-top">C${c.num} · ${Helpers.industryName(c.industry).toUpperCase()} · ${c.duration}</div>
           <div class="ep-quote">"${c.title.replace(/^[^:]+: /, '').replace(/\.$/, '')}"</div>
         </div>
