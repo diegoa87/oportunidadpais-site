@@ -1832,7 +1832,14 @@
   transform: scale(1.12);
   opacity: 1;
 }
-/* Iframe YouTube */
+/* Iframe Vimeo */
+.teaser-vimeo-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
 .teaser-iframe {
   position: absolute;
   inset: 0;
@@ -1840,7 +1847,6 @@
   height: 100%;
   border: none;
   display: block;
-  z-index: 1;
 }
 /* Ocultar placeholder cuando reproduce */
 .teaser-video-wrap.playing .teaser-placeholder {
