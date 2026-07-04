@@ -7,7 +7,16 @@
   <meta name="theme-color" content="#0E1B33">
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Oportunidad País">
+  <meta property="og:title" id="og-title" content="Persona · Oportunidad País">
+  <meta property="og:description" id="og-desc" content="Conocé a esta persona y su historia en Oportunidad País.">
+  <meta property="og:image" id="og-image" content="https://oportunidadpais.cl/assets/og/home.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_CL">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" id="tw-title" content="Persona · Oportunidad País">
+  <meta name="twitter:description" id="tw-desc" content="Conocé a esta persona y su historia en Oportunidad País.">
+  <meta name="twitter:image" id="tw-image" content="https://oportunidadpais.cl/assets/og/home.png">
   <link rel="canonical" href="https://oportunidadpais.cl/persona.html">
   <link rel="icon" type="image/svg+xml" href="assets/brand/isotipo-o-navy.svg">
   <link rel="apple-touch-icon" href="assets/brand/favicon-512.png">
@@ -112,10 +121,21 @@
 
       document.title = `${p.name} · Oportunidad País`;
 
-      // Actualizar OG image (best-effort)
-      const og = document.querySelector('meta[property="og:image"]');
-      if (og) og.setAttribute("content", "https://oportunidadpais.cl/assets/og/personas.png");
-      if (og && p.photoUrl) og.setAttribute('content', p.photoUrl);
+      // Actualizar OG y Twitter meta tags
+      const setMeta = (selector, attr, val) => {
+        const el = document.querySelector(selector);
+        if (el) el.setAttribute(attr, val);
+      };
+      const desc = `${p.name}, ${p.role}. "${p.keyIdea}"`;
+      setMeta('meta[property="og:title"]', 'content', `${p.name} · Oportunidad País`);
+      setMeta('meta[name="twitter:title"]', 'content', `${p.name} · Oportunidad País`);
+      setMeta('meta[name="description"]', 'content', desc);
+      setMeta('meta[property="og:description"]', 'content', desc);
+      setMeta('meta[name="twitter:description"]', 'content', desc);
+      const ogImg = document.querySelector('meta[property="og:image"]');
+      if (ogImg) ogImg.setAttribute('content', p.photoUrl || 'https://oportunidadpais.cl/assets/og/personas.png');
+      const twImg = document.querySelector('meta[name="twitter:image"]');
+      if (twImg) twImg.setAttribute('content', p.photoUrl || 'https://oportunidadpais.cl/assets/og/personas.png');
 
       root.innerHTML = `
         <div style="padding-top: 32px;">

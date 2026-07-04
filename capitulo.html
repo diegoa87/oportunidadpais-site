@@ -7,7 +7,16 @@
   <meta name="theme-color" content="#0E1B33">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Oportunidad País">
+  <meta property="og:title" id="og-title" content="Capítulo · Oportunidad País">
+  <meta property="og:description" id="og-desc" content="Escuchá el episodio en Spotify o YouTube.">
+  <meta property="og:image" id="og-image" content="https://oportunidadpais.cl/assets/og/home.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_CL">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" id="tw-title" content="Capítulo · Oportunidad País">
+  <meta name="twitter:description" id="tw-desc" content="Escuchá el episodio en Spotify o YouTube.">
+  <meta name="twitter:image" id="tw-image" content="https://oportunidadpais.cl/assets/og/home.png">
   <link rel="canonical" href="https://oportunidadpais.cl/capitulo.html">
   <link rel="icon" type="image/svg+xml" href="assets/brand/isotipo-o-navy.svg">
   <link rel="apple-touch-icon" href="assets/brand/favicon-512.png">
@@ -15,6 +24,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
+  <!-- Schema.org: PodcastSeries + PodcastEpisode (actualizado dinámicamente por JS) -->
+  <script type="application/ld+json" id="schema-ld">
+  {
+    "@context": "https://schema.org",
+    "@type": "PodcastSeries",
+    "name": "Oportunidad País",
+    "url": "https://oportunidadpais.cl/",
+    "description": "El podcast que visibiliza a quienes están aportando a la productividad de Chile.",
+    "inLanguage": "es-CL",
+    "author": { "@type": "Person", "name": "Diego Arias", "url": "https://oportunidadpais.cl/sobre.html" },
+    "publisher": { "@type": "Organization", "name": "Desafío Latam", "url": "https://desafiolatam.com/" }
+  }
+  </script>
 </head>
 <body>
 
@@ -111,7 +133,7 @@
       const next = DATA.capitulos.find(x => x.num === c.num + 1);
       const wzpUrl = Helpers.wzpUrlForCap(c, window.location.href);
 
-      // Update OG tags dynamically
+      // Actualizar OG tags dinámicamente
       const setMeta = (selector, attr, val) => {
         const el = document.querySelector(selector);
         if (el) el.setAttribute(attr, val);
@@ -122,6 +144,27 @@
       setMeta('meta[name="description"]', 'content', desc);
       setMeta('meta[property="og:description"]', 'content', desc);
       setMeta('meta[name="twitter:description"]', 'content', desc);
+      // Actualizar schema JSON-LD a PodcastEpisode
+      const schemaEl = document.getElementById('schema-ld');
+      if (schemaEl) {
+        const schema = {
+          "@context": "https://schema.org",
+          "@type": "PodcastEpisode",
+          "name": `${c.title} — Oportunidad País Cap ${c.num}`,
+          "description": desc,
+          "url": `https://oportunidadpais.cl/capitulo.html?num=${c.num}`,
+          "partOfSeries": {
+            "@type": "PodcastSeries",
+            "name": "Oportunidad País",
+            "url": "https://oportunidadpais.cl/"
+          },
+          "datePublished": c.date,
+          "duration": c.duration,
+          "author": { "@type": "Person", "name": p.name, "url": `https://oportunidadpais.cl/persona.html?slug=${p.slug}` },
+          "publisher": { "@type": "Organization", "name": "Desafío Latam", "url": "https://desafiolatam.com/" }
+        };
+        schemaEl.textContent = JSON.stringify(schema);
+      }
 
       root.innerHTML = `
         <div style="padding-top: 32px;">

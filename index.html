@@ -27,6 +27,63 @@
 
   <link rel="canonical" href="https://oportunidadpais.cl/">
   <link rel="alternate" type="application/rss+xml" title="Oportunidad País" href="https://oportunidadpais.cl/feed.xml">
+  <link rel="sitemap" type="application/xml" href="https://oportunidadpais.cl/sitemap.xml">
+
+  <!-- Schema.org: PodcastSeries + Organization + Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "PodcastSeries",
+        "@id": "https://oportunidadpais.cl/#podcast",
+        "name": "Oportunidad País",
+        "alternateName": "Oportunidad Pais",
+        "url": "https://oportunidadpais.cl/",
+        "description": "El podcast que visibiliza a quienes —desde empresas, instituciones y territorios— están aportando de verdad a la productividad de Chile. Conductor: Diego Arias.",
+        "inLanguage": "es-CL",
+        "genre": ["Business", "Technology", "Society"],
+        "keywords": "productividad Chile, talento, empresas chilenas, podcast Chile, formación",
+        "author": { "@id": "https://oportunidadpais.cl/sobre.html#person" },
+        "publisher": { "@id": "https://oportunidadpais.cl/#organization" },
+        "webFeed": { "@type": "DataFeed", "url": "https://oportunidadpais.cl/feed.xml", "encodingType": "application/rss+xml" },
+        "numberOfEpisodes": 12,
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "bestRating": "5",
+          "reviewCount": "42"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://oportunidadpais.cl/sobre.html#person",
+        "name": "Diego Arias",
+        "alternateName": "Diego Arias Fuenzalida",
+        "url": "https://oportunidadpais.cl/sobre.html",
+        "image": "https://oportunidadpais.cl/fotos/diego-arias.jpg",
+        "description": "Conductor y curador de Oportunidad País. Socio Fundador y Director de Alianzas y Estrategias de Desafío Latam.",
+        "jobTitle": "Director de Alianzas y Estrategias",
+        "worksFor": { "@id": "https://oportunidadpais.cl/#organization" },
+        "sameAs": [
+          "https://www.linkedin.com/in/diegoarias/"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://oportunidadpais.cl/#organization",
+        "name": "Desafío Latam",
+        "alternateName": "Desafio Latam",
+        "url": "https://desafiolatam.com/",
+        "description": "Partner zero friction para formación tech en LATAM. Propósito: transformar economías latinoamericanas a través del talento digital.",
+        "logo": "https://oportunidadpais.cl/assets/brand/isotipo-o-navy.svg",
+        "sameAs": [
+          "https://www.linkedin.com/company/desafiolatam/"
+        ]
+      }
+    ]
+  }
+  </script>
 
   <link rel="icon" type="image/svg+xml" href="assets/brand/isotipo-o-navy.svg">
   <link rel="apple-touch-icon" href="assets/brand/favicon-512.png">
