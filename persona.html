@@ -181,8 +181,8 @@
             <h3>${p.name} sigue moviendo la productividad de Chile.</h3>
             <p>Si esta conversación te sirvió, tienes dos formas simples de apoyar su trabajo: seguir su recorrido en LinkedIn y, si quieres, escribirle a Diego para agradecerle por sumar a ${p.gender === 'f' ? 'ella' : 'él'} a la conversación.</p>
             <div class="connect-buttons">
-              ${p.linkedinUrl ? `<a class="platform-btn" href="${p.linkedinUrl}" target="_blank" rel="noopener">Seguir ${p.gender === 'f' ? 'la' : 'lo'} en LinkedIn →</a>` : ''}
-              <a class="platform-btn alt" href="${Helpers.wzpUrlFor({ shareText: 'Hola Diego, te escribo para agradecerte por el capítulo ' + p.chapterNum + ' de Oportunidad País con ' + p.name + '. Aportó mucho a entender el país.' }, window.location.href)}" target="_blank" rel="noopener">Agradecer por WhatsApp</a>
+              ${p.linkedinUrl ? `<a class="platform-btn" href="${p.linkedinUrl}" target="_blank" rel="noopener">Seguir en LinkedIn →</a>` : ''}
+            <a class="cta-text-link" href="${p.linkedinUrl}" target="_blank" rel="noopener">Sigue y agradece por su aporte al país.</a>
             </div>
           </div>
         </div>

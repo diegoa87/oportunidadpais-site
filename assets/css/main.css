@@ -1707,6 +1707,19 @@
 .esg-card-cap .esg-card-tag { color: var(--gold); }
 .esg-card-cap:hover { background: #162544; border-color: var(--gold); }
 
+/* Texto CTA sin botón */
+.cta-text-link {
+  display: inline-block;
+  margin-top: var(--space-2);
+  font-size: var(--fs-small);
+  color: var(--navy);
+  opacity: 0.6;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+.cta-text-link:hover { opacity: 1; }
+
 /* ===========================================================================
    Perfil enriquecido — modelo a seguir
    =========================================================================== */
