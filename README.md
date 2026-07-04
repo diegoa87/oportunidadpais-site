@@ -230,4 +230,4 @@ python3 -m http.server 8000
 - **Sin Ranking:** reemplazado por Reportes ESG, en construcción.
 - **Reportes ESG:** nueva página con roadmap, metodología y CTA para sugerir empresas.
 - **Personas con fotos:** Pravatar como placeholder, fácil de reemplazar con URLs reales.
-- **Capítulos con wzp share:** cada uno tiene su `shareText` + URL dinámica para compartir.
+- **Capítulos con wzp share:** cada uno tiene su `shareText` + URL dinámica para compartir.Sat Jul  4 02:20:56 UTC 2026
