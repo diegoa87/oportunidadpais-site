@@ -278,14 +278,12 @@
         ${(p.logros && p.logros.length) ? `
         <div class="section">
           <div class="eyebrow">— Trayectoria y logros</div>
-          <div class="logros-timeline">
+          <div class="logros-grid">
             ${p.logros.map(l => `
-              <div class="logro-item">
-                <div class="logro-year">${l.year}</div>
-                <div class="logro-content">
-                  <div class="logro-title">${l.title}</div>
-                  <div class="logro-detail">${l.detail}</div>
-                </div>
+              <div class="logro-card">
+                <div class="logro-card-year">${l.year}</div>
+                <div class="logro-card-title">${l.title}</div>
+                <div class="logro-card-detail">${l.detail}</div>
               </div>
             `).join('')}
           </div>
@@ -294,28 +292,26 @@
 
         ${(p.formacion && p.formacion.length) || (p.memberships && p.memberships.length) ? `
         <div class="section-tight">
-          <div class="perfil-grid">
+          <div class="formacion-memberships-grid">
             ${(p.formacion && p.formacion.length) ? `
-            <div class="perfil-col">
-              <div class="perfil-col-title">Formación</div>
+            <div class="fm-col">
+              <div class="fm-col-title">Formación</div>
               ${p.formacion.map(f => `
-                <div class="perfil-item">
-                  <div class="perfil-item-inst">${f.institution}</div>
-                  <div class="perfil-item-title">${f.title}</div>
-                  <div class="perfil-item-year">${f.year}</div>
+                <div class="fm-item">
+                  <div class="fm-item-title">${f.title}</div>
+                  <div class="fm-item-sub">${f.institution} · ${f.year}</div>
                 </div>
               `).join('')}
             </div>
             ` : ''}
             ${(p.memberships && p.memberships.length) ? `
-            <div class="perfil-col">
-              <div class="perfil-col-title">Afiliaciones</div>
+            <div class="fm-col">
+              <div class="fm-col-title">Afiliaciones</div>
+              <div class="fm-badges">
               ${p.memberships.map(m => `
-                <div class="perfil-item">
-                  <div class="perfil-item-inst">${m.org}</div>
-                  <div class="perfil-item-title">${m.role}</div>
-                </div>
+                <div class="fm-badge">${m.org}</div>
               `).join('')}
+              </div>
             </div>
             ` : ''}
           </div>
