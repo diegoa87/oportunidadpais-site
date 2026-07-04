@@ -1737,6 +1737,28 @@
   display: block;
 }
 
+/* Video nativo */
+.teaser-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: #0a1a3a;
+  /* Oculta controles hasta que se interactúa */
+  pointer-events: none;
+}
+.teaser-video-container.playing .teaser-video {
+  pointer-events: auto;
+}
+.teaser-video-container.playing .teaser-play-ring,
+.teaser-video-container.playing .teaser-overlay {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
 /* ============================================================
    TEASER HERO — video inline con efecto wow
    ============================================================ */

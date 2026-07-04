@@ -146,20 +146,26 @@
           </div>
         </div>
 
-        ${c.youtubeUrl ? `
+        ${c.teaserVideo ? `
         <div class="teaser-hero-wrap" id="teaser-hero">
           <div class="teaser-video-container" id="teaser-video-container">
-            <img
-              class="teaser-thumb"
-              id="teaser-thumb"
-              src="https://img.youtube.com/vi/${c.teaserId || c.youtubeUrl.split('v=')[1] || ''}/hqdefault.jpg"
-              alt="Preview de ${p.name}"
-            />
+            <video
+              class="teaser-video"
+              id="teaser-video"
+              src="${c.teaserVideo}"
+              poster="https://img.youtube.com/vi/${c.teaserId || ''}/hqdefault.jpg"
+              playsinline
+              muted
+              loop
+              preload="none"
+              onerror="this.poster=''"
+              aria-label="Preview de ${p.name}">
+            </video>
             <div class="teaser-overlay"></div>
             <div class="teaser-play-ring">
               <button class="teaser-play-btn" id="teaser-play-btn" aria-label="Reproducir preview">
                 <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="30" cy="30" r="29" fill="rgba(14,26,54,0.75)" stroke="white" stroke-width="1.5"/>
+                  <circle cx="30" cy="30" r="29" fill="rgba(14,26,54,0.8)" stroke="white" stroke-width="1.5"/>
                   <polygon points="24,18 48,30 24,42" fill="white"/>
                 </svg>
               </button>
@@ -169,16 +175,6 @@
               <span class="teaser-duration">${c.duration}</span>
             </div>
           </div>
-          <iframe
-            id="teaser-iframe"
-            class="teaser-iframe"
-            src=""
-            title="Preview — ${p.name}"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            style="display:none;">
-          </iframe>
         </div>
         ` : ''}
 
@@ -356,35 +352,26 @@
           </div>
         </div>
       `;
-    if (c && c.youtubeUrl) {
+    if (c && c.teaserVideo) {
         const playBtn = document.getElementById('teaser-play-btn');
         const container = document.getElementById('teaser-video-container');
-        const iframe = document.getElementById('teaser-iframe');
         const heroWrap = document.getElementById('teaser-hero');
-        const thumb = document.getElementById('teaser-thumb');
-        // Fallback: si thumbnail no carga, mostrar gradiente y forzar visibilidad
-        if (thumb) {
-          thumb.addEventListener('error', function() {
-            container.style.background = 'linear-gradient(135deg, #0a1a3a 0%, #1a3a6a 50%, #0a1a3a 100%)';
-            thumb.style.display = 'none';
-          });
-        }
-        if (playBtn && container && iframe) {
+        const video = document.getElementById('teaser-video');
+        if (playBtn && container && video) {
           playBtn.addEventListener('click', function() {
-            // Build autoplay URL
-            const vid = (c.teaserId || (c.youtubeUrl && c.youtubeUrl.split('v=')[1])) + '?autoplay=1&rel=0&modestbranding=1&color=white';
-            iframe.src = 'https://www.youtube-nocookie.com/embed/' + vid;
-            container.style.display = 'none';
-            iframe.style.display = 'block';
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
+            video.play().catch(function() {});
+            container.classList.add('playing');
           });
-          // Reveal on scroll
+          // Scroll reveal
           if (heroWrap) {
             const observer = new IntersectionObserver(function(entries) {
               entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
                   heroWrap.classList.add('visible');
+                  // Auto-play video when visible (muted)
+                  if (video) {
+                    video.play().catch(function() {});
+                  }
                   observer.unobserve(heroWrap);
                 }
               });

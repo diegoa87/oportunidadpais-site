@@ -323,6 +323,7 @@ const DATA = {
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=WSgsbpbyGJc',
       teaserId: 'WSgsbpbyGJc',
+      teaserVideo: 'videos/teaser-carolina-web.mp4',
       shareText: 'La inclusión no es caridad: es productividad. Cap 8 de Oportunidad País.'
     },
     {
