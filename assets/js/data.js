@@ -129,8 +129,100 @@ const DATA = {
       tone: 2,
       photoUrl: 'fotos/elizabeth-cameron.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/elizabeth-cameron-ovando-15baba35',
-      gender: 'f',
-
+      story: {
+        intro: "Ingeniera Comercial y Magíster en Gestión y Políticas Públicas por la Universidad de Chile. De la gestión territorial en Fundación Integra (Antofagasta) a Especialista en Comunidades en Minera Escondida/BHP. Hoy es Directora de Asuntos Corporativos de BHP Chile, liderando la viabilidad social y regulatoria de Cerro Colorado. Llevó la participación femenina de Escondida del 7% al 40%.",
+        sections: [
+          {
+            title: "Orígenes y formación",
+            paragraphs: [
+              "Es <strong>Ingeniera Comercial</strong> con una sólida base en gestión organizacional y administración pública. Para robustecer su desempeño en entornos regulatorios exigentes, cursó el <strong>Magíster en Gestión y Políticas Públicas (MGPP)</strong> en la Universidad de Chile, rindiendo su examen de grado el <strong>28 de diciembre de 2023</strong> en el Departamento de Ingeniería Industrial.",
+              "Su formación avanzada le ha otorgado un instrumental analítico robusto para abordar la denominada \"permisología\", optimizando los procesos de aprobación ambiental mediante modelos de consulta indígena y comunitaria temprana."
+            ]
+          },
+          {
+            title: "Fundación Integra y la gestión territorial",
+            paragraphs: [
+              "Entre <strong>2012 y 2014</strong> se desempeñó como <strong>Directora Regional de la Fundación Integra</strong> en la Región de Antofagasta, asumiendo la representación legal e institucional de la Fundación de Desarrollo Integral del Menor ante los organismos públicos y de fiscalización del Estado.",
+              "En este cargo administró el presupuesto regional de educación inicial, gestionó contratos de infraestructura educativa local y lideró programas innovadores de cobertura rural. Su principal hito fue el diseño territorial de la campaña de educación inicial móvil <strong>\"Jardín Sobre Ruedas\"</strong>, en alianza con la productora creativa <strong>Woki Toki</strong> y el patrocinio financiero de <strong>Banco Santander</strong>."
+            ]
+          },
+          {
+            title: "Minera Escondida y la transformación cultural",
+            paragraphs: [
+              "Su ingreso a la gran minería se produjo en <strong>Minera Escondida</strong> (operada por BHP) entre <strong>2015 y 2024</strong>, primero como <strong>Especialista en Comunidades</strong> y luego como <strong>Especialista en Asuntos Corporativos</strong>. Su gestión se orientó a alinear los objetivos de la compañía con las metas de desarrollo sostenible de la Región de Antofagasta, enfrentando la baja representatividad histórica de mujeres en la fuerza laboral minera.",
+              "En <strong>2017</strong>, cuando BHP estableció la meta global de alcanzar el balance de género para 2025, la operación de Escondida presentaba apenas un <strong>7%</strong> de participación femenina —un reflejo de la exclusión estructural y los sesgos culturales históricos de la industria minera en Chile."
+            ]
+          },
+          {
+            title: "El programa \"Mineras\": del 7% al 40%",
+            paragraphs: [
+              "Cameron y su equipo diseñaron un <strong>modelo sistémico de transformación cultural</strong> estructurado en tres dimensiones interconectadas. <strong>Primero</strong>: la redefinición técnica del rol operativo —se reformularon los perfiles de reclutamiento eliminando la barrera de experiencia previa obligatoria y se introdujeron tecnologías de entrenamiento inmersivo como simuladores de realidad virtual, mixta y aumentada para la adquisición de competencias sin riesgo.",
+              "<strong>Segundo</strong>: la creación de la <strong>\"Comunidad Mineras\"</strong> —un programa interno de retención, mentoría y acompañamiento para mitigar los impactos personales y familiares de los turnos rotativos tradicionales de <strong>7x7 días</strong> en faena. Esto incluyó el rediseño de la infraestructura física y la publicación del libro institucional <strong>\"Memorias de Mineras: relatos y logros en comunidad\"</strong>.",
+              "<strong>Tercero</strong>: el foco en educación STEM temprana, mediante el programa <strong>\"STEM + Género\"</strong> en colaboración con la empresa de tecnología educativa <strong>Lab4U</strong>, dotando de herramientas experimentales de indagación científica a docentes de enseñanza media y impacting directly a <strong>+1.200 estudiantes</strong> en la Región de Antofagasta. El resultado: la participación femenina en Escondida pasó del <strong>7% en 2017 al 40% consolidado en 2024</strong>, superando los prejuicios tradicionales de la industria."
+            ]
+          },
+          {
+            title: "Directora de Asuntos Corporativos de BHP Chile",
+            paragraphs: [
+              "Desde <strong>2024</strong> es <strong>Directora de Asuntos Corporativos de BHP Chile</strong>, con responsabilidades directas sobre el posicionamiento estratégico de la compañía en las regiones de <strong>Tarapacá y Antofagasta</strong>, y el liderazgo de la viabilidad social y regulatoria de la faena <strong>Cerro Colorado</strong>.",
+              "Su gestión se enfoca en la conducción de relaciones gubernamentales e institucionales de primer nivel, la facilitación de la consulta previa y el diseño de la estrategia social para la reapertura de Cerro Colorado —un proyecto que contempla la utilización exclusiva de agua de mar desalinizada, reconfigurando drásticamente el mapa de actores hacia el borde costero y las comunidades andinas."
+            ]
+          },
+          {
+            title: "Reconocimientos e impacto",
+            paragraphs: [
+              "Ha sido seleccionada en el cuadro de honor <strong>WIM 100</strong> de Women in Mining Chile, como una de las 100 mujeres líderes e inspiradoras de la industria nacional. También participa como socia de WIM Chile y mentora RIM.",
+              "En el período 2025/2026, las operaciones combinadas de BHP en Chile —bajo su dirección en asuntos corporativos— superaron el <strong>48% de representación femenina global</strong>, posicionando a la compañía como referente internacional de diversidad y demostrando que la equidad de género dismilye la rotación voluntaria, improve la adaptabilidad de los equipos y robustece la toma de decisiones críticas en las operaciones."
+            ]
+          }
+        ]
+      },
+      logros: [
+        {
+          year: '2025/2026',
+          title: 'BHP Chile supera el 48% de participación femenina global',
+          detail: 'Resultado consolidado bajo su dirección en Asuntos Corporativos, posicionando a BHP como referente internacional de diversidad.'
+        },
+        {
+          year: '2024',
+          title: 'Directora de Asuntos Corporativos BHP Chile',
+          detail: 'Liderazgo institucional y regulatorio para Cerro Colorado, gestionando la viabilidad social de la reopening de la faena.'
+        },
+        {
+          year: '2024',
+          title: 'Escondida alcanza 40% de participación femenina',
+          detail: 'Resultado del programa "Mineras": del 7% en 2017 al 40% consolidado, superando la meta corporativa global de BHP.'
+        },
+        {
+          year: '2023',
+          title: 'Magíster en Gestión y Políticas Públicas — U. de Chile',
+          detail: 'Examen de grado rindido el 28 de diciembre de 2023 en el Departamento de Ingeniería Industrial.'
+        },
+        {
+          year: '2017-2024',
+          title: 'Programa "Mineras" — 1.200 estudiantes en STEM+Género',
+          detail: 'Modelo sistémico de transformación cultural: reclutamiento inclusivo, Comunidad Mineras y programa STEM+Género con Lab4U.'
+        },
+        {
+          year: '2012-2014',
+          title: 'Directora Regional — Fundación Integra Antofagasta',
+          detail: 'Gestión territorial de educación inicial; diseño de la campaña "Jardín Sobre Ruedas" en alianza con Banco Santander y Woki Toki.'
+        }
+      ],
+      formacion: [
+        {
+          institution: 'Universidad de Chile',
+          title: 'Ingeniería Comercial + Magíster en Gestión y Políticas Públicas',
+          year: 'Graduación MGPP: dic. 2023'
+        }
+      ],
+      memberships: [
+        { org: 'Women in Mining Chile — Socia WIM', role: '' },
+        { org: 'WIM 100 — Cuadro de Honor', role: '' },
+        { org: 'RIM Chile — Mentora', role: '' },
+        { org: 'LIQCAU — Embajadora', role: '' }
+      ],
+      aportacion: "Porque lidera inclusión en una de las mineras más grandes del mundo desde adentro —no desde el PowerPoint. Demostró con datos que llevar la participación femenina del 7% al 40% no solo es posible sino que reduce la rotación voluntaria, mejora la adaptabilidad de equipos y robustece la toma de decisiones. Si quieres ver cómo se mide de verdad la diversidad en la industria, escuchala."
     },
     {
       slug: 'varinka-farren',
