@@ -23,9 +23,12 @@ const MIME = {
 
 const DIRECT_FILES = new Set([
   'index.html',
-  'ranking-aporte-instituciones.html',
-  'reporte-aporte-instituciones.html',
-  'manual-marca.html',
+  'capitulos.html',
+  'personas.html',
+  'reportes.html',
+  'sobre.html',
+  'capitulo.html',
+  'persona.html',
   '404.html',
 ]);
 

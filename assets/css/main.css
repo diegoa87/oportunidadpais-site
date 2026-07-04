@@ -448,6 +448,19 @@
 }
 
 /* --------------------------------------------------------------------------
+   Mobile/desktop visibility
+   -------------------------------------------------------------------------- */
+@media (max-width: 920px) {
+  .eyebrow-mobile { display: inline-flex; }
+  .eyebrow-desktop { display: none; }
+  #hero-cells { display: none !important; }
+}
+@media (min-width: 921px) {
+  .eyebrow-mobile { display: none; }
+  .eyebrow-desktop { display: inline-flex; }
+}
+
+/* --------------------------------------------------------------------------
    Person card
    -------------------------------------------------------------------------- */
 
