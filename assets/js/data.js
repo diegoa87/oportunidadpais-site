@@ -78,8 +78,115 @@ const DATA = {
       tone: 3,
       photoUrl: 'fotos/jeannette-escudero.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/jeannette-escudero-vasquez',
-      gender: 'f',
-
+      story: {
+        intro: "Ingeniera Civil Industrial de la U. de Chile. Certificada en Marketing Digital por Columbia Business School. Gerente de Transformación Digital en BancoEstado y Gerenta General de la Asociación de la Industria Eléctrica-Electrónica (AIE). Hoy lidera Talento Digital para Chile, el programa público-privado que ha reconvertido a más de 13.000 personas en competencias digitales, ganó el Premio Nacional de Innovación Avonni 2023 y lanzó 15.000 becas en Inteligencia Artificial en mayo de 2026.",
+        sections: [
+          {
+            title: "Formación y fundamentos del liderazgo analítico",
+            paragraphs: [
+              "Jeannette Escudero Vásquez construyó su capacidad analítica desde la infancia, marcada por un interés temprano en las ciencias y las matemáticas. Esa vocación la llevó a graduarse como <strong>Ingeniera Civil Industrial</strong> por la <strong>Universidad de Chile</strong>, una formación que le gave diseño de procesos complejos, optimización operativa y gestión cuantitativa.",
+              "Para complementar su perfil técnico con competencias comerciales y estratégicas, cursó diversos diplomados en marketing y costos, y obteve una certificación en <strong>Marketing Digital por la Columbia University Business School</strong>. Esta combinación le permite abordar la tecnología no solo desde el desarrollo de sistemas, sino como un <strong>habilitador de modelos de negocio rentables y centrados en el usuario</strong>."
+            ]
+          },
+          {
+            title: "BancoEstado y la transformación digital bancaria",
+            paragraphs: [
+              "Con más de <strong>dos décadas de experiencia</strong> en el sector financiero, Jeannette alcanzó posiciones de alta dirección ejecutiva. Su rol más visible fue como <strong>Gerenta de Transformación Digital en BancoEstado</strong> entre 2018 y 2020, donde dirigió equipos multidisciplinarios enfocados en la creación de nuevos canales digitales y productos financieros.",
+              "Su gestión demostró una notable capacidad para la <strong>gestión del cambio y la integración tecnológica</strong> en una institución bancaria pública con millones de usuarios. Esta experiencia en el sector financiero la posicionó como una líder capaz de orquestar transformaciones a escala en organizaciones complejas."
+            ]
+          },
+          {
+            title: "Gerenta General de AIE y la articulación del ecosistema",
+            paragraphs: [
+              "Antes de asumir la dirección ejecutiva de Talento Digital para Chile, ocupó la <strong>Gerencia General de la Asociación de la Industria Eléctrica-Electrónica de Chile (AIE)</strong>. En este cargo consolidó su liderazgo en la articulación de la innovación dentro del ecosistema tecnológico nacional, promoviendo activamente el desarrollo industrial, la transferencia tecnológica y la innovación sectorial."
+            ]
+          },
+          {
+            title: "Talento Digital para Chile: el modelo público-privado",
+            paragraphs: [
+              "Como <strong>Directora Ejecutiva de Talento Digital para Chile</strong> —iniciativa diseñada por <strong>Fundación Chile y Fundación Kodea</strong>— Jeannette lidera el principal articulador para resolver el déficit de capital humano calificado en el sector tecnológico. El ecosistema integra las necesidades de la industria con la oferta de capacitación de agencias estatales como <strong>Sence</strong>, <strong>ChileValora</strong> y diversos ministerios, coordinando activamente con gremios como <strong>Sofofa</strong>, la <strong>OTIC Sofofa</strong> y la <strong>CPC</strong>.",
+              "Entre <strong>2019 y 2022</strong>, el programa capacitó a más de <strong>13.000 personas</strong> en perfiles tecnológicos de alta demanda. En <strong>2023</strong>, la campaña <strong>\"Lo que hace falta, lo tienes\"</strong> distribuyó <strong>5.500 becas</strong> de programación, diseño y emprendimiento digital en ocho regiones. El hito más reciente: en <strong>mayo de 2026</strong>, lanzamiento de <strong>15.000 becas</strong> enfocadas en habilidades digitales avanzadas e Inteligencia Artificial. El programa fue galardoado con el <strong>Premio Nacional de Innovación Avonni 2023</strong> y el <strong>Premio ColaboraX</strong>."
+            ]
+          },
+          {
+            title: "La pedagogía de bootcamps y la reconversión acelerada",
+            paragraphs: [
+              "El pilar metodológico de Jeannette se basa en el formato de <strong>bootcamps</strong>: ambientes de aprendizaje de alta intensidad e inmersión que simulan las condiciones y ritmos de trabajo de los entornos tecnológicos reales. Esta modalidad rompe con los esquemas de la educación técnica tradicional al priorizar la <strong>práctica sistemática y la adquisición acelerada de competencias duras y blandas</strong>: pensamiento crítico, agilidad de aprendizaje, autoestudio y trabajo colaborativo en equipos de desarrollo.",
+              "Su sistema de admisión resguada la calidad académica mediante exigentes filtros de selección: <strong>pruebas de lógica matemática</strong>, evaluaciones psicaborales para las rutas de programación, y tests de especialización técnica para los segmentos de diseño y TI especializada. Los programas se adaptan dinámicamente mediante el levantamiento de información del <strong>Pulso de Demanda de Empleos Digitales del Sence</strong>, garantizando pertinencia curricular. El programa <strong>\"Reinvéntate\"</strong> entregó <strong>2.075 becas gratuitas online</strong> en Ciencia y Análisis de Datos para desempleados y trabajadores independientes."
+            ]
+          },
+          {
+            title: "Mujeres X Talento Digital y la inclusión STEM",
+            paragraphs: [
+              "Jeannette lidera la iniciativa <strong>\"Mujeres X Talento Digital\"</strong>, un programa integral para guiar a mujeres egresadas —frecuentemente con roles simultáneos como madres, cuidadoras y jefas de hogar— a través de un esquema de <strong>mentorías corporativas</strong> impulsadas por profesionales sénior de empresas globales como <strong>IBM, Globant, Microsystem, Apiux, GI Group y Salesforce</strong>, además de la Fundación Woman Force IT.",
+              "Sus datos revelan que, si bien la matrícula femenina en carreras STEM subió un 16,8% hasta alcanzar el <strong>30,2% en 2024</strong>, Chile continúa rezagado ocupando el <strong>cuarto lugar más bajo de la OCDE</strong> en graduadas en estas especialidades. El <strong>36% de las personas egresadas de Talento Digital son mujeres</strong>, y Jeannette aspira a elevar esta cifra hacia la paridad del <strong>50%</strong> alineada con los Objetivos de Desarrollo Sostenible de la ONU para 2030. También lidera el estudio de brecha salarial y visibilidad, con la entrega del <strong>Premio Ada Byron</strong> en conjunto con la Universidad de Deusto —ganadora 2022: Barbarita Lara."
+            ]
+          },
+          {
+            title: "Fintech, IA y la descentralización territorial",
+            paragraphs: [
+              "En colaboración con la asociación gremial <strong>FinteChile</strong>, Jeannette impulsó el diseño de un mapa técnico para anticipar los perfiles laborales que definirán el futuro de la industria Fintech en Chile, dotando a las empresas de servicios financieros de capacidades críticas ante las regulaciones de la <strong>Ley Fintech</strong> y el auge del <strong>Open Finance</strong>.",
+              "Su visión de desarrollo rechaza la concentración tecnológica exclusiva en Santiago. Por ello, defiende la <strong>descentralización de la formación</strong> mediante cooperación activa con gobiernos regionales, <strong>Sercotec</strong> y los ministerios de <strong>Minería y Energía</strong>, levantando perfiles laborales pertinentes a las industrias estratégicas de cada territorio. Ha participado en mesas técnicas sobre capital humano en <strong>Antofagasta</strong> y lanzamientos de innovación en <strong>Coquimbo y Valparaíso</strong>, facilitando que el talento regional adquiera las competencias requeridas por la digitalización de sectores productivos tradicionales."
+            ]
+          }
+        ]
+      },
+      logros: [
+        {
+          year: 'Mayo 2026',
+          title: '15.000 becas en IA y habilidades digitales avanzadas',
+          detail: 'Hito histórico de Talento Digital para Chile: el mayor despliegue de formación en Inteligencia Artificial a nivel nacional.'
+        },
+        {
+          year: '2023',
+          title: 'Premio Nacional de Innovación Avonni + Premio ColaboraX',
+          detail: 'Reconocimiento a la efectividad del modelo público-privado de reconversión laboral en tecnología.'
+        },
+        {
+          year: '2019-2022',
+          title: '13.000+ personas capacitadas en perfiles digitales',
+          detail: 'Programa de becas de especialización digital ejecutado en coordinación con Sence, ChileValora y ministerios.'
+        },
+        {
+          year: '2023',
+          title: '"Lo que hace falta, lo tienes" — 5.500 becas regionales',
+          detail: 'Campaña de difusión territorial en 8 regiones de Chile: programación, diseño y emprendimiento digital.'
+        },
+        {
+          year: '2018-2020',
+          title: 'Gerenta de Transformación Digital — BancoEstado',
+          detail: 'Liderazgo de equipos multidisciplinarios para nuevos canales digitales y productos financieros en la banca pública.'
+        },
+        {
+          year: '36%→50%',
+          title: 'Mujeres X Talento Digital: hacia la paridad STEM',
+          detail: '36% de egresadas women (ODS 2030 meta: 50%). Mentorías corporativas con IBM, Globant, Salesforce, GI Group y otros.'
+        }
+      ],
+      formacion: [
+        {
+          institution: 'Universidad de Chile',
+          title: 'Ingeniera Civil Industrial',
+          year: 'Título de pregrado'
+        },
+        {
+          institution: 'Columbia University Business School',
+          title: 'Certificación en Marketing Digital',
+          year: 'Postgrado ejecutivo'
+        },
+        {
+          institution: 'Múltiples',
+          title: 'Diplomados en Marketing y Costos',
+          year: 'Formación complementaria'
+        }
+      ],
+      memberships: [
+        { org: 'Talento Digital para Chile — Directora Ejecutiva', role: '' },
+        { org: 'FinteChile — Colaboración en mapa técnico Fintech', role: '' },
+        { org: 'Premio Ada Byron — Liderazgo (Universidad de Deusto)', role: '' },
+        { org: 'ODS 2030 Chile — Impulso a paridad de género en STEM', role: '' }
+      ],
+      aportacion: "Porque lidera el programa que ha demostrado que la reconversión laboral a escala funciona. No desde la teoría: más de 13.000 personas capacitados, Avonni en la pared, y 15.000 becas de IA en 2026. Si te interesa entender cómo se cierra la brecha de capital humano digital con datos y no con slogans, esta conversación va al grano."
     },
     {
       slug: 'francisco-mardones',
