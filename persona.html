@@ -180,14 +180,17 @@
               </div>
             </div>
             <div class="teaser-video-wrap" id="teaser-video-wrap">
-              <video
-                class="teaser-video"
-                id="teaser-video"
-                src="${c.teaserVideo}"
-                playsinline
-                preload="none"
-                aria-label="Preview de ${p.name}">
-              </video>
+              <iframe
+                id="teaser-iframe"
+                class="teaser-iframe"
+                src=""
+                data-src="${c.teaserVideo}"
+                title="Preview de ${p.name}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
               <div class="teaser-overlay-dark" id="teaser-overlay-dark"></div>
               <button class="teaser-play-circle" id="teaser-play-circle" aria-label="Reproducir">
                 <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -361,10 +364,14 @@
     if (c && c.teaserVideo) {
         const playBtn = document.getElementById('teaser-play-circle');
         const wrap = document.getElementById('teaser-video-wrap');
-        const video = document.getElementById('teaser-video');
-        if (playBtn && wrap && video) {
+        const iframe = document.getElementById('teaser-iframe');
+        if (playBtn && wrap && iframe) {
           playBtn.addEventListener('click', function() {
-            video.play().catch(function() {});
+            // Cargar el iframe solo cuando presionan play
+            const src = iframe.getAttribute('data-src');
+            if (src) {
+              iframe.src = src;
+            }
             wrap.classList.add('playing');
           });
           // Scroll reveal
