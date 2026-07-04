@@ -901,8 +901,124 @@ const DATA = {
       tone: 2,
       photoUrl: 'fotos/cristobal-aravena.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/cristóbal-aravena-concha-16a82b117',
-      gender: 'm',
-
+      story: {
+        intro: "Líder de Propósito y Relacionamiento en Abastible. Arquitecto del programa de Pago a 7 Días que ha inyectado liquidez a más de 3.000 pymes chilenas con un cumplimiento del 95%. Lideró la creación de la Corporación Grande PYME con la UC, impulsa el Fondo Pyme² con Fundación Chile y firmó acuerdos con CONUPIA y ASECH para masificar el cambio en la cadena de pagos del país.",
+        sections: [
+          {
+            title: "El perfil multidisciplinario: del arte a los negocios",
+            paragraphs: [
+              "Nacido en Santiago en 1990, Cristóbal Aravena Concha desarrolló una sensibilidad única por el entorno al cursar estudios de <strong>arquitectura y arte en la Universidad Finis Terrae</strong>. En el circuito artístico chileno es reconocido como un joven creador que utiliza la pintura no como un mero ejercicio estético, sino como una <strong>herramienta analítica</strong>.",
+              "Su metodología se basa en la \"observación y recolección\": antes de intervenir un lienzo, \"divaga, mira y recoge\", ordenando los elementos que constituyen el ecosistema para apropiarse de ellos intelectualmente. Ha declarado que \"la pintura es el medio de apropiación a través del cual hago mío lo que veo\". Esa misma mecánica —observar un entorno caótico, identificar variables clave, recolectar datos y reordenarlos en una estructura coherente— es la que aplica hoy en el mundo de los negocios. Cuando analiza el ecosistema pyme chileno, no ve un problema abstracto sino un \"paisaje\" que debe comprenderse en su totalidad antes de ser intervenido."
+            ]
+          },
+          {
+            title: "Deportista de élite y rigor clínico",
+            paragraphs: [
+              "Los registros de la <strong>Pontificia Universidad Católica de Chile (UC)</strong> destacan a Aravena como un <strong>deportista de excelencia</strong>, premiado en ceremonias oficiales por su participación en la disciplina de vóleibol masculino universitario. El deporte de alto rendimiento forja habilidades intrínsecas de liderazgo, trabajo en equipo y tolerancia a la frustración —competencias críticas para gestionar el cambio cultural dentro de una corporación energética de gran envergadura."
+            ]
+          },
+          {
+            title: "El diagnóstico: la trampa de productividad de las pymes",
+            paragraphs: [
+              "Su gestión en Abastible parte de un diagnóstico implacable basado en datos del <strong>Informe Estadístico 2024</strong> del Observatorio Grande Pyme. Las cifras revelan una contracción dramática: las pymes representan el <strong>98% del tejido empresarial</strong> del país y generan <strong>2 de cada 3 empleos</strong>, pero su participación en las ventas cayó del <strong>25% en 1999 al 12,5% actual</strong> —una contracción del 50% en 20 años.",
+              "Su axioma central: \"<strong>Las empresas no quiebran por venta, quiebran por caja</strong>\". La falta de liquidez impide la compra de inventario, detiene la contratación de personal, retrasa la adopción de tecnologías y empuja a la empresa hacia la insolvencia. Si Chile quiere ser un país desarrollado, no puede ignorar al motor que genera dos tercios del empleo."
+            ]
+          },
+          {
+            title: "Pago a 7 Días: la reingeniería que cambió la industria",
+            paragraphs: [
+              "La intervención quirúrgica más impactante de Aravena en Abastible fue el programa <strong>\"Pago a 7 Días\"</strong>: un compromiso oficial de pagar a proveedores pymes en un máximo de 7 días desde la emisión de la factura. El promedio real de ejecución es de <strong>5,1 días</strong>.",
+              "Implementar esto \"requirió una convicción interna immense\" —no solo tener el dinero disponible, sino desmantelar y reconstruir los procedimientos burocráticos establecidos. Fue necesario alterar los métodos de pago, modificar el software de contabilidad, reestructurar las fechas de liquidación y sincronizar los departamentos de facturación, adquisiciones y tesorería. Para asegurar que la política sobreviviera a los cambios de administración, se redactó y formalizó un <strong>\"Manual de Pago Abastible\"</strong> disponible públicamente, garantizando transparencia absoluta. El resultado: <strong>más de 3.000 pymes</strong> beneficiaries con un <strong>95% de cumplimiento sostenido por más de dos años</strong>."
+            ]
+          },
+          {
+            title: "Los tres pilares del propósito corporativo",
+            paragraphs: [
+              "La matriz estratégica de Aravena opera bajo tres pilares de gobernanza que guían a la empresa matriz y generan ondas expansivas en toda la economía:",
+              "<strong>1. Liderar con el Ejemplo:</strong> asumir los costos operacionales e internos de ser el primero en cambiar las reglas del juego comercial, particularmente en las políticas de abastecimiento y pago.",
+              "<strong>2. Crear Conciencia:</strong> desarrollar inteligencia de mercado, levantar datos y visibilizar la realidad oculta de los emprendedores, eliminando la asimetría de información que sufren las políticas públicas. Esto se materializa en la <strong>Corporación Grande PYME</strong>, un think tank aliado con el <strong>Centro UC de Encuestas y Estudios Longitudinales</strong>.",
+              "<strong>3. Inspirar a Colaborar:</strong> ninguna empresa, por grande que sea, puede resolver un problema macroeconómico por sí sola. Este pilar exige la articulación de alianzas estratégicas con la academia, el gobierno, los gremios y otras corporaciones para multiplicar el impacto."
+            ]
+          },
+          {
+            title: "Compromiso PYME Primero y la cadena de valor",
+            paragraphs: [
+              "Inyectar liquidez resuelve la mitad de la ecuación. La otra mitad es asegurar el acceso a los mercados. Aravena ha estado directamente involucrado en el fortalecimiento del <strong>\"Compromiso PYME Primero\"</strong>: un instrumento normativo interno que obliga a la compañía a otorgar prioridad a las micro, pequeñas y medianas empresas en las compras de productos y en la contratación de servicios operacionales.",
+              "Al preferir a un emprendedor local frente a un conglomerado internacional, la corporación asume un rol de agente de desarrollo. Por ejemplo, confía la operación técnica en terreno a una <strong>red de más de 100 instaladores pymes acreditados</strong>. Estas políticas obligan a la pyme a profesionalizarse para cumplir con los estándares de la corporación energética —provocando una transferencia de know-how que eleva irrevocablemente la calidad y la productividad del servicio a nivel nacional."
+            ]
+          },
+          {
+            title: "CNC, Ley Karin y la formalización como motor",
+            paragraphs: [
+              "A mediados de 2024, Aravena orquestó una alianza de gran magnitud con la <strong>Cámara Nacional de Comercio, Servicios y Turismo de Chile (CNC)</strong> para entregar asesorías jurídicas y laborales gratuitas a las pymes proveedoras a través del programa <strong>\"Mi Pyme Cumple\"</strong>.",
+              "El primer gran hito fue una campaña masiva de capacitación sobre la implementación de la <strong>Ley Karin</strong> (contra el acoso, la violencia y la discriminación en el trabajo). Las pymes fueron instruidas no solo en el checklist legal, sino en la comprensión profunda de que la violencia en el trabajo es \"una amenaza para la igualdad de oportunidades e incompatible con el trabajo decente\". La lógica: un entorno laboral seguro y formalizado retiene el talento humano capacitado, reduce los costos hundidos por rotación y absentismo, y hace a la pyme un socio comercial mucho más confiable y productivo para la cadena de valor."
+            ]
+          },
+          {
+            title: "Corporación Grande PYME, Fondo Pyme² y el ecosistema",
+            paragraphs: [
+              "Aravena impulsó la creación de la <strong>Corporación Grande PYME</strong> —una entidad independiente aliada con la UC— que funciona como think tank del sector productivo. Su función: producir la inteligencia de datos que el sector público y privado necesitan para legislar sobre las pymes con evidencia, no con preconceptos.",
+              "En materia de innovación, estableció un puente con <strong>Fundación Chile y ChileGlobal Ventures</strong> para gestar el <strong>\"Fondo Pyme²\"</strong>: capital semilla y apoyo estructural a startups seleccionadas que desarrollan soluciones tecnológicas diseñadas específicamente para resolver los problemas transversales de los emprendedores chilenos. A finales de 2025, también forjó una alianza con el <strong>PTI Turismo Rural Valle del Huasco</strong> para capacitaciones gratuitas a pymes locales, atacando las asimetrías de productividad entre la Región Metropolitana y las zonas rurales del país."
+            ]
+          }
+        ]
+      },
+      logros: [
+        {
+          year: '2022-presente',
+          title: 'Pago a 7 Días: 3.000+ pymes, 95% cumplimiento, promedio 5,1 días',
+          detail: 'Reingeniería total de procesos de pago en Abastible: manual formalizado, software reconfigurado, sincronización entre facturación, adquisiciones y tesorería.'
+        },
+        {
+          year: '2024',
+          title: 'Corporación Grande PYME — Think tank aliado con la UC',
+          detail: 'Producción de inteligencia de datos (Informe Estadístico 2024) para fundamentar políticas de fomento productivo con evidencia empírica.'
+        },
+        {
+          year: '2024',
+          title: 'Alianza CNC — "Mi Pyme Cumple" y Ley Karin',
+          detail: 'Capacitación jurídica y laboral gratuita a miles de pymes proveedoras: formalización como motor de productividad.'
+        },
+        {
+          year: '2025',
+          title: 'Acuerdos CONUPIA y ASECH — Masificar el Pago a 7 Días',
+          detail: 'Puesta a disposición de la experiencia de Abastible para presionar a otras instituciones a seguir la práctica y transformar la matriz productiva chilena.'
+        },
+        {
+          year: '2025',
+          title: 'Fondo Pyme² con Fundación Chile — Capital semilla para startups',
+          detail: 'Financiamiento a startups que desarrollan soluciones tecnológicas para los problemas transversales de las pymes chilenas.'
+        },
+        {
+          year: '2025',
+          title: 'PTI Turismo Rural Valle del Huasco — Descentralización',
+          detail: 'Capacitaciones gratuitas a pymes locales en zonas rurales: atacando la asimetría de productividad territorial.'
+        }
+      ],
+      formacion: [
+        {
+          institution: 'Universidad Finis Terrae',
+          title: 'Arquitectura y Artes Visuales',
+          year: 'Pregrado'
+        },
+        {
+          institution: 'Pontificia Universidad Católica de Chile (UC)',
+          title: 'Deportista de élite — Vóleibol masculino',
+          year: 'Trayectoria universitaria'
+        },
+        {
+          institution: 'Formación autodidacta',
+          title: 'Pensamiento analítico: observación, recolección y estructuración',
+          year: 'Metodología propia'
+        }
+      ],
+      memberships: [
+        { org: 'Abastible — Líder de Propósito y Relacionamiento', role: '' },
+        { org: 'Corporación Grande PYME — Cofundador', role: '' },
+        { org: 'Fondo Pyme² / Fundación Chile — Nexo principal', role: '' },
+        { org: 'Podcast "El Club de la Sustentabilidad" — Invitado recurrente', role: '' }
+      ],
+      aportacion: "Porque pasó de pintar paisajes a diagnosticar el paisajismo económico del país. Si quieres entender por qué las empresas no quiebran por ventas sino por caja, y cómo una sola decisión de pago puede cambiar la productividad de miles de empresas, esta conversación va directo al grano — sin discursos, con datos."
     },
     {
       slug: 'diego-arias',
