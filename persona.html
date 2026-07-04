@@ -191,8 +191,8 @@
                 <iframe
                   id="teaser-iframe"
                   class="teaser-iframe"
-                  src=""
-                  data-src="${c.teaserVideo}"
+                  src="about:blank"
+                  data-src="${c.teaserVideo.replace(/&/g, '&amp;')}"
                   title="Preview de ${p.name}"
                   frameborder="0"
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
