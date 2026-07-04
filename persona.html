@@ -180,6 +180,17 @@
               </div>
             </div>
             <div class="teaser-video-wrap" id="teaser-video-wrap">
+              ${c.teaserVideo.startsWith('http') ? `
+              <iframe
+                id="teaser-iframe"
+                class="teaser-iframe"
+                src="${c.teaserVideo}"
+                title="Preview de ${p.name}"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerpolicy="strict-origin-when-cross-origin">
+              </iframe>
+              ` : `
               <video
                 class="teaser-iframe"
                 id="teaser-video"
@@ -191,6 +202,7 @@
                 controls
                 title="Preview de ${p.name}">
               </video>
+              `}
             </div>
             <div class="teaser-footer">
               <span class="teaser-footer-duration">${c.duration}</span>
