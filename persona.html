@@ -151,17 +151,19 @@
           <div class="teaser-video-container" id="teaser-video-container">
             <img
               class="teaser-thumb"
-              src="https://img.youtube.com/vi/${c.teaserId || c.youtubeUrl.split('v=')[1] || ''}/maxresdefault.jpg"
+              id="teaser-thumb"
+              src="https://img.youtube.com/vi/${c.teaserId || c.youtubeUrl.split('v=')[1] || ''}/hqdefault.jpg"
               alt="Preview de ${p.name}"
-              onerror="this.src='https://img.youtube.com/vi/${c.teaserId || c.youtubeUrl.split('v=')[1] || ''}/hqdefault.jpg'"
             />
             <div class="teaser-overlay"></div>
-            <button class="teaser-play-btn" id="teaser-play-btn" aria-label="Reproducir preview">
-              <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="30" cy="30" r="29" stroke="white" stroke-width="1.5" stroke-opacity="0.6"/>
-                <polygon points="24,18 48,30 24,42" fill="white"/>
-              </svg>
-            </button>
+            <div class="teaser-play-ring">
+              <button class="teaser-play-btn" id="teaser-play-btn" aria-label="Reproducir preview">
+                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="30" cy="30" r="29" fill="rgba(14,26,54,0.75)" stroke="white" stroke-width="1.5"/>
+                  <polygon points="24,18 48,30 24,42" fill="white"/>
+                </svg>
+              </button>
+            </div>
             <div class="teaser-meta">
               <span class="teaser-label">Preview · Cap ${String(c.num).padStart(2,'0')}</span>
               <span class="teaser-duration">${c.duration}</span>
@@ -359,6 +361,14 @@
         const container = document.getElementById('teaser-video-container');
         const iframe = document.getElementById('teaser-iframe');
         const heroWrap = document.getElementById('teaser-hero');
+        const thumb = document.getElementById('teaser-thumb');
+        // Fallback: si thumbnail no carga, mostrar gradiente y forzar visibilidad
+        if (thumb) {
+          thumb.addEventListener('error', function() {
+            container.style.background = 'linear-gradient(135deg, #0a1a3a 0%, #1a3a6a 50%, #0a1a3a 100%)';
+            thumb.style.display = 'none';
+          });
+        }
         if (playBtn && container && iframe) {
           playBtn.addEventListener('click', function() {
             // Build autoplay URL

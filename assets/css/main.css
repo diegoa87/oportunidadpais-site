@@ -1763,6 +1763,8 @@
   overflow: hidden;
   background: #0a0a14;
   cursor: pointer;
+  /* Fallback si thumbnail no carga */
+  background: linear-gradient(135deg, #0a1a3a 0%, #1a3a6a 50%, #0a1a3a 100%);
 }
 /* Thumbnail con zoom lento — efecto parallax */
 .teaser-thumb {
@@ -1798,47 +1800,56 @@
 .teaser-video-container:hover .teaser-thumb {
   transform: scale(1.04);
 }
-/* Botón de play — centrado */
-.teaser-play-btn {
+/* Ring exterior del play button — siempre visible y pulsante */
+.teaser-play-ring {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
+  pointer-events: none;
+}
+/* Pulso en el anillo — animation que llama la atención */
+.teaser-play-ring::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.5);
+  animation: playPulse 2s ease-out infinite;
+}
+@keyframes playPulse {
+  0%   { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+  100% { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
+}
+/* Botón de play — grande para móvil, clickeable */
+.teaser-play-btn {
+  position: relative;
+  z-index: 3;
   background: transparent;
   border: none;
   padding: 0;
   cursor: pointer;
-  width: 80px;
-  height: 80px;
-  z-index: 2;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  width: 88px;
+  height: 88px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 .teaser-play-btn svg {
   width: 100%;
   height: 100%;
-  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.4));
-  transition: transform 0.3s, filter 0.3s;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.5));
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-/* Pulso en el círculo del play */
-.teaser-play-btn::before {
-  content: '';
-  position: absolute;
-  inset: -8px;
-  border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.35);
-  animation: playPulse 2.4s ease-out infinite;
-  pointer-events: none;
-}
-@keyframes playPulse {
-  0%   { transform: scale(1); opacity: 0.7; }
-  100% { transform: scale(1.55); opacity: 0; }
-}
-/* Hover: agranda play button */
-.teaser-video-container:hover .teaser-play-btn {
-  transform: translate(-50%, -50%) scale(1.12);
-}
-.teaser-video-container:hover .teaser-play-btn svg {
-  filter: drop-shadow(0 8px 28px rgba(0,0,0,0.5));
+/* Hover/tap: agranda play button */
+.teaser-video-container:hover .teaser-play-btn svg,
+.teaser-play-btn:active svg {
+  transform: scale(1.12);
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.6));
 }
 /* Meta inferior */
 .teaser-meta {
@@ -1857,12 +1868,12 @@
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.8);
 }
 .teaser-duration {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.55);
   letter-spacing: 0.05em;
 }
 /* Iframe del video (oculto hasta que clickean play) */
@@ -1872,6 +1883,26 @@
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* Móvil — mayor área táctil y play más grande */
+@media (max-width: 640px) {
+  .teaser-play-btn {
+    width: 100px;
+    height: 100px;
+  }
+  .teaser-play-ring::before {
+    width: 112px;
+    height: 112px;
+  }
+  .teaser-meta {
+    bottom: 16px;
+    padding: 0 16px;
+  }
+  .teaser-label,
+  .teaser-duration {
+    font-size: 10px;
+  }
 }
 
 /* Historia de vida */
