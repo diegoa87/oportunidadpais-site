@@ -61,8 +61,115 @@ const DATA = {
       tone: 2,
       photoUrl: 'fotos/justo-vargas.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/justomiguel',
-      gender: 'm',
-
+      story: {
+        intro: "Ingeniero en Sistemas de Información de la UTN Argentina. MBA por la Universidad de Chile. Vicepresidente de Tecnología y Tech Partner de Globant para Chile y Uruguay, gestionando más de 2.400 ingenieros. Cofundador y Chief Knowledge Officer de Unlearni SpA, donde lidera el desarrollo de PatagonIA. Docente en CIISA, la UAI y The Valley. Apodado 'El Lobo' en la industria tech.",
+        sections: [
+          {
+            title: "Orígenes en el nordeste argentino",
+            paragraphs: [
+              "Nacido en la provincia de Formosa, en el norte de Argentina, Vargas desarrolló su etapa formativa en un entorno geográfico y socioeconómico distante de los principales núcleos metropolitanos del país. Esta procedencia influyó de manera determinante en su posterior enfoque comunitario y descentralizado de la tecnología, defendiendo la democratización del acceso al conocimiento técnico en regiones tradicionalmente rezagadas.",
+              "Cursó la carrera de <strong>Ingeniería en Sistemas de Información</strong> en la <strong>Universidad Tecnológica Nacional (UTN)</strong>, específicamente en la Facultad Regional Resistencia, provincia de Chaco, egresando entre <strong>2006 y 2013</strong>. Durante este período asumió un marcado compromiso institucional: fue <strong>Secretario General del Centro de Estudiantes</strong>, participó como candidato a la Vicepresidencia entre 2007 y 2008, y captain el equipo de programación competitiva para el prestigious campeonato internacional <strong>ACM ICPC</strong>."
+            ]
+          },
+          {
+            title: "Líder estudiantil y diffusor del software libre",
+            paragraphs: [
+              "En paralelo, lideró agrupaciones de difusión tecnológica orientadas al software libre, destacando su rol al frente del grupo <strong>OSUM (Open Source University Meetup)</strong>, respaldado por <strong>Oracle-Sun</strong>, y su participación en NesLa, un colectivo independiente de promoción del código abierto. En reconocimiento a sus sobresalientes méritos académicos y liderazgo juvenil, la Consultora Efecto 10 —con la homologación de APTRA— le otorgar en 2008 el galarón <strong>\"Premios Sol de Formosa\"</strong> en la categoría \"Juventud Protagonista\".",
+              "Sus primeros desarrollos de software interactivo móvil recibieron distinciones en el <strong>Congreso de Estudiantes de Ingeniería en Sistemas</strong> de la provincia de Córdoba."
+            ]
+          },
+          {
+            title: "Globant: de desarrollador a VP de Tecnología",
+            paragraphs: [
+              "Su vinculación con Globant se extiende por más de <strong>quince años</strong>, constituyendo un testimonio directo del programa interno de crecimiento \"Once a Glober, Always a Glober\". Ingresó en <strong>septiembre de 2010</strong> como desarrollador de ActionScript nivel semi-sénior en la sede de Resistencia. Su versatilidad técnica propició su rápida incorporación a los <strong>Globant Labs</strong>, donde colideró proyectos de alto perfil internacional: el desarrollo del videojuego multijugador masivo (MMO) para la franquicia cinematográfica <strong>\"How to Train Your Dragon\"</strong> de DreamWorks en 2010, y el soporte de producción de sistemas críticos para <strong>Southwest Airlines</strong> en 2012.",
+              "En <strong>2013</strong> se trasladó a Santiago de Chile, colaboró de manera decisiva en el escalamiento operativo y la estructuración del centro de entregas en Santiago, sentando las bases para el crecimiento exponencial de la firma en el mercado chileno. Entre <strong>2014 y 2016</strong>, compaginó estas asignaciones con responsabilidades como <strong>Java Tech Manager y Technical Interviewer</strong> en la sede de origen, acumulando <strong>tres distinciones corporativas</strong> por su desempeño en reclutamiento y evaluación de talentos. En <strong>noviembre de 2020</strong> asumió como <strong>Tech Partner para Chile y Uruguay</strong>, ascendiendo posteriormente a <strong>Vicepresidente de Tecnología</strong>. Bajo su liderazgo, Globant Chile y Uruguay fue galarada con el <strong>primer puesto en innovación en tecnología</strong> por la <strong>ESE Business School</strong> en los rankings de 2021 y 2022."
+            ]
+          },
+          {
+            title: "La CTO de Appedidos y los proyectos móviles",
+            paragraphs: [
+              "Entre <strong>2014 y enero de 2016</strong>, asumió interinamente la <strong>Dirección de Tecnología (CTO)</strong> de la startup <strong>Appedidos Inc.</strong>, aportando dirección técnica y estratégica en fases de crecimiento acelerado de la plataforma. Durante esta década de consolidación técnica, también lideró múltiples arquitecturas móviles y de soporte de software: <strong>Stellar Mobile</strong> (Action Script sobre Android y Adobe AIR), <strong>SWIPPER</strong> (Java y Android nativo), <strong>SWAT</strong> (mantenimiento de plataformas Java J2EE con Groovy), y <strong>Trucometer</strong> (Java ME para móviles de primera generación)."
+            ]
+          },
+          {
+            title: "La vocación docente: de la academia al mundo",
+            paragraphs: [
+              "Su vocación por la transferencia de conocimientos se manifestó tempranamente. Entre <strong>2007 y 2010</strong> impartió cursos elementales de idioma inglés para jóvenes y adultos dentro de la propia UTN, estructurando sus clases a partir de metodologías del libro <em>Cutting Edge Elementary</em>. Simultáneamente, entre <strong>2008 y 2011</strong>, ejerció como docente de apoyo en las asignaturas de Algoritmos y Estructuras de Datos en el instituto \"La Academia\", orientando a estudiantes de primer año de ingeniería para mitigar las tasas de deserción inicial. Entre <strong>2011 y 2017</strong>, dictó la especialización de Diseño y Desarrollo de Videojuegos en la UTN Resistencia.",
+              "En Chile, ha sido docente en la <strong>Universidad Adolfo Ibáñez</strong> (pregrado y postgrado: cátedras de Paradigmas de Programación y módulos avanzados de e-commerce, entre 2022 y 2024), en <strong>The Valley Digital Business School</strong> (programa ejecutivo en marketing digital, 2020-2024), y en el <strong>Instituto Profesional CIISA</strong> (taller de programación web HTML/CSS/JS, desde abril de 2024, enseñando a más de cien alumnos)."
+            ]
+          },
+          {
+            title: "Unlearni y PatagonIA: EdTech con inteligencia artificial",
+            paragraphs: [
+              "En <strong>mayo de 2024</strong>, Vargas cofunda <strong>Unlearni SpA</strong> —startup de educación tecnológica— exercising como <strong>Chief Knowledge Officer (CKO)</strong>, diseñando los itinerarios de aprendizaje y la arquitectura pedagógica orientada a los negocios digitales de aplicación inmediata. La compañía se erige bajo la premisa del <em>lifelong learning</em> y el concepto de \"<em>unlearning</em>\": desafiar a las organizaciones y profesionales a cuestionar y depurar metodologías obsoletas para asimilar nuevos paradigmas tecnológicos sin las ataduras cognitivas de las prácticas del pasado.",
+              "La principal disrupción técnica patentada es <strong>\"PatagonIA\"</strong>, un motor de inteligencia artificial diseñado específicamente para optimizar y personalizar la creación de contenidos curriculares dentro de las empresas, midiendo de manera cuantitativa el retorno de inversión y el impacto real de las capacitaciones sobre la productividad operativa. El directorio formal de cinco miembros incluye a figuras como <strong>Pere Palés</strong> (CEO), y un consejo asesor con <strong>Arantxa Sasiambarrena</strong> (ex-CEO de The Valley), <strong>Conzuelo Pi</strong> (CEO de Who&Co), <strong>Denisse Goldfarb</strong> (CEO de The People Future) y <strong>Eduardo Pooley</strong> (Socio Director de Grupo Simma)."
+            ]
+          },
+          {
+            title: "Vibecoding, IA y el ecosistema personal de productividad",
+            paragraphs: [
+              "Su contribución más reciente al debate técnico se centra en la tensión entre el denominado <strong>vibecoding</strong> y la ingeniería clásica. Vargas advierte que la tendencia donde desarrolladores sin bases formales rigurosas confían ciegamente la generación de software a instrucciones de lenguaje natural procesadas por modelos generativos crea una nueva brecha digital que compromete la calidad y mantenibilidad a largo plazo de los sistemas corporativos. Aboga por un retorno a la ingeniería rigurosa, donde el profesional asuma el rol de director estratégico de la IA.",
+              "Su ecosistema personal de IA incluye <strong>Cursor</strong> (editor de código inteligente), <strong>Gemini</strong> (modelo de lenguaje principal de consulta, elegido por su profundidad lógica), <strong>NotebookLM</strong> (investigación avanzada), <strong>Monologue</strong> (transcriptor de voz para reflexiones técnicas), <strong>Dia</strong> (navegador con IA), <strong>Waldo</strong> (inteligencia de mercado) y <strong>Cuptions/Clipto</strong> (edición audiovisual automatizada)."
+            ]
+          }
+        ]
+      },
+      logros: [
+        {
+          year: '2024-presente',
+          title: 'Cofundador y CKO — Unlearni SpA',
+          detail: 'PatagonIA: motor de IA personalizado para contenidos curriculares empresariales. Directivo de 5 miembros, Advisory Board con ex-CEOs de The Valley, Who&Co y The People Future.'
+        },
+        {
+          year: '2020-presente',
+          title: 'VP Tecnología y Tech Partner — Globant Chile y Uruguay',
+          detail: 'Gestión estratégica de más de 2.400 ingenieros. Doble premio de innovación ESE Business School 2021-2022. Crecimiento exponencial del centro de entregas en Santiago.'
+        },
+        {
+          year: '2021-2024',
+          title: 'Profesor — Universidad Adolfo Ibáñez (Pregrado y Postgrado)',
+          detail: 'Cátedras de Paradigmas de Programación y módulos avanzados de e-commerce. Formación de la próxima generación de ingenieros.'
+        },
+        {
+          year: '2014-2016',
+          title: 'CTO — Appedidos Inc.',
+          detail: 'Dirección técnica y estratégica en fases de crecimiento acelerado de la startup.'
+        },
+        {
+          year: '2014-2016',
+          title: 'Java Tech Manager — Globant Resistencia',
+          detail: 'Tres distinciones corporativas anuales por reclutamiento técnico y liderazgo de proyectos ágiles.'
+        },
+        {
+          year: '2008',
+          title: 'Premio Sol de Formosa — Juventud Protagonista',
+          detail: 'Galardón de la Consultora Efecto 10 con homologación APTRA por méritos académicos y liderazgo juvenil.'
+        }
+      ],
+      formacion: [
+        {
+          institution: 'Universidad Tecnológica Nacional (UTN) — Resistencia, Chaco',
+          title: 'Ingeniería en Sistemas de Información',
+          year: 'Egreso 2006-2013'
+        },
+        {
+          institution: 'Universidad de Chile — Facultad de Economía y Negocios',
+          title: 'Máster en Administración de Empresas (MBA)',
+          year: '2019-2021'
+        },
+        {
+          institution: 'Universidad Tecnológica Nacional',
+          title: 'Docencia en Diseño y Desarrollo de Videojuegos',
+          year: '2011-2017'
+        }
+      ],
+      memberships: [
+        { org: 'Globant — VP Tecnología / Tech Partner Chile y Uruguay', role: '' },
+        { org: 'Unlearni SpA — Cofundador y CKO', role: '' },
+        { org: 'Globant Labs — Ex líder técnico', role: '' },
+        { org: 'ACM ICPC — Capitán equipo de programación competitiva', role: '' }
+      ],
+      aportacion: "Porque lleva 15 años creciendo dentro de Globant —de desarrollador a VP— y simultáneamente cofunda EdTechs y enseña en las mejores universidades. Si te interesa entender cómo funciona la IA en la empresa real, cómo se gestiona un equipo de 2.400 ingenieros, y por qué el 'unlearning' es la competencia más importante del siglo, esta conversación no tiene desperdicio."
     },
     {
       slug: 'jeannette-escudero',
