@@ -420,7 +420,16 @@
   opacity: 0.6;
 }
 @media (max-width: 920px) {
-  .hero-visual { max-width: 480px; margin-inline: auto; }
+  .hero-visual {
+    max-width: 100%;
+    margin-inline: auto;
+    aspect-ratio: unset;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+  .hero-visual .cell { display: none; }
+  .hero-visual .cell.feat { display: flex; width: 100%; border-radius: var(--r-lg); }
 }
 
 /* Cell positions - distributed asymmetrically */
