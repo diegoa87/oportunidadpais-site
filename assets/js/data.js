@@ -60,6 +60,7 @@ const DATA = {
       chapterNum: 1,
       tone: 2,
       photoUrl: 'fotos/justo-vargas.jpg',
+      teaserVideo: 'videos/teaser-justo-480.mp4',
       linkedinUrl: 'https://www.linkedin.com/in/justomiguel',
       story: {
         intro: "Ingeniero en Sistemas de Información de la UTN Argentina. MBA por la Universidad de Chile. Vicepresidente de Tecnología y Tech Partner de Globant para Chile y Uruguay, gestionando más de 2.400 ingenieros. Cofundador y Chief Knowledge Officer de Unlearni SpA, donde lidera el desarrollo de PatagonIA. Docente en CIISA, la UAI y The Valley. Apodado 'El Lobo' en la industria tech.",
@@ -184,6 +185,7 @@ const DATA = {
       chapterNum: 2,
       tone: 3,
       photoUrl: 'fotos/jeannette-escudero.jpg',
+      teaserVideo: 'videos/teaser-jeannette-480.mp4',
       linkedinUrl: 'https://www.linkedin.com/in/jeannette-escudero-vasquez',
       story: {
         intro: "Ingeniera Civil Industrial de la U. de Chile. Certificada en Marketing Digital por Columbia Business School. Gerente de Transformación Digital en BancoEstado y Gerenta General de la Asociación de la Industria Eléctrica-Electrónica (AIE). Hoy lidera Talento Digital para Chile, el programa público-privado que ha reconvertido a más de 13.000 personas en competencias digitales, ganó el Premio Nacional de Innovación Avonni 2023 y lanzó 15.000 becas en Inteligencia Artificial en mayo de 2026.",
@@ -308,6 +310,7 @@ const DATA = {
       chapterNum: 3,
       tone: 4,
       photoUrl: 'fotos/francisco-mardones.jpg',
+      teaserVideo: 'videos/teaser-francisco-480.mp4',
       linkedinUrl: 'https://www.linkedin.com/in/fmardones',
       story: {
         intro: "Ingeniero Civil Electrónico de la U. de Concepción. Managing Director en DynWrk y Director Ejecutivo Interino de Chiletec. Entre 2019 y 2023 construyó el hub de ingeniería de Evernote en Chile: de 5 a 85 profesionales. Lideró Industrias Inteligentes en Corfo y hoy impulsa la Ley de Economía Digital para llevar las exportaciones tecnológicas de Chile a US$15.000 millones en la próxima década.",
@@ -433,6 +436,7 @@ const DATA = {
       chapterNum: 4,
       tone: 1,
       photoUrl: 'fotos/luz-maria-garcia.jpg',
+      teaserVideo: 'videos/teaser-luzmaria-480.mp4',
       linkedinUrl: 'https://www.linkedin.com/in/luz-maría-garcía-contreras-085024a4',
       story: {
         intro: "Gerenta General de ACTI Chile desde septiembre de 2023. De la编码 editorial y el diseño digital (1997-1998) a la gerencia del gremio tecnológico más antiguo de Chile. Residió y trabajó en Colombia y Argentina, especializándose en IA en la UBA. Lideró Sé Santiago Smart City (CORFO) y coordina la Agenda 2026-2030 del sector tech ante el Estado chileno bajo la Ley de Lobby.",
@@ -548,6 +552,7 @@ const DATA = {
       chapterNum: 5,
       tone: 2,
       photoUrl: 'fotos/elizabeth-cameron.jpg',
+      teaserVideo: 'videos/teaser-elizabeth-480.mp4',
       linkedinUrl: 'https://www.linkedin.com/in/elizabeth-cameron-ovando-15baba35',
       story: {
         intro: "Ingeniera Comercial y Magíster en Gestión y Políticas Públicas por la Universidad de Chile. De la gestión territorial en Fundación Integra (Antofagasta) a Especialista en Comunidades en Minera Escondida/BHP. Hoy es Directora de Asuntos Corporativos de BHP Chile, liderando la viabilidad social y regulatoria de Cerro Colorado. Llevó la participación femenina de Escondida del 7% al 40%.",
@@ -657,6 +662,7 @@ const DATA = {
       chapterNum: 6,
       tone: 3,
       photoUrl: 'fotos/varinka-farren.jpg',
+      teaserVideo: 'videos/teaser-varinka-480.mp4',
       linkedinUrl: 'https://www.linkedin.com/in/vfarren',
       story: {
         intro: "Ingeniera Comercial de la Universidad Católica del Norte. MVP en banca PYME en Banco Santander (2002-2003). Traffic Area Manager en MSC USA (2005-2008), operando en Nueva York, Houston y Charleston. Desde 2018 es CEO de Hub APTA, donde ha transferido más de 60 tecnologías científicas chilenas al mercado. Premiada por Her Global Impact 2026.",
@@ -879,6 +885,7 @@ const DATA = {
       tone: 1,
       photoUrl: 'fotos/carolina-garcia.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/carolinagarciaberguecio',
+      teaserVideo: 'videos/teaser-carolina-480.mp4',
       story: {
         intro: "Ingeniera Civil Industrial de la Universidad de Chile. Hijo de Fernando García, presidente del Colegio de Ingenieros y ejecutivo de IBM. Deportista de alta competencia: campeona nacional de windsurf a los 15 años. Tetraplejia desde 2006 tras un accidente de tránsito. Hoy lidera inclusión en BHP y fundo Comunidad Inclusiva.",
         sections: [
@@ -1007,6 +1014,7 @@ const DATA = {
       chapterNum: 9,
       tone: 2,
       photoUrl: 'fotos/cristobal-aravena.jpg',
+      teaserVideo: 'videos/teaser-cristobal-480.mp4',
       linkedinUrl: 'https://www.linkedin.com/in/cristóbal-aravena-concha-16a82b117',
       story: {
         intro: "Líder de Propósito y Relacionamiento en Abastible. Arquitecto del programa de Pago a 7 Días que ha inyectado liquidez a más de 3.000 pymes chilenas con un cumplimiento del 95%. Lideró la creación de la Corporación Grande PYME con la UC, impulsa el Fondo Pyme² con Fundación Chile y firmó acuerdos con CONUPIA y ASECH para masificar el cambio en la cadena de pagos del país.",
@@ -1156,6 +1164,7 @@ const DATA = {
       chapterNum: 10,
       tone: 3,
       photoUrl: 'fotos/cecilia-melendez.jpg',
+      teaserVideo: 'videos/teaser-cecilia-480.mp4',
       linkedinUrl: 'https://www.linkedin.com/in/ceciliamelendezretamales',
       teaserVideo: 'videos/teaser-cecilia-480.mp4',
       story: {
@@ -1283,6 +1292,7 @@ const DATA = {
       tone: 2,
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=QoWBA62rA1w',
+      teaserId: 'QoWBA62rA1w',
       shareText: 'Las PYME no quiebran por ventas: quiebran por caja. Cap 9 de Oportunidad País.'
     },
     {
@@ -1309,6 +1319,7 @@ const DATA = {
       tone: 2,
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=OVEHWEDahA0',
+      teaserId: 'OVEHWEDahA0',
       teaserVideo: 'videos/camila-vimeo-final.mp4',
       shareText: 'IA y educación financiera: ¿oportunidad o riesgo? Cap 7 de Oportunidad País.'
     },
@@ -1322,6 +1333,7 @@ const DATA = {
       tone: 3,
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=w6zXPnNhyzI',
+      teaserId: 'w6zXPnNhyzI',
       shareText: 'Ciencia chilena al mercado con Varinka Farren, Hub APTA. Cap 6 de Oportunidad País.'
     },
     {
@@ -1334,6 +1346,7 @@ const DATA = {
       tone: 1,
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=C-upc2eDoh0',
+      teaserId: 'C-upc2eDoh0',
       shareText: 'Chile necesita mirar al norte: la visión de Elizabeth Cameron de BHP. Cap 5 de Oportunidad País.'
     },
     {
@@ -1346,6 +1359,7 @@ const DATA = {
       tone: 4,
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=NlY7gtO4Ut4',
+      teaserId: 'NlY7gtO4Ut4',
       shareText: 'Qué debe hacer Chile, según la Gerente General ACTI. Cap 4 de Oportunidad País.'
     },
     {
@@ -1358,6 +1372,7 @@ const DATA = {
       tone: 2,
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=-jepRqm50g4',
+      teaserId: '-jepRqm50g4',
       shareText: 'Chile debe potenciar tech. Cap 3 de Oportunidad País.'
     },
     {
@@ -1370,6 +1385,7 @@ const DATA = {
       tone: 3,
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=GbMk7umUWig',
+      teaserId: 'GbMk7umUWig',
       shareText: 'IA: ¿Amenaza u oportunidad? Cap 2 de Oportunidad País.'
     },
     {
@@ -1382,6 +1398,7 @@ const DATA = {
       tone: 1,
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=aYCqxOal1uk',
+      teaserId: 'aYCqxOal1uk',
       shareText: '¿Ganas más usando IA en tu empresa? Cap 1 de Oportunidad País.'
     }
   ]
