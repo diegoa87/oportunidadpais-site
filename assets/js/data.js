@@ -1156,7 +1156,7 @@ const DATA = {
       chapterNum: 10,
       tone: 3,
       photoUrl: 'fotos/cecilia-melendez.jpg',
-      linkedinUrl: '',
+      linkedinUrl: 'https://www.linkedin.com/in/ceciliamelendezretamales',
       teaserVideo: 'videos/teaser-cecilia-480.mp4',
       story: {
         intro: "Arquitecta y planificadora urbana oriunda de la Región de Antofagasta. Gerente de Proyecto de IMPULSA 4.0, la iniciativa público-privada más ambiciosa de Chile para resolver la escasez de capital humano calificado en la minería. Casi dos décadas conectando la demanda tecnológica de la gran minería con la oferta formativa del territorio. Reconocida con el Premio Mujer & Minería 2026 en la Categoría Académica/Investigadora.",
