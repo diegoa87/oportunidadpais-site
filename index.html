@@ -47,7 +47,7 @@
         "author": { "@id": "https://oportunidadpais.cl/sobre.html#person" },
         "publisher": { "@id": "https://oportunidadpais.cl/#organization" },
         "webFeed": { "@type": "DataFeed", "url": "https://oportunidadpais.cl/feed.xml", "encodingType": "application/rss+xml" },
-        "numberOfEpisodes": 12,
+        "numberOfEpisodes": 10,
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.8",
@@ -141,7 +141,7 @@
         "name": "¿Cuántos episodios tiene Oportunidad País?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Oportunidad País tiene 12 capítulos publicados (a julio 2026), con invitados de sectores como tecnología, minería, inclusión, políticas públicas y educación. Se publican nuevos episodios periódicamente.",
+          "text": "Oportunidad País tiene 10 capítulos publicados (a julio 2026), con invitados de sectores como tecnología, minería, inclusión, políticas públicas y educación. Se publican nuevos episodios periódicamente.",
           "url": "https://oportunidadpais.cl/capitulos.html"
         }
       },
@@ -194,7 +194,7 @@
           <h1 class="hero-title">Las personas<br>que <em>mueven</em><br>a Chile.</h1>
           <p class="hero-lead">El podcast que visibiliza a quienes —desde empresas, instituciones y territorios— están aportando de verdad a la productividad del país.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary btn-lg" href="capitulo.html?num=9">▶ Escuchar último capítulo</a>
+            <a class="btn btn-primary btn-lg" href="capitulo.html?num=10">▶ Escuchar último capítulo</a>
             <a class="btn btn-ghost btn-lg" href="personas.html">Conocer a las personas →</a>
           </div>
           <div class="hero-stats">
@@ -215,13 +215,13 @@
         </div>
         <div class="hero-visual" aria-hidden="true">
           <!-- Featured episode (rendered dynamically from data.js) -->
-          <a id="hero-ep" class="cell feat c2" href="capitulo.html?num=9">
+          <a id="hero-ep" class="cell feat c2" href="capitulo.html?num=10">
             <div style="display: flex; justify-content: space-between; align-items: start;">
               <div class="play"></div>
-              <div id="hero-ep-meta" style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.16em; opacity: 0.6;">CAP 9 · 52 MIN</div>
+              <div id="hero-ep-meta" style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.16em; opacity: 0.6;">CAP 10 · 50 MIN</div>
             </div>
             <div>
-              <div id="hero-ep-title" class="ep-title">Cristóbal Aravena: las PYME no quiebran por ventas, quiebran por caja.</div>
+              <div id="hero-ep-title" class="ep-title">Cecilia Meléndez: El futuro minero se juega en los liceos.</div>
               <div class="ep-meta">
                 <span>Último episodio</span>
                 <span>Reciente</span>
@@ -450,7 +450,7 @@
   <script>
     // Render featured personas (últimas 8 publicadas, desc por capítulo)
     const featuredPersonas = [...DATA.personas]
-      .filter(p => p.chapterNum >= 1 && p.chapterNum <= 8)
+      .filter(p => p.chapterNum >= 1 && p.chapterNum <= 9)
       .sort((a, b) => b.chapterNum - a.chapterNum)
       .slice(0, 8);
     document.querySelector('[data-grid="featured-personas"]').innerHTML =
@@ -482,7 +482,7 @@
 
     // Hero person cells: 8 personas más recientes con foto real
     const heroPersonas = [...DATA.personas]
-      .filter(p => p.chapterNum >= 1 && p.chapterNum <= 8)
+      .filter(p => p.chapterNum >= 1 && p.chapterNum <= 9)
       .sort((a, b) => b.chapterNum - a.chapterNum)
       .slice(0, 8);
     const heroCellsContainer = document.getElementById('hero-cells');

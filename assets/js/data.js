@@ -1143,10 +1143,136 @@ const DATA = {
       linkedinUrl: 'https://www.linkedin.com/in/diegoaarias',
       gender: 'm',
     },
+    {
+      slug: 'cecilia-melendez',
+      name: 'Cecilia Meléndez Retamales',
+      role: 'Gerenta de Proyecto IMPULSA 4.0',
+      org: 'Alianza CCM-Eleva / Corporación Clúster Minero Región de Antofagasta',
+      industry: 'mineria',
+      city: 'Antofagasta',
+      bio: 'Arquitecta y planificadora urbana oriunda de Antofagasta. 18-20 años de experiencia en el ecosistema minero regional. Lidera IMPULSA 4.0, el proyecto que busca formar a los perfiles tecnológicos que la minería del futuro necesita.',
+      keyIdea: 'La minería 4.0 necesita 2.500 perfiles que hoy no existen.',
+      whyKnow: 'Porque lidera el proyecto que va a definir la empleabilidad del norte de Chile en la próxima década. Si te interesa cómo la tecnología está reconfigurando el mercado laboral, y por qué la formación técnica es la clave para que Antofagasta no se quede fuera de la revolución minera, esta conversación es directa al grano.',
+      chapterNum: 10,
+      tone: 3,
+      photoUrl: 'fotos/cecilia-melendez.jpg',
+      linkedinUrl: '',
+      teaserVideo: 'videos/teaser-cecilia-480.mp4',
+      story: {
+        intro: "Arquitecta y planificadora urbana oriunda de la Región de Antofagasta. Gerente de Proyecto de IMPULSA 4.0, la iniciativa público-privada más ambiciosa de Chile para resolver la escasez de capital humano calificado en la minería. Casi dos décadas conectando la demanda tecnológica de la gran minería con la oferta formativa del territorio. Reconocida con el Premio Mujer & Minería 2026 en la Categoría Académica/Investigadora.",
+        sections: [
+          {
+            title: "De la arquitectura al diseño del talento regional",
+            paragraphs: [
+              "La trayectoria profesional de Cecilia Meléndez se origina en las disciplinas de la arquitectura, la planificación urbana y la gestión integral del territorio. Durante aproximadamente dos décadas, desarrolló y lideró un portafolio extenso de proyectos y estudios técnicos en la Región de Antofagasta, trabajando tanto en el sector público como en el corporativo privado.",
+              "Esa base disciplinar le otorga una capacidad singular: visualizar los problemas industriales no como deficiencias aisladas, sino como fenómenos territoriales, espaciales y demográficos profundamente interconectados. Es una '<strong>arquitecta del capital humano</strong>' que diseña soluciones utilizando metodologías derivadas del urbanismo."
+            ]
+          },
+          {
+            title: "IMPULSA 4.0: la respuesta colaborativa a la crisis del talento",
+            paragraphs: [
+              "El proyecto IMPULSA 4.0 se estructura como una iniciativa colaborativa sin precedentes en Chile, ejecutada bajo la arquitectura institucional de la Corporación Clúster Minero Región de Antofagasta (CCMRA) y la Alianza CCM-Eleva, respaldada por las cuatro mineras más grandes del país: <strong>Antofagasta Minerals (AMSA), BHP, Codelco y SQM</strong>.",
+              "Su propósito es potenciar holísticamente el ecosistema formativo-laboral de Antofagasta, para que la región no solo extraiga cobre y litio, sino que también forme a las personas que operarán la minería del futuro. Tras trece meses de pre-diseño, consulta y alineación con las cuatro corporaciones, el proyecto se lanzó formalmente en marzo de 2023."
+            ]
+          },
+          {
+            title: "Los 28 Perfiles 4.0 y la brecha de talento",
+            paragraphs: [
+              "IMPULSA 4.0 ha identificado <strong>28 perfiles tecnológicos prioritarios</strong> que la minería del futuro demandará y que hoy tienen una oferta educativa casi nula en la región. De los 12.500 nuevos trabajadores que Antofagasta necesitará reclutar hasta 2032, al menos <strong>2.500 corresponderán estrictamente a roles de frontera tecnológica</strong>.",
+              "Estos perfiles se han agrupado en clústeres especializados: <strong>Mantenimiento 4.0</strong> (mecatrónica), <strong>Operación 4.0</strong> (gestión de CIOs y gemelos digitales), <strong>Conectividad e IoT</strong> (ciberseguridad industrial), <strong>Talentos Digitales Puros</strong> (científicos de datos, desarrolladores de IA), <strong>Talentos Verdes</strong> (gestión hídrica y huella de carbono), e <strong>Instructores 4.0</strong>."
+            ]
+          },
+          {
+            title: "La reconversión: 100 perfiles tradicionales bajo amenaza",
+            paragraphs: [
+              "Más allá de los nuevos empleos, el impacto más desafiante de la Industria 4.0 se verá en la reconversión de los trabajadores ya insertos en la operación. Se estima que al menos <strong>cien perfiles tradicionales requerirán transformaciones formativas profundas</strong> para adaptarse a los entornos altamente tecnificados.",
+              "La visión de Meléndez establece que las competencias puramente técnicas derivadas del uso de software o maquinaria específica son efímeras. La verdadera resiliencia del trabajador dependerá de habilidades transversales: pensamiento crítico, resolución de problemas complejos, aprendizaje activo continuo y '<strong>conocimiento situacional</strong>' —la capacidad de anticipar cascadas de fallas en sistemas multivariables."
+            ]
+          },
+          {
+            title: "Premio Mujer & Minería 2026 y la inclusión femenina",
+            paragraphs: [
+              "En la cena anual <strong>Mujer & Minería 2026</strong> —evento que congregó a más de seiscientas altas autoridades y líderes empresariales del país— Cecilia Meléndez fue reconocida como ganadora en la Categoría Académica/Investigadora. El premio reconoció su incansable contribución teórica y práctica en materia de equidad de género y la promoción del liderazgo femenino en STEM.",
+              "Su enfoque trasciende los paliativos cosméticos: aboga por la intervención pedagógica en etapas tempranas (4° a 8° básico), formando docentes en un enfoque no sexista, involucrando a las familias en la orientación vocacional y visibilizando modelos corporativos femeninos a seguir. Su tesis: el cambio cultural sostenible debe gestarse donde los estereotipos se cristalizan, no cuando ya están consolidados."
+            ]
+          }
+        ]
+      },
+      logros: [
+        {
+          year: '2026',
+          title: 'Premio Mujer & Minería 2026 — Categoría Académica/Investigadora',
+          detail: 'Reconocimiento en el evento anual de la Asociación de Industriales de Antofagasta (AIA) por su aporte a la equidad de género y la formación de capital humano femenino en STEM.'
+        },
+        {
+          year: '2023-presente',
+          title: 'Gerenta de Proyecto — IMPULSA 4.0',
+          detail: 'Lidera la iniciativa público-privada más ambiciosa de Chile para resolver la escasez de talento calificado en la minería: AMSA, BHP, Codelco y SQM como socias estratégicas.'
+        },
+        {
+          year: '2023-presente',
+          title: 'Gerenta — Alianza CCM-Eleva',
+          detail: 'Articula al Consejo Minero y Fundación Chile para desplegar soluciones formativas a escala en la macrozona norte.'
+        },
+        {
+          year: '2023-presente',
+          title: 'Gerenta — Corporación Clúster Minero Región de Antofagasta (CCMRA)',
+          detail: 'Dirige la entidad que articula el ecosistema productivo, formativo y comunitario de la región minera más importante de Chile.'
+        },
+        {
+          year: '2023-presente',
+          title: '28 Perfiles 4.0 identificados para la minería del futuro',
+          detail: 'Diagnóstico de 2.500 roles de frontera tecnológica con oferta educativa casi nula en Antofagasta. Impulso a la creación de mallas curriculares modulares.'
+        },
+        {
+          year: '2022',
+          title: '"Tecnologías 4.0, impacto en la empleabilidad minera"',
+          detail: 'Columna de opinión en CCM-Eleva: 34.009 nuevos trabajadores requeridos en Chile (2023-2032), 12.500 solo en Antofagasta. Base analítica del proyecto IMPULSA 4.0.'
+        }
+      ],
+      formacion: [
+        {
+          institution: 'Universidad / Región de Antofagasta',
+          title: 'Arquitectura y Planificación Urbana',
+          year: 'Formación de pregrado'
+        },
+        {
+          institution: 'Región de Antofagasta',
+          title: 'Gestión Integral del Territorio',
+          year: 'Experiencia profesional 18-20 años'
+        },
+        {
+          institution: 'Corporación Clúster Minero Región de Antofagasta',
+          title: 'Gerencia de Proyecto — IMPULSA 4.0',
+          year: '2023-presente'
+        }
+      ],
+      memberships: [
+        { org: 'Corporación Clúster Minero Región de Antofagasta (CCMRA) — Gerenta', role: '' },
+        { org: 'Alianza CCM-Eleva (Consejo Minero + Fundación Chile) — Gerenta de Proyecto', role: '' },
+        { org: 'Women in Mining (WIM) Chile — Aliada estratégica', role: '' },
+        { org: 'IMPULSA 4.0 — Liderazgo: AMSA, BHP, Codelco y SQM como socias', role: '' }
+      ],
+      aportacion: "Porque lidera la iniciativa que va a determinar qué pasa con el empleo en el norte de Chile cuando la minería se automatice. Si te interesa cómo 28 perfiles tecnológicos nuevos, 12.500 nuevos puestos y una brecha de género en STEM se convierten en un plan de acción territorial real —no en un discurso—, esta conversación es directa al grano."
+    },
   ],
 
   // Capítulos — con links reales a YouTube y Spotify, y shareText para wzp
   capitulos: [
+    {
+      num: 10,
+      title: "El futuro minero se juega en los liceos.",
+      personaSlug: 'cecilia-melendez',
+      industry: 'mineria',
+      duration: '50 min',
+      date: '2026-07-09',
+      tone: 3,
+      spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
+      youtubeUrl: 'https://www.youtube.com/watch?v=BKxGTMOCBVE',
+      teaserId: 'BKxGTMOCBVE',
+      teaserVideo: 'videos/teaser-cecilia-480.mp4',
+      shareText: 'La minería 4.0 necesita 2.500 perfiles que hoy no existen. Cap 10 de Oportunidad País.'
+    },
     {
       num: 9,
       title: "Las PYME no quiebran por ventas: quiebran por caja.",
