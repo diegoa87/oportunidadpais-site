@@ -1293,6 +1293,7 @@ const DATA = {
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=QoWBA62rA1w',
       teaserId: 'QoWBA62rA1w',
+      teaserVideo: 'videos/teaser-cristobal-480.mp4',
       shareText: 'Las PYME no quiebran por ventas: quiebran por caja. Cap 9 de Oportunidad País.'
     },
     {
@@ -1334,6 +1335,7 @@ const DATA = {
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=w6zXPnNhyzI',
       teaserId: 'w6zXPnNhyzI',
+      teaserVideo: 'videos/teaser-varinka-480.mp4',
       shareText: 'Ciencia chilena al mercado con Varinka Farren, Hub APTA. Cap 6 de Oportunidad País.'
     },
     {
@@ -1347,6 +1349,7 @@ const DATA = {
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=C-upc2eDoh0',
       teaserId: 'C-upc2eDoh0',
+      teaserVideo: 'videos/teaser-elizabeth-480.mp4',
       shareText: 'Chile necesita mirar al norte: la visión de Elizabeth Cameron de BHP. Cap 5 de Oportunidad País.'
     },
     {
@@ -1360,6 +1363,7 @@ const DATA = {
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=NlY7gtO4Ut4',
       teaserId: 'NlY7gtO4Ut4',
+      teaserVideo: 'videos/teaser-luzmaria-480.mp4',
       shareText: 'Qué debe hacer Chile, según la Gerente General ACTI. Cap 4 de Oportunidad País.'
     },
     {
@@ -1373,6 +1377,7 @@ const DATA = {
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=-jepRqm50g4',
       teaserId: '-jepRqm50g4',
+      teaserVideo: 'videos/teaser-francisco-480.mp4',
       shareText: 'Chile debe potenciar tech. Cap 3 de Oportunidad País.'
     },
     {
@@ -1386,6 +1391,7 @@ const DATA = {
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=GbMk7umUWig',
       teaserId: 'GbMk7umUWig',
+      teaserVideo: 'videos/teaser-jeannette-480.mp4',
       shareText: 'IA: ¿Amenaza u oportunidad? Cap 2 de Oportunidad País.'
     },
     {
@@ -1399,6 +1405,7 @@ const DATA = {
       spotifyUrl: 'https://open.spotify.com/show/2nGzjakwUUOf7AAqui0TnQ',
       youtubeUrl: 'https://www.youtube.com/watch?v=aYCqxOal1uk',
       teaserId: 'aYCqxOal1uk',
+      teaserVideo: 'videos/teaser-justo-480.mp4',
       shareText: '¿Ganas más usando IA en tu empresa? Cap 1 de Oportunidad País.'
     }
   ]
