@@ -545,7 +545,7 @@ const DATA = {
       role: 'Principal Asuntos Corporativos Cerro Colorado',
       org: 'BHP',
       industry: 'mineria',
-      city: 'Antofagasta',
+      city: 'Iquique',
       bio: 'Magíster en Gestión de Políticas Públicas. Lidera asuntos corporativos en Cerro Colorado, una operación de BHP en el norte de Chile. Socia WIM, Mentora RIM, Embajadora LIQCAU, reconocida entre las 100 mujeres inspiradoras de la minería chilena.',
       keyIdea: 'Chile necesita mirar al norte: la visión de Elizabeth Cameron de BHP.',
       whyKnow: 'Porque lidera inclusión en una de las mineras más grandes del mundo desde adentro —no desde el PowerPoint. Es evidencia empírica de que la diversidad funciona, no solo un argumento. Si quieres ver cómo se mide de verdad, escuchala.',
