@@ -779,10 +779,10 @@ const DATA = {
       slug: 'camila-forno',
       name: 'Camila Forno',
       role: 'Subgerente de Sostenibilidad Corporativo',
-      org: 'Falabella Financiero',
+      org: 'Banco Falabella',
       industry: 'inclusion',
       city: 'Santiago',
-      bio: 'Lidera sostenibilidad corporativa en Banco Falabella. Conduce el Movimiento Gennials, con foco en educación financiera, desarrollo local, diversidad e inclusión. Premiada con el sello Cuantificación de Huella Chile.',
+      bio: 'Lidera sostenibilidad corporativa en Banco Falabella. Su foco está en educación financiera, desarrollo local, diversidad e inclusión y medioambientales.',
       keyIdea: 'IA y educación financiera: ¿oportunidad o riesgo?',
       whyKnow: 'Porque lidera la agenda de educación financiera digital de una de las empresas más grandes de Chile, con foco en grupos vulnerables. Si quieres entender cómo se construye inclusión financiera real desde una empresa privada, esta conversación es para ti.',
       chapterNum: 7,
@@ -790,19 +790,20 @@ const DATA = {
       photoUrl: 'fotos/camila-forno.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/camila-forno-2510a14a',
       story: {
-        intro: "Subgerente Corporativa de Sostenibilidad en Falabella Financiero. Ingeniera Comercial de la Universidad de Valparaíso. Lidera educación financiera, diversidad e inclusión con un enfoque basado en evidencia y alianzas intersectoriales. Reconocida como Top Voice de LinkedIn en Sostenibilidad ASG para Chile.",
+        intro: "Subgerente Corporativa de Sostenibilidad en Banco Falabella. Ingeniera Comercial con mención en Administración de Empresas de la Pontificia Universidad Católica de Chile. Complementó su formación con un Minor en Psicología Social y un Diplomado en Responsabilidad Social Empresarial y Marketing Social. Lidera la agenda ESG con enfoque en educación financiera, inclusión y sostenibilidad ambiental. Reconocida como Top Voice de LinkedIn en Sostenibilidad ASG para Chile.",
         sections: [
           {
             title: "Orígenes y formación",
             paragraphs: [
-              "Originaria de la Región de Valparaíso. Estudió <strong>Ingeniería Comercial</strong> en la Universidad de Valparaíso, titulándose a fines de la década de 2000. Esa base disciplinaria le dio el herramental cuantitativo y estratégico que hoy aplica a la sostenibilidad corporativa.",
-              "En su juventud fue campeona de cueca universitaria (2009), lo que refleja una faceta cultural y comunitaria que anticipó su لاحق trajetória profesional enfocada en el bienestar colectivo."
+              "Camila Forno es <strong>Ingeniera Comercial con mención en Administración de Empresas</strong> de la Pontificia Universidad Católica de Chile (<strong>2005–2009</strong>). Complementó su formación de pregrado con un <strong>Minor en Psicología Social</strong>, lo que le permitió desarrollar una comprensión más profunda del comportamiento humano y las dinámicas organizacionales.",
+              "Comenzó su especialización en sostenibilidad y gestión del impacto social a través de un <strong>Diplomado en Responsabilidad Social Empresarial y Marketing Social</strong>, también en la Pontificia Universidad Católica de Chile, fortaleciendo sus conocimientos en sostenibilidad corporativa, creación de valor compartido y relacionamiento con grupos de interés. <a href=\"https://www.linkedin.com/in/camila-forno-2510a14a\" target=\"_blank\" rel=\"noopener\">[LinkedIn]</a>",
+              "Además, ha complementado su formación con estudios especializados en sostenibilidad corporativa, derechos humanos, normativa NIIF S1 y S2, y asuntos públicos, fortaleciendo su capacidad para integrar criterios ESG y tendencias regulatorias en la estrategia empresarial."
             ]
           },
           {
             title: "De Responsabilidad Social a Sostenibilidad Estratégica",
             paragraphs: [
-              "En <strong>2017</strong> assumió como <strong>Jefa Corporativa de Responsabilidad Social</strong> de Falabella Financiero, en una época en que la industria bancaria operaba bajo el marco clásico de la RSE: vinculación comunitaria, donación y voluntariado corporativo.",
+              "En <strong>2016</strong> assumió como <strong>Jefa Corporativa de Responsabilidad Social</strong> de Falabella Financiero, en una época en que la industria bancaria operaba bajo el marco clásico de la RSE: vinculación comunitaria, donación y voluntariado corporativo.",
               "A medida que el mercado de capitales global empezó a exigir mayor rendición de cuentas y los marcos normativos internacionales —como los lineamientos del <strong>Global Reporting Initiative (GRI)</strong>— adquirieron carácter vinculante, la organización evolucionó. Para <strong>2020</strong>, el cargo se expandió formalmente a <strong>Subgerencia Corporativa de Sostenibilidad</strong> con alcance regional en Chile, Perú, Colombia y la empresa conjunta en México.",
               "Esa transición nominal encapsula un giro estratégico profundo: el abandono de la filantropía como centro de gravedad en favor de la integración sistemática de variables ambientales y sociales en el núcleo del negocio de originación de crédito y medios de pago."
             ]
@@ -810,9 +811,9 @@ const DATA = {
           {
             title: "La Radiografía UC que cambió todo",
             paragraphs: [
-              "El hito analítico más trascendental de su gestión fue la alianza investigativa de casi tres años con el <strong>Centro de Políticas Públicas de la Pontificia Universidad Católica de Chile (PUC)</strong>. El estudio resultante, \"Radiografía de la Educación e Inclusión Financiera en Chile\", utilizó bases de datos levantadas durante 2024 y published entre 2025 y 2026.",
-              "Los hallazgos fueron devastadores: el ciudadano chileno se autoevalúa con un <strong>3.0 sobre 5</strong> en conocimientos financieros, pero su dominio real mide apenas <strong>1.6 sobre 5</strong>. Solo el <strong>30%</strong> responde correctamente tres preguntas económicas basales. Apenas el <strong>20%</strong> comprende cómo opera una tasa de interés. La planificación presupuestaria familiar es inexistente para más de la mitad de los hogares. Únicamente el <strong>34%</strong> de la población declara poder cubrir sus gastos sin dificultad.",
-              "Estos datos forzaron una redefinición completa de la política de riesgo crediticio y los modelos de vinculación comunitaria del banco."
+              "El hito analítico más trascendental de su gestión fue la alianza investigativa de casi tres años con el <strong>Centro de Políticas Públicas de la Pontificia Universidad Católica de Chile (PUC)</strong>. El estudio resultante, \"Radiografía de la Educación e Inclusión Financiera en Chile\", con una muestra de 1500 personas y que venía a actualizar un índice 10 años después.",
+              "Los hallazgos fueron alarmantes: el ciudadano chileno se autoevalúa con un <strong>3.0 sobre 5</strong> en conocimientos financieros, pero su dominio real mide apenas <strong>1.6 sobre 5</strong>. Solo el <strong>30%</strong> responde correctamente tres preguntas económicas basales. Apenas el <strong>20%</strong> comprende cómo opera una tasa de interés. La planificación presupuestaria familiar es inexistente para más de la mitad de los hogares. Únicamente el <strong>34%</strong> de la población declara poder cubrir sus gastos sin dificultad.",
+              "Estos datos direccionaron la estrategia de sostenibilidad del Banco Falabella para continuar el foco en mejorar el aprendizaje a través de la experiencia personal y hacerse cargo de los grupos más vulnerables, como mujeres, jóvenes y personas mayores."
             ]
           },
           {
@@ -859,9 +860,19 @@ const DATA = {
       ],
       formacion: [
         {
-          institution: 'Universidad de Valparaíso',
-          title: 'Ingeniería Comercial',
-          year: '~2009'
+          institution: 'Pontificia Universidad Católica de Chile',
+          title: 'Ingeniería Comercial con mención en Administración de Empresas',
+          year: '2005–2009'
+        },
+        {
+          institution: 'Pontificia Universidad Católica de Chile',
+          title: 'Minor en Psicología Social',
+          year: '2005–2009'
+        },
+        {
+          institution: 'Pontificia Universidad Católica de Chile',
+          title: 'Diplomado en Responsabilidad Social Empresarial y Marketing Social',
+          year: 'Postgrado'
         }
       ],
       memberships: [
