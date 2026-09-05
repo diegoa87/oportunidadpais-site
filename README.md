@@ -231,3 +231,6 @@ python3 -m http.server 8000
 - **Reportes ESG:** nueva página con roadmap, metodología y CTA para sugerir empresas.
 - **Personas con fotos:** Pravatar como placeholder, fácil de reemplazar con URLs reales.
 - **Capítulos con wzp share:** cada uno tiene su `shareText` + URL dinámica para compartir.Sat Jul  4 02:20:56 UTC 2026
+
+
+<!-- Security scan triggered at 2026-09-05 08:08:51 -->
