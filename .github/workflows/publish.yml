@@ -13,6 +13,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Build a public-only asset bundle
+        run: python3 scripts/build_static.py
       - name: Publish Cloudflare Worker and static assets
         env:
           CI: '1'
