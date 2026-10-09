@@ -30,3 +30,9 @@ if routes is not None:
 scripts = get(f"/accounts/{ACCOUNT}/workers/scripts")
 if scripts is not None:
     print("worker_names", [s.get("id") for s in scripts if "oportunidad" in s.get("id", "").lower()])
+domains = get(f"/accounts/{ACCOUNT}/workers/domains")
+if domains is not None:
+    print("worker_domains", [(d.get("hostname"), d.get("service"), d.get("environment")) for d in domains if "oportunidadpais.cl" in d.get("hostname", "")])
+records = get(f"/zones/{ZONE}/dns_records?type=A&name=oportunidadpais.cl")
+if records is not None:
+    print("dns_a", [(r.get("name"), r.get("content"), r.get("proxied")) for r in records])
