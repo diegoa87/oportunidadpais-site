@@ -13,6 +13,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Inspect current hostname routing (read only)
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_AUTH_EMAIL }}
+          CLOUDFLARE_API_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
+        run: python3 scripts/inspect_routing.py
       - name: Build a public-only asset bundle
         run: python3 scripts/build_static.py
       - name: Publish Cloudflare Worker and static assets
