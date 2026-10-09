@@ -108,6 +108,16 @@ export default {
       const url = new URL(request.url);
       const pathname = url.pathname;
 
+      // Direct-link resource. Kept out of navigation and sitemap; not access control.
+      if (pathname === '/herramientas/oportunidades-sostenibilidad' || pathname === '/herramientas/oportunidades-sostenibilidad/') {
+        const resource = await serveAsset(env, new Request(url.origin + '/herramientas/oportunidades-sostenibilidad/index.html'));
+        if (!resource || !resource.ok) return new Response('Not Found', { status: 404 });
+        const headers = new Headers(resource.headers);
+        headers.set('Content-Type', 'text/html; charset=utf-8');
+        headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
+        return new Response(resource.body, { status: 200, headers });
+      }
+
       // SPA: serve index.html for all non-file routes
       if (isSpaPath(pathname)) {
         const assetResp = await serveAsset(env, new Request(url.origin + '/index.html'));
