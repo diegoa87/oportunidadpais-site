@@ -2,6 +2,7 @@
 import json
 import os
 import subprocess
+import time
 
 BASE = "https://api.cloudflare.com/client/v4"
 ZONE = "9416c421d3b93f331115f7e0d4ae70b2"
@@ -40,6 +41,11 @@ if not matched:
     print("Created the path-specific route.")
 else:
     print("The path-specific route was already present.")
-verified = api("GET", path)
-assert any(r.get("pattern") == PATTERN and r.get("script") == SCRIPT for r in verified)
-print("Verified", PATTERN, "=>", SCRIPT)
+for attempt in range(5):
+    verified = api("GET", path)
+    if any(r.get("pattern") == PATTERN and r.get("script") == SCRIPT for r in verified):
+        print("Verified", PATTERN, "=>", SCRIPT)
+        break
+    time.sleep(1)
+else:
+    raise RuntimeError("Route creation was accepted but readback did not confirm it.")
