@@ -107,6 +107,10 @@ export default {
     try {
       const url = new URL(request.url);
       const pathname = url.pathname;
+      // Never expose repository internals, even if an older asset version contained them.
+      if (pathname.split('/').some(segment => segment.startsWith('.') && segment !== '.well-known')) {
+        return new Response('Not Found', { status: 404 });
+      }
 
       // Direct-link resource. Kept out of navigation and sitemap; not access control.
       if (pathname === '/herramientas/oportunidades-sostenibilidad' || pathname === '/herramientas/oportunidades-sostenibilidad/') {
