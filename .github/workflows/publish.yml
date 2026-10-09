@@ -28,3 +28,9 @@ jobs:
           CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_AUTH_EMAIL }}
           CLOUDFLARE_API_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
         run: npx --yes wrangler@4 deploy --name oportunidadpais-site
+      - name: Bind only the resource path on oportunidadpais.cl
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_AUTH_EMAIL }}
+          CLOUDFLARE_API_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
+        run: python3 scripts/bind_resource_route.py
